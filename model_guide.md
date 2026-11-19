@@ -10,7 +10,7 @@ Python 3.9+ 标准库即可运行。执行 python model.py 重新生成 modelout
 
 Excel 工作簿可独立运行。调整「情景参数」「系统参数」中的黄色单元格，九列预测和中间量自动更新。报告及原始图表对应交付时的参数。Python和Excel各自持有独立输入；变更一端后应同步另一端。单位有效成果要求非零候选率和正的成功概率。
 
-parameters.csv 给出 39 个场景参数的三个取值、测试上下界和理由。fixed_parameters.csv 给出32个共用假设。每个范围是压力测试边界。forecasts.csv 含九个组合，profiles.csv 为 2028 参照。queue.csv 对应同质训练池等候，concurrency.csv 扫描同一时刻的活跃沙箱，costs.csv 的 share 是 0–1；sensitivity.csv 为单因素重算。配套脚本在每次生成前验证资源量、结果数、工时、年倍率和 M/M/1 排队特例。
+parameters.csv 给出 39 个场景参数的三个取值、测试上下界和理由。fixed_parameters.csv 给出 32 个共用参数。每个输入的数值出处、采用理由、适用限制和校准方法见[输入参数来源表](docs/input-provenance.md)，也可下载[同表 Excel 版](docs/input-provenance.xlsx)。每个范围是压力测试边界。forecasts.csv 含九个组合，profiles.csv 为 2028 参照。queue.csv 对应同质训练池等候，concurrency.csv 扫描同一时刻的活跃沙箱，costs.csv 的 share 是 0–1；sensitivity.csv 为单因素重算。配套脚本在每次生成前验证资源量、结果数、工时、年倍率和 M/M/1 排队特例。
 
 ## 容量模型
 
