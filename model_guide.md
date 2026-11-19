@@ -4,13 +4,11 @@
 
 ## 操作与审计
 
-Python 3.9+ 标准库即可运行。执行 python model.py 重新生成 modelout。执行 python model.py my_results overrides.json 可覆盖参数。下列文件示例中 0.55 代表 55%。
+[默认配置](config/assumptions.json) 集中保存运行时假设及依据。使用 Python 3.9+ 执行 `python model.py`，或使用 `python model.py my_results --config config/assumptions.json` 指定输入。原有的 `python model.py my_results examples/overrides.json` 继续支持一次性覆盖。[README](README.md#配置与运行) 说明了如何根据新报告更新某一等级的数值和证据。
 
-    {"AL4":{"agents":1.5,"head":0.5,"cache":0.55},"fixed":{"gpu_price":5.0},"years":{"2027":0.70,"2028":1.0,"2030":1.8}}
+输出目录中的 `input_sources.csv` 将实际采用的值与引用对应起来。`effective_config.json` 可以作为下一次运行的完整输入，`run_manifest.json` 提供文件指纹以便复核。`parameters.csv` 和 `fixed_parameters.csv` 给出情景与共用参数。`forecasts.csv` 覆盖全部年份，`profiles.csv` 为配置指定的基准年，`queue.csv` 对应同质训练作业的排队时间，`concurrency.csv` 对应活跃沙箱，`sensitivity.csv` 为单因素重算。更新基准后，某个压力点若超出物理或概率约束，该点会留下错误说明，其他有效点与主预测继续输出。
 
-Excel 工作簿可独立运行。调整「情景参数」「系统参数」中的黄色单元格，九列预测和中间量自动更新。报告及原始图表对应交付时的参数。Python和Excel各自持有独立输入；变更一端后应同步另一端。单位有效成果要求非零候选率和正的成功概率。
-
-parameters.csv 给出 39 个场景参数的三个取值、测试上下界和理由。fixed_parameters.csv 给出 32 个共用参数。每个输入的数值出处、采用理由、适用限制和校准方法见[输入参数来源表](docs/input-provenance.md)，也可下载[同表 Excel 版](docs/input-provenance.xlsx)。每个范围是压力测试边界。forecasts.csv 含九个组合，profiles.csv 为 2028 参照。queue.csv 对应同质训练池等候，concurrency.csv 扫描同一时刻的活跃沙箱，costs.csv 的 share 是 0–1；sensitivity.csv 为单因素重算。配套脚本在每次生成前验证资源量、结果数、工时、年倍率和 M/M/1 排队特例。
+本说明后文的数字及独立 Excel 工作簿对应 2026-11-19 建档情景。更新配置后，最新预测与数值来源见同一次运行的输出。单位有效成果的计算要求候选率和成果通过概率为正。
 
 ## 容量模型
 

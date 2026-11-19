@@ -2,22 +2,34 @@
 
 给定研发团队每天委派的任务和发起的实验，一个 24 小时统计周期会消耗多少推理与实验卡时？为了让这些任务按时运行，又要预留多少 GPU、CPU、内存和存储？本模型以 100 名研究员为基准，从会话、实验作业和工作区三类业务记录估算资源需求。研究资料截止于 2026 年 11 月 19 日。
 
-在默认的 2028 年 AL4 情景中，每天 **40 个新实验候选**，每次训练占 **8 张 H100、运行 3 小时**。模型算得 **84 张 H100 等效配置**，其中推理 12 张、训练 64 张、评测与数据生成 8 张。这三个业务输入都是可替换的建模假设。实际采购还取决于已有设备、共享策略，以及多少实验原本就会由人发起。
+在 2026-11-19 建档的 2028 年 AL4 基准情景中，每天 **40 个新实验候选**，每次训练占 **8 张 H100、运行 3 小时**。模型算得 **84 张 H100 等效配置**，其中推理 12 张、训练 64 张、评测与数据生成 8 张。这三个业务输入都是可替换的建模假设。实际采购还取决于已有设备、共享策略，以及多少实验原本就会由人发起。
 
-各个输入的取值、来源链接、推导和校准方法见 **[逐项参数来源表](docs/input-provenance.md)**；筛选或导出可用 [Excel 版](docs/input-provenance.xlsx)。
+## 配置与运行
 
-## 快速复算
-
-进入本目录，使用 Python 3.9 或更高版本。核心模型只用标准库。
+**[config/assumptions.json](config/assumptions.json) 是模型默认读取的配置文件。** 每次执行时，程序从中读取 AL3、AL4、AL5 的业务参数、系统参数、年度倍率、模型结构和压力测试设置。只用 Python 3.9 或更高版本的标准库。
 
 ```bash
 python model.py
-python model.py my_results examples/overrides.json
+python model.py my_results --config config/assumptions.json
+python model.py comparison_results examples/overrides.json
 ```
 
-第一条命令将默认结果写入 `modelout/`；第二条命令把修改参数后的结果写入 `my_results/`。两个目录均包含 `forecasts.csv`（三年 × 三种情景）、`profiles.csv`（2028 年对照）、`sensitivity.csv`（逐项调参）和 `results.json`（全部结果）。完整输入、单位和选取理由分别列在生成的 `parameters.csv` 和 `fixed_parameters.csv` 中。
+第一条命令把结果写入 `modelout/`。第二条可指定任意一份完整配置和输出目录。第三条先读取默认配置，再应用一次性情景覆盖。长期采用的新数字应回写到完整配置，并随证据说明一起提交。
 
-也可直接打开 [Excel 情景模型](capacity_model.xlsx)，修改「情景参数」和「系统参数」中的输入。Excel 与 Python 各自独立计算。用上述覆盖示例运行 Python，2028 年 AL4 的总卡数应为 102 张。
+| 需要修改的量 | JSON 中的位置 | 影响 |
+|---|---|---|
+| AL4 每名研究员每天发起的独立实验候选数 | `scenarios.head.values.AL4` | 按研究员数和年度倍率得到每日新候选数，再计重试与实验卡时 |
+| AL4 每个训练实验用多少卡、占用多久 | `scenarios.g.values.AL4`、`scenarios.h.values.AL4` | 决定单次训练的 GPU·h 及成组调度所需的卡数 |
+| H100 预算单价 | `fixed.gpu_price.value` | 影响成本。更新时记录供应商、机型、实例规格和计价单位 |
+| 预测年份的工作量倍率 | `settings.years.value` | 同时作用于人均会话数和新候选频率，基准对照年份由 `settings.reference_year.value` 指定 |
+
+### 如何用一份新报告更新参数
+
+1. **先对齐指标。** 确认报告统计的是在线存量、启动次数、独立候选或包含重试的作业，以及分母是全体研究员还是活跃实验者。比如 OpenAI 公布了每位活跃实验者的已记录实验数相对 2025 年基线为 1.68 倍。缺少绝对基数时，这条证据可记入 `head` 的背景引用，`head` 的绝对候选率仍保留为假设。[OpenAI 原文](https://openai.com/index/research-acceleration-jagged-frontier/)
+2. **在同一条目更新数值和证据。** `values` 或 `value` 保存数值。`evidence` 记录证据类别 `kind`、资料核对日期 `as_of`、样本与统计窗口 `scope`、取值或换算理由 `rationale`、校准方法 `calibration`，以及带标题、原始 URL 和用途的 `references`。精确值有直接披露用 A，按公开数据换算用 B 并写明算式，将其他组织的实测值外推作本团队参数时保留情景假设 C。只更新单一等级时，把证据写入该条目的 `evidence.by_level.AL4` 等对应位置。年份倍率可按同样方式在 `settings.years.evidence.by_year` 中记录单一年度的依据。配置顶层 `as_of` 记录本版核对日期。
+3. **运行并核对差异。** 用新目录运行，比较 `forecasts.csv` 的候选数、训练 GPU·h、配置卡数和成本。`input_sources.csv` 逐条列出本次生效值及依据。`effective_config.json` 是可重跑的完整配置，`run_manifest.json` 记录配置指纹和临时覆盖。可执行 `python model.py replay --config my_results/effective_config.json` 重放第二条命令的结果。
+
+直接查看 [本版运行的输入来源表](modelout/input_sources.csv)、[情景结果](modelout/forecasts.csv) 和[系统与业务计量方法](model_guide.md)。此前发布的[逐项说明](docs/input-provenance.md)、[Excel 来源表](docs/input-provenance.xlsx) 及 [Excel 情景模型](capacity_model.xlsx) 是 2026-11-19 的独立快照。以后修改 JSON，当前值以本次运行生成的文件为准。
 
 ## 数据从哪里来
 

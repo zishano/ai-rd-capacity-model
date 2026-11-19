@@ -1,0 +1,7 @@
+{
+  "config_file": "assumptions.json",
+  "config_as_of": "2026-11-19",
+  "config_sha256": "c33a49f7cd15d063cfe55da7fbe4e5c825852aca4d9d5966993a99f5f20b30f8",
+  "effective_config_sha256": "c33a49f7cd15d063cfe55da7fbe4e5c825852aca4d9d5966993a99f5f20b30f8",
+  "overrides": {}
+}
