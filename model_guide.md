@@ -1,10 +1,14 @@
 # 100 人 AI 研发组织的资源与成本模型
 
-研究截止 2026-11-19。下列数字均为 C 类条件推算，三种任务组合分别模拟 AL3 辅助、AL4 主导、AL5 受控自主。2027/2028/2030 分别将每人会话数和每人新实验频率乘 0.75/1/1.5，100 人、H100 等效硬件及单价保持固定，隔离业务量变化。若掌握新机型、价格或采用路径，可替换。
+本说明对应 2026-11-19 建档参数。AL3 模拟人机协作，AL4 模拟 AI 主导执行，AL5 模拟受控自主研发。
 
 ## 操作与审计
 
-[默认配置](config/assumptions.json) 集中保存运行时假设及依据。使用 Python 3.9+ 执行 `python model.py`，或使用 `python model.py my_results --config config/assumptions.json` 指定输入。原有的 `python model.py my_results examples/overrides.json` 继续支持一次性覆盖。[README](README.md#配置与运行) 说明了如何根据新报告更新某一等级的数值和证据。
+业务场景由 [config/business.json](config/business.json) 的五项输入描述。默认团队为 100 人，2028 年 AL4 平均同时在线 120 个会话，每天产生 40 个独立实验候选，每次训练分配 8 张卡并占用 3 小时。人数来自研究任务，其余四项为情景假设。运行 `python model.py` 会同时读取业务文件和[详细参数](config/assumptions.json)。字段定义与新报告的维护方式见 [README](README.md#配置与运行)。
+
+设团队人数为 $P$，基准年平均在线会话总数为 $N$，团队日均新增候选数为 $E$，基准年业务倍率为 $s_r$。模型将 AL4 的标准人均强度换算为 $N/(P s_r)$ 和 $E/(P s_r)$。预测年份 $y$ 采用倍率 $s_y$ 时，团队总量分别为 $N s_y/s_r$ 和 $E s_y/s_r$。基准年恰好复现业务输入的两个总量。每次训练卡数与时长直接传递到 AL4。AL3、AL5 共用团队人数，各自的人均强度与训练参数来自详细配置。
+
+例如默认 $s_r=1$，120 个在线会话对应每人 1.2 个，40 个新候选对应每人每天 0.4 个。每次训练占用 $8×3=24$ GPU·h。每天每个候选仅计算首次训练时为 $40×24=960$ GPU·h，加入模型中的重试后为 1,084.8 GPU·h。
 
 输出目录中的 `input_sources.csv` 将实际采用的值与引用对应起来。`effective_config.json` 可以作为下一次运行的完整输入，`run_manifest.json` 提供文件指纹以便复核。`parameters.csv` 和 `fixed_parameters.csv` 给出情景与共用参数。`forecasts.csv` 覆盖全部年份，`profiles.csv` 为配置指定的基准年，`queue.csv` 对应同质训练作业的排队时间，`concurrency.csv` 对应活跃沙箱，`sensitivity.csv` 为单因素重算。更新基准后，某个压力点若超出物理或概率约束，该点会留下错误说明，其他有效点与主预测继续输出。
 

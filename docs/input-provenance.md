@@ -1,6 +1,6 @@
 # 百人 AI 研发团队容量模型 · 输入参数来源表
 
-本页保留 2026-11-19 建档版本的参数解释与计算示例。维护当前参数请编辑 [config/assumptions.json](../config/assumptions.json)。本版生效数值、来源及校准方法见[本次运行生成的参数表](../modelout/input_sources.csv)。
+本页保留 2026-11-19 建档版本的参数解释与计算示例。调整团队规模、在线会话、每日新候选或单次训练规格，请编辑[五项业务输入](../config/business.json)。各等级的详细假设、资源参数和报告来源见[完整配置](../config/assumptions.json)。本版生效数值、来源及校准方法见[本次运行生成的参数表](../modelout/input_sources.csv)。
 
 本表对应 [模型版本 85dd3e7](https://github.com/zishano/ai-rd-capacity-model/blob/85dd3e77908b1ac26692029fea10bf40a5fc13d8/model.py)，研究资料截至 2026-11-19。共 **92 行**：39 个情景参数、32 个共用参数、21 项公式常量、年度系数、压力测试或示例设置。每项给出实际代码取值、数值出处、选取理由，以及用组织日志或合同价格替换它的方法。可筛选版本见 [Excel 参数来源表](input-provenance.xlsx)。
 

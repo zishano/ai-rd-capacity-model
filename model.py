@@ -8,7 +8,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 from assumptions import (DEFAULT_CONFIG, LEVELS, check_value, effective_config, load_config,
-                         read_json, setting_values, validate_config)
+                         read_inputs, read_json, setting_values)
 
 SCENES = ['保守', '基准', '激进']
 
@@ -30,8 +30,8 @@ def _scenario_rows(config):
     return rows
 
 
-def parameters(config_path=DEFAULT_CONFIG):
-    return _scenario_rows(load_config(config_path))
+def parameters(config_path=DEFAULT_CONFIG, *, base_config_path=None):
+    return _scenario_rows(load_config(config_path, base_config_path))
 
 
 def _fixed_rows(config):
@@ -40,8 +40,17 @@ def _fixed_rows(config):
             for key, entry in config['fixed'].items()]
 
 
-def fixed_parameters(config_path=DEFAULT_CONFIG):
-    return _fixed_rows(load_config(config_path))
+def fixed_parameters(config_path=DEFAULT_CONFIG, *, base_config_path=None):
+    return _fixed_rows(load_config(config_path, base_config_path))
+
+
+def _team_volume(people, rate, scale):
+    total = people * rate * scale
+    nearest = round(total)
+    # Division to a per-person rate followed by rescaling can produce 100.00000000000001.
+    if nearest > 0 and total != nearest and abs(total - nearest) <= 2 * math.ulp(total):
+        return float(nearest)
+    return total
 
 
 def budgets(p, k, year=None, scale=1, level='AL4', *, settings=None):
@@ -50,7 +59,7 @@ def budgets(p, k, year=None, scale=1, level='AL4', *, settings=None):
     if year is None:
         year = settings['reference_year']
     people=k['people']
-    N=people*p['agents']*scale
+    N=_team_volume(people, p['agents'], scale)
     ah=24*N
     life=ah/p['duration']
     cpuactive=N*p['exec_duty']
@@ -80,7 +89,7 @@ def budgets(p, k, year=None, scale=1, level='AL4', *, settings=None):
     # Simplified causal attention FLOPs; new tokens use measured mean attended prefix L.
     # FLOP proxy: 2P per token + 4*n_layer*d_model*mean_attended_length per token.
     flop_tok=2*k['weight_b']*1e9+4*settings['layer_count']*settings['model_width']*p['context']
-    e=people*p['head']*scale
+    e=_team_volume(people, p['head'], scale)
     attempts=e*(1+(1-p['success'])*p['retry'])
     accepted=e*p['success']*(1+(1-p['success'])*p['retry'])*p['valid']
     train=attempts*p['g']*p['h']
@@ -161,8 +170,8 @@ def queue_mm_c(arrivals_day,c=None,h=None,g=None):
     return dict(arrivals_day=arrivals_day,utilization=rho,slots=c,gpus_per_job=g,hours_per_job=h,wait_h=w,p_wait=pwait,capacity_gpu=c*g,stable=rho<1)
 
 
-def calculate(overrides=None, config_path=DEFAULT_CONFIG):
-    return _calculate(effective_config(load_config(config_path), overrides))
+def calculate(overrides=None, config_path=DEFAULT_CONFIG, *, base_config_path=None):
+    return _calculate(effective_config(load_config(config_path, base_config_path), overrides))
 
 
 def _calculate(config):
@@ -230,27 +239,23 @@ def _check_results(z):
     assert math.isclose(queue_mm_c(6, c=1, h=2, g=1)['wait_h'], 2)
 
 
-def tests(config_path=DEFAULT_CONFIG):
-    _check_results(calculate(config_path=config_path))
+def tests(config_path=DEFAULT_CONFIG, *, base_config_path=None):
+    _check_results(calculate(config_path=config_path, base_config_path=base_config_path))
 
 
 def _json_bytes(value):
     return (json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + '\n').encode('utf-8')
 
 
-def write(out, overrides=None, config_path=DEFAULT_CONFIG):
+def write(out, overrides=None, config_path=DEFAULT_CONFIG, *, base_config_path=None):
     from input_sources import source_rows
-    path = Path(config_path)
-    raw = path.read_bytes()
-    config = read_json(raw)
-    validate_config(config)
+    config, manifest = read_inputs(config_path, base_config_path)
     effective = effective_config(config, overrides)
     z = _calculate(effective)
     _check_results(z)
     sources = source_rows(config, overrides)
     snapshot = _json_bytes(effective)
-    manifest = dict(config_file=path.name, config_as_of=config['as_of'],
-                    config_sha256=hashlib.sha256(raw).hexdigest(),
+    manifest.update(config_as_of=config['as_of'],
                     effective_config_sha256=hashlib.sha256(snapshot).hexdigest(),
                     overrides=overrides or {})
     out = Path(out)
@@ -278,10 +283,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output_dir', nargs='?', type=Path, default=Path(__file__).resolve().parent/'modelout')
     parser.add_argument('overrides', nargs='?', type=Path, help='optional temporary parameter overrides')
-    parser.add_argument('--config', type=Path, default=DEFAULT_CONFIG, help='complete assumptions JSON')
+    parser.add_argument('--config', type=Path, default=DEFAULT_CONFIG, help='five business assumptions or a complete model configuration')
+    parser.add_argument('--base-config', type=Path, help='advanced settings to pair with business assumptions')
     args = parser.parse_args()
     try:
         changes = read_json(args.overrides.read_bytes()) if args.overrides is not None else None
-        write(args.output_dir, changes, args.config)
+        write(args.output_dir, changes, args.config, base_config_path=args.base_config)
     except (ValueError, OSError) as exc:
         parser.exit(2, f'model.py: {exc}\n')

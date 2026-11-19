@@ -1,5 +1,6 @@
 """Input file and evidence validation for the capacity model. Python 3.9+."""
 import copy
+import hashlib
 import json
 import math
 from datetime import date
@@ -7,7 +8,11 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 LEVELS = ('AL3', 'AL4', 'AL5')
-DEFAULT_CONFIG = Path(__file__).resolve().parent / 'config' / 'assumptions.json'
+CONFIG_DIR = Path(__file__).resolve().parent / 'config'
+DEFAULT_CONFIG = CONFIG_DIR / 'business.json'
+ADVANCED_CONFIG = CONFIG_DIR / 'assumptions.json'
+BUSINESS_KEYS = ('researchers', 'avg_online_sessions', 'new_experiments_per_day',
+                 'gpus_per_training_run', 'hours_per_training_run')
 SCENARIO_KEYS = set('agents duration duty exec_duty resident input output cache tools fanout depth c m s context qin qout peak head g h eg eh evalreps success retry valid synth ckpt dataset retention f keep private review log alpha_c alpha_m alpha_s'.split())
 FIXED_KEYS = set('people gpu_price cpu_price ram_price ssd_price fs_price obj_price backup_price net_price control_price human_price base_gb backup_frac io_blocks io_mb egress_frac stg_read q_gpu q_infer trans startsec recovery weight_b mem_gb hbmfrac tp gpu_active_kw gpu_idle_kw pue steps_h grad_gb h2d_gb'.split())
 SETTING_KEYS = set('years reference_year layer_count model_width kv_heads head_dimension precision_bytes kv_sequences lifecycle_events auth_events billing_window queue_baseline queue_grid sandbox_grid sensitivity cold_start_vcpu'.split())
@@ -186,10 +191,75 @@ def validate_config(config):
             number(value, f'{path}.points[{i}]')
 
 
-def load_config(path=DEFAULT_CONFIG):
-    config = read_json(Path(path).read_bytes())
+def _apply_business_inputs(config, business, filename):
+    """Translate reference-year team totals into the model's per-person rates."""
+    required_keys(business, BUSINESS_KEYS, filename, exact=True)
+    for key in BUSINESS_KEYS:
+        number(business[key], f'{filename}.{key}', positive=True,
+               integer=key in ('researchers', 'gpus_per_training_run'))
+
+    people = business['researchers']
+    year = config['settings']['reference_year']['value']
+    scale = config['settings']['years']['value'][str(year)]
+    denominator = people * scale
+    if not math.isfinite(denominator) or denominator <= 0:
+        raise ValueError(f'{filename}: researchers × reference-year multiplier exceeds numerical range')
+
+    inputs = (
+        ('people', people, 'researchers'),
+        ('agents', business['avg_online_sessions'] / denominator,
+         f'avg_online_sessions ÷ (researchers × {year} 年倍率)'),
+        ('head', business['new_experiments_per_day'] / denominator,
+         f'new_experiments_per_day ÷ (researchers × {year} 年倍率)'),
+        ('g', business['gpus_per_training_run'], 'gpus_per_training_run'),
+        ('h', business['hours_per_training_run'], 'hours_per_training_run'),
+    )
+    for key, value, formula in inputs:
+        team_size = key == 'people'
+        entry = config['fixed']['people'] if team_size else config['scenarios'][key]
+        target = entry if team_size else entry['values']
+        field = 'value' if team_size else 'AL4'
+        if target[field] == value:
+            # The detailed configuration can document a matching measured value.
+            continue
+        target[field] = value
+        evidence = entry['evidence']
+        prior = evidence.get('by_level', {}).get('AL4', {})
+        updated = dict(kind='brief' if team_size else 'C', as_of=config['as_of'],
+                       scope='业务配置指定的团队规模' if team_size else f'{year} 年 AL4 业务情景设定',
+                       rationale=f'{filename} 中的业务输入：{formula}。',
+                       calibration=prior.get('calibration', evidence['calibration']), references=[])
+        if team_size:
+            entry['evidence'] = updated
+        else:
+            evidence.setdefault('by_level', {})['AL4'] = updated
+
+
+def read_inputs(path=DEFAULT_CONFIG, base_config_path=None):
+    """Read a business or complete config and fingerprint the exact files used."""
+    path = Path(path)
+    raw = path.read_bytes()
+    data = read_json(raw)
+    manifest = dict(config_file=path.name, config_sha256=hashlib.sha256(raw).hexdigest())
+    if isinstance(data, dict) and ('schema_version' in data or 'scenarios' in data):
+        if base_config_path is not None:
+            raise ValueError('--base-config applies only to a five-field business config')
+        validate_config(data)
+        return data, manifest
+
+    base_path = ADVANCED_CONFIG if base_config_path is None else Path(base_config_path)
+    base_raw = base_path.read_bytes()
+    config = read_json(base_raw)
     validate_config(config)
-    return config
+    _apply_business_inputs(config, data, path.name)
+    validate_config(config)
+    manifest.update(business_inputs=data, base_config_file=base_path.name,
+                    base_config_sha256=hashlib.sha256(base_raw).hexdigest())
+    return config, manifest
+
+
+def load_config(path=DEFAULT_CONFIG, base_config_path=None):
+    return read_inputs(path, base_config_path)[0]
 
 
 def effective_config(config, overrides=None):

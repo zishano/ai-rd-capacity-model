@@ -1,7 +1,16 @@
 {
-  "config_file": "assumptions.json",
+  "config_file": "business.json",
+  "config_sha256": "c86ecfa5f46d881c3f6be173b5843dcc5c7120fc595f71b3dac237a21e423d06",
+  "business_inputs": {
+    "researchers": 100,
+    "avg_online_sessions": 120,
+    "new_experiments_per_day": 40,
+    "gpus_per_training_run": 8,
+    "hours_per_training_run": 3
+  },
+  "base_config_file": "assumptions.json",
+  "base_config_sha256": "c33a49f7cd15d063cfe55da7fbe4e5c825852aca4d9d5966993a99f5f20b30f8",
   "config_as_of": "2026-11-19",
-  "config_sha256": "c33a49f7cd15d063cfe55da7fbe4e5c825852aca4d9d5966993a99f5f20b30f8",
   "effective_config_sha256": "c33a49f7cd15d063cfe55da7fbe4e5c825852aca4d9d5966993a99f5f20b30f8",
   "overrides": {}
 }

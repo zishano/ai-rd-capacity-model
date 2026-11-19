@@ -1,35 +1,40 @@
 # 100 人 AI 研发团队的计算资源容量模型
 
-给定研发团队每天委派的任务和发起的实验，一个 24 小时统计周期会消耗多少推理与实验卡时？为了让这些任务按时运行，又要预留多少 GPU、CPU、内存和存储？本模型以 100 名研究员为基准，从会话、实验作业和工作区三类业务记录估算资源需求。研究资料截止于 2026 年 11 月 19 日。
+**业务场景只需填写 [config/business.json](config/business.json) 中的五个数。** 默认的 2028 年 AL4 情景假设，100 名研究员平均维持 120 个在线会话，每天提出 40 个新实验候选，每次训练用 8 张 H100 等效卡运行 3 小时。
 
-在 2026-11-19 建档的 2028 年 AL4 基准情景中，每天 **40 个新实验候选**，每次训练占 **8 张 H100、运行 3 小时**。模型算得 **84 张 H100 等效配置**，其中推理 12 张、训练 64 张、评测与数据生成 8 张。这三个业务输入都是可替换的建模假设。实际采购还取决于已有设备、共享策略，以及多少实验原本就会由人发起。
+| 想描述什么 | 配置字段 | 默认值 | 统计口径与依据 |
+|---|---|---:|---|
+| 团队有多少研究员 | `researchers` | 100 人 | 纳入容量规划的全体研究员。100 人由研究任务指定 |
+| 平均有多少会话同时在线 | `avg_online_sessions` | 120 个 | 团队全天在线会话数的时间平均，含等待和子会话。情景假设 |
+| 每天提出多少个新实验 | `new_experiments_per_day` | 40 个/日 | 全团队按候选 ID 去重，重试、复跑与评测另计。情景假设 |
+| 一次训练要同时用多少张卡 | `gpus_per_training_run` | 8 张 | 每次训练尝试按同一规格成组分配的 H100 等效卡数。情景假设 |
+| 每次训练占用这些卡多久 | `hours_per_training_run` | 3 小时 | 从获配到释放设备的平均时长，排队时间另计。情景假设 |
+
+40 个候选各训练一次，每日需 **40 × 8 × 3＝960 GPU·h**。按建档时的重试假设，计入重试后的期望训练量为 **1,084.8 GPU·h/日**。进一步计入成组调度、推理和评测需求，配置结果为 **84 张 H100 等效卡**，其中训练 64 张、推理 12 张、评测与合成数据 8 张。
 
 ## 配置与运行
 
-**[config/assumptions.json](config/assumptions.json) 是模型默认读取的配置文件。** 每次执行时，程序从中读取 AL3、AL4、AL5 的业务参数、系统参数、年度倍率、模型结构和压力测试设置。只用 Python 3.9 或更高版本的标准库。
+从仓库目录执行下列命令。模型使用 Python 3.9 或更高版本的标准库，每次运行都会重新读取配置。
 
 ```bash
 python model.py
-python model.py my_results --config config/assumptions.json
-python model.py comparison_results examples/overrides.json
 ```
 
-第一条命令把结果写入 `modelout/`。第二条可指定任意一份完整配置和输出目录。第三条先读取默认配置，再应用一次性情景覆盖。长期采用的新数字应回写到完整配置，并随证据说明一起提交。
+默认结果在 `modelout/`。也可用 `python model.py my_results --config config/business.json` 指定业务文件和新的输出目录。人数适用于所有等级，另外四项描述 AL4 的基准情景。默认年度倍率下，120÷100＝1.2 个在线会话/人，40÷100＝0.4 个新候选/人日。若只把团队改成 200 人，AL4 基准年的团队总量仍是 120 和 40，人均值相应减半。其他年度按相对基准年的倍率缩放业务量。AL3、AL5 使用各自的人均强度和作业规格。
 
-| 需要修改的量 | JSON 中的位置 | 影响 |
-|---|---|---|
-| AL4 每名研究员每天发起的独立实验候选数 | `scenarios.head.values.AL4` | 按研究员数和年度倍率得到每日新候选数，再计重试与实验卡时 |
-| AL4 每个训练实验用多少卡、占用多久 | `scenarios.g.values.AL4`、`scenarios.h.values.AL4` | 决定单次训练的 GPU·h 及成组调度所需的卡数 |
-| H100 预算单价 | `fixed.gpu_price.value` | 影响成本。更新时记录供应商、机型、实例规格和计价单位 |
-| 预测年份的工作量倍率 | `settings.years.value` | 同时作用于人均会话数和新候选频率，基准对照年份由 `settings.reference_year.value` 指定 |
+### 何时查看详细参数
+
+[config/assumptions.json](config/assumptions.json) 解释业务量怎样换算成资源和成本。39 个情景参数描述推理活跃率、Token、沙箱、训练、重试和保留期等。32 个共用参数描述硬件规格、调度目标、能耗和单价等。16 项运行设置指定模型结构、年份、排队和压力测试。每项都有依据和校准方法。
+
+日常调整团队或实验规模时修改业务文件。校准底层技术参数时修改详细文件。需要组合两份自定义配置时，可运行 `python model.py my_results --config my_business.json --base-config my_assumptions.json`。程序先读取详细参数，再采用五项业务输入，最后应用可选的一次性覆盖。显式指定完整配置，如 `python model.py replay --config modelout/effective_config.json`，可独立重放该配置。旧用法 `python model.py comparison_results examples/overrides.json` 仍可用来比较场景。
 
 ### 如何用一份新报告更新参数
 
-1. **先对齐指标。** 确认报告统计的是在线存量、启动次数、独立候选或包含重试的作业，以及分母是全体研究员还是活跃实验者。比如 OpenAI 公布了每位活跃实验者的已记录实验数相对 2025 年基线为 1.68 倍。缺少绝对基数时，这条证据可记入 `head` 的背景引用，`head` 的绝对候选率仍保留为假设。[OpenAI 原文](https://openai.com/index/research-acceleration-jagged-frontier/)
-2. **在同一条目更新数值和证据。** `values` 或 `value` 保存数值。`evidence` 记录证据类别 `kind`、资料核对日期 `as_of`、样本与统计窗口 `scope`、取值或换算理由 `rationale`、校准方法 `calibration`，以及带标题、原始 URL 和用途的 `references`。精确值有直接披露用 A，按公开数据换算用 B 并写明算式，将其他组织的实测值外推作本团队参数时保留情景假设 C。只更新单一等级时，把证据写入该条目的 `evidence.by_level.AL4` 等对应位置。年份倍率可按同样方式在 `settings.years.evidence.by_year` 中记录单一年度的依据。配置顶层 `as_of` 记录本版核对日期。
-3. **运行并核对差异。** 用新目录运行，比较 `forecasts.csv` 的候选数、训练 GPU·h、配置卡数和成本。`input_sources.csv` 逐条列出本次生效值及依据。`effective_config.json` 是可重跑的完整配置，`run_manifest.json` 记录配置指纹和临时覆盖。可执行 `python model.py replay --config my_results/effective_config.json` 重放第二条命令的结果。
+1. **核对统计口径。** 确认报告的样本、观察期和分母。例如，OpenAI 公布的 1.68 倍指每位活跃实验者的已记录实验数相对 2025 年基线的倍数。缺少绝对基数和全员口径时，它只能作为背景资料。[OpenAI 原文](https://openai.com/index/research-acceleration-jagged-frontier/)
+2. **记录数据与依据。** 如果新证据改变了五项业务输入，在业务文件中更新对应数字。如需为新值登记报告依据，在详细文件中同步相应有效底层数值，并用 `evidence` 记录原文链接、日期、适用范围、换算方法和证据类别。明细字段 `fixed.people` 对应人数，`scenarios` 下的 `agents`、`head`、`g`、`h` 分别对应人均会话数、人均候选率、单次卡数和训练时长。选择单一等级用 `evidence.by_level.AL4` 等字段，单一年份用 `settings.years.evidence.by_year`。A 表示公开披露的同口径数值，B 表示按公开数据推导的数值，C 表示情景假设。把其他组织的观察值外推到本团队时应保留 C。
+3. **在新目录复算。** 用 `forecasts.csv` 比较候选数、训练卡时和设备数，用 `input_sources.csv` 追溯输入。`effective_config.json` 保存完整生效配置，`run_manifest.json` 记录输入文件指纹与临时覆盖。
 
-直接查看 [本版运行的输入来源表](modelout/input_sources.csv)、[情景结果](modelout/forecasts.csv) 和[系统与业务计量方法](model_guide.md)。此前发布的[逐项说明](docs/input-provenance.md)、[Excel 来源表](docs/input-provenance.xlsx) 及 [Excel 情景模型](capacity_model.xlsx) 是 2026-11-19 的独立快照。以后修改 JSON，当前值以本次运行生成的文件为准。
+[本版输入来源](modelout/input_sources.csv) · [情景结果](modelout/forecasts.csv) · [模型说明](model_guide.md)。[建档时的参数说明](docs/input-provenance.md)、[Excel 来源表](docs/input-provenance.xlsx)及 [Excel 模型](capacity_model.xlsx) 对应 2026-11-19 的独立快照。
 
 ## 数据从哪里来
 
@@ -38,7 +43,7 @@ python model.py comparison_results examples/overrides.json
 | A · 公开测量 | 截至 2026 年 10 月 18 日的四周，OpenAI 每名活跃实验者记录的实验数为 2025 年基线的 **1.68 倍**。报告未披露这个基线的绝对次数。[OpenAI，2026-11-18](https://openai.com/index/research-acceleration-jagged-frontier/) | 将实验发起率单独设为输入，需要用本团队作业记录校准。 |
 | A · 公开测量 | Anthropic 于 2026 年 8 月测得 **26%** 的加权研发工作达到 AL4，其使用最多的内部平台约有 **3 万个**研究与工程 Agent 同时工作。前一项按固定的研发任务篮子加权，后一项统计单个平台的并发数量。[Anthropic，2026-09-17](https://www.anthropic.com/institute/measuring-pace-of-ai-development) | 区分任务主导权、在线会话、活跃推理和占用设备四种指标。 |
 | A · 公开测量；B · 算术推导 | Epoch 的两次同题试验中，下游 GPU 与 Agent 推理的开支分别为约 6,700/610 美元、14,000/2,100 美元，费用比约 **11.0 倍、6.7 倍**。[Epoch AI，2026-10-07](https://epoch.ai/publications/innovationeval) | 直接推理和下游实验分别核算。两个实测费用比均未作为卡时乘数。 |
-| C · 情景预测 | 100 人、人均实验率、卡数、时长、保留期、模型吞吐和年度业务倍率等构成一组可替换输入。 | 模型输出的是各组业务条件下的容量与成本。 |
+| C · 情景预测 | 在研究任务指定的 100 人规模下，人均实验率、卡数、时长、保留期、模型吞吐和年度业务倍率等采用可替换的情景假设。 | 模型输出的是各组业务条件下的容量与成本。 |
 
 逐条统计窗口、分母、测量方法、局限和原始出处见[证据台账](evidence.csv)。
 

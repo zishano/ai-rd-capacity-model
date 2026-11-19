@@ -1,0 +1,7 @@
+{
+  "researchers": 100,
+  "avg_online_sessions": 120,
+  "new_experiments_per_day": 40,
+  "gpus_per_training_run": 8,
+  "hours_per_training_run": 3
+}
