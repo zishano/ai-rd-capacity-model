@@ -71,14 +71,14 @@ def calculate(workload,hardware_name="H100_SXM",model_path=DEFAULT_MODEL,hardwar
     comm_latency=a["num_moe_layers"]*s["all_to_all_latency_us_per_moe_layer"]*1e-6
     hbm_bw=ngpu*hw["hbm_bandwidth_tb_s"]*1e12*s["hbm_bandwidth_efficiency"]
     compute=ngpu*hw["fp8_dense_peak_tflops"]*1e12*s["compute_efficiency"]
-    def phase(tokens,flops_tok,weight_bytes,kv_bytes):
+    def phase(tokens,flops_tok,weight_bytes,kv_bytes,latency_per_token):
         if tokens<=0: return {"tokens":0,"compute_seconds":0,"hbm_seconds":0,"communication_seconds":0,"service_seconds":0,"gpu_hours":0,"tokens_per_second":0,"bottleneck":"none"}
         c=tokens*flops_tok/compute; h=tokens*(weight_bytes+kv_bytes)/hbm_bw
-        n=tokens*ep_bytes/comm_bw+tokens*comm_latency
+        n=tokens*ep_bytes/comm_bw+tokens*latency_per_token
         bottleneck=max(((c,"compute"),(h,"hbm"),(n,"communication")))[1]
         sec=max(c,h,n)
         return {"tokens":tokens,"compute_seconds":c,"hbm_seconds":h,"communication_seconds":n,"service_seconds":sec,"gpu_hours":sec*ngpu/3600,"tokens_per_second":tokens/sec if sec else 0,"bottleneck":bottleneck}
-    pre=phase(uncached,pf_flop_tok,pf_weight,pf_kv); dec=phase(O,dc_flop_tok,dc_weight,dc_kv)
+    pre=phase(uncached,pf_flop_tok,pf_weight,pf_kv,comm_latency/max(1,prefill_batch)); dec=phase(O,dc_flop_tok,dc_weight,dc_kv,comm_latency/max(1,decode_batch))
     infer_gpu_h=pre["gpu_hours"]+dec["gpu_hours"]
     replicas=max(1,math.ceil((pre["service_seconds"]+dec["service_seconds"])/(86400*s["target_gpu_pool_utilization"])))
     cards=ngpu*replicas
