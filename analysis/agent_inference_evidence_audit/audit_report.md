@@ -279,3 +279,22 @@ Inter-node per-GPU bandwidth 50/100 GB/s 不是 GPU 官方规格，必须由真�
 `cost = 633600×0.45×$2/M + 633600×0.55×$0.1/M + 46080×$10/M ≈ $1.07/day`。
 
 按 GPT-6.2 Astra Standard 价格约为 $4.26/day。OpenAI 报告的 $2,400/day 是每名研究员的多 Agent API list-price equivalent，包含模型混用、subagents、不同 Harness 和多种任务。两者不是同一统计单位，不能用比例直接修正单 Agent Token 率；但这个数量级差异足以说明当前 AL4 点值尚未被头部实验室使用强度校准。
+
+
+## 11. Public Serving Benchmark sanity check：当前 Decode 下界偏乐观
+
+SGLang 的 Kimi K2 公开 B200 8-GPU benchmark 给出：
+- max concurrency=1：mean TPOT 18.40 ms，median 15.63 ms，P99 39.88 ms；
+- max concurrency=100（实测平均 concurrency 89.6）：mean TPOT 97.23 ms，median 85.61 ms，P99 435.95 ms。
+
+当前 10T 模型 Base 单 Agent 情景，Decode GPU-hours=1.478 GPU·h，部署候选为 192 张 H100；模型对应的 Decode wall time 为：
+
+`1.478 × 3600 / 192 = 27.72 seconds`
+
+`27.72 / 46,080 output tokens ≈ 0.602 ms/output token`
+
+0.602 ms/token 比 Kimi K2 单并发实测 mean TPOT 18.40 ms 快约 30.6 倍。两者模型规模、硬件和部署拓扑不同，不能直接当成同口径性能对比；但这个差异是明确的模型风险信号：当前 L1 Roofline 只计入 60 层 × 10 μs 的 collective latency，并没有覆盖完整逐 Token 的 kernel launch、调度、专家 dispatch/combine、同步和运行时开销。当前 decode 公式可能严重低估单序列实际 TPOT。
+
+此外，当前 decode batch 敏感性只减少 collective rounds 和共享权重流量，没有完整建模 Continuous Batching 下的队列、batch formation、step-time 增长和 per-sequence latency。SGLang 的 concurrency 100 结果中，TPOT 比 concurrency 1 明显更高，说明吞吐改善和单请求延迟不是同一指标。
+
+**因此，当前 0.469 / 2.212 / 12.642 GPU·h/day 只能称为当前 L1-L3 Roofline 参数下的条件性模型输出，不是经过实测校准的 GPU-hours 预测区间，也不能作为采购承诺。** 在将其升级为可信预测前，需要为目标模型和目标 GPU 建立实测的 Prefill throughput、Decode TPOT/throughput、EP dispatch/combine latency、HBM bandwidth 与 batch-size profile。

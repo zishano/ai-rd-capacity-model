@@ -5,6 +5,7 @@
 - `parameter_ledger.csv`：52 项参数逐项台账。
 - `audit_report.md`：研究报告、统计口径、公式、限制与结论。
 - `sensitivity_results.csv`：当前模型的关键敏感性输出。
+- `scenario_gpu_hours.csv`：CI 自动复算的三种单 Agent 情景输出；属于 C 类模型情景，不是实测区间。
 - `scenario_gpu_hours.csv`：由独立审计脚本生成的三种情景结果（CI Artifact）。
 - 主独立配置：`config/agent_inference_evidence.json`。
 
