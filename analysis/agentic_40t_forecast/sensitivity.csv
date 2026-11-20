@@ -1,0 +1,197 @@
+year,parameter,endpoint,basis,baseline_gpu_h_day,gpu_h_day,change_pct
+2026,input_tokens,213797,trace marginal P10/P90,1.0418239954563435,0.996333467247771,-4.366431221297273
+2026,input_tokens,1492152,trace marginal P10/P90,1.0418239954563435,1.1831585521839028,13.56606848603552
+2026,output_tokens,2990,trace marginal P10/P90,1.0418239954563435,0.4596971850030103,-55.87573457629452
+2026,output_tokens,15558,trace marginal P10/P90,1.0418239954563435,2.069415502665825,98.63388745998046
+2026,prefix_cache_hit_rate,0.7664788578305345,trace marginal P10/P90,1.0418239954563435,1.287366292375498,23.568500820678562
+2026,prefix_cache_hit_rate,0.9574023583133762,trace marginal P10/P90,1.0418239954563435,1.023876332751028,-1.7227154282863255
+2026,context_tokens,12412,trace marginal P10/P90,1.0418239954563435,1.0405975853422285,-0.11771759140351001
+2026,context_tokens,37811,trace marginal P10/P90,1.0418239954563435,1.0436838422022712,0.17851832497992604
+2026,prefix_cache_hit_rate,0,cold cache stress,1.0418239954563435,2.3451694585233325,125.10226955332246
+2026,tasks_per_day,0.5,half/double task volume,1.0418239954563435,0.5209119977281718,-50.0
+2026,tasks_per_day,2.0,half/double task volume,1.0418239954563435,2.083647990912687,100.0
+2026,hardware,H100_SXM,same workload on each supported SKU,1.0418239954563435,1.0418239954563435,0.0
+2026,hardware,H200_SXM,same workload on each supported SKU,1.0418239954563435,0.536403367167672,-48.513053115779435
+2026,hardware,B200_SXM,same workload on each supported SKU,1.0418239954563435,0.5146772080505291,-50.5984494218634
+2026,hardware,GB300_NVL72,same workload on each supported SKU,1.0418239954563435,0.30369720805052913,-70.8494707959282
+2026,experts_per_token,4,"engineering stress, no probability assigned",1.0418239954563435,1.0244581724918518,-1.6668672482327618
+2026,experts_per_token,16,"engineering stress, no probability assigned",1.0418239954563435,1.1155382106615621,7.0754960076466755
+2026,all_to_all_latency_us_per_moe_layer,5,"engineering stress, no probability assigned",1.0418239954563435,0.5595839954563437,-46.288048855005236
+2026,all_to_all_latency_us_per_moe_layer,20,"engineering stress, no probability assigned",1.0418239954563435,2.0489163449837036,96.66626550353448
+2026,decode_batch_sequences,1,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,decode_batch_sequences,4,"engineering stress, no probability assigned",1.0418239954563435,0.31849599545634366,-69.42900174641929
+2026,prefill_batch_tokens,32,"engineering stress, no probability assigned",1.0418239954563435,1.0843083449837037,4.077881649169646
+2026,prefill_batch_tokens,128,"engineering stress, no probability assigned",1.0418239954563435,1.0413764074024228,-0.042961964388688045
+2026,cross_node_traffic_fraction,0,"engineering stress, no probability assigned",1.0418239954563435,1.0412798858504178,-0.05222663408587236
+2026,cross_node_traffic_fraction,1,"engineering stress, no probability assigned",1.0418239954563435,1.0423681050622697,0.052226634085905665
+2026,expert_weight_batch_reuse_factor,1,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,expert_weight_batch_reuse_factor,2,"engineering stress, no probability assigned",1.0418239954563435,1.0259403449837037,-1.524600176412949
+2026,usable_hbm_fraction,0.75,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,usable_hbm_fraction,0.95,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,runtime_hbm_reserve_fraction,0,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,runtime_hbm_reserve_fraction,0.2,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,tensor_parallel_size,2,"engineering stress, no probability assigned",1.0418239954563435,0.9212639954563437,-11.572012213751293
+2026,tensor_parallel_size,8,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,expert_parallel_size,24,"engineering stress, no probability assigned",1.0418239954563435,0.9212639954563437,-11.572012213751293
+2026,expert_parallel_size,96,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,target_gpu_pool_utilization,0.5,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,target_gpu_pool_utilization,0.9,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,scale_metadata_overhead_fraction,0,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,scale_metadata_overhead_fraction,0.06,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,bytes_per_parameter,0.5,"engineering stress, no probability assigned",1.0418239954563435,0.522583361050184,-49.8395733512281
+2026,bytes_per_parameter,1,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,bytes_per_element,1,"engineering stress, no probability assigned",1.0418239954563435,1.040456693384702,-0.13124117678271485
+2026,bytes_per_element,2,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,compute_efficiency,0.15,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,compute_efficiency,0.6,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,hbm_efficiency,0.35,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,hbm_efficiency,1,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,communication_efficiency,0.25,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2026,communication_efficiency,1,"engineering stress, no probability assigned",1.0418239954563435,1.0418239954563435,0.0
+2027,input_tokens,213797,trace marginal P10/P90,0.8043525067933311,0.7567445576257408,-5.918791669760115
+2027,input_tokens,1492152,trace marginal P10/P90,0.8043525067933311,0.9522656803106603,18.38909834532705
+2027,output_tokens,2990,trace marginal P10/P90,0.8043525067933311,0.367619412963827,-54.29623083672661
+2027,output_tokens,15558,trace marginal P10/P90,0.8043525067933311,1.5752897151088672,95.84568976964962
+2027,prefix_cache_hit_rate,0.7664788578305345,trace marginal P10/P90,0.8043525067933311,1.0613239171190874,31.947611048072734
+2027,prefix_cache_hit_rate,0.9574023583133762,trace marginal P10/P90,0.8043525067933311,0.7855694447494243,-2.3351779083511937
+2027,context_tokens,12412,trace marginal P10/P90,0.8043525067933311,0.8030690116863122,-0.15956873338230926
+2027,context_tokens,37811,trace marginal P10/P90,0.8043525067933311,0.8062989227358689,0.24198543873474865
+2027,prefix_cache_hit_rate,0,cold cache stress,0.8043525067933311,2.168364027367622,169.57882384330745
+2027,tasks_per_day,0.7497645951035782,half/double task volume,0.8043525067933311,0.4021762533966656,-50.0
+2027,tasks_per_day,2.9990583804143127,half/double task volume,0.8043525067933311,1.6087050135866623,100.0
+2027,hardware,H100_SXM,same workload on each supported SKU,0.8043525067933311,1.5622454922450348,94.22398501288383
+2027,hardware,H200_SXM,same workload on each supported SKU,0.8043525067933311,0.8043525067933311,0.0
+2027,hardware,B200_SXM,same workload on each supported SKU,0.8043525067933311,0.77177349700609,-4.050339808987746
+2027,hardware,GB300_NVL72,same workload on each supported SKU,0.8043525067933311,0.45540282845618424,-43.382680527507254
+2027,experts_per_token,4,"engineering stress, no probability assigned",0.8043525067933311,0.7692137473571319,-4.368577102629423
+2027,experts_per_token,16,"engineering stress, no probability assigned",0.8043525067933311,0.8817733233957444,9.625234701022144
+2027,all_to_all_latency_us_per_moe_layer,5,"engineering stress, no probability assigned",0.8043525067933311,0.4427860284505816,-44.95124653545087
+2027,all_to_all_latency_us_per_moe_layer,20,"engineering stress, no probability assigned",0.8043525067933311,1.5384274947142638,91.26284579474115
+2027,decode_batch_sequences,1,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,decode_batch_sequences,4,"engineering stress, no probability assigned",0.8043525067933311,0.26202678174625016,-67.42388697328013
+2027,prefill_batch_tokens,32,"engineering stress, no probability assigned",0.8043525067933311,0.8151985681605916,1.348421404254685
+2027,prefill_batch_tokens,128,"engineering stress, no probability assigned",0.8043525067933311,0.8038840851205517,-0.058235869077716274
+2027,cross_node_traffic_fraction,0,"engineering stress, no probability assigned",0.8043525067933311,0.803536598556573,-0.10143664995971857
+2027,cross_node_traffic_fraction,1,"engineering stress, no probability assigned",0.8043525067933311,0.8051684150300893,0.10143664995971857
+2027,expert_weight_batch_reuse_factor,1,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,expert_weight_batch_reuse_factor,2,"engineering stress, no probability assigned",0.8043525067933311,0.7714363082735859,-4.092260326379849
+2027,usable_hbm_fraction,0.75,"engineering stress, no probability assigned",0.8043525067933311,1.0453968256884976,29.967497690300583
+2027,usable_hbm_fraction,0.95,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,runtime_hbm_reserve_fraction,0,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,runtime_hbm_reserve_fraction,0.2,"engineering stress, no probability assigned",0.8043525067933311,1.0453968256884976,29.967497690300583
+2027,tensor_parallel_size,2,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,tensor_parallel_size,8,"engineering stress, no probability assigned",0.8043525067933311,1.0453968256884976,29.967497690300583
+2027,expert_parallel_size,16,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,expert_parallel_size,64,"engineering stress, no probability assigned",0.8043525067933311,1.0453968256884976,29.967497690300583
+2027,target_gpu_pool_utilization,0.5,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,target_gpu_pool_utilization,0.9,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,scale_metadata_overhead_fraction,0,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,scale_metadata_overhead_fraction,0.06,"engineering stress, no probability assigned",0.8043525067933311,1.0453968256884976,29.967497690300583
+2027,bytes_per_parameter,0.5,"engineering stress, no probability assigned",0.8043525067933311,0.5245853066447198,-34.781665723147206
+2027,bytes_per_parameter,1,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,bytes_per_element,1,"engineering stress, no probability assigned",0.8043525067933311,0.8029215617134013,-0.1779002449603162
+2027,bytes_per_element,2,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,compute_efficiency,0.17,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,compute_efficiency,0.68,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,hbm_efficiency,0.365,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,hbm_efficiency,1,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,communication_efficiency,0.265,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2027,communication_efficiency,1,"engineering stress, no probability assigned",0.8043525067933311,0.8043525067933311,0.0
+2028,input_tokens,213797,trace marginal P10/P90,0.5906282354128961,0.5687808952234613,-3.6990002982437487
+2028,input_tokens,1492152,trace marginal P10/P90,0.5906282354128961,0.6585057532819474,11.49242684302072
+2028,output_tokens,2990,trace marginal P10/P90,0.5906282354128961,0.2565994076048358,-56.55483564454848
+2028,output_tokens,15558,trace marginal P10/P90,0.5906282354128961,1.1802681222124711,99.83266146891366
+2028,prefix_cache_hit_rate,0.7664788578305345,trace marginal P10/P90,0.5906282354128961,0.7085526979975508,19.96593720281865
+2028,prefix_cache_hit_rate,0.9574023583133762,trace marginal P10/P90,0.5906282354128961,0.5820086676002197,-1.4593897304368775
+2028,context_tokens,12412,trace marginal P10/P90,0.5906282354128961,0.5900392380978509,-0.09972386684722334
+2028,context_tokens,37811,trace marginal P10/P90,0.5906282354128961,0.5915214478278452,0.1512309031965975
+2028,prefix_cache_hit_rate,0,cold cache stress,0.5906282354128961,1.216574621118197,105.97975988528799
+2028,tasks_per_day,1.1468926553672318,half/double task volume,0.5906282354128961,0.29531411770644805,-50.0
+2028,tasks_per_day,4.587570621468927,half/double task volume,0.5906282354128961,1.1812564708257922,100.0
+2028,hardware,H100_SXM,same workload on each supported SKU,0.5906282354128961,1.195557739803888,102.42136561048389
+2028,hardware,H200_SXM,same workload on each supported SKU,0.5906282354128961,0.8002537047232833,35.49194852898325
+2028,hardware,B200_SXM,same workload on each supported SKU,0.5906282354128961,0.5906282354128961,0.0
+2028,hardware,GB300_NVL72,same workload on each supported SKU,0.5906282354128961,0.45235885688182254,-23.410560186715813
+2028,experts_per_token,4,"engineering stress, no probability assigned",0.5906282354128961,0.5883217232533668,-0.39051843803519226
+2028,experts_per_token,16,"engineering stress, no probability assigned",0.5906282354128961,0.6264357137214294,6.062608619362897
+2028,all_to_all_latency_us_per_moe_layer,5,"engineering stress, no probability assigned",0.5906282354128961,0.3140894783507492,-46.82112037343158
+2028,all_to_all_latency_us_per_moe_layer,20,"engineering stress, no probability assigned",0.5906282354128961,1.1766434465067337,99.21896312392961
+2028,decode_batch_sequences,1,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,decode_batch_sequences,4,"engineering stress, no probability assigned",0.5906282354128961,0.1758384501021616,-70.22857365103168
+2028,prefill_batch_tokens,32,"engineering stress, no probability assigned",0.5906282354128961,0.6234925312524965,5.564294740603737
+2028,prefill_batch_tokens,128,"engineering stress, no probability assigned",0.5906282354128961,0.5904132761925085,-0.03639501254749655
+2028,cross_node_traffic_fraction,0,"engineering stress, no probability assigned",0.5906282354128961,0.5900042001021448,-0.10565619341158516
+2028,cross_node_traffic_fraction,1,"engineering stress, no probability assigned",0.5906282354128961,0.5930635293312242,0.4123226375429834
+2028,expert_weight_batch_reuse_factor,1,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,expert_weight_batch_reuse_factor,2,"engineering stress, no probability assigned",0.5906282354128961,0.5900216159982592,-0.10270748641281191
+2028,usable_hbm_fraction,0.75,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,usable_hbm_fraction,0.95,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,runtime_hbm_reserve_fraction,0,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,runtime_hbm_reserve_fraction,0.2,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,tensor_parallel_size,2,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,tensor_parallel_size,8,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,expert_parallel_size,12,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,expert_parallel_size,48,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,target_gpu_pool_utilization,0.5,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,target_gpu_pool_utilization,0.9,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,scale_metadata_overhead_fraction,0,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,scale_metadata_overhead_fraction,0.06,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,bytes_per_parameter,0.5,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,bytes_per_parameter,1,"engineering stress, no probability assigned",0.5906282354128961,1.1792456950568353,99.65955305750813
+2028,bytes_per_element,1,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,bytes_per_element,2,"engineering stress, no probability assigned",0.5906282354128961,0.5919415599521899,0.2223606086789287
+2028,compute_efficiency,0.19,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,compute_efficiency,0.76,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,hbm_efficiency,0.38,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,hbm_efficiency,1,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,communication_efficiency,0.285,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2028,communication_efficiency,1,"engineering stress, no probability assigned",0.5906282354128961,0.5906282354128961,0.0
+2030,input_tokens,213797,trace marginal P10/P90,0.683134295876028,0.6501413144631039,-4.829647934834702
+2030,input_tokens,1492152,trace marginal P10/P90,0.683134295876028,0.7856402149485948,15.005236846016734
+2030,output_tokens,2990,trace marginal P10/P90,0.683134295876028,0.30464771209297736,-55.404418438352955
+2030,output_tokens,15558,trace marginal P10/P90,0.683134295876028,1.3512526372822804,97.80190299909921
+2030,prefix_cache_hit_rate,0.7664788578305345,trace marginal P10/P90,0.683134295876028,0.8612191139110439,26.068786051305757
+2030,prefix_cache_hit_rate,0.9574023583133762,trace marginal P10/P90,0.683134295876028,0.6701173684988182,-1.9054712163905307
+2030,context_tokens,12412,trace marginal P10/P90,0.683134295876028,0.6822448156327102,-0.1302057660825251
+2030,context_tokens,37811,trace marginal P10/P90,0.683134295876028,0.684483189624589,0.19745659919345737
+2030,prefix_cache_hit_rate,0,cold cache stress,0.683134295876028,1.6284135513823395,138.3738543376918
+2030,tasks_per_day,1.7319915254237288,half/double task volume,0.683134295876028,0.341567147938014,-50.0
+2030,tasks_per_day,6.927966101694915,half/double task volume,0.683134295876028,1.366268591752056,100.0
+2030,hardware,H100_SXM,same workload on each supported SKU,0.683134295876028,1.8054835941311789,164.29409342066316
+2030,hardware,H200_SXM,same workload on each supported SKU,0.683134295876028,1.2085112135676428,76.90682796387634
+2030,hardware,B200_SXM,same workload on each supported SKU,0.683134295876028,0.891943194181113,30.566302931302204
+2030,hardware,GB300_NVL72,same workload on each supported SKU,0.683134295876028,0.683134295876028,0.0
+2030,experts_per_token,4,"engineering stress, no probability assigned",0.683134295876028,0.6669867712120527,-2.3637408868878773
+2030,experts_per_token,16,"engineering stress, no probability assigned",0.683134295876028,0.7372093208462731,7.915723935496621
+2030,all_to_all_latency_us_per_moe_layer,5,"engineering stress, no probability assigned",0.683134295876028,0.3699209484184011,-45.84945439695321
+2030,all_to_all_latency_us_per_moe_layer,20,"engineering stress, no probability assigned",0.683134295876028,1.3339735424241055,95.27251822622425
+2030,decode_batch_sequences,1,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,decode_batch_sequences,4,"engineering stress, no probability assigned",0.683134295876028,0.21333505858789262,-68.771139163154
+2030,prefill_batch_tokens,32,"engineering stress, no probability assigned",0.683134295876028,0.7074637119156308,3.561439703214364
+2030,prefill_batch_tokens,128,"engineering stress, no probability assigned",0.683134295876028,0.6828096730385893,-0.04751962233464635
+2030,cross_node_traffic_fraction,0,"engineering stress, no probability assigned",0.683134295876028,0.6821919026496628,-0.13795138555542374
+2030,cross_node_traffic_fraction,1,"engineering stress, no probability assigned",0.683134295876028,0.6840766891023937,0.13795138555547926
+2030,expert_weight_batch_reuse_factor,1,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,expert_weight_batch_reuse_factor,2,"engineering stress, no probability assigned",0.683134295876028,0.6695538814071562,-1.9879567679231713
+2030,usable_hbm_fraction,0.75,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,usable_hbm_fraction,0.95,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,runtime_hbm_reserve_fraction,0,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,runtime_hbm_reserve_fraction,0.2,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,tensor_parallel_size,2,"engineering stress, no probability assigned",0.683134295876028,0.5265276221472146,-22.924727198476603
+2030,tensor_parallel_size,8,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,expert_parallel_size,9,"engineering stress, no probability assigned",0.683134295876028,0.5265276221472146,-22.924727198476603
+2030,expert_parallel_size,36,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,target_gpu_pool_utilization,0.5,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,target_gpu_pool_utilization,0.9,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,scale_metadata_overhead_fraction,0,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,scale_metadata_overhead_fraction,0.06,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,bytes_per_parameter,0.5,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,bytes_per_parameter,1,"engineering stress, no probability assigned",0.683134295876028,1.0500186509610756,53.70603661679254
+2030,bytes_per_element,1,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,bytes_per_element,2,"engineering stress, no probability assigned",0.683134295876028,0.6851176261916796,0.29032802592763307
+2030,compute_efficiency,0.225,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,compute_efficiency,0.9,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,hbm_efficiency,0.4,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,hbm_efficiency,1,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,communication_efficiency,0.31,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
+2030,communication_efficiency,1,"engineering stress, no probability assigned",0.683134295876028,0.683134295876028,0.0
