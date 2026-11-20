@@ -86,3 +86,8 @@ python model.py
 ```
 
 当前 10T MoE 是以 Kimi K2 MLA/MoE 架构为模板、扩展 Routed Expert 数量的 **Synthetic 10T MoE**，不是已发布模型。推理吞吐、计算效率、HBM 有效带宽、跨节点通信比例和 All-to-All 延迟均为 C 类模型假设；输出属于 L1-L3 理论/约束估算，不是实测 serving benchmark。Dense 默认模式不变。
+
+
+### 10T MoE 后端验收说明
+
+MoE 推理模块位于 [inference/moe.py](inference/moe.py)，合成模型结构位于 [config/models/moe_10t.json](config/models/moe_10t.json)，硬件规格位于 [config/hardware/gpus.json](config/hardware/gpus.json)。模型假设和 L1-L3 边界见 [docs/moe-10t-model.md](docs/moe-10t-model.md)。Dense 默认路径不变。启用 MoE 后，团队业务 Token、训练/评测、CPU/RAM/SSD、存储与监督资源应通过集成测试保持不变，只有推理资源字段允许变化。CI 使用 `python -m unittest discover -s tests -v`。

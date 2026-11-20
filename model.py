@@ -76,7 +76,8 @@ def budgets(p, k, year=None, scale=1, level='AL4', *, settings=None):
         moe_result=calculate_moe(
             {'input_tokens': I, 'output_tokens': O, 'prefix_cache_hit_rate': p['cache'],
              'context_tokens': p['context'], 'peak_sequences': peak_sequences, 'decode_batch_sequences': peak_sequences},
-            hardware_name=settings['moe_hardware'], model_path=model_path)
+            hardware_name=settings['moe_hardware'], model_path=model_path,
+            tensor_parallel_size=settings['moe_tensor_parallel_size'])
         uncached=I*(1-p['cache'])
         prefill=moe_result['prefill']['gpu_hours']
         decode=moe_result['decode']['gpu_hours']

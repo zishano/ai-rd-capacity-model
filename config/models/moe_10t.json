@@ -53,7 +53,8 @@
       "H200_SXM": 32,
       "B200_SXM": 24,
       "GB300_NVL72": 18
-    }
+    },
+    "expert_weight_batch_reuse_factor": 1
   },
   "references": [
     {
