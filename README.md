@@ -86,3 +86,38 @@ python model.py
 ```
 
 当前 10T MoE 是以 Kimi K2 MLA/MoE 架构为模板、扩展 Routed Expert 数量的 **Synthetic 10T MoE**，不是已发布模型。推理吞吐、计算效率、HBM 有效带宽、跨节点通信比例和 All-to-All 延迟均为 C 类模型假设；输出属于 L1-L3 理论/约束估算，不是实测 serving benchmark。Dense 默认模式不变。
+
+
+### 10T MoE 后端验收说明
+
+MoE 推理模块位于 [inference/moe.py](inference/moe.py)，合成模型结构位于 [config/models/moe_10t.json](config/models/moe_10t.json)，硬件规格位于 [config/hardware/gpus.json](config/hardware/gpus.json)。模型假设和 L1-L3 边界见 [docs/moe-10t-model.md](docs/moe-10t-model.md)。Dense 默认路径不变。启用 MoE 后，团队业务 Token、训练/评测、CPU/RAM/SSD、存储与监督资源应通过集成测试保持不变，只有推理资源字段允许变化。CI 使用 `python -m unittest discover -s tests -v`。
+
+
+### MoE 激活参数与硬件敏感性扫描
+
+模型提供 Low/Base/High Active 三种 10T 总参数配置（Top-4/8/16），用于隔离 Top-K 对激活参数与推理需求的影响。运行 `python scripts/moe_hardware_sweep.py`，可生成三种激活场景 × 四种硬件的 CSV 对比。它是可复算的 L1-L3 情景分析，不是实际 serving benchmark。
+
+
+## 独立分析模块：10T MoE Agentic 推理需求预测
+
+本模块只研究单人单 Agent 直接推理需求，不修改团队主模型、训练/评测、CPU/RAM/SSD、团队存储、网络或团队成本汇总。
+
+- [情景配置](analysis/agentic_10t_forecast/forecast_config.json)
+- [图表说明与方法](analysis/agentic_10t_forecast/chart_notes.md)
+- [预测结果 CSV](analysis/agentic_10t_forecast/forecast_summary.csv)
+
+10T MoE 是 Kimi K2-style Synthetic 模型，不是已发布模型。未来 Agent 工作时长、Token 速率、上下文、Top-K 与 Serving 效率均为 C 类情景。GPU-hours 是分摊工作量；部署 GPU 数是权重/KV 容量下界，不是单 Agent 独占卡数或实测可行部署规模。完整可编辑 PPT、Excel、DOCX、10 张研究图和复算脚本见本次研究交付包。
+
+
+## 单 Agent 推理输入参数证据审计（2026-11-20）
+
+本次只更新独立 MoE 推理配置、硬件推理规格和独立证据审计目录；未修改团队主流程、团队业务参数和非推理资源公式。
+
+- [审计报告](analysis/agent_inference_evidence_audit/audit_report.md)
+- [52 项参数证据台账](analysis/agent_inference_evidence_audit/parameter_ledger.csv)
+- [独立单 Agent 参数配置](config/agent_inference_evidence.json)
+- [敏感性结果](analysis/agent_inference_evidence_audit/sensitivity_results.csv)
+
+审计发现：公开的 Agent-workdays、平台并发、AL4 工作覆盖率和 API list-price spend 均是研究员或平台级口径，不能直接转换成单 Agent 的 GPU-hours。当前单 Agent Token 速率和 Serving efficiency 仍是 C 类假设，必须用真实 Agent trace 和目标模型 Profile 校准。
+
+硬件 FP8 峰值已统一为 dense 口径；稀疏峰值单独记录。模型同时输出 HBM 原始容量下界与 TP×EP 分组取整后的候选部署卡数，避免把两者混为一谈。

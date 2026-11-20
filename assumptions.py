@@ -157,6 +157,8 @@ def validate_config(config):
     text(settings['moe_model_config'], 'settings.moe_model_config')
     text(settings['moe_hardware'], 'settings.moe_hardware')
     number(settings['moe_tensor_parallel_size'], 'settings.moe_tensor_parallel_size', positive=True, integer=True)
+    if settings['moe_hardware'] not in ('H100_SXM','H200_SXM','B200_SXM','GB300_NVL72'):
+        raise ValueError('settings.moe_hardware is not a supported hardware profile')
     for key in ('reference_year','layer_count','model_width','kv_heads','head_dimension'):
         number(settings[key], f'settings.{key}', positive=True, integer=True)
     for key in ('precision_bytes','kv_sequences'):

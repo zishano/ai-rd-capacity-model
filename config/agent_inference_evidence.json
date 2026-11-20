@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "as_of": "2026-11-20",
+    "scope": "single-Agent direct LLM inference only",
+    "evidence_legend": {
+      "A": "public measurement/specification",
+      "B": "derived from public source and formula",
+      "C": "assumption/scenario"
+    }
+  },
+  "public_observations": {
+    "openai_sep_2026": {
+      "median_api_equivalent_usd_per_researcher_day": 1500,
+      "p90_api_equivalent_usd_per_researcher_day": 11000,
+      "agent_workdays_per_researcher_day": 3.1,
+      "mid_aug_agent_api_spend_median_gt": 600,
+      "mid_aug_agent_api_spend_p90_gt": 7000
+    },
+    "openai_oct_2026": {
+      "median_api_equivalent_usd_per_researcher_day": 2400,
+      "p90_api_equivalent_usd_per_researcher_day": 23000
+    },
+    "openai_nov_2026": {
+      "agent_workdays_per_researcher_day": 5.7,
+      "agent_hours_per_researcher_day_derived": 45.6,
+      "researcher_daily_peak_concurrency": {
+        "fraction_peak_ge_4": ">2/3",
+        "fraction_peak_ge_16": ">10%"
+      },
+      "internal_deployment_share_of_total_research_compute": 0.02
+    },
+    "anthropic_aug_2026": {
+      "simultaneous_agents_one_internal_platform": 30000,
+      "importance_weighted_AL4_R&D_share": 0.26,
+      "AI_R&D_compute_to_safety_share": 0.06,
+      "AI_driven_AI_R&D_compute_to_safety_share": 0.12
+    }
+  },
+  "api_spend_to_token_equivalent": {
+    "purpose": "conditional cross-check only; not an observed token count",
+    "assumed_input_output_ratio": 10,
+    "assumed_input_prefix_cache_hit_rate": 0.55,
+    "prices_usd_per_million_tokens": {
+      "gpt_6_2_astra": {
+        "input": 8,
+        "cached_input": 0.4,
+        "output": 40
+      },
+      "gpt_6_2_sol": {
+        "input": 2,
+        "cached_input": 0.1,
+        "output": 10
+      }
+    },
+    "formula": "effective_input_price=(1-cache_hit)*input_price+cache_hit*cached_input_price; blended_price=(ratio*effective_input_price+output_price)/(ratio+1); token_equivalent=API_list_price_spend/blended_price",
+    "derived_token_equivalent_million_per_researcher_day": {
+      "september_median": {
+        "low_astra": 211,
+        "high_sol": 844
+      },
+      "october_median": {
+        "low_astra": 337.6,
+        "high_sol": 1350.4
+      },
+      "october_p90": {
+        "low_astra": 3235.3,
+        "high_sol": 12941.2
+      }
+    },
+    "warning": "Conditional on model choice, 10:1 input/output mix and 55% input cache hit. Not measured tokens and not attributable to one Agent. Cache-write costs and tool fees are omitted."
+  },
+  "single_agent_scenarios": {
+    "conservative": {
+      "online_hours_per_day": 12,
+      "inference_active_duty": 0.1,
+      "input_tokens_per_inference_active_hour": 60000,
+      "output_tokens_per_inference_active_hour": 5000,
+      "prefix_cache_hit_rate": 0.35,
+      "context_tokens": 8192,
+      "top_k": 4,
+      "hardware": "H100_SXM",
+      "prefill_batch_tokens": 1024,
+      "decode_batch_sequences": 1,
+      "compute_efficiency": 0.2,
+      "hbm_efficiency": 0.5,
+      "communication_efficiency": 0.3,
+      "cross_node_traffic_fraction": 0.5,
+      "a2a_latency_us_per_moe_layer": 20,
+      "expert_weight_reuse_factor": 1,
+      "evidence": "C; lower-intensity scenario bounded by legacy config ranges, not a measured single-agent trace"
+    },
+    "base": {
+      "online_hours_per_day": 24,
+      "inference_active_duty": 0.24,
+      "input_tokens_per_inference_active_hour": 110000,
+      "output_tokens_per_inference_active_hour": 8000,
+      "prefix_cache_hit_rate": 0.55,
+      "context_tokens": 16384,
+      "top_k": 8,
+      "hardware": "H100_SXM",
+      "prefill_batch_tokens": 8192,
+      "decode_batch_sequences": 1,
+      "compute_efficiency": 0.3,
+      "hbm_efficiency": 0.7,
+      "communication_efficiency": 0.5,
+      "cross_node_traffic_fraction": 0.5,
+      "a2a_latency_us_per_moe_layer": 10,
+      "expert_weight_reuse_factor": 1,
+      "evidence": "C; retains AL4 planning point; 8192 prefill batch budget is a public Kimi serving config example, not observed average occupancy"
+    },
+    "aggressive": {
+      "online_hours_per_day": 24,
+      "inference_active_duty": 0.5,
+      "input_tokens_per_inference_active_hour": 250000,
+      "output_tokens_per_inference_active_hour": 22000,
+      "prefix_cache_hit_rate": 0.7,
+      "context_tokens": 65536,
+      "top_k": 16,
+      "hardware": "H100_SXM",
+      "prefill_batch_tokens": 32768,
+      "decode_batch_sequences": 1,
+      "compute_efficiency": 0.4,
+      "hbm_efficiency": 0.8,
+      "communication_efficiency": 0.6,
+      "cross_node_traffic_fraction": 0.5,
+      "a2a_latency_us_per_moe_layer": 10,
+      "expert_weight_reuse_factor": 1,
+      "evidence": "C; stress scenario within legacy parameter ranges, not an observed AL5/10T workload"
+    }
+  },
+  "sensitivity_ranges": {
+    "inference_active_duty": [
+      0.05,
+      0.65
+    ],
+    "input_tokens_per_active_hour": [
+      25000,
+      250000
+    ],
+    "output_tokens_per_active_hour": [
+      2000,
+      22000
+    ],
+    "prefix_cache_hit_rate": [
+      0.1,
+      0.85
+    ],
+    "context_tokens": [
+      4096,
+      131072
+    ],
+    "top_k": [
+      4,
+      8,
+      16
+    ],
+    "decode_batch_sequences": [
+      1,
+      4,
+      16,
+      64,
+      100
+    ],
+    "compute_efficiency": [
+      0.1,
+      0.5
+    ],
+    "hbm_efficiency": [
+      0.4,
+      0.9
+    ],
+    "communication_efficiency": [
+      0.2,
+      0.8
+    ],
+    "cross_node_traffic_fraction": [
+      0.1,
+      0.9
+    ],
+    "a2a_latency_us_per_moe_layer": [
+      5,
+      10,
+      50
+    ],
+    "expert_weight_reuse_factor": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "prefill_batch_tokens": [
+      1024,
+      8192,
+      32768
+    ],
+    "usable_hbm_fraction": [
+      0.8,
+      0.95
+    ],
+    "runtime_hbm_reserve_fraction": [
+      0.05,
+      0.2
+    ],
+    "tensor_parallel_size": [
+      4,
+      8,
+      16
+    ],
+    "inter_node_bandwidth": "must be configured from actual NIC/rail/oversubscription; no universal range inferred"
+  },
+  "important_boundary": "Single-Agent GPU-hours are a workload allocation metric. Deployment GPU count is the resident model capacity/replica requirement. OpenAI and Anthropic public data are researcher/platform aggregates, not per-Agent GPU traces."
+}

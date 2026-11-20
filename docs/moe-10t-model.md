@@ -19,7 +19,7 @@
 `P_total = P_routed + P_non_routed`
 `P_active = P_non_routed + P_expert × top_k`
 
-默认推导：Routed Expert 总参数约 9.9883T，总参数约 10.0003T，每 Token 激活参数约 33.14B。12B non-routed 参数是包含 attention、router、embedding、首层 Dense 和 shared expert 的合成预算项，属于 C 类假设；若有真实 10T 模型结构，应逐层替换。
+默认推导：Routed Expert 总参数约 9.9883T，总参数 10.000T，每 Token 激活参数约 32.82B。10.058752B non-routed 参数预算包含 attention、embedding、首层 Dense、shared expert 等，不含单独计算的 router 参数，属于 C 类假设；若有真实 10T 模型结构，应逐层替换。
 
 ## Token 到 FLOPs
 权重矩阵近似：`F_weights/token ≈ 2 × P_active`。
@@ -69,3 +69,55 @@ r = calculate({
 }, hardware_name="H100_SXM")
 ```
 这些 Token 值由现有 AL4 业务参数计算而来，不是头部厂商的单 Agent trace 实测。
+
+
+## 额外建模边界
+
+MoE 权重流量不应把所有激活参数简单除以 batch size。当前把每 Token 权重读取拆为 routed expert 和 non-routed/shared 两部分：
+
+`W_token = P_routed_active / expert_weight_batch_reuse_factor + P_shared_active / batch_size`
+
+默认 `expert_weight_batch_reuse_factor=1.0`，不假设不同 Token 会复用同一专家权重；真实复用取决于路由分布、专家命中频率、权重缓存和 kernel 调度，应使用 profiler 校准。Prefill/Decode collective latency 分别按 batch rounds 计数，不再把每个 Token 误当成独立 collective。计算、HBM、通信时间是简化下界，未建模真实通信重叠、专家负载偏斜、热点专家复制、token permutation、拥塞和引擎 Buffer，不能标记为实测性能。
+
+
+## Low / Base / High 激活参数场景
+
+为满足激活参数敏感性分析，提供三种模型配置。三者保持 10T 总参数、层数、隐藏维度、专家数量和权重精度不变，只改变每 Token 激活的 Routed Experts 数量：
+
+| 场景 | Top-K | 近似激活参数 |
+|---|---:|---:|
+| Low Active | 4 | 22.25B |
+| Base Active | 8 | 32.82B |
+| High Active | 16 | 53.97B |
+
+这是结构敏感性场景，不是三个真实发布模型，也不代表 Top-K 增加后质量或性能必然按比例变化。运行硬件扫描：
+
+```bash
+python scripts/moe_hardware_sweep.py
+```
+
+默认输出 `modelout/moe_hardware_sweep.csv`，比较三种激活场景与 H100/H200/B200/GB300 的参数量、部署 GPU 下界、FLOPs、GPU-hours、KV 和瓶颈标签。
+
+
+## 单 Agent 输入参数证据审计（2026-11-20）
+
+完整参数台账和 OpenAI/Anthropic 证据口径见 [analysis/agent_inference_evidence_audit/audit_report.md](../analysis/agent_inference_evidence_audit/audit_report.md)。本次明确区分 Agent wall-clock runtime、LLM inference active time、GPU busy time；公开的 researcher/platform aggregates 不直接转换为单 Agent GPU-hours。
+
+独立工作负载构造器：
+```python
+from inference.agent_workload import build_daily_workload
+workload = build_daily_workload(
+    online_hours=24, inference_duty=0.24,
+    input_tokens_per_active_hour=110000,
+    output_tokens_per_active_hour=8000,
+    prefix_cache_hit_rate=0.55, context_tokens=16384)
+```
+当前点值仍为 C 类假设；单 Agent Token rate 和 inference duty 没有可比公开 trace 支持。OpenAI API list-price spend 只能通过指定模型价格、Input:Output 比和缓存命中率生成条件 Token 等价区间，不能视为实测 Token 数。
+
+## HBM 容量下界与分组部署数
+
+输出字段 `hbm_capacity_lower_bound_gpus` 是权重、KV 与 runtime reserve 除以可用 HBM 后的原始容量下界；`deployment_gpus_per_replica` 是再按 TP×EP group size 取整的候选部署规模。后者不是实测可行部署配置。两者不能和单 Agent GPU-hours 混为一谈。
+
+FP8 scale metadata 默认采用 128×128 block、每块一个 FP32 scale 的 scale-only 理论下界（0.0244%），不包含 padding/layout 额外开销。真实 checkpoint 的 scale dtype、group layout 和实际权重占用必须从文件与引擎 profile 校准。
+
+硬件 FP8 roofline 使用 dense peak：H100/H200 1,979 TFLOPS、B200 4,500 TFLOPS、GB300 5,000 TFLOPS；稀疏峰值另存于硬件配置，不得混用。Inter-node per-GPU bandwidth 是 C 类网络配置项，不是 GPU 官方规格。
