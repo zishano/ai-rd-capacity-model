@@ -23,4 +23,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: agent-inference-evidence-audit
-          path: artifacts/agent-inference-scenarios.csv
+          path: artifacts/agent_inference_scenarios.csv
