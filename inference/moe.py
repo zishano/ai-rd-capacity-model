@@ -111,7 +111,7 @@ def calculate(workload,hardware_name="H100_SXM",model_path=DEFAULT_MODEL,hardwar
       "total_parameters":total_p,"active_parameters":active_p,"parameter_stats":stats,
       "input_tokens":I,"output_tokens":O,"uncached_input_tokens":uncached,
       "prefill":pre,"decode":dec,"prefill_eflop":pf_flops/1e18,"decode_eflop":dc_flops/1e18,
-      "infer_gpu_h":infer_gpu_h,"infer_cards":cards,"deployment_gpus_per_replica":ngpu,"deployment_replicas":replicas,
+      "infer_gpu_h":infer_gpu_h,"infer_cards":cards,"hbm_capacity_lower_bound_gpus":min_gpus,"deployment_group_size":group,"deployment_gpus_per_replica":ngpu,"deployment_replicas":replicas,
       "weights_gb_per_replica":weight_gb,"kv_peak_gb":kv_gb,"kv_bytes_per_token":kv_bpt,
       "kv_slots_per_replica":max(0,int((ngpu*usable-weight_gb-runtime_gb)*1e9/(kv_bpt*context))),
       "kv_replicas":replicas,"throughput_replicas":replicas,
