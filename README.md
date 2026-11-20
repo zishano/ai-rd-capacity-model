@@ -96,3 +96,14 @@ MoE 推理模块位于 [inference/moe.py](inference/moe.py)，合成模型结构
 ### MoE 激活参数与硬件敏感性扫描
 
 模型提供 Low/Base/High Active 三种 10T 总参数配置（Top-4/8/16），用于隔离 Top-K 对激活参数与推理需求的影响。运行 `python scripts/moe_hardware_sweep.py`，可生成三种激活场景 × 四种硬件的 CSV 对比。它是可复算的 L1-L3 情景分析，不是实际 serving benchmark。
+
+
+## 独立分析模块：10T MoE Agentic 推理需求预测
+
+本模块只研究单人单 Agent 直接推理需求，不修改团队主模型、训练/评测、CPU/RAM/SSD、团队存储、网络或团队成本汇总。
+
+- [情景配置](analysis/agentic_10t_forecast/forecast_config.json)
+- [图表说明与方法](analysis/agentic_10t_forecast/chart_notes.md)
+- [预测结果 CSV](analysis/agentic_10t_forecast/forecast_summary.csv)
+
+10T MoE 是 Kimi K2-style Synthetic 模型，不是已发布模型。未来 Agent 工作时长、Token 速率、上下文、Top-K 与 Serving 效率均为 C 类情景。GPU-hours 是分摊工作量；部署 GPU 数是权重/KV 容量下界，不是单 Agent 独占卡数或实测可行部署规模。完整可编辑 PPT、Excel、DOCX、10 张研究图和复算脚本见本次研究交付包。

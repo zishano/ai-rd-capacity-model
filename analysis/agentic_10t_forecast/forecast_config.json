@@ -1,0 +1,24 @@
+{
+ "as_of":"2026-11-20",
+ "scope":"Standalone single-Agent inference forecast only; team capacity model and all non-inference calculations unchanged.",
+ "evidence":{"A":"public model/hardware specs or public price","B":"formula-derived","C":"scenario assumption"},
+ "model":{"name":"Synthetic 10T MoE, Kimi-K2-style MLA","total_parameters":10000000000000,"top_k":{"conservative":4,"base":8,"aggressive":16},"weight_bytes":{"2026":1,"2027":1,"2028":0.5,"2030":0.5},"kv_bytes":{"2026":2,"2027":2,"2028":1,"2030":1}},
+ "hardware":{
+  "H100_SXM":{"hbm_gb":80,"hbm_tb_s":3.35,"fp8_dense_tflops":1979,"price_normalized":4.09},
+  "H200_SXM":{"hbm_gb":141,"hbm_tb_s":4.8,"fp8_dense_tflops":1979,"price_normalized":4.09},
+  "B200_SXM":{"hbm_gb":180,"hbm_tb_s":8,"fp8_dense_tflops":4500,"price_normalized":4.09,"public_price":6.79},
+  "GB300_NVL72":{"hbm_gb":279,"hbm_tb_s":8,"fp8_dense_tflops":5000,"price_normalized":4.09}},
+ "serving":{"tp":4,"ep":{"H100_SXM":48,"H200_SXM":32,"B200_SXM":24,"GB300_NVL72":18},"prefill_batch_tokens":64,"decode_batch_sequences":1,"pool_utilization":0.7,"compute_efficiency":{"2026":0.30,"2027":0.34,"2028":0.38,"2030":0.45},"hbm_efficiency":{"2026":0.70,"2027":0.73,"2028":0.76,"2030":0.80},"communication_efficiency":{"2026":0.50,"2027":0.53,"2028":0.57,"2030":0.62},"cross_node_fraction":0.5,"a2a_latency_us_per_layer":10},
+ "scenarios":{
+  "conservative":{"2026":[10,0.20,90000,6000,16384,4,"H100_SXM"],"2027":[11,0.21,100000,7000,16384,4,"H200_SXM"],"2028":[12,0.22,110000,8000,24576,4,"H200_SXM"],"2030":[14,0.23,120000,9000,32768,4,"B200_SXM"]},
+  "base":{"2026":[12,0.24,110000,8000,16384,8,"H100_SXM"],"2027":[14,0.26,130000,10000,24576,8,"H200_SXM"],"2028":[16,0.28,160000,14000,32768,8,"B200_SXM"],"2030":[18,0.30,200000,18000,65536,8,"GB300_NVL72"]},
+  "aggressive":{"2026":[14,0.28,140000,12000,32768,16,"H100_SXM"],"2027":[17,0.32,180000,18000,65536,16,"H200_SXM"],"2028":[19,0.38,240000,26000,131072,16,"B200_SXM"],"2030":[22,0.45,320000,36000,262144,16,"GB300_NVL72"]}},
+ "tuple_order":["online_hours","inference_duty","input_tokens_per_active_hour","output_tokens_per_active_hour","context_tokens","top_k","hardware"],
+ "sources":[
+  {"type":"A","name":"Kimi K2 architecture template","url":"https://github.com/MoonshotAI/Kimi-K2"},
+  {"type":"A","name":"NVIDIA H100/H200/B200 specifications","url":"https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory-h100-h200-b200/latest/components.html"},
+  {"type":"A","name":"NVIDIA GB300 Blackwell Ultra specifications","url":"https://resources.nvidia.com/en-us-gpu-resources/blackwell-ultra-datasheet"},
+  {"type":"A","name":"Lambda public instance prices effective 2026-11-16","url":"https://lambda.com/instances"}],
+ "price_note":"USD/day uses H100 $4.09/GPU-hour normalized across hardware for comparison; B200 public price is $6.79/GPU-hour. H200/GB300 same-scope quotes unavailable; normalized prices are not market quotes.",
+ "limitations":["Synthetic 10T model, not a released model","Future workload and efficiency inputs are C assumptions","GPU counts are weight/KV capacity lower bounds","GPU-hours are allocated work, not dedicated replica capacity","No measured serving benchmark or full communication/compute overlap"]
+}
