@@ -91,3 +91,8 @@ python model.py
 ### 10T MoE 后端验收说明
 
 MoE 推理模块位于 [inference/moe.py](inference/moe.py)，合成模型结构位于 [config/models/moe_10t.json](config/models/moe_10t.json)，硬件规格位于 [config/hardware/gpus.json](config/hardware/gpus.json)。模型假设和 L1-L3 边界见 [docs/moe-10t-model.md](docs/moe-10t-model.md)。Dense 默认路径不变。启用 MoE 后，团队业务 Token、训练/评测、CPU/RAM/SSD、存储与监督资源应通过集成测试保持不变，只有推理资源字段允许变化。CI 使用 `python -m unittest discover -s tests -v`。
+
+
+### MoE 激活参数与硬件敏感性扫描
+
+模型提供 Low/Base/High Active 三种 10T 总参数配置（Top-4/8/16），用于隔离 Top-K 对激活参数与推理需求的影响。运行 `python scripts/moe_hardware_sweep.py`，可生成三种激活场景 × 四种硬件的 CSV 对比。它是可复算的 L1-L3 情景分析，不是实际 serving benchmark。

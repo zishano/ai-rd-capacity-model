@@ -19,7 +19,7 @@
 `P_total = P_routed + P_non_routed`
 `P_active = P_non_routed + P_expert × top_k`
 
-默认推导：Routed Expert 总参数约 9.9883T，总参数 10.000T，每 Token 激活参数约 32.82B。12B non-routed 参数是包含 attention、router、embedding、首层 Dense 和 shared expert 的合成预算项，属于 C 类假设；若有真实 10T 模型结构，应逐层替换。
+默认推导：Routed Expert 总参数约 9.9883T，总参数 10.000T，每 Token 激活参数约 32.82B。10.058752B non-routed 参数预算包含 attention、embedding、首层 Dense、shared expert 等，不含单独计算的 router 参数，属于 C 类假设；若有真实 10T 模型结构，应逐层替换。
 
 ## Token 到 FLOPs
 权重矩阵近似：`F_weights/token ≈ 2 × P_active`。
@@ -78,3 +78,22 @@ MoE 权重流量不应把所有激活参数简单除以 batch size。当前把�
 `W_token = P_routed_active / expert_weight_batch_reuse_factor + P_shared_active / batch_size`
 
 默认 `expert_weight_batch_reuse_factor=1.0`，不假设不同 Token 会复用同一专家权重；真实复用取决于路由分布、专家命中频率、权重缓存和 kernel 调度，应使用 profiler 校准。Prefill/Decode collective latency 分别按 batch rounds 计数，不再把每个 Token 误当成独立 collective。计算、HBM、通信时间是简化下界，未建模真实通信重叠、专家负载偏斜、热点专家复制、token permutation、拥塞和引擎 Buffer，不能标记为实测性能。
+
+
+## Low / Base / High 激活参数场景
+
+为满足激活参数敏感性分析，提供三种模型配置。三者保持 10T 总参数、层数、隐藏维度、专家数量和权重精度不变，只改变每 Token 激活的 Routed Experts 数量：
+
+| 场景 | Top-K | 近似激活参数 |
+|---|---:|---:|
+| Low Active | 4 | 22.25B |
+| Base Active | 8 | 32.82B |
+| High Active | 16 | 53.97B |
+
+这是结构敏感性场景，不是三个真实发布模型，也不代表 Top-K 增加后质量或性能必然按比例变化。运行硬件扫描：
+
+```bash
+python scripts/moe_hardware_sweep.py
+```
+
+默认输出 `modelout/moe_hardware_sweep.csv`，比较三种激活场景与 H100/H200/B200/GB300 的参数量、部署 GPU 下界、FLOPs、GPU-hours、KV 和瓶颈标签。
