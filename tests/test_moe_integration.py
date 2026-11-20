@@ -13,7 +13,8 @@ BASELINE={
 }
 
 def run(config,out):
- subprocess.run([sys.executable,str(ROOT/"model.py"),str(out),"--config",str(config)],cwd=ROOT,check=True,capture_output=True,text=True)
+ result=subprocess.run([sys.executable,str(ROOT/"model.py"),str(out),"--config",str(config)],cwd=ROOT,capture_output=True,text=True)
+ if result.returncode: raise RuntimeError(result.stderr or result.stdout)
  z=json.loads((out/"results.json").read_text(encoding="utf-8"))
  return next(x for x in z["profiles"] if x["level"]=="AL4")
 
