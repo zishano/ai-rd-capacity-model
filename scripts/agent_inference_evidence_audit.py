@@ -1,10 +1,10 @@
 """Reproduce evidence-audit scenario GPU-hours; does not call or modify team model."""
-import argparse,csv,json,tempfile
+import argparse,csv,json,tempfile,sys
 from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 from inference.moe import calculate,DEFAULT_MODEL,DEFAULT_HARDWARE
 from inference.agent_workload import build_daily_workload
-
-ROOT=Path(__file__).resolve().parents[1]
 def main():
  p=argparse.ArgumentParser()
  p.add_argument("--config",type=Path,default=ROOT/"config/agent_inference_evidence.json")
