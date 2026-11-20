@@ -19,8 +19,9 @@ class MoEModelTest(unittest.TestCase):
 
     def test_parameter_accounting(self):
         z=architecture_stats(_read(DEFAULT_MODEL))
-        self.assertAlmostEqual(z["total_parameters_derived"],1e13,delta=1e9)
-        self.assertAlmostEqual(z["active_parameters_derived"]/1e9,32.82374656,places=5)
+        self.assertEqual(z["total_parameters_derived"],39_998_895_001_600)
+        self.assertEqual(z["target_total_parameters"],40_000_000_000_000)
+        self.assertAlmostEqual(z["active_parameters_derived"]/1e9,37.70558464,places=5)
         self.assertLess(z["active_parameters_derived"],z["total_parameters_derived"])
 
     def test_hardware_profiles_are_feasible(self):
@@ -38,7 +39,7 @@ class MoEModelTest(unittest.TestCase):
 
     def test_tensor_parallel_override(self):
         a=calculate(self.workload,"H100_SXM",tensor_parallel_size=4)
-        b=calculate(self.workload,"H100_SXM",tensor_parallel_size=8)
+        b=calculate(self.workload,"H100_SXM",tensor_parallel_size=6)
         self.assertNotEqual(a["deployment_gpus_per_replica"],b["deployment_gpus_per_replica"])
 
 if __name__=="__main__":

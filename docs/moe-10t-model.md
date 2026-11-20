@@ -1,7 +1,7 @@
 # Synthetic 10T MoE 单 Agent 推理模型
 
 ## 范围与兼容性
-本模块只替换推理计算，不修改团队业务工作负载、AL3/AL4/AL5、训练/评测/合成、CPU/RAM/SSD、持久存储、网络控制平面、人工复核或资源汇总公式。默认 `settings.inference_engine=dense`，原 Dense 路径保持默认。切换为 `moe_10t` 才启用本模块。
+本模块只替换推理计算，不修改团队业务工作负载、AL3/AL4/AL5、训练/评测/合成、CPU/RAM/SSD、持久存储、网络控制平面、人工复核或资源汇总公式。默认 `settings.inference_engine=dense`，原 Dense 路径保持默认。在 40T 分支上复现此 10T 模型时，将 `settings.inference_engine.value` 设为 `moe_10t`，并将 `settings.moe_model_config.value` 设为 `config/models/moe_10t.json`。
 
 输入直接来自既有模型计算出的团队每日 Input/Output Tokens、Prefix Cache 命中率、上下文长度和峰值活跃序列数，不另行定义 Agent 业务参数。
 

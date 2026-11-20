@@ -27,7 +27,7 @@ class MoEIntegrationTest(unittest.TestCase):
  def test_moe_only_changes_inference_resource_outputs(self):
   with tempfile.TemporaryDirectory() as td:
    p=Path(td); cfg=json.loads((ROOT/"config/assumptions.json").read_text(encoding="utf-8"))
-   cfg["settings"]["inference_engine"]["value"]="moe_10t"
+   cfg["settings"]["inference_engine"]["value"]="moe_40t"
    cfg["settings"]["moe_hardware"]["value"]="H100_SXM"
    cp=p/"moe.json"; cp.write_text(json.dumps(cfg),encoding="utf-8")
    dense=run(ROOT/"config/assumptions.json",p/"dense")
@@ -35,7 +35,7 @@ class MoEIntegrationTest(unittest.TestCase):
    for k in ("input_m","output_m","train_gpu_h","eval_gpu_h","synth_gpu_h","cpu_peak","cpu_h","ram_peak_tib","ram_gib_h","ssd_peak_tb","fs_tb","obj_tb","backup_tb","durable_tb","new_exp_day","attempts_day","review_h_day"):
     self.assertAlmostEqual(dense[k],moe[k],places=8,msg=k)
    self.assertNotEqual(dense["infer_cards"],moe["infer_cards"])
-   self.assertGreater(moe["total_parameters"],1e12)
+   self.assertEqual(moe["total_parameters"],39_998_895_001_600)
    self.assertGreater(moe["active_parameters"],0)
 
 if __name__=="__main__": unittest.main()

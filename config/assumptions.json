@@ -1800,12 +1800,12 @@
         "kind": "C",
         "as_of": "2026-11-20",
         "scope": "可选的单 Agent 推理后端选择；默认 Dense 保持兼容",
-        "rationale": "通过配置选择 Dense 或 Synthetic 10T MoE 推理计算器；不改变团队工作负载与非推理资源公式。",
+        "rationale": "通过配置选择 Dense 或 Synthetic 40T MoE 推理计算器；不改变团队工作负载与非推理资源公式。",
         "calibration": "仅在完成模型结构、硬件和 serving profile 校准后启用 MoE；默认保持 dense。",
         "references": [
           {
-            "title": "本仓库 10T MoE 推理模型配置",
-            "url": "https://github.com/zishano/ai-rd-capacity-model/blob/main/config/models/moe_10t.json",
+            "title": "本仓库 40T MoE 推理模型配置",
+            "url": "https://github.com/zishano/ai-rd-capacity-model/blob/feat/synthetic-40t-moe-inference/config/models/moe_40t.json",
             "role": "implementation"
           }
         ]
@@ -1814,17 +1814,17 @@
     "moe_model_config": {
       "label": "MoE 模型配置路径",
       "unit": "仓库相对路径",
-      "value": "config/models/moe_10t.json",
+      "value": "config/models/moe_40t.json",
       "evidence": {
         "kind": "C",
         "as_of": "2026-11-20",
         "scope": "可选的单 Agent 推理后端选择；默认 Dense 保持兼容",
-        "rationale": "通过配置选择 Dense 或 Synthetic 10T MoE 推理计算器；不改变团队工作负载与非推理资源公式。",
+        "rationale": "通过配置选择 Dense 或 Synthetic 40T MoE 推理计算器；不改变团队工作负载与非推理资源公式。",
         "calibration": "仅在完成模型结构、硬件和 serving profile 校准后启用 MoE；默认保持 dense。",
         "references": [
           {
-            "title": "本仓库 10T MoE 推理模型配置",
-            "url": "https://github.com/zishano/ai-rd-capacity-model/blob/main/config/models/moe_10t.json",
+            "title": "本仓库 40T MoE 推理模型配置",
+            "url": "https://github.com/zishano/ai-rd-capacity-model/blob/feat/synthetic-40t-moe-inference/config/models/moe_40t.json",
             "role": "implementation"
           }
         ]
@@ -1838,12 +1838,12 @@
         "kind": "C",
         "as_of": "2026-11-20",
         "scope": "可选的单 Agent 推理后端选择；默认 Dense 保持兼容",
-        "rationale": "通过配置选择 Dense 或 Synthetic 10T MoE 推理计算器；不改变团队工作负载与非推理资源公式。",
+        "rationale": "通过配置选择 Dense 或 Synthetic 40T MoE 推理计算器；不改变团队工作负载与非推理资源公式。",
         "calibration": "仅在完成模型结构、硬件和 serving profile 校准后启用 MoE；默认保持 dense。",
         "references": [
           {
-            "title": "本仓库 10T MoE 推理模型配置",
-            "url": "https://github.com/zishano/ai-rd-capacity-model/blob/main/config/models/moe_10t.json",
+            "title": "本仓库 40T MoE 推理模型配置",
+            "url": "https://github.com/zishano/ai-rd-capacity-model/blob/feat/synthetic-40t-moe-inference/config/models/moe_40t.json",
             "role": "implementation"
           }
         ]
@@ -1857,12 +1857,12 @@
         "kind": "C",
         "as_of": "2026-11-20",
         "scope": "可选的单 Agent 推理后端选择；默认 Dense 保持兼容",
-        "rationale": "通过配置选择 Dense 或 Synthetic 10T MoE 推理计算器；不改变团队工作负载与非推理资源公式。",
+        "rationale": "通过配置选择 Dense 或 Synthetic 40T MoE 推理计算器；不改变团队工作负载与非推理资源公式。",
         "calibration": "仅在完成模型结构、硬件和 serving profile 校准后启用 MoE；默认保持 dense。",
         "references": [
           {
-            "title": "本仓库 10T MoE 推理模型配置",
-            "url": "https://github.com/zishano/ai-rd-capacity-model/blob/main/config/models/moe_10t.json",
+            "title": "本仓库 40T MoE 推理模型配置",
+            "url": "https://github.com/zishano/ai-rd-capacity-model/blob/feat/synthetic-40t-moe-inference/config/models/moe_40t.json",
             "role": "implementation"
           }
         ]

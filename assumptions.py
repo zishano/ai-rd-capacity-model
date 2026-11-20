@@ -152,8 +152,8 @@ def validate_config(config):
             else:
                 check_value(group, key, entry['value'], f'{path}.value')
     settings = setting_values(config)
-    if settings['inference_engine'] not in ('dense','moe_10t'):
-        raise ValueError('settings.inference_engine must be dense or moe_10t')
+    if settings['inference_engine'] not in ('dense','moe_10t','moe_40t'):
+        raise ValueError('settings.inference_engine must be dense, moe_10t or moe_40t')
     text(settings['moe_model_config'], 'settings.moe_model_config')
     text(settings['moe_hardware'], 'settings.moe_hardware')
     number(settings['moe_tensor_parallel_size'], 'settings.moe_tensor_parallel_size', positive=True, integer=True)

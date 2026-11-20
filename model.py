@@ -70,7 +70,7 @@ def budgets(p, k, year=None, scale=1, level='AL4', *, settings=None):
     peak=p['peak']
     peak_sequences = active * peak * settings['kv_sequences']
     moe_extra={}
-    if settings.get('inference_engine','dense') == 'moe_10t':
+    if settings.get('inference_engine','dense') in ('moe_10t', 'moe_40t'):
         from inference.moe import calculate as calculate_moe
         model_path=Path(__file__).resolve().parent / settings['moe_model_config']
         moe_result=calculate_moe(

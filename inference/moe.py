@@ -2,7 +2,7 @@
 import json, math
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-DEFAULT_MODEL=ROOT/"config/models/moe_10t.json"
+DEFAULT_MODEL=ROOT/"config/models/moe_40t.json"
 DEFAULT_HARDWARE=ROOT/"config/hardware/gpus.json"
 
 def _read(path):

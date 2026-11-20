@@ -5,9 +5,9 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from inference.moe import calculate
 MODELS={
- "low_active":ROOT/"config/models/moe_10t_low_active.json",
- "base_active":ROOT/"config/models/moe_10t.json",
- "high_active":ROOT/"config/models/moe_10t_high_active.json",
+ "low_active":ROOT/"config/models/moe_40t_low_active.json",
+ "base_active":ROOT/"config/models/moe_40t.json",
+ "high_active":ROOT/"config/models/moe_40t_high_active.json",
 }
 HARDWARE=("H100_SXM","H200_SXM","B200_SXM","GB300_NVL72")
 
