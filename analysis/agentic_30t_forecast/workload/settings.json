@@ -1,0 +1,16 @@
+{
+  "reference_date": "2026-11-18",
+  "years": [2026, 2027, 2028, 2029, 2030],
+  "reference_tasks_per_main_agent_day": 1,
+  "calendar_hours": 24,
+  "hours_per_reported_workday": 8,
+  "bounded_online_session_equivalents": 16,
+  "models": ["ols", "last56", "last84", "piecewise", "nonnegative", "bounded"],
+  "scenarios": {
+    "A": {"session_count_exponent": 1, "upper_decile_mix_2030": 0},
+    "B": {"session_count_exponent": 0, "upper_decile_mix_2030": 0},
+    "C": {"session_count_exponent": 0.5, "upper_decile_mix_2030": 0.5}
+  },
+  "peak_sequences_per_serial_main": 1,
+  "context_stress_factors": [1, 2]
+}

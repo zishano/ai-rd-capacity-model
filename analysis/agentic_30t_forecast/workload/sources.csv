@@ -1,0 +1,6 @@
+file,source,selector,row_key,sha256
+../observed_agent_workdays.csv,https://openai.com/index/research-acceleration-jagged-frontier/#agent-workdays-research,"agent-workdays-research / Overall Research / date,value",calendar date,4a5651956b888d74cd14a4dddc1f52dbd8350b14f89972e7519a52be88802b40
+../observed_api_usage_value.csv,https://openai.com/index/research-acceleration-jagged-frontier/#median-spend,"median-spend / date,spend",calendar date,ab92791681f7a54bfacf28389ba3392e3d145de2680f280bde60549535f4d805
+observed_concurrent_workflows.csv,https://openai.com/index/research-acceleration-view-inside-openai/,"4+ concurrent workflows / date,value",calendar date,51206d7bc9115dc73083e30bed958293c41a365a3b7270e1879e7af3da7c9d63
+../../agentic_40t_forecast/trace_sample.csv,per-row url and raw sha256,Published issue traces / info.model_stats and assistant extra.response.usage,instance,350ac40141529df656c3e81ed953b0be2a9fc7eea9e62c40c73147b295e972aa
+trace_calls.csv,join instance to trace_sample.csv url and raw sha256,"response.created, extra.timestamp, usage.prompt_tokens, completion_tokens, prompt_tokens_details.cached_tokens",instance + ordinal call,3b35df7ef51e4236043776ecff7f381852c3e8534622563f0b85b0c7f628bb18

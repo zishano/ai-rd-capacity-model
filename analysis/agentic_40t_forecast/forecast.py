@@ -4,8 +4,6 @@ import csv
 import json
 import math
 import sys
-from datetime import date
-from statistics import mean
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -13,6 +11,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT))
 from inference.moe import calculate
+from analysis.agentic_30t_forecast.workload.trends import legacy_projection as linear_usage_projection
 
 
 def load(path):
@@ -21,36 +20,6 @@ def load(path):
 
 def quantile(rows, q, key):
     return sorted(rows, key=key)[math.ceil(q * len(rows)) - 1]
-
-
-def linear_usage_projection(settings):
-    """Fit the published series in calendar days; normalize to the reference-date fit."""
-    with (ROOT / settings['observations']).open() as stream:
-        observations = [(date.fromisoformat(r['date']), float(r['agent_workdays_per_researcher_day']))
-                        for r in csv.DictReader(stream)]
-    dates, values = zip(*observations)
-    if len(set(dates)) != len(dates):
-        raise ValueError('Duplicate usage observation dates')
-    origin = min(dates)
-    days = [(d - origin).days for d in dates]
-    x_mean, y_mean = mean(days), mean(values)
-    slope = sum((x-x_mean)*(y-y_mean) for x, y in zip(days, values)) / sum((x-x_mean)**2 for x in days)
-    intercept = y_mean - slope*x_mean
-    reference = date.fromisoformat(settings['reference_date'])
-    baseline = intercept + slope*(reference-origin).days
-    if baseline <= 0:
-        raise ValueError('Reference-date fitted usage must be positive')
-    projections = {}
-    for year in settings['projection_years']:
-        target = reference.replace(year=year)
-        prediction = intercept + slope*(target-origin).days
-        if prediction <= 0:
-            raise ValueError(f'Nonpositive usage forecast for {target}')
-        projections[str(year)] = dict(date=target.isoformat(), observations=len(days),
-            fit_start=origin.isoformat(), fit_end=max(dates).isoformat(),
-            intercept=intercept, slope_per_day=slope, agent_workdays_per_researcher_day=prediction,
-            usage_multiplier=prediction/baseline)
-    return projections
 
 
 def historical_volume(settings):
