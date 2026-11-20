@@ -1,0 +1,76 @@
+{
+  "model_id": "synthetic-30t-moe-low-active",
+  "model_name": "Synthetic 30T MoE — Low Active",
+  "model_type": "synthetic_moe",
+  "evidence_type": "C",
+  "description": "Synthetic 30T-class MoE scaled from a public Kimi K2-style architecture template. Not a released model.",
+  "architecture": {
+    "target_total_parameters": 30000000000000,
+    "non_routed_parameters": 10058752000,
+    "num_hidden_layers": 61,
+    "num_moe_layers": 60,
+    "num_routed_experts": 11348,
+    "experts_per_token": 4,
+    "num_shared_experts": 1,
+    "hidden_size": 7168,
+    "expert_intermediate_size": 2048,
+    "expert_mlp_matrices": 3,
+    "attention_type": "MLA",
+    "num_attention_heads": 64,
+    "qk_nope_head_dim": 128,
+    "qk_rope_head_dim": 64,
+    "v_head_dim": 128,
+    "kv_lora_rank": 512,
+    "first_k_dense_layers": 1
+  },
+  "weights": {
+    "format": "FP8",
+    "bytes_per_parameter": 1,
+    "scale_metadata_overhead_fraction": 0.03
+  },
+  "kv_cache": {
+    "format": "BF16",
+    "bytes_per_element": 2,
+    "mla_cache_components": [
+      "kv_lora_rank",
+      "qk_rope_head_dim"
+    ]
+  },
+  "serving_assumptions": {
+    "prefill_batch_tokens": 64,
+    "decode_batch_sequences": 1,
+    "target_gpu_pool_utilization": 0.7,
+    "compute_efficiency": 0.3,
+    "hbm_bandwidth_efficiency": 0.7,
+    "communication_bandwidth_efficiency": 0.5,
+    "cross_node_traffic_fraction": 0.5,
+    "all_to_all_latency_us_per_moe_layer": 10,
+    "runtime_hbm_reserve_fraction": 0.1,
+    "usable_hbm_fraction": 0.85,
+    "tensor_parallel_size": 4,
+    "expert_parallel_by_hardware": {
+      "H100_SXM": 48,
+      "H200_SXM": 32,
+      "B200_SXM": 24,
+      "GB300_NVL72": 18
+    },
+    "expert_weight_batch_reuse_factor": 1
+  },
+  "references": [
+    {
+      "title": "Kimi K2 official repository",
+      "url": "https://github.com/MoonshotAI/Kimi-K2",
+      "role": "architecture_reference"
+    },
+    {
+      "title": "Kimi K2 official config",
+      "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/config.json",
+      "role": "architecture_reference"
+    },
+    {
+      "title": "DeepSeek V3 official repository",
+      "url": "https://github.com/deepseek-ai/DeepSeek-V3",
+      "role": "architecture_cross_check"
+    }
+  ]
+}

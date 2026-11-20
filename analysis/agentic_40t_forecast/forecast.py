@@ -1,4 +1,4 @@
-"""Offline single-agent forecast from metered issue traces and the 40T profile."""
+"""Offline single-agent forecast from metered issue traces and a configured synthetic MoE profile."""
 import argparse
 import csv
 import json
@@ -54,7 +54,8 @@ def run(config, out, scratch):
         base_work = workload(row)
         for year, settings in years.items():
             model = load(ROOT / config['model_config'])
-            assert model['architecture']['target_total_parameters'] == 40_000_000_000_000
+            if model['architecture']['target_total_parameters'] != config.get('target_total_parameters', 40_000_000_000_000):
+                raise ValueError('Forecast target does not match the model configuration')
             arch, serving = model['architecture'], model['serving_assumptions']
             arch['experts_per_token'] = settings['top_k']
             model['weights']['bytes_per_parameter'] = config['weight_bytes'][year]
@@ -147,8 +148,8 @@ def run(config, out, scratch):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=HERE)
+    parser.add_argument('--output', type=Path, help='Output directory (defaults to the forecast configuration directory)')
     parser.add_argument('--config', type=Path, default=HERE/'forecast_config.json')
     args = parser.parse_args()
     with TemporaryDirectory() as temp:
-        run(load(args.config), args.output, Path(temp))
+        run(load(args.config), args.output or args.config.resolve().parent, Path(temp))

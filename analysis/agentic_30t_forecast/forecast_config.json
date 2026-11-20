@@ -1,0 +1,165 @@
+{
+  "model_config": "config/models/moe_30t.json",
+  "hardware_config": "config/hardware/gpus.json",
+  "reference_tasks_per_day": 1,
+  "completion_quantile": {
+    "conservative": 0.1,
+    "base": 0.5,
+    "aggressive": 0.9
+  },
+  "weight_bytes": {
+    "2026": 1,
+    "2027": 1,
+    "2028": 0.5,
+    "2030": 0.5
+  },
+  "kv_bytes": {
+    "2026": 2,
+    "2027": 2,
+    "2028": 1,
+    "2030": 1
+  },
+  "dense_fp8_tflops": {
+    "H100_SXM": 1979,
+    "H200_SXM": 1979,
+    "B200_SXM": 4500,
+    "GB300_NVL72": 5000
+  },
+  "year_efficiency": {
+    "compute_efficiency": {
+      "2026": 0.3,
+      "2027": 0.34,
+      "2028": 0.38,
+      "2030": 0.45
+    },
+    "hbm_efficiency": {
+      "2026": 0.7,
+      "2027": 0.73,
+      "2028": 0.76,
+      "2030": 0.8
+    },
+    "communication_efficiency": {
+      "2026": 0.5,
+      "2027": 0.53,
+      "2028": 0.57,
+      "2030": 0.62
+    }
+  },
+  "scenarios": {
+    "conservative": {
+      "2026": {
+        "online_hours": 10,
+        "duty": 0.2,
+        "input_rate": 90000,
+        "output_rate": 6000,
+        "historical_context": 16384,
+        "top_k": 4,
+        "hardware": "H100_SXM"
+      },
+      "2027": {
+        "online_hours": 11,
+        "duty": 0.21,
+        "input_rate": 100000,
+        "output_rate": 7000,
+        "historical_context": 16384,
+        "top_k": 4,
+        "hardware": "H200_SXM"
+      },
+      "2028": {
+        "online_hours": 12,
+        "duty": 0.22,
+        "input_rate": 110000,
+        "output_rate": 8000,
+        "historical_context": 24576,
+        "top_k": 4,
+        "hardware": "H200_SXM"
+      },
+      "2030": {
+        "online_hours": 14,
+        "duty": 0.23,
+        "input_rate": 120000,
+        "output_rate": 9000,
+        "historical_context": 32768,
+        "top_k": 4,
+        "hardware": "B200_SXM"
+      }
+    },
+    "base": {
+      "2026": {
+        "online_hours": 12,
+        "duty": 0.24,
+        "input_rate": 110000,
+        "output_rate": 8000,
+        "historical_context": 16384,
+        "top_k": 8,
+        "hardware": "H100_SXM"
+      },
+      "2027": {
+        "online_hours": 14,
+        "duty": 0.26,
+        "input_rate": 130000,
+        "output_rate": 10000,
+        "historical_context": 24576,
+        "top_k": 8,
+        "hardware": "H200_SXM"
+      },
+      "2028": {
+        "online_hours": 16,
+        "duty": 0.28,
+        "input_rate": 160000,
+        "output_rate": 14000,
+        "historical_context": 32768,
+        "top_k": 8,
+        "hardware": "B200_SXM"
+      },
+      "2030": {
+        "online_hours": 18,
+        "duty": 0.3,
+        "input_rate": 200000,
+        "output_rate": 18000,
+        "historical_context": 65536,
+        "top_k": 8,
+        "hardware": "GB300_NVL72"
+      }
+    },
+    "aggressive": {
+      "2026": {
+        "online_hours": 14,
+        "duty": 0.28,
+        "input_rate": 140000,
+        "output_rate": 12000,
+        "historical_context": 32768,
+        "top_k": 16,
+        "hardware": "H100_SXM"
+      },
+      "2027": {
+        "online_hours": 17,
+        "duty": 0.32,
+        "input_rate": 180000,
+        "output_rate": 18000,
+        "historical_context": 65536,
+        "top_k": 16,
+        "hardware": "H200_SXM"
+      },
+      "2028": {
+        "online_hours": 19,
+        "duty": 0.38,
+        "input_rate": 240000,
+        "output_rate": 26000,
+        "historical_context": 131072,
+        "top_k": 16,
+        "hardware": "B200_SXM"
+      },
+      "2030": {
+        "online_hours": 22,
+        "duty": 0.45,
+        "input_rate": 320000,
+        "output_rate": 36000,
+        "historical_context": 262144,
+        "top_k": 16,
+        "hardware": "GB300_NVL72"
+      }
+    }
+  },
+  "target_total_parameters": 30000000000000
+}
