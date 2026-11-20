@@ -70,29 +70,3 @@ AL3 模拟人类主导、AI 协作的任务组合；AL4 模拟人给目标、AI 
 | 2030 | 7 | 124 | 1,140 |
 
 表中单位为张 H100 等效卡。只改 2028 年 AL4 的平均训练时长为 **1.5 / 3 / 6 小时**，设备总数依次为 **52 / 84 / 148 张**。据此做团队预算时，优先用作业日志替换每人每日唯一候选数、重试率及每次作业的“卡数 × 时长”，再用推理与沙箱轨迹替换峰值并发、上下文长度和状态驻留时间。实际能安排多少新任务，还要检查实验队列和复核人员的服务能力。
-
-
-## 单人单 Agent 推理子模型
-
-单 Agent 直接推理已拆成独立子模型，不与 Agent 派生的训练、评测、CPU 沙箱资源混算。
-
-- **配置入口：** [config/agent_inference.json](config/agent_inference.json)
-- **运行程序：** [agent_inference.py](agent_inference.py)
-- **模型说明、参数来源与公式：** [docs/agent-inference-model.md](docs/agent-inference-model.md)
-- **测试：** [tests/test_agent_inference.py](tests/test_agent_inference.py)
-
-运行默认示例：
-
-```bash
-python agent_inference.py
-```
-
-指定自定义配置和输出文件：
-
-```bash
-python agent_inference.py --config config/agent_inference.json --output modelout/agent_inference.json
-```
-
-默认示例输入为 100 次模型调用、每次 10,000 输入 Token 和 2,000 输出 Token。模型计算得到 100 万输入 Token、20 万输出 Token；在示例吞吐假设下，Prefill 为 100 秒、Decode 为 400 秒，4 张 GPU 合计约 **0.556 GPU·h/任务**。示例 70B BF16 模型的权重+KV 显存下界约 35.82 GB/GPU。吞吐、模型结构和部署参数均为可替换假设，不能作为 H100 通用性能承诺。
-
-该子模型输出单任务 Token、Prefill/Decode 服务时间、GPU·h、权重与 KV 显存下界及直接推理成本。总容量模型可按每日任务数和研究员数扩展；子 Agent 应独立计数，训练、评测和数据生成仍归入派生实验资源池。
