@@ -1,9 +1,9 @@
 """Sweep active-parameter variants across supported GPU profiles."""
-import argparse,csv
+import argparse,csv,sys
 from pathlib import Path
-from inference.moe import calculate,DEFAULT_MODEL
-
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
+from inference.moe import calculate
 MODELS={
  "low_active":ROOT/"config/models/moe_10t_low_active.json",
  "base_active":ROOT/"config/models/moe_10t.json",
