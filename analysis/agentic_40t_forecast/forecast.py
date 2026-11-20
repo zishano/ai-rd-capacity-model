@@ -4,6 +4,8 @@ import csv
 import json
 import math
 import sys
+from datetime import date
+from statistics import mean
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -19,6 +21,36 @@ def load(path):
 
 def quantile(rows, q, key):
     return sorted(rows, key=key)[math.ceil(q * len(rows)) - 1]
+
+
+def linear_usage_projection(settings):
+    """Fit the published series in calendar days; normalize to the reference-date fit."""
+    with (ROOT / settings['observations']).open() as stream:
+        observations = [(date.fromisoformat(r['date']), float(r['agent_workdays_per_researcher_day']))
+                        for r in csv.DictReader(stream)]
+    dates, values = zip(*observations)
+    if len(set(dates)) != len(dates):
+        raise ValueError('Duplicate usage observation dates')
+    origin = min(dates)
+    days = [(d - origin).days for d in dates]
+    x_mean, y_mean = mean(days), mean(values)
+    slope = sum((x-x_mean)*(y-y_mean) for x, y in zip(days, values)) / sum((x-x_mean)**2 for x in days)
+    intercept = y_mean - slope*x_mean
+    reference = date.fromisoformat(settings['reference_date'])
+    baseline = intercept + slope*(reference-origin).days
+    if baseline <= 0:
+        raise ValueError('Reference-date fitted usage must be positive')
+    projections = {}
+    for year in settings['projection_years']:
+        target = reference.replace(year=year)
+        prediction = intercept + slope*(target-origin).days
+        if prediction <= 0:
+            raise ValueError(f'Nonpositive usage forecast for {target}')
+        projections[str(year)] = dict(date=target.isoformat(), observations=len(days),
+            fit_start=origin.isoformat(), fit_end=max(dates).isoformat(),
+            intercept=intercept, slope_per_day=slope, agent_workdays_per_researcher_day=prediction,
+            usage_multiplier=prediction/baseline)
+    return projections
 
 
 def historical_volume(settings):
@@ -48,10 +80,17 @@ def run(config, out, scratch):
     hardware_path = scratch / 'hardware.json'
     hardware_path.write_text(json.dumps(hardware))
     model_path = scratch / 'model.json'
+    trend = linear_usage_projection(config['usage_trend']) if 'usage_trend' in config else None
     forecasts, sensitivities, stress_grid = [], [], []
     for name, years in config['scenarios'].items():
         row = quantile(sample, config['completion_quantile'][name], lambda r: int(r['completion']))
         base_work = workload(row)
+        if trend is not None and name == 'base':
+            for projection in trend.values():
+                tasks = config['reference_tasks_per_day'] * projection['usage_multiplier']
+                projection.update(base_tasks_per_day=tasks, base_input_tokens_day=tasks*int(row['prompt']),
+                                  base_cached_input_day=tasks*int(row['cache_read']),
+                                  base_output_tokens_day=tasks*int(row['completion']))
         for year, settings in years.items():
             model = load(ROOT / config['model_config'])
             if model['architecture']['target_total_parameters'] != config.get('target_total_parameters', 40_000_000_000_000):
@@ -63,7 +102,11 @@ def run(config, out, scratch):
             for field, values in config['year_efficiency'].items():
                 serving[field] = values[year]
             sku = settings['hardware']
-            dayscale = config['reference_tasks_per_day'] * historical_volume(settings) / historical_volume(years['2026'])
+            if trend is None:
+                growth = historical_volume(settings) / historical_volume(years['2026'])
+            else:
+                growth = trend[year]['usage_multiplier']
+            dayscale = config['reference_tasks_per_day'] * growth
             model_path.write_text(json.dumps(model))
             def evaluate(work):
                 return calculate(work, sku, model_path, hardware_path)
@@ -141,6 +184,8 @@ def run(config, out, scratch):
                 label = 'expert_parallel_size' if field == sku else field
                 record(label,values,changed,'engineering stress, no probability assigned')
     out.mkdir(parents=True, exist_ok=True)
+    if trend is not None:
+        write_csv(out/'usage_projection.csv', list(trend.values()))
     write_csv(out/'forecast_summary.csv',forecasts)
     write_csv(out/'sensitivity.csv',sensitivities)
     write_csv(out/'serving_stress.csv',stress_grid)
