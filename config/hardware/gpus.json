@@ -1,10 +1,38 @@
 {
-  "as_of":"2026-11-20",
-  "note":"Vendor peak specifications only. Achieved serving performance must be calibrated with measured profiles.",
-  "hardware":{
-    "H100_SXM":{"memory_gb":80,"hbm_bandwidth_tb_s":3.35,"fp8_dense_peak_tflops":1979,"nvlink_per_gpu_tb_s":0.9,"inter_node_per_gpu_gb_s":50,"source":"https://resources.nvidia.com/en-us-gpu/h100-datasheet-24306"},
-    "H200_SXM":{"memory_gb":141,"hbm_bandwidth_tb_s":4.8,"fp8_dense_peak_tflops":1979,"nvlink_per_gpu_tb_s":0.9,"inter_node_per_gpu_gb_s":50,"source":"https://www.nvidia.com/en-us/data-center/h200/"},
-    "B200_SXM":{"memory_gb":180,"hbm_bandwidth_tb_s":8.0,"fp8_dense_peak_tflops":4500,"nvlink_per_gpu_tb_s":1.8,"inter_node_per_gpu_gb_s":100,"source":"https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory-h100-h200-b200/latest/components.html"},
-    "GB300_NVL72":{"memory_gb":279,"hbm_bandwidth_tb_s":8.0,"fp8_dense_peak_tflops":9000,"nvlink_per_gpu_tb_s":1.8,"inter_node_per_gpu_gb_s":100,"source":"https://resources.nvidia.com/en-us-gpu-resources/blackwell-ultra-datasheet"}
+  "as_of": "2026-11-20",
+  "note": "Vendor peak specifications only. Achieved serving performance must be calibrated with measured profiles.",
+  "hardware": {
+    "H100_SXM": {
+      "memory_gb": 80,
+      "hbm_bandwidth_tb_s": 3.35,
+      "fp8_dense_peak_tflops": 1979,
+      "nvlink_per_gpu_tb_s": 0.9,
+      "inter_node_per_gpu_gb_s": 50,
+      "source": "https://resources.nvidia.com/en-us-gpu/h100-datasheet-24306"
+    },
+    "H200_SXM": {
+      "memory_gb": 141,
+      "hbm_bandwidth_tb_s": 4.8,
+      "fp8_dense_peak_tflops": 1979,
+      "nvlink_per_gpu_tb_s": 0.9,
+      "inter_node_per_gpu_gb_s": 50,
+      "source": "https://www.nvidia.com/en-us/data-center/h200/"
+    },
+    "B200_SXM": {
+      "memory_gb": 180,
+      "hbm_bandwidth_tb_s": 8,
+      "fp8_dense_peak_tflops": 9000,
+      "nvlink_per_gpu_tb_s": 1.8,
+      "inter_node_per_gpu_gb_s": 100,
+      "source": "https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory-h100-h200-b200/latest/components.html"
+    },
+    "GB300_NVL72": {
+      "memory_gb": 279,
+      "hbm_bandwidth_tb_s": 8,
+      "fp8_dense_peak_tflops": 9000,
+      "nvlink_per_gpu_tb_s": 1.8,
+      "inter_node_per_gpu_gb_s": 100,
+      "source": "https://resources.nvidia.com/en-us-gpu-resources/blackwell-ultra-datasheet"
+    }
   }
 }

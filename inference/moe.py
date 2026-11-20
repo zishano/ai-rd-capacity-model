@@ -23,10 +23,11 @@ def architecture_stats(model):
     per=a["expert_mlp_matrices"]*a["hidden_size"]*a["expert_intermediate_size"]*a["num_moe_layers"]
     routed=per*a["num_routed_experts"]
     active=per*a["experts_per_token"]
-    total=routed+a["non_routed_parameters"]
+    router=a["hidden_size"]*a["num_routed_experts"]*a["num_moe_layers"]
+    total=routed+router+a["non_routed_parameters"]
     return {"expert_params_per_expert_all_layers":per,"routed_expert_total_parameters":routed,
-            "routed_expert_active_parameters":active,"total_parameters_derived":total,
-            "active_parameters_derived":active+a["non_routed_parameters"],
+            "routed_expert_active_parameters":active,"router_parameters":router,"total_parameters_derived":total,
+            "active_parameters_derived":active+router+a["non_routed_parameters"],
             "target_total_parameters":a["target_total_parameters"],
             "total_parameter_error_fraction":total/a["target_total_parameters"]-1}
 
@@ -53,8 +54,9 @@ def calculate(workload,hardware_name="H100_SXM",model_path=DEFAULT_MODEL,hardwar
     runtime_gb=weight_gb*s["runtime_hbm_reserve_fraction"]
     min_gpus=math.ceil((weight_gb+kv_gb+runtime_gb)/usable)
     ngpu=_ceil_multiple(min_gpus,group)
-    router=2*a["hidden_size"]*a["num_routed_experts"]*a["num_moe_layers"]
-    matmul=2*active_p
+    router_params=stats["router_parameters"]
+    router=2*router_params
+    matmul=2*(active_p-router_params)
     pf_flop_tok=matmul+_attn_flops_token(a,context,"prefill")+router
     dc_flop_tok=matmul+_attn_flops_token(a,context,"decode")+router
     pf_flops=uncached*pf_flop_tok; dc_flops=O*dc_flop_tok

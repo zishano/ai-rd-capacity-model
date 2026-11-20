@@ -23,7 +23,7 @@
 
 ## Token 到 FLOPs
 权重矩阵近似：`F_weights/token ≈ 2 × P_active`。
-Router 近似：`F_router/token = 2 × hidden_size × num_routed_experts × num_moe_layers`。
+Router 近似：`P_router = hidden_size × num_routed_experts × num_moe_layers`，`F_router/token = 2 × P_router`。矩阵乘 FLOPs 使用 `2 × (P_active - P_router)`，避免 Router 权重被重复计数。Attention 投影权重已包含在 non-routed 参数中；显式 Attention 公式只计 QK 与 AV 的上下文相关计算，避免重复计数。
 MLA Attention 单独计量，Prefill 使用因果可见前缀平均长度，Decode 使用完整上下文。当前公式是 L1 架构近似，未逐算子展开 RMSNorm、RoPE、softmax、router top-k、量化/反量化、padding、expert token permutation、MTP 等细节。
 
 ## HBM 与 MLA KV Cache
