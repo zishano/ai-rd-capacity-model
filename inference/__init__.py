@@ -1,0 +1,1 @@
+"""Inference resource models."""

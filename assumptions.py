@@ -15,7 +15,7 @@ BUSINESS_KEYS = ('researchers', 'avg_online_sessions', 'new_experiments_per_day'
                  'gpus_per_training_run', 'hours_per_training_run')
 SCENARIO_KEYS = set('agents duration duty exec_duty resident input output cache tools fanout depth c m s context qin qout peak head g h eg eh evalreps success retry valid synth ckpt dataset retention f keep private review log alpha_c alpha_m alpha_s'.split())
 FIXED_KEYS = set('people gpu_price cpu_price ram_price ssd_price fs_price obj_price backup_price net_price control_price human_price base_gb backup_frac io_blocks io_mb egress_frac stg_read q_gpu q_infer trans startsec recovery weight_b mem_gb hbmfrac tp gpu_active_kw gpu_idle_kw pue steps_h grad_gb h2d_gb'.split())
-SETTING_KEYS = set('years reference_year layer_count model_width kv_heads head_dimension precision_bytes kv_sequences lifecycle_events auth_events billing_window queue_baseline queue_grid sandbox_grid sensitivity cold_start_vcpu'.split())
+SETTING_KEYS = set('years reference_year layer_count model_width kv_heads head_dimension precision_bytes kv_sequences lifecycle_events auth_events billing_window queue_baseline queue_grid sandbox_grid sensitivity cold_start_vcpu inference_engine moe_model_config moe_hardware moe_tensor_parallel_size'.split())
 
 
 def required_keys(obj, keys, path, exact=False):
@@ -152,6 +152,11 @@ def validate_config(config):
             else:
                 check_value(group, key, entry['value'], f'{path}.value')
     settings = setting_values(config)
+    if settings['inference_engine'] not in ('dense','moe_10t'):
+        raise ValueError('settings.inference_engine must be dense or moe_10t')
+    text(settings['moe_model_config'], 'settings.moe_model_config')
+    text(settings['moe_hardware'], 'settings.moe_hardware')
+    number(settings['moe_tensor_parallel_size'], 'settings.moe_tensor_parallel_size', positive=True, integer=True)
     for key in ('reference_year','layer_count','model_width','kv_heads','head_dimension'):
         number(settings[key], f'settings.{key}', positive=True, integer=True)
     for key in ('precision_bytes','kv_sequences'):

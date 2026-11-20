@@ -1054,7 +1054,7 @@
     "control_price": {
       "label": "外置授权与审计服务",
       "unit": "USD/百万事务",
-      "value": 1.0,
+      "value": 1,
       "low": 0.1,
       "high": 5,
       "reason": "假设，授权查询与状态事件；日志存储另计",
@@ -1438,7 +1438,7 @@
       "unit": "倍",
       "value": {
         "2027": 0.75,
-        "2028": 1.0,
+        "2028": 1,
         "2030": 1.5
       },
       "evidence": {
@@ -1790,6 +1790,82 @@
         "rationale": "将创建与恢复次数乘启动时长和启动期间的 CPU 占用，计入执行环境的 CPU 容量和工时。",
         "calibration": "按启动事件采集 CPU-seconds 与启动耗时，两者之比为平均 vCPU 占用。",
         "references": []
+      }
+    },
+    "inference_engine": {
+      "label": "推理后端",
+      "unit": "模式",
+      "value": "dense",
+      "evidence": {
+        "kind": "C",
+        "as_of": "2026-11-20",
+        "scope": "可选的单 Agent 推理后端选择；默认 Dense 保持兼容",
+        "rationale": "通过配置选择 Dense 或 Synthetic 10T MoE 推理计算器；不改变团队工作负载与非推理资源公式。",
+        "calibration": "仅在完成模型结构、硬件和 serving profile 校准后启用 MoE；默认保持 dense。",
+        "references": [
+          {
+            "title": "本仓库 10T MoE 推理模型配置",
+            "url": "https://github.com/zishano/ai-rd-capacity-model/blob/main/config/models/moe_10t.json",
+            "role": "implementation"
+          }
+        ]
+      }
+    },
+    "moe_model_config": {
+      "label": "MoE 模型配置路径",
+      "unit": "仓库相对路径",
+      "value": "config/models/moe_10t.json",
+      "evidence": {
+        "kind": "C",
+        "as_of": "2026-11-20",
+        "scope": "可选的单 Agent 推理后端选择；默认 Dense 保持兼容",
+        "rationale": "通过配置选择 Dense 或 Synthetic 10T MoE 推理计算器；不改变团队工作负载与非推理资源公式。",
+        "calibration": "仅在完成模型结构、硬件和 serving profile 校准后启用 MoE；默认保持 dense。",
+        "references": [
+          {
+            "title": "本仓库 10T MoE 推理模型配置",
+            "url": "https://github.com/zishano/ai-rd-capacity-model/blob/main/config/models/moe_10t.json",
+            "role": "implementation"
+          }
+        ]
+      }
+    },
+    "moe_hardware": {
+      "label": "MoE 推理硬件配置",
+      "unit": "硬件名称",
+      "value": "H100_SXM",
+      "evidence": {
+        "kind": "C",
+        "as_of": "2026-11-20",
+        "scope": "可选的单 Agent 推理后端选择；默认 Dense 保持兼容",
+        "rationale": "通过配置选择 Dense 或 Synthetic 10T MoE 推理计算器；不改变团队工作负载与非推理资源公式。",
+        "calibration": "仅在完成模型结构、硬件和 serving profile 校准后启用 MoE；默认保持 dense。",
+        "references": [
+          {
+            "title": "本仓库 10T MoE 推理模型配置",
+            "url": "https://github.com/zishano/ai-rd-capacity-model/blob/main/config/models/moe_10t.json",
+            "role": "implementation"
+          }
+        ]
+      }
+    },
+    "moe_tensor_parallel_size": {
+      "label": "MoE Tensor Parallel Size",
+      "unit": "GPU",
+      "value": 4,
+      "evidence": {
+        "kind": "C",
+        "as_of": "2026-11-20",
+        "scope": "可选的单 Agent 推理后端选择；默认 Dense 保持兼容",
+        "rationale": "通过配置选择 Dense 或 Synthetic 10T MoE 推理计算器；不改变团队工作负载与非推理资源公式。",
+        "calibration": "仅在完成模型结构、硬件和 serving profile 校准后启用 MoE；默认保持 dense。",
+        "references": [
+          {
+            "title": "本仓库 10T MoE 推理模型配置",
+            "url": "https://github.com/zishano/ai-rd-capacity-model/blob/main/config/models/moe_10t.json",
+            "role": "implementation"
+          }
+        ]
       }
     }
   }

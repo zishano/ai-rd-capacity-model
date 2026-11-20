@@ -70,3 +70,19 @@ AL3 模拟人类主导、AI 协作的任务组合；AL4 模拟人给目标、AI 
 | 2030 | 7 | 124 | 1,140 |
 
 表中单位为张 H100 等效卡。只改 2028 年 AL4 的平均训练时长为 **1.5 / 3 / 6 小时**，设备总数依次为 **52 / 84 / 148 张**。据此做团队预算时，优先用作业日志替换每人每日唯一候选数、重试率及每次作业的“卡数 × 时长”，再用推理与沙箱轨迹替换峰值并发、上下文长度和状态驻留时间。实际能安排多少新任务，还要检查实验队列和复核人员的服务能力。
+
+
+## 10T MoE 推理后端（可选）
+
+团队模型默认仍使用原有 Dense 推理路径。要启用合成 10T MoE 推理模型，在 `config/assumptions.json` 中将 `settings.inference_engine.value` 改为 `moe_10t`，并设置 `settings.moe_hardware.value` 为 `H100_SXM`、`H200_SXM`、`B200_SXM` 或 `GB300_NVL72`。团队业务输入、训练/评测、CPU/RAM/SSD、存储和控制平面公式保持不变；仅替换推理子模块。
+
+- 模型结构：[config/models/moe_10t.json](config/models/moe_10t.json)
+- GPU 规格：[config/hardware/gpus.json](config/hardware/gpus.json)
+- MoE 计算器：[inference/moe.py](inference/moe.py)
+- 模型假设与公式：[docs/moe-10t-model.md](docs/moe-10t-model.md)
+
+```bash
+python model.py
+```
+
+当前 10T MoE 是以 Kimi K2 MLA/MoE 架构为模板、扩展 Routed Expert 数量的 **Synthetic 10T MoE**，不是已发布模型。推理吞吐、计算效率、HBM 有效带宽、跨节点通信比例和 All-to-All 延迟均为 C 类模型假设；输出属于 L1-L3 理论/约束估算，不是实测 serving benchmark。Dense 默认模式不变。

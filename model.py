@@ -67,28 +67,51 @@ def budgets(p, k, year=None, scale=1, level='AL4', *, settings=None):
     active=N*p['duty']
     I=ah*p['duty']*p['input']
     O=ah*p['duty']*p['output']
-    uncached=I*(1-p['cache'])
-    prefill=uncached/p['qin']/3600
-    decode=O/p['qout']/3600
-    infer=prefill+decode
     peak=p['peak']
-    # Two arrays per layer (keys and values), sized using the configured architecture.
-    kv_b_per_tok = 2 * settings['layer_count'] * settings['kv_heads'] * settings['head_dimension'] * settings['precision_bytes']
     peak_sequences = active * peak * settings['kv_sequences']
-    kv_gb=peak_sequences*p['context']*kv_b_per_tok/1e9
-    weight=k['weight_b']*settings['precision_bytes']
-    tp=int(k['tp'])
-    kv_headroom=tp*k['mem_gb']*k['hbmfrac']-weight
-    if kv_headroom <= 0: raise ValueError('Replica cannot host model weights')
-    infer_rate_reps=math.ceil(infer/24*peak/(k['q_infer']*tp))
-    # Whole-sequence slots, then whole replicas, not fractional KV paging capacity.
-    seq_slots=math.floor(kv_headroom/(p['context']*kv_b_per_tok/1e9))
-    if seq_slots<1: raise ValueError('Context too long for one sequence')
-    infer_kv_reps=math.ceil(math.ceil(peak_sequences)/seq_slots)
-    infer_cards=tp*max(1,infer_rate_reps,infer_kv_reps)
-    # Simplified causal attention FLOPs; new tokens use measured mean attended prefix L.
-    # FLOP proxy: 2P per token + 4*n_layer*d_model*mean_attended_length per token.
-    flop_tok=2*k['weight_b']*1e9+4*settings['layer_count']*settings['model_width']*p['context']
+    moe_extra={}
+    if settings.get('inference_engine','dense') == 'moe_10t':
+        from inference.moe import calculate as calculate_moe
+        model_path=Path(__file__).resolve().parent / settings['moe_model_config']
+        moe_result=calculate_moe(
+            {'input_tokens': I, 'output_tokens': O, 'prefix_cache_hit_rate': p['cache'],
+             'context_tokens': p['context'], 'peak_sequences': peak_sequences},
+            hardware_name=settings['moe_hardware'], model_path=model_path)
+        uncached=I*(1-p['cache'])
+        prefill=moe_result['prefill']['gpu_hours']
+        decode=moe_result['decode']['gpu_hours']
+        infer=moe_result['infer_gpu_h']
+        prefill_eflop=moe_result['prefill_eflop']
+        decode_eflop=moe_result['decode_eflop']
+        kv_gb=moe_result['kv_peak_gb']
+        weight=moe_result['weights_gb_per_replica']
+        tp=int(settings.get('moe_tensor_parallel_size',4))
+        infer_rate_reps=moe_result['throughput_replicas']
+        seq_slots=moe_result['kv_slots_per_replica']
+        infer_kv_reps=moe_result['kv_replicas']
+        infer_cards=moe_result['infer_cards']
+        moe_extra={key:value for key,value in moe_result.items()
+                   if key not in {'prefill','decode','assumptions'}}
+    else:
+        uncached=I*(1-p['cache'])
+        prefill=uncached/p['qin']/3600
+        decode=O/p['qout']/3600
+        infer=prefill+decode
+        # Two arrays per layer (keys and values), sized using the configured architecture.
+        kv_b_per_tok = 2 * settings['layer_count'] * settings['kv_heads'] * settings['head_dimension'] * settings['precision_bytes']
+        kv_gb=peak_sequences*p['context']*kv_b_per_tok/1e9
+        weight=k['weight_b']*settings['precision_bytes']
+        tp=int(k['tp'])
+        kv_headroom=tp*k['mem_gb']*k['hbmfrac']-weight
+        if kv_headroom <= 0: raise ValueError('Replica cannot host model weights')
+        infer_rate_reps=math.ceil(infer/24*peak/(k['q_infer']*tp))
+        seq_slots=math.floor(kv_headroom/(p['context']*kv_b_per_tok/1e9))
+        if seq_slots<1: raise ValueError('Context too long for one sequence')
+        infer_kv_reps=math.ceil(math.ceil(peak_sequences)/seq_slots)
+        infer_cards=tp*max(1,infer_rate_reps,infer_kv_reps)
+        flop_tok=2*k['weight_b']*1e9+4*settings['layer_count']*settings['model_width']*p['context']
+        prefill_eflop=uncached*flop_tok/1e18
+        decode_eflop=O*flop_tok/1e18
     e=_team_volume(people, p['head'], scale)
     attempts=e*(1+(1-p['success'])*p['retry'])
     accepted=e*p['success']*(1+(1-p['success'])*p['retry'])*p['valid']
@@ -135,13 +158,13 @@ def budgets(p, k, year=None, scale=1, level='AL4', *, settings=None):
     gbusy=infer+indirect
     kwh=(gbusy*k['gpu_active_kw']+(24*installed-gbusy)*k['gpu_idle_kw'])*k['pue']
     return dict(year=year,level=level,scenario=SCENES[LEVELS.index(level)],scale=scale,online=N,parent_online=N*(1-p['fanout']),child_online=N*p['fanout'],active_infer=active,active_cpu=cpuactive,resident_ram=ramresident,peak_sandboxes=math.ceil(N*peak),mean_agent_h_per_person=ah/people,infer_active_h_per_person=ah*p['duty']/people,task_births=life,cold_starts=life*(1+k['recovery']),destroy_day=life,
-        input_m=I/1e6,output_m=O/1e6,prefill_gpu_h=prefill,decode_gpu_h=decode,infer_gpu_h=infer,prefill_eflop=uncached*flop_tok/1e18,decode_eflop=O*flop_tok/1e18,
+        input_m=I/1e6,output_m=O/1e6,prefill_gpu_h=prefill,decode_gpu_h=decode,infer_gpu_h=infer,prefill_eflop=prefill_eflop,decode_eflop=decode_eflop,
         kv_peak_gb=kv_gb,weights_gb_per_replica=weight,kv_slots_per_replica=seq_slots,kv_replicas=infer_kv_reps,throughput_replicas=infer_rate_reps,infer_cards=infer_cards,
         gpu_installed=installed,train_cards=tcards,eval_synth_cards=auxcards,exp_slots=tslots,train_gpu_h=train,eval_gpu_h=ev,synth_gpu_h=synth,indirect_gpu_h=indirect,total_gpu_h=gbusy,indirect_ratio=(indirect/infer if infer else None),
         new_exp_day=e,attempts_day=attempts,accepted_day=accepted,review_h_day=time_approval,train_pool_busy=train/(24*tcards),aux_pool_busy=(ev+synth)/(24*auxcards),infer_pool_busy=infer/(24*infer_cards),pooled_occupancy=gbusy/(24*installed),avg_exp_gpu=indirect/24,mean_train_conc=attempts*p['h']/24,
         cpu_peak=peakcpu,cpu_h=cpuh,ram_peak_tib=peakram/1024,ram_gib_h=ramh,ssd_peak_tb=ssd/1000,cpu_cold_h=cold_cpu,local_iops=tools*k['io_blocks']/86400,local_peak_iops=tools*k['io_blocks']/86400*peak,local_mbps=tools*k['io_mb']/86400,local_peak_mbps=tools*k['io_mb']/86400*peak,fs_tb=fs/1000,obj_tb=obj/1000,backup_tb=backup/1000,durable_tb=durable/1000,unique_persist_gb_day=object_delta*p['f'],raw_data_gb_day=object_delta,
         tool_calls_day=tools,control_qps=ctrl/86400,peak_control_qps=ctrl/86400*peak,auth_qps=tools*settings['auth_events']/86400,storage_gb_day=stgtraffic,storage_avg_gbps=stgtraffic/86400,priced_net_gb_day=transfer,train_fabric_tb_day=fabric/1000,h2d_tb_day=host_gpu/1000,
-        cost_day=total,cost_yr=total*settings['billing_window']['year_days'],cost_allocated_gpu=costs['推理']+costs['实验'],human_cost_day=time_approval*k['human_price'],infra_usd_day=total-time_approval*k['human_price'],cost_per_accepted=total/accepted,gpuh_per_accepted=gbusy/accepted,accepted_per_1000gpuh=accepted/gbusy*1000,
+        cost_day=total,cost_yr=total*settings['billing_window']['year_days'],cost_allocated_gpu=costs['推理']+costs['实验'],human_cost_day=time_approval*k['human_price'],infra_usd_day=total-time_approval*k['human_price'],cost_per_accepted=total/accepted,gpuh_per_accepted=gbusy/accepted,accepted_per_1000gpuh=accepted/gbusy*1000,**moe_extra,
         gpu_facility_kwh_day=kwh,**{'cost_'+key:val for key,val in costs.items()})
 
 def queue_mm_c(arrivals_day,c=None,h=None,g=None):
