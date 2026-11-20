@@ -13,3 +13,8 @@ jobs:
         with:
           python-version: "3.11"
       - run: python -m unittest discover -s tests -v
+      - run: python scripts/moe_hardware_sweep.py --output artifacts/moe_hardware_sweep.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: moe-hardware-sweep
+          path: artifacts/moe_hardware_sweep.csv
