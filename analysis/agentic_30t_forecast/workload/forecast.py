@@ -1,12 +1,13 @@
 """Generate independent workload tables and per-task inputs for the 30T kernel."""
 import argparse
 import json
-import math
 from collections import defaultdict
 from datetime import date
 from statistics import mean
 
 from .adapter import task_input
+from .calibration.daily_tables import task_mix_weights, update_daily_tables
+from .calibration.model import run as calibrate_task_starts
 from .observations import HERE, PARENT, complete, records, series, write_rows
 from .trends import fit, diagnostics
 
@@ -54,9 +55,7 @@ def decompose(tasks, cfg, name, growth, anchor, progress):
     exponent = scenario['session_count_exponent']
     if not (0<=share<=1 and 0<=exponent<=1 and growth>0):
         raise ValueError('Invalid decomposition')
-    cutoff = sorted(int(t['completion']) for t in tasks)[math.ceil(.9*len(tasks))-1]
-    upper = [int(t['completion']) >= cutoff for t in tasks]
-    weights = [(1-share)/len(tasks) + (share/sum(upper) if high else 0) for high in upper]
+    weights = task_mix_weights(tasks, share)
     def mix(field):
         return sum(w*float(t[field]) for w,t in zip(weights,tasks))
     window = cfg['calendar_hours']
@@ -148,6 +147,8 @@ def run(cfg, out):
                            ('context_stress',contexts),('session_sensitivity',session_stress),('api_crosscheck',api_rows)]:
         write_rows(out/(filename+'.csv'),table)
     (out/'inference_inputs.json').write_text(json.dumps(adapter,indent=2)+'\n')
+    calibrate_task_starts(out/'calibrated', [ref.replace(year=y) for y in years])
+    update_daily_tables(out/'calibrated', cfg, trends)
 
 
 if __name__=='__main__':

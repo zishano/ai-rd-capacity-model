@@ -1,5 +1,7 @@
 # 历史使用量如何进入 30T 预测
 
+按真实任务发起率推算日负载请参见[第一层校准报告](workload/calibration/REPORT.md)。下文记录原时长倍率情景的推导。
+
 ## 观测窗口与口径
 
 检索窗口为 2025 年 11 月至 2026 年 11 月。OpenAI 2026 年 11 月 18 日报告的交互图 **Agent workdays across research** 提供 2026-05-03 至 2026-10-18 的 169 个日度图值。取单一序列 Overall Research，每位研究员每个日历日累计的 Agent 使用时长按八小时折成一个工作日，取过去 28 天移动平均。分子可累加并行会话，通常只覆盖交互式使用。首尾图值为 0.5 和 5.7。9 月报告相应图从同一日期开始且与此窗重叠。未给 2025 年 11 月至 2026 年春季或 2026 年 11 月补值。11 月 18 日是发布日期与本预测的年度基准日。[OpenAI 11 月原文](https://openai.com/index/research-acceleration-jagged-frontier/#agent-workdays-research) · [9 月原文](https://openai.com/index/research-acceleration-view-inside-openai/)

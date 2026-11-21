@@ -4,7 +4,7 @@
 
 |来源与时间|观察及分母|在第一层的用途|
 |---|---|---|
-|OpenAI 2026-11-18，Agent workdays across research|Overall Research，2026-05-03 至 10-18，169 个图值。8 小时计一个 Agent 工作日，按研究员日历日计，累加同时工作的 Agent，通常覆盖交互式使用。文章的并发口径含子 Agent；时长图未给主/子时数拆分或逐项工具等待剔除规则。|以 28 天滑动均值拟合总体会话小时代理。相邻点共享最多 27 天，末 28 日留出与训练期也可能共享底层日期。[原图](https://openai.com/index/research-acceleration-jagged-frontier/#agent-workdays-research)|
+|OpenAI 2026-11-18，Agent workdays across research|Overall Research，2026-05-03 至 10-18，169 个图值。8 小时计一个 Agent 工作日，按研究员日历日计，累加同时工作的 Agent，通常覆盖交互式使用。时长包含合格子 Agent 与自动评审，排除部分程序化使用，同一 turn 内相邻服务事件超过 30 分钟的间隔不计；未分别公布父子用时。|以 28 天滑动均值拟合总体会话小时代理。相邻点共享最多 27 天，末 28 日留出与训练期也可能共享底层日期。[原图](https://openai.com/index/research-acceleration-jagged-frontier/#agent-workdays-research)|
 |OpenAI 同报告，Median spend|291 个日度图值，2026-01-01 至 10-18；先算每位研究员过去 28 天平均 API 牌价等值，再跨研究员取中位数，$0.40→2,414.70。|独立 OLS 给出 2030/2026 约 6.88 倍。V=(未缓存输入×单价+缓存输入×单价+输出×单价)按模型加总。免费/折扣缓存、模型与价格组合未识别，无法唯一推断 Token、调用频次、单 Agent 金额或真实硬件成本。[原图](https://openai.com/index/research-acceleration-jagged-frontier/#median-spend)|
 |OpenAI 9 月报告，4+ concurrent workflows|2026-04-12→08-15，126 个图值，达到日峰阈值的研究员比例约 29.6%→74.0%，含多会话与子 Agent。11 月报告另给 10 月中旬日峰平均 ≥4 的研究员超 2/3、≥16 的超 10%。|支持让“更多并行 Agent”进入敏感性分析。阈值份额与请求均值、P95、创建会话数的分母不同。[9 月原文](https://openai.com/index/research-acceleration-view-inside-openai/) · [11 月原文](https://openai.com/index/research-acceleration-jagged-frontier/)|
 |Anthropic，R&D Automation Index，2026-09-17|7 月固定工作篮约 15,000 项、378 个叶类；加权 AL4 占比 2 月 <1%、3 月 1%、4 月 3%、5 月 12%、6 月 14%、7 月 22%、8 月 26%。8 月最常用研发工程平台约 30,000 个并发 Agent。7 月 13–20 日近万训练/评测作业约 14% 被抽样。|任务自动化占比可作跨月背景。平台并发缺少同日研究员分母、活跃请求及驻留分布，组织级算力分配亦无法确定主 Agent 占用。[原文与方法](https://www.anthropic.com/institute/measuring-pace-of-ai-development)|
@@ -12,6 +12,8 @@
 |Anthropic Measuring agent autonomy，交互式 Claude Code|2025 年秋至 2026 年 1 月，按 7 日滚动的 P99.9 自主 turn 时长从不足 25 到超过 45 分钟；中位约 45 秒，约 40–55 秒间波动。Turn 以停止/监督事件分段。|尾部与中位变化不同。该 turn 时钟不能校准整次研究会话时长。使用公开 API 的供应商也未必能可靠拼接 session。[原文 Figure 1](https://www.anthropic.com/research/measuring-agent-autonomy)|
 |Anthropic 内部员工时长，2026 年 8 月|交互式 Agent 小时/员工工时约 6，人员工时按每周 40 小时估计；统计包含子 Agent 和工具时间，并排除很长的工具等待。|仅作边界对照。该等待处理规则不能移用到 OpenAI 图值。[原文 Figure 2](https://www.anthropic.com/research/employment-at-anthropic)|
 |SWE-bench Verified，mini v2.0.0 / Kimi K2.5 high|沿用 500 取 40 的固定抽样。仅 23 个 issue 的 reported_calls=metered_calls 且缓存字段完整。1,172 次调用逐条回溯到 SHA 校验原件。|每题保存 (calls,prompt,completion,cache_read,peak_request)，每次调用另保存上下文长度的两个加数与请求时钟。缺失的 17 条可能系统性偏长；真实生产任务分布未知。[抽样与来源](../../agentic_40t_forecast/trace_sample.csv)|
+
+最新的任务发起率和逐题 Token 校准扩展至全部 500 条提交轨迹，独立保留 252 条完整联合记录。[证据及复算方法](calibration/REPORT.md)
 
 ## 字段分类及自由参数
 

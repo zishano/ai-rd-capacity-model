@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>研究员的 Agent 平均日峰值并发分布</title>
+<style>body{margin:1rem auto;max-width:1500px;font:16px system-ui}svg{width:100%;height:auto;display:block}output{position:fixed;pointer-events:none;color:white;background:#15181c;padding:.6rem .8rem;border-radius:8px;white-space:pre-line;font:14px/1.55 system-ui}</style>
+{{svg}}<output hidden></output><script>
+const series={{series}}, bins={{bins}}, cutoff='{{cutoff}}';
+const area=document.querySelector('#plot-area path'), svg=document.querySelector('svg'), tip=document.querySelector('output');
+const times=series.map(([d])=>Date.parse(d));
+svg.addEventListener('pointermove', e=>{
+  const p=new DOMPoint(e.clientX,e.clientY).matrixTransform(area.getScreenCTM().inverse()), box=area.getBBox();
+  const x=(p.x-box.x)/box.width, y=1-(p.y-box.y)/box.height;
+  if(x<0 || x>1 || y<0 || y>1){tip.hidden=true;return}
+  const t=times[0]+x*(times.at(-1)-times[0]);
+  let i=0;while(i+1<times.length && t>(times[i]+times[i+1])/2)i++;
+  const [day,shares]=series[i];let band=0,sum=shares[0];
+  while(band<shares.length-1 && sum<y)sum+=shares[++band];
+  tip.textContent=day+' · '+(day<=cutoff?'历史观测':'全速外推')+'\n平均日峰值并发 '+bins[band]+'\n研究员占比 '+(shares[band]*100).toFixed(2)+'%';
+  tip.hidden=false;tip.style.left=Math.max(0,Math.min(innerWidth-tip.offsetWidth-8,e.clientX+12))+'px';
+  tip.style.top=Math.max(0,Math.min(innerHeight-tip.offsetHeight-8,e.clientY+12))+'px';
+});
+svg.addEventListener('pointerleave',()=>tip.hidden=true);
+</script></html>

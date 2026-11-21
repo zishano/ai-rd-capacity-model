@@ -1,0 +1,4 @@
+date,method,workload_scenario,serving_scenario,hardware,top_k,weight_bytes,kv_bytes,compute_efficiency,hbm_bandwidth_efficiency,communication_bandwidth_efficiency,trace_count,tasks_per_main_agent_day,weighted_gpu_h_per_task,prefill_gpu_h_day,decode_gpu_h_day,gpu_h_per_main_agent_day
+2030-11-18,ols,A,base,GB300_NVL72,8,0.5,1,0.45,0.8,0.62,23,1.0,0.12746111126282098,0.02381383310542657,0.1036472781573944,0.12746111126282098
+2030-11-18,ols,B,base,GB300_NVL72,8,0.5,1,0.45,0.8,0.62,23,8.67144029056095,0.12746111126282098,0.20650023186309013,0.8987711838210077,1.105271415684098
+2030-11-18,ols,C,base,GB300_NVL72,8,0.5,1,0.45,0.8,0.62,23,1.9360515990845126,0.18098371468036684,0.05104217327600304,0.2993516369391764,0.3503938102151794
