@@ -1,6 +1,8 @@
 """Acceptance checks for the workload-only projection and existing service boundary."""
+import csv
 import hashlib
 import json
+import math
 import subprocess
 import sys
 import tempfile
@@ -30,12 +32,53 @@ class WorkloadForecastTest(unittest.TestCase):
     def tearDownClass(cls):
         cls.tmp.cleanup()
 
+    def assert_forecast_matches_archive(self, actual, archive):
+        # Python 3.12 improved sum() precision. Check computed floats numerically
+        # while keeping counts, labels, structure and the source hashes exact.
+        def compare(value, expected, location):
+            self.assertIs(type(value), type(expected), location)
+            if isinstance(expected, dict):
+                self.assertEqual(value.keys(), expected.keys(), location)
+                for key in expected:
+                    compare(value[key], expected[key], f'{location}.{key}')
+            elif isinstance(expected, list):
+                self.assertEqual(len(value), len(expected), location)
+                for i, (item, reference) in enumerate(zip(value, expected)):
+                    compare(item, reference, f'{location}[{i}]')
+            elif isinstance(expected, float):
+                self.assertTrue(math.isclose(value, expected, rel_tol=1e-12, abs_tol=1e-12),
+                                f'{location}: {value} != {expected}')
+            else:
+                self.assertEqual(value, expected, location)
+
+        if archive.suffix == '.json':
+            compare(json.loads(actual.read_text()), json.loads(archive.read_text()), archive.name)
+            return
+        self.assertEqual(archive.suffix, '.csv')
+        with actual.open(newline='') as a, archive.open(newline='') as b:
+            rows, reference = csv.reader(a), csv.reader(b)
+            self.assertEqual(next(rows), next(reference), archive.name)
+            for line, (row, ref) in enumerate(zip(rows, reference, strict=True), 2):
+                for col, (field, expected) in enumerate(zip(row, ref, strict=True), 1):
+                    if field == expected:
+                        continue
+                    location = f'{archive.name} row {line} column {col}'
+                    if any(c in expected.lower() for c in '.e'):
+                        try:
+                            left, right = float(field), float(expected)
+                        except ValueError:
+                            pass
+                        else:
+                            compare(left, right, location)
+                            continue
+                    self.assertEqual(field, expected, location)
+
     def test_old_configuration_and_all_four_archives(self):
         out = Path(self.tmp.name)/'legacy'
         subprocess.run([sys.executable,'-B','analysis/agentic_40t_forecast/forecast.py','--config',
                         str(PARENT/'forecast_config.json'),'--output',str(out)],cwd=ROOT,check=True)
         for path in out.glob('*.csv'):
-            self.assertEqual(path.read_bytes(),(PARENT/path.name).read_bytes())
+            self.assert_forecast_matches_archive(path, PARENT/path.name)
         self.assertEqual(len(list(out.glob('*.csv'))),4)
 
     def test_provenance_and_reproduction(self):
@@ -45,7 +88,7 @@ class WorkloadForecastTest(unittest.TestCase):
         self.assertEqual((len(tasks),sum(len(t['contexts']) for t in tasks)),(23,1172))
         for p in self.out.rglob('*'):
             if p.is_file():
-                self.assertEqual(p.read_bytes(), (HERE/'results'/p.relative_to(self.out)).read_bytes())
+                self.assert_forecast_matches_archive(p, HERE/'results'/p.relative_to(self.out))
 
     def test_calibrated_researcher_day_and_kernel_input(self):
         out = self.out/'calibrated'
