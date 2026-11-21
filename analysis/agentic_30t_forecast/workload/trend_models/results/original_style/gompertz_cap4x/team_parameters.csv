@@ -1,0 +1,6 @@
+method,series,parameters
+gompertz_cap4x,Pretraining,"{""cap"": 32.8, ""a"": 1.407325403945544, ""rate_per_day"": 0.0068111365784905694, ""jacobian_condition"": 397.38440491183366, ""cap_basis"": ""conditional sensitivity"", ""internal_scale"": 1.0, ""negative_forecasts_before_floor"": 0, ""fit_days"": 169}"
+gompertz_cap4x,Posttraining,"{""cap"": 31.2, ""a"": 1.5094963465179405, ""rate_per_day"": 0.007268570508970097, ""jacobian_condition"": 442.3961467610711, ""cap_basis"": ""conditional sensitivity"", ""internal_scale"": 1.0, ""negative_forecasts_before_floor"": 0, ""fit_days"": 169}"
+gompertz_cap4x,Overall Research,"{""basis"": ""forecast.csv overall series, identical to model comparison""}"
+gompertz_cap4x,Scaling / Infrastructure,"{""cap"": 17.2, ""a"": 1.3083574457969507, ""rate_per_day"": 0.00617956853653857, ""jacobian_condition"": 359.0809620292733, ""cap_basis"": ""conditional sensitivity"", ""internal_scale"": 1.0, ""negative_forecasts_before_floor"": 0, ""fit_days"": 169}"
+gompertz_cap4x,Other,"{""cap"": 12.0, ""a"": 1.385292764860944, ""rate_per_day"": 0.007041760792493374, ""jacobian_condition"": 388.03375099417013, ""cap_basis"": ""conditional sensitivity"", ""internal_scale"": 1.0, ""negative_forecasts_before_floor"": 0, ""fit_days"": 169}"

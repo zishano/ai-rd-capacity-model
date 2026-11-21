@@ -1,0 +1,6 @@
+method,series,parameters
+legacy_ols,Pretraining,"{""internal_scale"": 1.0, ""coefficients"": [-0.5107622694048022, 0.05094525384118144], ""negative_forecasts_before_floor"": 0, ""fit_days"": 169}"
+legacy_ols,Posttraining,"{""internal_scale"": 1.0, ""coefficients"": [-0.6224295161851728, 0.04620953706926557], ""negative_forecasts_before_floor"": 0, ""fit_days"": 169}"
+legacy_ols,Overall Research,"{""basis"": ""forecast.csv overall series, identical to model comparison""}"
+legacy_ols,Scaling / Infrastructure,"{""internal_scale"": 1.0, ""coefficients"": [-0.057090149669334164, 0.02581348515737655], ""negative_forecasts_before_floor"": 0, ""fit_days"": 169}"
+legacy_ols,Other,"{""internal_scale"": 1.0, ""coefficients"": [-0.21556561085972806, 0.020381134702401667], ""negative_forecasts_before_floor"": 0, ""fit_days"": 169}"
