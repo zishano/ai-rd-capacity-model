@@ -1,0 +1,38 @@
+{
+  "seed": 20261122,
+  "draws_per_component": 2400,
+  "ensemble_draws": 7200,
+  "models": [
+    "naive_rw",
+    "ols_spaced",
+    "local_level",
+    "local_linear",
+    "damped_local_linear",
+    "ensemble"
+  ],
+  "effective_points": {
+    "workdays": 7,
+    "tasks": 9,
+    "output": 15
+  },
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.10.8"
+  },
+  "sources": {
+    "observed_openai_research_usage.csv": "697ee13990d246403c197959b4a59dc0b4f3abfad5f09e999fac039ef1ecc632",
+    "calibration/observed_output_tokens.csv": "90952607008546a3ef82a13cba191cdab07a93685694ba0cef5ee4e1606475aa",
+    "observed_workdays_by_team.csv": "e0602e56546b413210c4fc6f0aaa7f67bffd620882c8127961594463b02f8ca6"
+  },
+  "interval_basis": "conditional simulation, not verified four-year coverage; includes zero censoring",
+  "scenario_assumptions": {
+    "start": "2028-01-18",
+    "annual_contraction": [
+      0.1,
+      0.2
+    ],
+    "probabilities": null
+  }
+}

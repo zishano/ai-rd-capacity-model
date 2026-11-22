@@ -16,6 +16,7 @@ from .. import monthly_research_usage as style
 from ..observations import HERE, records, write_rows
 from .models import fit_predict
 from .run import END, HERE_NEW, KEYS, inputs
+from .uncertainty import PRESET as UNCERTAINTY_PRESET, LABEL as UNCERTAINTY_LABEL, NOTE as UNCERTAINTY_NOTE
 
 PRESETS = {
     'damped_holt_hl365': ('阻尼 Holt · 半衰期 365 天', '条件情景：趋势半衰期人为固定为 365 天，不代表历史已识别该参数'),
@@ -23,6 +24,7 @@ PRESETS = {
     'logistic_cap4x': ('Logistic · 条件上限', '条件情景：上限设为各序列历史最大值的 4 倍，尚无外部容量证据'),
     'gompertz_cap4x': ('Gompertz · 条件上限', '条件情景：上限设为各序列历史最大值的 4 倍，尚无外部容量证据'),
     'legacy_ols': ('原脚本 OLS · 线性参照', '保持原 OLS 斜率与锚点规则，作为持续绝对增量的参照'),
+    UNCERTAINTY_PRESET: (UNCERTAINTY_LABEL, UNCERTAINTY_NOTE),
 }
 CONCURRENCY_LABELS = {
     'legacy_log_complement': '原双门槛模型', 'conditional_logistic': '条件 Logistic',
@@ -44,15 +46,18 @@ def team_prediction(days, values, future, method):
 
 def render(out, methods=None, concurrency_method='legacy_log_complement'):
     out = Path(out)
-    data, bins = inputs()
-    forecasts = records(out/'forecast.csv')
-    category_rows = records(out/'categories.csv')
-    concurrency_rows = records(out/'concurrency.csv')
-    team_rows = style.source_rows('observed_workdays_by_team.csv', None)
     methods = list(PRESETS) if methods is None else methods
+    if UNCERTAINTY_PRESET in methods and concurrency_method != 'legacy_log_complement':
+        print('ensemble_uncertainty 固定使用原双门槛 + Bootstrap；--concurrency-method 仅作用于旧预设',flush=True)
+    needs_legacy = any(m != UNCERTAINTY_PRESET for m in methods)
+    data, bins = inputs()
+    forecasts = records(out/'forecast.csv') if needs_legacy else []
+    category_rows = records(out/'categories.csv') if needs_legacy else []
+    concurrency_rows = records(out/'concurrency.csv') if needs_legacy else []
+    team_rows = style.source_rows('observed_workdays_by_team.csv', None)
     exported, parameters = [], []
     root = out/'original_style'
-    root.mkdir(exist_ok=True)
+    root.mkdir(parents=True,exist_ok=True)
     style.configure_fonts()
 
     def record(metric, method, series, points, cutoff):
@@ -70,6 +75,10 @@ def render(out, methods=None, concurrency_method='legacy_log_complement'):
         title, note = PRESETS[method]
         folder = root/method
         folder.mkdir(exist_ok=True)
+        if method == UNCERTAINTY_PRESET:
+            from .uncertainty.export import export
+            export(out, folder)
+            continue
         selected = [r for r in forecasts if r['method']==method]
         if not selected:
             raise ValueError(f'No projections for {method}; run trend_models.run first')
@@ -172,6 +181,8 @@ def render(out, methods=None, concurrency_method='legacy_log_complement'):
 
     # Separate files per selected model make individual redraws non-destructive.
     for method in methods:
+        if method == UNCERTAINTY_PRESET:
+            continue  # The adapter has exported the actual centers and interval provenance.
         write_rows(root/method/'chart_data.csv',[r for r in exported if r['method']==method])
         write_rows(root/method/'team_parameters.csv',[r for r in parameters if r['method']==method])
     sections = []
@@ -185,7 +196,7 @@ def render(out, methods=None, concurrency_method='legacy_log_complement'):
     (root/'index.html').write_text('<!doctype html><meta charset="utf-8"><title>原风格 · 多模型外推</title>'
         '<style>body{font-family:sans-serif;max-width:1400px;margin:24px auto;color:#222}img{width:100%}'
         'nav{position:sticky;top:0;background:white;padding:16px}section{scroll-margin-top:70px}</style>'
-        '<h1>同一绘图风格下比较增长假设</h1><p>原图值不变；每套图仅使用一个总量增长模型。'
+        '<h1>同一绘图风格下比较增长假设</h1><p>原图值不变；每套图对应一个预测方案（单模型或多模型融合）。'
         '并发采用独立模型。所有曲线延伸至 2030-11-18；非线性不等于更准确。</p>'
         f'<nav>{navigation}</nav>'+''.join(sections),encoding='utf8')
     print('Original-style chart sets:',root,flush=True)

@@ -1,0 +1,12 @@
+{
+  "method": "ensemble_uncertainty",
+  "label": "多模型融合与不确定性外推",
+  "note": "总量：三模型等权预测分布混合；并发：原双门槛 + 28 天分块 Bootstrap。区间未经长期覆盖率校准，停滞/回落为独立条件情景",
+  "total_method": "ensemble",
+  "point": "median",
+  "concurrency_method": "legacy_log_complement",
+  "concurrency_interval": "paired_block_bootstrap_28d",
+  "source_results": "/workspace/ai-rd-capacity-model/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results",
+  "source_manifest_sha256": "ab704cb13c26a1c692721874bde39d784d35f5a2cb8787a5491a12037ed1f168",
+  "resource_inputs_updated": false
+}

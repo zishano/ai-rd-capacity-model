@@ -39,16 +39,31 @@ def run():
         assert isclose(total,predicted[metric,day,method],rel_tol=1e-12)
     # Original-style figures must use the same monthly totals as the exported models.
     from .original_style import PRESETS
+    from .uncertainty import PRESET as UNCERTAINTY_PRESET
     for method in PRESETS:
         folder=out/'original_style'/method
+        if method == UNCERTAINTY_PRESET:
+            centers={(r['metric'],r['date']):float(r['median'])
+                     for r in records(folder/'forecast.csv') if r['method']=='ensemble'}
+            metadata=json.loads((folder/'preset.json').read_text())
+            assert metadata['concurrency_method']=='legacy_log_complement'
+            assert not metadata['resource_inputs_updated']
+            # The adapter must export the approved concurrency center, not a new baseline.
+            old={r['date']:r for r in records(out/'concurrency.csv')
+                 if r['method']=='legacy_log_complement'}
+            for r in records(folder/'main_concurrency.csv'):
+                assert all(isclose(float(r[f'bin_{i}']),float(old[r['date']][f'bin_{i}']),abs_tol=1e-12)
+                           for i in range(9))
         totals=defaultdict(float)
         for r in records(folder/'chart_data.csv'):
+            assert r['method']==method
             assert float(r['value'])>=0
             if r['status']!='forecast' or (r['metric']=='workdays' and r['series']!='Overall Research'):
                 continue
             totals[r['metric'],r['date']]+=float(r['value'])
         for (metric,day),total in totals.items():
-            target=1. if metric=='concurrency' else predicted[metric,day,method]
+            target=(1. if metric=='concurrency' else centers[metric,day]
+                    if method==UNCERTAINTY_PRESET else predicted[metric,day,method])
             assert isclose(total,target,rel_tol=1e-10,abs_tol=1e-9)
         for name in ('monthly_workdays','monthly_concurrency','monthly_tasks','monthly_output_tokens'):
             assert (folder/(name+'.png')).is_file() and (folder/(name+'.pdf')).is_file()
@@ -74,7 +89,7 @@ def run():
         books=[n for n in z.namelist() if n.startswith('ppt/embeddings/') and n.endswith('.xlsx')]
         assert len(charts)==len(books)==13
         assert all(ElementTree.fromstring(z.read(n)).find('.//{*}externalData') is not None for n in charts)
-    print('Passed probability, category, window, workload, adapter, 13 native charts and 5 original-style chart sets')
+    print(f'Passed probability, category, window, workload, adapter, 13 native charts and {len(PRESETS)} original-style chart sets')
 
 
 if __name__=='__main__':
