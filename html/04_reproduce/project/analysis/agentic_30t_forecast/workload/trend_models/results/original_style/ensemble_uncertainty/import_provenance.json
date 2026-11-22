@@ -1,0 +1,279 @@
+{
+  "schema_version": 1,
+  "method": "ensemble_uncertainty",
+  "source_method": "ensemble",
+  "source_commit": "fc61b42c84844b22580c85e306878f068300dd69",
+  "source_directory": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty",
+  "canonical_input": "data_predict/forecasts/upstream/forecast.csv",
+  "retained_non_ensemble_rows": 2250,
+  "retained_non_ensemble_sha256": "71105d8bc2259716c99e5efaf571b9ed6001a1c67b2670fe099bd96c9fa016cd",
+  "imported_rows": 150,
+  "conversion": {
+    "value": "forecast.csv median; output is 14-day target, workdays/tasks are 28-day targets",
+    "output_tokens_28d": "output_aligned28.csv median; quantiles are taken after aligning each simulated path",
+    "intervals": "nominal conditional 80%/95% model quantiles, not calibrated four-year coverage"
+  },
+  "omitted": [
+    "uncertainty/results/predictive_paths.npz (not read by HTML; retained in the upstream repository)"
+  ],
+  "files": [
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/backtest.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/backtest.csv",
+      "sha256": "737cddacb2f696f72a8fb1a6d7c8495df5ae3e7e331b3d915c40a30921ffd2f7",
+      "bytes": 42277
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/chart_data.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/chart_data.csv",
+      "sha256": "d845f9d20c924f4c87ceeb943d703d58bd77635a14762dcf686d6e58002c64a1",
+      "bytes": 873316
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/forecast.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/forecast.csv",
+      "sha256": "439c9300e550d6b149b3554b069b1e3ed7d3ff663a8a4afdcc8a5fd07882e72e",
+      "bytes": 129669
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/main_concurrency.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/main_concurrency.csv",
+      "sha256": "efa3f3d2bcc3e904bbbc6582c281b2128f9201babc767d98d2633d0c4c73e71a",
+      "bytes": 10826
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/main_concurrency_bands.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/main_concurrency_bands.csv",
+      "sha256": "886ee4ee4311fdfdb966e9804cd1132c0a105eb1da8a80e594176b9e890d57d9",
+      "bytes": 13246
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/main_concurrency_metadata.json",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/main_concurrency_metadata.json",
+      "sha256": "3fe26573a53a3847abda19e69130a3bfa36b9ac5f7fa1203ecd794af4591f82b",
+      "bytes": 604
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/manifest.json",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/manifest.json",
+      "sha256": "ab704cb13c26a1c692721874bde39d784d35f5a2cb8787a5491a12037ed1f168",
+      "bytes": 1011
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_concurrency.pdf",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_concurrency.pdf",
+      "sha256": "b08fa9195b0f9c4b58231920396f568b626cc765333e90fa9883f2c8cc24918a",
+      "bytes": 55896
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_concurrency.png",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_concurrency.png",
+      "sha256": "cf15187ac9f94a5e17cefa646adc1789a8afb66dfb779d3353fe7679f9141ace",
+      "bytes": 282958
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_output_tokens.pdf",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_output_tokens.pdf",
+      "sha256": "11f21c69ff8674f522b792198a8378dea87031f1ea8496c4b2c51a8a29d4f96f",
+      "bytes": 130372
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_output_tokens.png",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_output_tokens.png",
+      "sha256": "dc07e44cacb62a637d05724587357e018b31e1e71c0a1f4014e6a812c6769635",
+      "bytes": 366478
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_tasks.pdf",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_tasks.pdf",
+      "sha256": "48b9b55818c688e303def02b92f6c9348b06525d83f5c1a282e7e3f0ee2f7bb4",
+      "bytes": 110477
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_tasks.png",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_tasks.png",
+      "sha256": "731ddeaf12d6536f4ea9d95e9b88370cd79b76597549bc3b6a32fcd31212a1e8",
+      "bytes": 367899
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_workdays.pdf",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_workdays.pdf",
+      "sha256": "30888d8741dc0685a3a855e65dce5fb4e9f3c174983afecb87e13ea35c9aabbe",
+      "bytes": 58445
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_workdays.png",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_workdays.png",
+      "sha256": "5da9682188024a4865e38935f5f77114828640d1843303d74133bdc0bcf38026",
+      "bytes": 278431
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/output_aligned28.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/output_aligned28.csv",
+      "sha256": "1a09cdf47c64057920e2fc6c8fe07c0246057dc2a8cc84902cc528aee7cc1d1a",
+      "bytes": 41620
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/parameters.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/parameters.csv",
+      "sha256": "4baa9c27f74d72326fe3e465da66061d40c3ff85911f68caccb90214293d57d4",
+      "bytes": 60362
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/preset.json",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/preset.json",
+      "sha256": "06e68ed1d53e7dd40d7f96325aa3f9ff2bce677ef40cce5a43625f2b2eef52c1",
+      "bytes": 683
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/scenarios.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/scenarios.csv",
+      "sha256": "4128216b4f01f2c9e7e9cc43060af25a915b5af0d131025bd6188cb1a383188e",
+      "bytes": 23247
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/team_parameters.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/team_parameters.csv",
+      "sha256": "ce37813f89ebb05d126811c5b2b5912c5b7aa5e28fcb1de9d953f04acc083169",
+      "bytes": 7524
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/README.md",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/README.md",
+      "sha256": "6ecba5fec5476235c34de8c621d4b7e8a6933da890b893e18c88f141051e8a2c",
+      "bytes": 15897
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/__init__.py",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/__init__.py",
+      "sha256": "d50852f342aa265e78b1509f938829e4738db4984106ad9fee07dbf277165835",
+      "bytes": 351
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/check.py",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/check.py",
+      "sha256": "abc1160e5868acdc8d7955bc62d2f1f1d2cee1432f99c2a1f641b2003c74eb4b",
+      "bytes": 4838
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/export.py",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/export.py",
+      "sha256": "310e4ca07b1bab7aacec8eb784eb2393c38e95e695c00324f89dd0a100c70aad",
+      "bytes": 2787
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/probabilistic.py",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/probabilistic.py",
+      "sha256": "e65155eeda1519ff0a88d83aef61fa99f08aee6500cb4c71ca2c09976933ca0e",
+      "bytes": 9833
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/run.py",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/run.py",
+      "sha256": "69b3e06b2d26e16b6521639695253df60a950395c93f87918ba799a0705fc9b5",
+      "bytes": 9947
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/sources.json",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/sources.json",
+      "sha256": "7712534c7d71b1f7ec3147aea8b628084cdfdbc3a49ff06d5f6ba1c22026c21b",
+      "bytes": 3170
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/visualize.py",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/visualize.py",
+      "sha256": "4f404782e9711ed2a4b1daf2a0be4288316824c11d6e0abdb40ddd4d56369d48",
+      "bytes": 15781
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/backtest.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/backtest.csv",
+      "sha256": "737cddacb2f696f72a8fb1a6d7c8495df5ae3e7e331b3d915c40a30921ffd2f7",
+      "bytes": 42277
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/chart_data.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/chart_data.csv",
+      "sha256": "6db91bbff063dcf209e40af6ebb274762e166e2a4eb542bdc85bc3f49616110e",
+      "bytes": 499310
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/concurrency.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/concurrency.csv",
+      "sha256": "c7259f954af1928ebeb8146eebd58363f429accd1e3245129fc49d8bea2403f9",
+      "bytes": 158221
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/concurrency_backtest.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/concurrency_backtest.csv",
+      "sha256": "69c40a888d1898354fdebd6c655bfc7577a83341e3ecb3aac6416a677bfec62e",
+      "bytes": 1940
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/concurrency_thresholds.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/concurrency_thresholds.csv",
+      "sha256": "8ef91906605aa080cd307c9cfeb84436683fb23bc3994872770f817337556322",
+      "bytes": 33318
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/forecast.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/forecast.csv",
+      "sha256": "439c9300e550d6b149b3554b069b1e3ed7d3ff663a8a4afdcc8a5fd07882e72e",
+      "bytes": 129669
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/main_concurrency.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/main_concurrency.csv",
+      "sha256": "efa3f3d2bcc3e904bbbc6582c281b2128f9201babc767d98d2633d0c4c73e71a",
+      "bytes": 10826
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/main_concurrency_bands.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/main_concurrency_bands.csv",
+      "sha256": "886ee4ee4311fdfdb966e9804cd1132c0a105eb1da8a80e594176b9e890d57d9",
+      "bytes": 13246
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/main_concurrency_metadata.json",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/main_concurrency_metadata.json",
+      "sha256": "3fe26573a53a3847abda19e69130a3bfa36b9ac5f7fa1203ecd794af4591f82b",
+      "bytes": 604
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/manifest.json",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/manifest.json",
+      "sha256": "ab704cb13c26a1c692721874bde39d784d35f5a2cb8787a5491a12037ed1f168",
+      "bytes": 1011
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/output_aligned28.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/output_aligned28.csv",
+      "sha256": "1a09cdf47c64057920e2fc6c8fe07c0246057dc2a8cc84902cc528aee7cc1d1a",
+      "bytes": 41620
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/parameters.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/parameters.csv",
+      "sha256": "4baa9c27f74d72326fe3e465da66061d40c3ff85911f68caccb90214293d57d4",
+      "bytes": 60362
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/scenarios.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/scenarios.csv",
+      "sha256": "4128216b4f01f2c9e7e9cc43060af25a915b5af0d131025bd6188cb1a383188e",
+      "bytes": 23247
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/sensitivity.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/sensitivity.csv",
+      "sha256": "b102c91c8f80729bafdc6ec3ce56938e7628dc6bd27d213ccf045e0d2ed25b3d",
+      "bytes": 1701
+    },
+    {
+      "source": "analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/team_parameters.csv",
+      "archive": "html/04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/team_parameters.csv",
+      "sha256": "ce37813f89ebb05d126811c5b2b5912c5b7aa5e28fcb1de9d953f04acc083169",
+      "bytes": 7524
+    }
+  ]
+}

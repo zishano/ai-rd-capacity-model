@@ -1,0 +1,1550 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-22T05:38:47.453969+00:00",
+  "source_project": "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model",
+  "scope": "two offline pages; frontend; prepared data; archived-input reconstruction; figures and validation",
+  "limitations": [
+    "trend models reuse archived fits; full retraining environment not bundled",
+    "public_tasks.csv contains metering summaries and source URLs/hashes, not per-task trajectory originals",
+    "historical source-method notes do not override the current dashboard methodology"
+  ],
+  "files": [
+    {
+      "path": "01_pages/raw-data-dashboard.html",
+      "origin": "output_team100_resource_dashboard/raw-data-dashboard.html",
+      "original_sha256": "8793110e85a2234175ff4e18b5da90910dd556ab8e7304b85027832d1da8d6be",
+      "role": "standalone page or compatible fragment",
+      "category": "01_pages",
+      "bytes": 498725,
+      "sha256": "720151baf09c1f882313ec1d86d9f07927f1770b3adf9435d7403d55a988b2d7",
+      "matches_original": false
+    },
+    {
+      "path": "01_pages/resource-dashboard-preview.html",
+      "origin": "output_team100_resource_dashboard/resource-dashboard-preview.html",
+      "original_sha256": "114c17337d42d083a73cc5a39fa6b85c19dba465b1457d1c75ef10711da6404a",
+      "role": "standalone page or compatible fragment",
+      "category": "01_pages",
+      "bytes": 682857,
+      "sha256": "19cb9367152c6540b8d01005e03be79a43eef930e043c953841508195357436c",
+      "matches_original": false
+    },
+    {
+      "path": "01_pages/team-resource-dashboard.html",
+      "origin": "output_team100_resource_dashboard/team-resource-dashboard.html",
+      "original_sha256": "41337f56573a3d7056b9ed0474006710b7624d2b1f36aebefe173d8c05ecaf9a",
+      "role": "standalone page or compatible fragment",
+      "category": "01_pages",
+      "bytes": 682513,
+      "sha256": "26307351266b68a15743040c798f9940832acc1fb6e0db76ed931b1a87201685",
+      "matches_original": false
+    },
+    {
+      "path": "02_frontend/dashboard.css",
+      "origin": "output_team100_resource_dashboard/dashboard.css",
+      "original_sha256": "a372e9375b1672aaa3e3f0d322dde90485157d93d542131a9db545d8b5a229e3",
+      "role": "editable frontend source",
+      "category": "02_frontend",
+      "bytes": 16491,
+      "sha256": "3213588a43f5b35580a45cc1eb7aff45633f035695f23f10edad4d93c35f0e91",
+      "matches_original": false
+    },
+    {
+      "path": "02_frontend/dashboard.js",
+      "origin": "output_team100_resource_dashboard/dashboard.js",
+      "original_sha256": "b16bec1743cb87988f1c0f34b3fa506ec4ea64d60135183e7dd4e389a94b6d1a",
+      "role": "editable frontend source",
+      "category": "02_frontend",
+      "bytes": 54089,
+      "sha256": "f18278a382eb5aaec743031d19d36a0f82b6e65b174fe59bf6708c924bc11f2a",
+      "matches_original": false
+    },
+    {
+      "path": "02_frontend/dashboard.template.html",
+      "origin": "output_team100_resource_dashboard/dashboard.template.html",
+      "original_sha256": "ccbcee05378757faec4dd953080426a6a8d821e6a7838d1b974cb7c1efdab5d5",
+      "role": "editable frontend source",
+      "category": "02_frontend",
+      "bytes": 8899,
+      "sha256": "553b14f60b42cb458256d72064ece20327c6716a7794893acd31e7cf907bbe40",
+      "matches_original": false
+    },
+    {
+      "path": "02_frontend/raw-dashboard.css",
+      "origin": "output_team100_resource_dashboard/raw-dashboard.css",
+      "original_sha256": "d85e8b849bd7dab2a94a45dc76201c2b7967d76e7c04bec402d223ea950c1ede",
+      "role": "editable frontend source",
+      "category": "02_frontend",
+      "bytes": 2481,
+      "sha256": "16e09fa86055d548a088b60913d5056f91cb72dc47c9ecc2b00253b91df3a6a7",
+      "matches_original": false
+    },
+    {
+      "path": "02_frontend/raw-dashboard.js",
+      "origin": "output_team100_resource_dashboard/raw-dashboard.js",
+      "original_sha256": "080444f3b0373d7cd03e5f6ddc6044cca4cd360b70879159f21155da11517212",
+      "role": "editable frontend source",
+      "category": "02_frontend",
+      "bytes": 22006,
+      "sha256": "a84a5d7b6057c3ac72509fa86096453728052d9a7e778e6684039a0dff2ca73a",
+      "matches_original": false
+    },
+    {
+      "path": "02_frontend/raw-dashboard.template.html",
+      "origin": "output_team100_resource_dashboard/raw-dashboard.template.html",
+      "original_sha256": "5b30aab1196e7f67d1ab25114930bf318a8dc8a4ffcf435e3dcf917e2996c1b8",
+      "role": "editable frontend source",
+      "category": "02_frontend",
+      "bytes": 5915,
+      "sha256": "4d56c32507c033c19c4b17b6a68ed207420bd00a186419da06ba2ced0b2bd117",
+      "matches_original": false
+    },
+    {
+      "path": "03_data/algorithm_forecasts.json",
+      "origin": "output_team100_resource_dashboard/algorithm_forecasts.json",
+      "original_sha256": "b4f2287ebc6d746f04eb2261f53c94fa7edd467fd1bdaa39971e5d46054fc534",
+      "role": "prepared chart data",
+      "category": "03_data",
+      "bytes": 100953,
+      "sha256": "a57cd62aa3313ad5bb6d1b90495c4c1b8e50add4ee9e3042037d8b9626fd7a0b",
+      "matches_original": false
+    },
+    {
+      "path": "03_data/baseline_2026.csv",
+      "origin": "output_team100_resource_dashboard/baseline_2026.csv",
+      "original_sha256": "66234a112f4ebb29c743330c4911beb3a95f02d476335e0763c1ed1727e9b8bc",
+      "role": "prepared chart data",
+      "category": "03_data",
+      "bytes": 2110,
+      "sha256": "2a0a6cf5e61de03e4b21ade89dabe996e2a7a44920a4ff8319d33a1ebb8d13c1",
+      "matches_original": false
+    },
+    {
+      "path": "03_data/category_mix.csv",
+      "origin": "output_team100_resource_dashboard/category_mix.csv",
+      "original_sha256": "c314fbf526d090ec0ce4b02205f37bbeb316f6c15188ec6089f54960ea31b7ab",
+      "role": "prepared chart data",
+      "category": "03_data",
+      "bytes": 75001,
+      "sha256": "8c13bdd988dea3c85d394c277644666de4f0fd70f244c8f636842aa2858ce71b",
+      "matches_original": false
+    },
+    {
+      "path": "03_data/dashboard_data.csv",
+      "origin": "output_team100_resource_dashboard/dashboard_data.csv",
+      "original_sha256": "b9b61d59ea30ba1c90702e26e3234022c7160cb6fb90819198e1939c84d10bcf",
+      "role": "prepared chart data",
+      "category": "03_data",
+      "bytes": 5759,
+      "sha256": "4f6e81be56b28314d07446d2d3c9e3a0b7bda785cbab29c54401f15bfe30efdd",
+      "matches_original": false
+    },
+    {
+      "path": "03_data/dashboard_data.json",
+      "origin": "output_team100_resource_dashboard/dashboard_data.json",
+      "original_sha256": "045ab5eb740f3c938276fc75a930f1161f65a271c8f1f524cf704df18c0d5722",
+      "role": "prepared chart data",
+      "category": "03_data",
+      "bytes": 1293913,
+      "sha256": "2cdd9b5ee7e817e73ed3a88e6d62e25f8c26d6acd25404082245b560e0e001a5",
+      "matches_original": false
+    },
+    {
+      "path": "03_data/monthly_agents.csv",
+      "origin": "output_team100_resource_dashboard/monthly_agents.csv",
+      "original_sha256": "48a05ac521581bfcfa9a09bb8226f50fde92c2bcd1216cf3249cb8feedacb46c",
+      "role": "prepared chart data",
+      "category": "03_data",
+      "bytes": 30550,
+      "sha256": "48a05ac521581bfcfa9a09bb8226f50fde92c2bcd1216cf3249cb8feedacb46c",
+      "matches_original": true
+    },
+    {
+      "path": "03_data/monthly_resources.csv",
+      "origin": "output_team100_resource_dashboard/monthly_resources.csv",
+      "original_sha256": "9c116e76b7ec845a325f52cc802a8458c43e4fa238be3716ee1447ac99dd04b1",
+      "role": "prepared chart data",
+      "category": "03_data",
+      "bytes": 96160,
+      "sha256": "72b8f43b3671912d3409558ff863e0eeb63e0e4e55d9bf08517b66792013530c",
+      "matches_original": false
+    },
+    {
+      "path": "03_data/monthly_tasks.csv",
+      "origin": "output_team100_resource_dashboard/monthly_tasks.csv",
+      "original_sha256": "1b32e0f909d0bf9491a296794ae17be65d1f907350a89283fdc7c2ddeeb84526",
+      "role": "prepared chart data",
+      "category": "03_data",
+      "bytes": 27616,
+      "sha256": "1b32e0f909d0bf9491a296794ae17be65d1f907350a89283fdc7c2ddeeb84526",
+      "matches_original": true
+    },
+    {
+      "path": "03_data/monthly_tokens.csv",
+      "origin": "output_team100_resource_dashboard/monthly_tokens.csv",
+      "original_sha256": "46ae587fb39c69aa231bddfd03cda25e48d836910604b93386276862c096a283",
+      "role": "prepared chart data",
+      "category": "03_data",
+      "bytes": 55714,
+      "sha256": "836ce094ca105c4fb233058832b3ca21829bc40cfdfb07a3f363522e8bee867b",
+      "matches_original": false
+    },
+    {
+      "path": "03_data/official_history.csv",
+      "origin": "output_team100_resource_dashboard/official_history.csv",
+      "original_sha256": "d9455a9430874179df594832e6961c1144bf7d75af596d5a0a7e4181575b2b28",
+      "role": "prepared chart data",
+      "category": "03_data",
+      "bytes": 246107,
+      "sha256": "d9455a9430874179df594832e6961c1144bf7d75af596d5a0a7e4181575b2b28",
+      "matches_original": true
+    },
+    {
+      "path": "03_data/raw_research_data.json",
+      "origin": "output_team100_resource_dashboard/raw_research_data.json",
+      "original_sha256": "543fb85ac21003a5fa63f1c9627e733422889ad54dc586e88b610cb4eb182708",
+      "role": "prepared chart data",
+      "category": "03_data",
+      "bytes": 452232,
+      "sha256": "ff749cf029e35619733f38c2a29b1b5bad3397882d53513952be5be6cd099df3",
+      "matches_original": false
+    },
+    {
+      "path": "04_reproduce/bundle_manifest.py",
+      "category": "04_reproduce",
+      "bytes": 3171,
+      "sha256": "22a040b00e7a60cf3fcf184f1ef0f6312cf65f297925236b4493230f43babe76",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/environment.md",
+      "category": "04_reproduce",
+      "bytes": 4718,
+      "sha256": "283e224b01951963cd9ee84ac10d7f7efff13fb1c5ba32997af91ef4a18043dc",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/calibration/REPORT.md",
+      "origin": "analysis/agentic_30t_forecast/workload/calibration/REPORT.md",
+      "original_sha256": "d8f7e967cc4bac772d2b3c9dc9527e08146f04462fbde3e2efacaee68f9ccd81",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 21366,
+      "sha256": "d8f7e967cc4bac772d2b3c9dc9527e08146f04462fbde3e2efacaee68f9ccd81",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/calibration/observed_output_tokens.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/calibration/observed_output_tokens.csv",
+      "original_sha256": "90952607008546a3ef82a13cba191cdab07a93685694ba0cef5ee4e1606475aa",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 60629,
+      "sha256": "90952607008546a3ef82a13cba191cdab07a93685694ba0cef5ee4e1606475aa",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/calibration/public_tasks.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/calibration/public_tasks.csv",
+      "original_sha256": "2627833f5c03c21b551e1ea7cced069ef9d861e393d713c75610540d2503d4dd",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 174159,
+      "sha256": "2627833f5c03c21b551e1ea7cced069ef9d861e393d713c75610540d2503d4dd",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/monthly_research_usage.py",
+      "origin": "analysis/agentic_30t_forecast/workload/monthly_research_usage.py",
+      "original_sha256": "c8cafb2814b456858f2248e6db216b1ddc04b7d7a0c8b528553c7c0d5cbd25ed",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 119193,
+      "sha256": "c8cafb2814b456858f2248e6db216b1ddc04b7d7a0c8b528553c7c0d5cbd25ed",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/observed_openai_research_usage.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/observed_openai_research_usage.csv",
+      "original_sha256": "697ee13990d246403c197959b4a59dc0b4f3abfad5f09e999fac039ef1ecc632",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 26230,
+      "sha256": "697ee13990d246403c197959b4a59dc0b4f3abfad5f09e999fac039ef1ecc632",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/observed_workdays_by_team.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/observed_workdays_by_team.csv",
+      "original_sha256": "e0602e56546b413210c4fc6f0aaa7f67bffd620882c8127961594463b02f8ca6",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 5163,
+      "sha256": "e0602e56546b413210c4fc6f0aaa7f67bffd620882c8127961594463b02f8ca6",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/settings.json",
+      "origin": "analysis/agentic_30t_forecast/workload/settings.json",
+      "original_sha256": "394b796e804461a2148ee7991451d489e6ac128b0c672db8b740f1279dc9262d",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 610,
+      "sha256": "394b796e804461a2148ee7991451d489e6ac128b0c672db8b740f1279dc9262d",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/sources.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/sources.csv",
+      "original_sha256": "12124ef94b5bd7365b08120bf8158608ad97e0b5260d23f56f2f47945ab1cecf",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 2593,
+      "sha256": "12124ef94b5bd7365b08120bf8158608ad97e0b5260d23f56f2f47945ab1cecf",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/README.md",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/README.md",
+      "original_sha256": "dc780583bed7be8833ebc3d686fcda919c144b8c13aad27184929a625540dc0c",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 18153,
+      "sha256": "dc780583bed7be8833ebc3d686fcda919c144b8c13aad27184929a625540dc0c",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/original_style.py",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/original_style.py",
+      "original_sha256": "e5bc4f0d3723bc1aef288aff8d91c44f8488aab4d9251cb100fe595c2d2863cc",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 11284,
+      "sha256": "e5bc4f0d3723bc1aef288aff8d91c44f8488aab4d9251cb100fe595c2d2863cc",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/requirements.txt",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/requirements.txt",
+      "original_sha256": "8a2134db6b21d38c2455e8cb2b02fa12ddb38cd48e69533100805594342c2039",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 86,
+      "sha256": "8a2134db6b21d38c2455e8cb2b02fa12ddb38cd48e69533100805594342c2039",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/audit.json",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/audit.json",
+      "original_sha256": "141238935017bca06566657e3cf3e15ce1508d3123290a3c1421991178b84aae",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 565,
+      "sha256": "141238935017bca06566657e3cf3e15ce1508d3123290a3c1421991178b84aae",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/backtest.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/backtest.csv",
+      "original_sha256": "b30686b1ab8d89748ed49e1c1b9f5f61678d7bd9df86716f021ba58aab3f61e8",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 27148,
+      "sha256": "b30686b1ab8d89748ed49e1c1b9f5f61678d7bd9df86716f021ba58aab3f61e8",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/concurrency.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/concurrency.csv",
+      "original_sha256": "6eef2a221a9730fdce05934ce71d4713bacec25c9d363566f263ae073b8fd2e6",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 42137,
+      "sha256": "6eef2a221a9730fdce05934ce71d4713bacec25c9d363566f263ae073b8fd2e6",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/concurrency_backtest.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/concurrency_backtest.csv",
+      "original_sha256": "23295fbb288237457c9f99314ff36128d171116e2aa0c790e61a62c70d97cd7d",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 3062,
+      "sha256": "23295fbb288237457c9f99314ff36128d171116e2aa0c790e61a62c70d97cd7d",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/forecast.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/forecast.csv",
+      "original_sha256": "71105d8bc2259716c99e5efaf571b9ed6001a1c67b2670fe099bd96c9fa016cd",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 172987,
+      "sha256": "71105d8bc2259716c99e5efaf571b9ed6001a1c67b2670fe099bd96c9fa016cd",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/manifest.json",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/manifest.json",
+      "original_sha256": "bed6d29dd6dc4a6b8d09a384af8b74e1859072b5ac245612aa5b3d9ad9c2da96",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 837,
+      "sha256": "bed6d29dd6dc4a6b8d09a384af8b74e1859072b5ac245612aa5b3d9ad9c2da96",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt/chart_data.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt/chart_data.csv",
+      "original_sha256": "0520d76a3bd257325010b752603227cf43f98abf03be14cdd0a8694fa61b59a8",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 761358,
+      "sha256": "0520d76a3bd257325010b752603227cf43f98abf03be14cdd0a8694fa61b59a8",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt/team_parameters.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt/team_parameters.csv",
+      "original_sha256": "469e72aee6e13d56ad48d3142041cf26396f38918a42dd5ddc24a3eb95259f5a",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 1651,
+      "sha256": "469e72aee6e13d56ad48d3142041cf26396f38918a42dd5ddc24a3eb95259f5a",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt_hl365/chart_data.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt_hl365/chart_data.csv",
+      "original_sha256": "8d47b182a85f2de4e9f812d44bb2f1f5076321ba252ec2b3d7a735d769d6848e",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 836611,
+      "sha256": "8d47b182a85f2de4e9f812d44bb2f1f5076321ba252ec2b3d7a735d769d6848e",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt_hl365/team_parameters.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt_hl365/team_parameters.csv",
+      "original_sha256": "b2bf64c23922710e02547e3cca2096cab145a5657c275fa1566cc583c3905e1a",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 1683,
+      "sha256": "b2bf64c23922710e02547e3cca2096cab145a5657c275fa1566cc583c3905e1a",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/backtest.csv",
+      "category": "04_reproduce",
+      "bytes": 42277,
+      "sha256": "737cddacb2f696f72a8fb1a6d7c8495df5ae3e7e331b3d915c40a30921ffd2f7",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/chart_data.csv",
+      "category": "04_reproduce",
+      "bytes": 873316,
+      "sha256": "d845f9d20c924f4c87ceeb943d703d58bd77635a14762dcf686d6e58002c64a1",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/forecast.csv",
+      "category": "04_reproduce",
+      "bytes": 129669,
+      "sha256": "439c9300e550d6b149b3554b069b1e3ed7d3ff663a8a4afdcc8a5fd07882e72e",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/import_provenance.json",
+      "category": "04_reproduce",
+      "bytes": 17410,
+      "sha256": "ceb5a0a3c01680a0e747978d1b34bc98a4a307e4d08e58d981b1b54ecc347fe6",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/main_concurrency.csv",
+      "category": "04_reproduce",
+      "bytes": 10826,
+      "sha256": "efa3f3d2bcc3e904bbbc6582c281b2128f9201babc767d98d2633d0c4c73e71a",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/main_concurrency_bands.csv",
+      "category": "04_reproduce",
+      "bytes": 13246,
+      "sha256": "886ee4ee4311fdfdb966e9804cd1132c0a105eb1da8a80e594176b9e890d57d9",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/main_concurrency_metadata.json",
+      "category": "04_reproduce",
+      "bytes": 604,
+      "sha256": "3fe26573a53a3847abda19e69130a3bfa36b9ac5f7fa1203ecd794af4591f82b",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/manifest.json",
+      "category": "04_reproduce",
+      "bytes": 1011,
+      "sha256": "ab704cb13c26a1c692721874bde39d784d35f5a2cb8787a5491a12037ed1f168",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_concurrency.pdf",
+      "category": "04_reproduce",
+      "bytes": 55896,
+      "sha256": "b08fa9195b0f9c4b58231920396f568b626cc765333e90fa9883f2c8cc24918a",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_concurrency.png",
+      "category": "04_reproduce",
+      "bytes": 282958,
+      "sha256": "cf15187ac9f94a5e17cefa646adc1789a8afb66dfb779d3353fe7679f9141ace",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_output_tokens.pdf",
+      "category": "04_reproduce",
+      "bytes": 130372,
+      "sha256": "11f21c69ff8674f522b792198a8378dea87031f1ea8496c4b2c51a8a29d4f96f",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_output_tokens.png",
+      "category": "04_reproduce",
+      "bytes": 366478,
+      "sha256": "dc07e44cacb62a637d05724587357e018b31e1e71c0a1f4014e6a812c6769635",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_tasks.pdf",
+      "category": "04_reproduce",
+      "bytes": 110477,
+      "sha256": "48b9b55818c688e303def02b92f6c9348b06525d83f5c1a282e7e3f0ee2f7bb4",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_tasks.png",
+      "category": "04_reproduce",
+      "bytes": 367899,
+      "sha256": "731ddeaf12d6536f4ea9d95e9b88370cd79b76597549bc3b6a32fcd31212a1e8",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_workdays.pdf",
+      "category": "04_reproduce",
+      "bytes": 58445,
+      "sha256": "30888d8741dc0685a3a855e65dce5fb4e9f3c174983afecb87e13ea35c9aabbe",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/monthly_workdays.png",
+      "category": "04_reproduce",
+      "bytes": 278431,
+      "sha256": "5da9682188024a4865e38935f5f77114828640d1843303d74133bdc0bcf38026",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/output_aligned28.csv",
+      "category": "04_reproduce",
+      "bytes": 41620,
+      "sha256": "1a09cdf47c64057920e2fc6c8fe07c0246057dc2a8cc84902cc528aee7cc1d1a",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/parameters.csv",
+      "category": "04_reproduce",
+      "bytes": 60362,
+      "sha256": "4baa9c27f74d72326fe3e465da66061d40c3ff85911f68caccb90214293d57d4",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/preset.json",
+      "category": "04_reproduce",
+      "bytes": 683,
+      "sha256": "06e68ed1d53e7dd40d7f96325aa3f9ff2bce677ef40cce5a43625f2b2eef52c1",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/scenarios.csv",
+      "category": "04_reproduce",
+      "bytes": 23247,
+      "sha256": "4128216b4f01f2c9e7e9cc43060af25a915b5af0d131025bd6188cb1a383188e",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/ensemble_uncertainty/team_parameters.csv",
+      "category": "04_reproduce",
+      "bytes": 7524,
+      "sha256": "ce37813f89ebb05d126811c5b2b5912c5b7aa5e28fcb1de9d953f04acc083169",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/gompertz_cap4x/chart_data.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/gompertz_cap4x/chart_data.csv",
+      "original_sha256": "e2ab57df99b9f2dcd76534ea95bea043a180a3483d421749ffd988c7b82756cb",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 799126,
+      "sha256": "e2ab57df99b9f2dcd76534ea95bea043a180a3483d421749ffd988c7b82756cb",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/gompertz_cap4x/team_parameters.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/gompertz_cap4x/team_parameters.csv",
+      "original_sha256": "5f9e1fe410f9dd803056716c64c4e84cb59db7fb9d3ba326f3aeb50eedd121cf",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 1275,
+      "sha256": "5f9e1fe410f9dd803056716c64c4e84cb59db7fb9d3ba326f3aeb50eedd121cf",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/legacy_ols/chart_data.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/legacy_ols/chart_data.csv",
+      "original_sha256": "abe65edf65ae95de1510958aeee7fb6967de0e8972fafc53b0666d34b3f06adf",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 748060,
+      "sha256": "abe65edf65ae95de1510958aeee7fb6967de0e8972fafc53b0666d34b3f06adf",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/legacy_ols/team_parameters.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/legacy_ols/team_parameters.csv",
+      "original_sha256": "8b3e031825cab4f89c9ce82a415603d928b4782af7da6354029ef193b235489d",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 831,
+      "sha256": "8b3e031825cab4f89c9ce82a415603d928b4782af7da6354029ef193b235489d",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/logistic_cap4x/chart_data.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/logistic_cap4x/chart_data.csv",
+      "original_sha256": "d77e9261fb60fae876b31a43b11525f6c4cd483955599ebb49590e413f3d22a9",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 799060,
+      "sha256": "d77e9261fb60fae876b31a43b11525f6c4cd483955599ebb49590e413f3d22a9",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/logistic_cap4x/team_parameters.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/logistic_cap4x/team_parameters.csv",
+      "original_sha256": "53e58fa4951388e8143d0ea3c665e9e04834cc2ad22ecc6e04455fb6f10cc087",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 1274,
+      "sha256": "53e58fa4951388e8143d0ea3c665e9e04834cc2ad22ecc6e04455fb6f10cc087",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/parameters.csv",
+      "origin": "analysis/agentic_30t_forecast/workload/trend_models/results/parameters.csv",
+      "original_sha256": "ac9488750b4d424bce04072debd60726e9d7104e2ea1c2de3cb71558adbed0ec",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 13671,
+      "sha256": "ac9488750b4d424bce04072debd60726e9d7104e2ea1c2de3cb71558adbed0ec",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/README.md",
+      "category": "04_reproduce",
+      "bytes": 15897,
+      "sha256": "6ecba5fec5476235c34de8c621d4b7e8a6933da890b893e18c88f141051e8a2c",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/__init__.py",
+      "category": "04_reproduce",
+      "bytes": 351,
+      "sha256": "d50852f342aa265e78b1509f938829e4738db4984106ad9fee07dbf277165835",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/check.py",
+      "category": "04_reproduce",
+      "bytes": 4838,
+      "sha256": "abc1160e5868acdc8d7955bc62d2f1f1d2cee1432f99c2a1f641b2003c74eb4b",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/export.py",
+      "category": "04_reproduce",
+      "bytes": 2787,
+      "sha256": "310e4ca07b1bab7aacec8eb784eb2393c38e95e695c00324f89dd0a100c70aad",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/probabilistic.py",
+      "category": "04_reproduce",
+      "bytes": 9833,
+      "sha256": "e65155eeda1519ff0a88d83aef61fa99f08aee6500cb4c71ca2c09976933ca0e",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/backtest.csv",
+      "category": "04_reproduce",
+      "bytes": 42277,
+      "sha256": "737cddacb2f696f72a8fb1a6d7c8495df5ae3e7e331b3d915c40a30921ffd2f7",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/chart_data.csv",
+      "category": "04_reproduce",
+      "bytes": 499310,
+      "sha256": "6db91bbff063dcf209e40af6ebb274762e166e2a4eb542bdc85bc3f49616110e",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/concurrency.csv",
+      "category": "04_reproduce",
+      "bytes": 158221,
+      "sha256": "c7259f954af1928ebeb8146eebd58363f429accd1e3245129fc49d8bea2403f9",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/concurrency_backtest.csv",
+      "category": "04_reproduce",
+      "bytes": 1940,
+      "sha256": "69c40a888d1898354fdebd6c655bfc7577a83341e3ecb3aac6416a677bfec62e",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/concurrency_thresholds.csv",
+      "category": "04_reproduce",
+      "bytes": 33318,
+      "sha256": "8ef91906605aa080cd307c9cfeb84436683fb23bc3994872770f817337556322",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/forecast.csv",
+      "category": "04_reproduce",
+      "bytes": 129669,
+      "sha256": "439c9300e550d6b149b3554b069b1e3ed7d3ff663a8a4afdcc8a5fd07882e72e",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/main_concurrency.csv",
+      "category": "04_reproduce",
+      "bytes": 10826,
+      "sha256": "efa3f3d2bcc3e904bbbc6582c281b2128f9201babc767d98d2633d0c4c73e71a",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/main_concurrency_bands.csv",
+      "category": "04_reproduce",
+      "bytes": 13246,
+      "sha256": "886ee4ee4311fdfdb966e9804cd1132c0a105eb1da8a80e594176b9e890d57d9",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/main_concurrency_metadata.json",
+      "category": "04_reproduce",
+      "bytes": 604,
+      "sha256": "3fe26573a53a3847abda19e69130a3bfa36b9ac5f7fa1203ecd794af4591f82b",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/manifest.json",
+      "category": "04_reproduce",
+      "bytes": 1011,
+      "sha256": "ab704cb13c26a1c692721874bde39d784d35f5a2cb8787a5491a12037ed1f168",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/output_aligned28.csv",
+      "category": "04_reproduce",
+      "bytes": 41620,
+      "sha256": "1a09cdf47c64057920e2fc6c8fe07c0246057dc2a8cc84902cc528aee7cc1d1a",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/parameters.csv",
+      "category": "04_reproduce",
+      "bytes": 60362,
+      "sha256": "4baa9c27f74d72326fe3e465da66061d40c3ff85911f68caccb90214293d57d4",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/scenarios.csv",
+      "category": "04_reproduce",
+      "bytes": 23247,
+      "sha256": "4128216b4f01f2c9e7e9cc43060af25a915b5af0d131025bd6188cb1a383188e",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/sensitivity.csv",
+      "category": "04_reproduce",
+      "bytes": 1701,
+      "sha256": "b102c91c8f80729bafdc6ec3ce56938e7628dc6bd27d213ccf045e0d2ed25b3d",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/results/team_parameters.csv",
+      "category": "04_reproduce",
+      "bytes": 7524,
+      "sha256": "ce37813f89ebb05d126811c5b2b5912c5b7aa5e28fcb1de9d953f04acc083169",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/run.py",
+      "category": "04_reproduce",
+      "bytes": 9947,
+      "sha256": "69b3e06b2d26e16b6521639695253df60a950395c93f87918ba799a0705fc9b5",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/sources.json",
+      "category": "04_reproduce",
+      "bytes": 3170,
+      "sha256": "7712534c7d71b1f7ec3147aea8b628084cdfdbc3a49ff06d5f6ba1c22026c21b",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/uncertainty/visualize.py",
+      "category": "04_reproduce",
+      "bytes": 15781,
+      "sha256": "4f404782e9711ed2a4b1daf2a0be4288316824c11d6e0abdb40ddd4d56369d48",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/project/config/models/moe_30t.json",
+      "origin": "config/models/moe_30t.json",
+      "original_sha256": "11341675d6ee27d44d24a03b2531b0c1e79a5dccf1c0677fa36985ea6641c954",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 2244,
+      "sha256": "11341675d6ee27d44d24a03b2531b0c1e79a5dccf1c0677fa36985ea6641c954",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output/team_100_2030.csv",
+      "origin": "output/team_100_2030.csv",
+      "original_sha256": "87bd5134a66f0258f48ab7451e972965c53ff6ed97af0d14f939682e9c8f8d55",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 1758,
+      "sha256": "87bd5134a66f0258f48ab7451e972965c53ff6ed97af0d14f939682e9c8f8d55",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_official_100/official_data/normalization_manifest.json",
+      "origin": "output_openai_official_100/official_data/normalization_manifest.json",
+      "original_sha256": "c24c24993900ebb8b7a935cfc778eb1d9394954ef5d01786448d43026b088445",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 2984,
+      "sha256": "c24c24993900ebb8b7a935cfc778eb1d9394954ef5d01786448d43026b088445",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_official_100/official_data/task_starts.csv",
+      "origin": "output_openai_official_100/official_data/task_starts.csv",
+      "original_sha256": "da498ed88239961eb732ced0b187c7ec4a104e01b77eee59481fb6e8bba428fe",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 946919,
+      "sha256": "da498ed88239961eb732ced0b187c7ec4a104e01b77eee59481fb6e8bba428fe",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_official_100/official_data/workdays.csv",
+      "origin": "output_openai_official_100/official_data/workdays.csv",
+      "original_sha256": "1dbf79fd16d2a5625b4d581316fea20466d721e5d2ba91897374af526043b9b6",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 171107,
+      "sha256": "1dbf79fd16d2a5625b4d581316fea20466d721e5d2ba91897374af526043b9b6",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_official_100/source_downloads/download_manifest.json",
+      "origin": "output_openai_official_100/source_downloads/download_manifest.json",
+      "original_sha256": "bf3c3121d7625aa5d1e84aa3eca31b9ef3302d77306a5cc6ed343cc45dab2117",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 1139,
+      "sha256": "bf3c3121d7625aa5d1e84aa3eca31b9ef3302d77306a5cc6ed343cc45dab2117",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_official_100/source_downloads/november_2026_chart_02.json",
+      "origin": "output_openai_official_100/source_downloads/november_2026_chart_02.json",
+      "original_sha256": "45be68e16706293c24fce138dc77c067f9f97888efb0532152e715955f965123",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 169334,
+      "sha256": "45be68e16706293c24fce138dc77c067f9f97888efb0532152e715955f965123",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_official_100/source_downloads/november_2026_chart_03.json",
+      "origin": "output_openai_official_100/source_downloads/november_2026_chart_03.json",
+      "original_sha256": "003070bab3ed409a7459df5fca111ff587124d4f32c01e19e778e93c43876d4a",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 199176,
+      "sha256": "003070bab3ed409a7459df5fca111ff587124d4f32c01e19e778e93c43876d4a",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_official_100/source_downloads/november_2026_chart_08.json",
+      "origin": "output_openai_official_100/source_downloads/november_2026_chart_08.json",
+      "original_sha256": "7238a2b52ced9577929dc4e8ffc797d2f7726f8a5ce60e65a8f9cd4055fa5221",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 126313,
+      "sha256": "7238a2b52ced9577929dc4e8ffc797d2f7726f8a5ce60e65a8f9cd4055fa5221",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_official_100/source_downloads/november_2026_page.html",
+      "origin": "output_openai_official_100/source_downloads/november_2026_page.html",
+      "original_sha256": "07a39c8c1298f2f4e2163a4811dcb3923a1d6b49a5bfe4a1f24be9634c57cace",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 1813869,
+      "sha256": "07a39c8c1298f2f4e2163a4811dcb3923a1d6b49a5bfe4a1f24be9634c57cace",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_official_100/source_methods.md",
+      "origin": "output_openai_official_100/source_methods.md",
+      "original_sha256": "3469a579bb7ce0398d5e3bce651c084465eaa7c8a51f919d6789efc06eb21b2a",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 3380,
+      "sha256": "3469a579bb7ce0398d5e3bce651c084465eaa7c8a51f919d6789efc06eb21b2a",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_researcher_forecast/official_data/normalization_manifest.json",
+      "origin": "output_openai_researcher_forecast/official_data/normalization_manifest.json",
+      "original_sha256": "3033b4fcbfe3cd8bcc6b180fc77a8f2480b26d3081b028741ecd280d01bf38da",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 16961,
+      "sha256": "3033b4fcbfe3cd8bcc6b180fc77a8f2480b26d3081b028741ecd280d01bf38da",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_researcher_forecast/official_data/output_tokens_14d.csv",
+      "origin": "output_openai_researcher_forecast/official_data/output_tokens_14d.csv",
+      "original_sha256": "3a1cc809ec87bf13f3abe10875cd9d5b854bfb7d761e3fd1ed5694da88c9a1fd",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 990149,
+      "sha256": "3a1cc809ec87bf13f3abe10875cd9d5b854bfb7d761e3fd1ed5694da88c9a1fd",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_researcher_forecast/source_downloads/chart_08.json",
+      "origin": "output_openai_researcher_forecast/source_downloads/chart_08.json",
+      "original_sha256": "5c7b8252d6c6fd47a7644b28466f1f155e692f815df6d8150918d564f5c14d89",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 444938,
+      "sha256": "5c7b8252d6c6fd47a7644b28466f1f155e692f815df6d8150918d564f5c14d89",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_researcher_forecast/source_downloads/download_manifest.json",
+      "origin": "output_openai_researcher_forecast/source_downloads/download_manifest.json",
+      "original_sha256": "c2107a37863f74c03e03ccfdc917d1d3afbb96c847e1b4f1a8290a77a51c7254",
+      "role": "direct reconstruction input",
+      "category": "04_reproduce",
+      "bytes": 939,
+      "sha256": "c2107a37863f74c03e03ccfdc917d1d3afbb96c847e1b4f1a8290a77a51c7254",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_researcher_forecast/source_downloads/selected_chart_identity.json",
+      "origin": "output_openai_researcher_forecast/source_downloads/selected_chart_identity.json",
+      "original_sha256": "22cd91fc1588b2fcd3eed4ab958fe74f8265ea74f83a3c7d64043c0e48e1388e",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 818,
+      "sha256": "22cd91fc1588b2fcd3eed4ab958fe74f8265ea74f83a3c7d64043c0e48e1388e",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_researcher_forecast/source_downloads/selected_zh_article.html",
+      "origin": "output_openai_researcher_forecast/source_downloads/selected_zh_article.html",
+      "original_sha256": "a08c742e5c54a0876c5d8bdaa217d4ae667f504bde74f9861dbb126e073fbf63",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 2358481,
+      "sha256": "a08c742e5c54a0876c5d8bdaa217d4ae667f504bde74f9861dbb126e073fbf63",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_openai_researcher_forecast/source_methods.md",
+      "origin": "output_openai_researcher_forecast/source_methods.md",
+      "original_sha256": "d627814e83f0d84de81ea01e7cbf12c43388e80cd9a0d2747e46f4690e8c80d3",
+      "role": "provenance and background evidence; not a runtime dependency",
+      "category": "04_reproduce",
+      "bytes": 6340,
+      "sha256": "d627814e83f0d84de81ea01e7cbf12c43388e80cd9a0d2747e46f4690e8c80d3",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_team100_resource_dashboard/build_algorithm_data.py",
+      "origin": "output_team100_resource_dashboard/build_algorithm_data.py",
+      "original_sha256": "e5e5eae9e57a1338f1c019ae0e6b1fd96a285a3f35ed147b74ccf5cc757ff8ba",
+      "role": "original build script; run via rebuild.py",
+      "category": "04_reproduce",
+      "bytes": 17451,
+      "sha256": "5261df08bb06797b5cd11bf5520b0885089daf2520ef40dc317e322bf0332424",
+      "matches_original": false
+    },
+    {
+      "path": "04_reproduce/project/output_team100_resource_dashboard/build_analysis_figures.py",
+      "origin": "output_team100_resource_dashboard/build_analysis_figures.py",
+      "original_sha256": "ea03b97e88eb82d042f8213756bff898a3923cdd5d871449056764941e9dffa3",
+      "role": "original build script; run via rebuild.py",
+      "category": "04_reproduce",
+      "bytes": 16090,
+      "sha256": "066ee8d76ff2b3fd3c5966233dcc63be080d5f027eb4edc1104a6348c357e276",
+      "matches_original": false
+    },
+    {
+      "path": "04_reproduce/project/output_team100_resource_dashboard/build_data.py",
+      "origin": "output_team100_resource_dashboard/build_data.py",
+      "original_sha256": "f8bd2c9575a1d7d394d3eb9f80c54f6bd179973a9f574b38a3e0b9034afa4ed2",
+      "role": "original build script; run via rebuild.py",
+      "category": "04_reproduce",
+      "bytes": 54434,
+      "sha256": "60677c8fbc7170af0bddf28977fc9e29fcb14b31f0f3a9f381b696fe21daed9a",
+      "matches_original": false
+    },
+    {
+      "path": "04_reproduce/project/output_team100_resource_dashboard/build_fragment.py",
+      "origin": "output_team100_resource_dashboard/build_fragment.py",
+      "original_sha256": "15769771365c672886484ce16b4a499b460cd3a132dc44a76a59bc55f93208a4",
+      "role": "original build script; run via rebuild.py",
+      "category": "04_reproduce",
+      "bytes": 4830,
+      "sha256": "15769771365c672886484ce16b4a499b460cd3a132dc44a76a59bc55f93208a4",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_team100_resource_dashboard/build_presentation.py",
+      "origin": "output_team100_resource_dashboard/build_presentation.py",
+      "original_sha256": "87b29e435158dbab071a16a252a4f592b7ec76e5a8ca9aec606de254d6ad2299",
+      "role": "original build script; run via rebuild.py",
+      "category": "04_reproduce",
+      "bytes": 6135,
+      "sha256": "e07bc23cd86e6e7fce545c826565549f2903191df2b7f9b4cf91049bf1d93af5",
+      "matches_original": false
+    },
+    {
+      "path": "04_reproduce/project/output_team100_resource_dashboard/build_preview.py",
+      "origin": "output_team100_resource_dashboard/build_preview.py",
+      "original_sha256": "af0d421e91a2d30e0fc9466a058670f7e74d7409ec3d6233e0c4af0af638454b",
+      "role": "original build script; run via rebuild.py",
+      "category": "04_reproduce",
+      "bytes": 3588,
+      "sha256": "a072e9197cdc20c4bbc6311c89d253017ce7257e71d59fd962893328e56dfab6",
+      "matches_original": false
+    },
+    {
+      "path": "04_reproduce/project/output_team100_resource_dashboard/build_raw_dashboard.py",
+      "origin": "output_team100_resource_dashboard/build_raw_dashboard.py",
+      "original_sha256": "d78df270b268282a4c904f1de12c95b8e4a977a4ecd344daba40155f2858f230",
+      "role": "original build script; run via rebuild.py",
+      "category": "04_reproduce",
+      "bytes": 2291,
+      "sha256": "d78df270b268282a4c904f1de12c95b8e4a977a4ecd344daba40155f2858f230",
+      "matches_original": true
+    },
+    {
+      "path": "04_reproduce/project/output_team100_resource_dashboard/build_raw_data.py",
+      "origin": "output_team100_resource_dashboard/build_raw_data.py",
+      "original_sha256": "1d488224017f5cf3cd3e626cfe6f9ec5c0293bfe35fbc9541934fe0dcdc43dfb",
+      "role": "original build script; run via rebuild.py",
+      "category": "04_reproduce",
+      "bytes": 19251,
+      "sha256": "340fecd0d8f9328dde1c0cae098684e9447409c52231448718530099b0130838",
+      "matches_original": false
+    },
+    {
+      "path": "04_reproduce/project/output_team100_resource_dashboard/package_outputs.py",
+      "origin": "output_team100_resource_dashboard/package_outputs.py",
+      "original_sha256": "5768b75dca868a1bbfe96730f4ff3cdc1ab3da0450872e044701b5369390892d",
+      "role": "original build script; run via rebuild.py",
+      "category": "04_reproduce",
+      "bytes": 11269,
+      "sha256": "8d23378a2f3b0b8eb25a4d94eafb8f9adb63218453739ee586aba585d2bc4c9a",
+      "matches_original": false
+    },
+    {
+      "path": "04_reproduce/project/resource_predictions/forecast.csv",
+      "category": "04_reproduce",
+      "bytes": 198684,
+      "sha256": "9ce6f9c6d0aa2fcc26994ea6367118de322c2b2089f07c8e3502d73c37470346",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "04_reproduce/rebuild.py",
+      "category": "04_reproduce",
+      "bytes": 9422,
+      "sha256": "78db63058ad18a394b1e949c11c17278b2d78961cff40a9c2f78acd4fd975fdc",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "05_figures/exports/team-resource-analysis-2026-2030.pdf",
+      "origin": "output_team100_resource_dashboard/team-resource-analysis-2026-2030.pdf",
+      "original_sha256": "962a37bbc9001e5a08575e97d698cbbea2e14a83da478d88948026a8e33185a9",
+      "role": "static editable or shareable export",
+      "category": "05_figures",
+      "bytes": 92474,
+      "sha256": "ca5b7c81862569f14ca48579132ec70a0ee800c021d0866fca797196ada1a2e5",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/exports/team-resource-analysis-2026-2030.png",
+      "origin": "output_team100_resource_dashboard/team-resource-analysis-2026-2030.png",
+      "original_sha256": "5f496cef00fd9d565e9b3a8a21f3eb4bfa1e6ecf897b4af9d2118aa0dd93c3c0",
+      "role": "static figure export",
+      "category": "05_figures",
+      "bytes": 753493,
+      "sha256": "954fa6b3b819dc5e080fc336115de1b802e74e045a8f338c510222169b474bbd",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/exports/team-resource-analysis-2026-2030.pptx",
+      "origin": "output_team100_resource_dashboard/team-resource-analysis-2026-2030.pptx",
+      "original_sha256": "29dc3784b17537d1db6161c3658d24a0ceab40663ba080ec24cad0f730b8369d",
+      "role": "static editable or shareable export",
+      "category": "05_figures",
+      "bytes": 94752,
+      "sha256": "d6aca63f60993ddae6ff506031037bbadd38764e44d32be5705e8bf9f685558c",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/exports/team-resource-analysis-2026-2030.svg",
+      "origin": "output_team100_resource_dashboard/team-resource-analysis-2026-2030.svg",
+      "original_sha256": "c7a424ab826dfb69fef365d9b00e0a6e8cda5710b301ad15258dc2c30321759a",
+      "role": "static editable or shareable export",
+      "category": "05_figures",
+      "bytes": 87291,
+      "sha256": "93a59407ed5fc9fbb5abdd9412670719aadceaaad28527a0ffede2031a60b978",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/exports/team-resource-overview-2030.pptx",
+      "origin": "output_team100_resource_dashboard/team-resource-overview-2030.pptx",
+      "original_sha256": "e9692fdf24a8fc69d16afbdb12f697048499fe31609261ace8e7ee904f4361c8",
+      "role": "static editable or shareable export",
+      "category": "05_figures",
+      "bytes": 30648,
+      "sha256": "8e129a5c2368faa77b0f670520a136e77fdf156b6bd7e67bd6fe87e4272f454b",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_2026_baseline.png",
+      "origin": "output_team100_resource_dashboard/dashboard_2026_baseline.png",
+      "original_sha256": "2a91601064a4610a474bd64fa32c4d0f37ca7adf995efaea013d663ce2bf59b7",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 429426,
+      "sha256": "2a91601064a4610a474bd64fa32c4d0f37ca7adf995efaea013d663ce2bf59b7",
+      "matches_original": true
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_algorithms.png",
+      "origin": "output_team100_resource_dashboard/dashboard_algorithms.png",
+      "original_sha256": "dcf22d7901f64270741242a2fd476bb6531fba7c018d7bc60f4c496e33f2a8c9",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 313854,
+      "sha256": "de8a08a96678b80b8138c7ed1bab7f961539b2e26c79f3088f6dbbdd34ece45a",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_algorithms_menu.png",
+      "origin": "output_team100_resource_dashboard/dashboard_algorithms_menu.png",
+      "original_sha256": "69f1c36c8d5900373d81443b28f52640bffd25c96b70bf071c4a6019420aa4cf",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 325362,
+      "sha256": "3705617e1c0b8365da043affe7a6826111ec5e695ba3c1f7ae2f4156cfce668c",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_algorithms_menu_mobile.png",
+      "category": "05_figures",
+      "bytes": 243415,
+      "sha256": "f7c9995eaeb04b1e8190396bbd096ebf1e17fa9dde95224cfc006f8750d4d63c",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_algorithms_mobile.png",
+      "origin": "output_team100_resource_dashboard/dashboard_algorithms_mobile.png",
+      "original_sha256": "43447a6bdfd363b50737d19ffaac3013329e93990b07aa7a5ca24a4d3df70dd4",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 266250,
+      "sha256": "a7c92ef0886639d748a21c463d434cf23ddb79e419a3b472534575eb03b68e5b",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_compare.png",
+      "origin": "output_team100_resource_dashboard/dashboard_compare.png",
+      "original_sha256": "be696ec08620f84e9c21dcc00b5f3106d2b16b3eea6924de2ece974a3820ab3d",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 310555,
+      "sha256": "70f6f87946effb0e140e16c647910b5d884e06d1d61b32153df72ea5bffd0734",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_compute.png",
+      "origin": "output_team100_resource_dashboard/dashboard_compute.png",
+      "original_sha256": "b069fd187aac2fa87495b32b93f99691c811728447663cdebce86da15c0449fa",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 320195,
+      "sha256": "a09d550964da70fd40caada9443f4065282a82dc38cfb98b59308095377a67b3",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_dark.png",
+      "origin": "output_team100_resource_dashboard/dashboard_dark.png",
+      "original_sha256": "38db345585ebc909f907325f01c4c61d8e621292a1c9b0215407d93f2e3434f9",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 249910,
+      "sha256": "12b23e808d8b8d1091ef643e359f4050e24e59a9bc6851440204ba3cf27a53e4",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_default.png",
+      "origin": "output_team100_resource_dashboard/dashboard_default.png",
+      "original_sha256": "30af2a0b39ea1c1d088bf94b0bcebd55086e2b3eff731d1ca5d43c3d18dd6526",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 255401,
+      "sha256": "7e496ac42cdbd893a5f8033942de4e60511246f9292cba4d5e00bfd212a42471",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_ensemble.png",
+      "category": "05_figures",
+      "bytes": 295952,
+      "sha256": "e2127c79278484be75cf423c6da09c82acd82ac5c501455dd6064931eba3f09a",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_mobile.png",
+      "origin": "output_team100_resource_dashboard/dashboard_mobile.png",
+      "original_sha256": "b49cd4ab85ac53828c63c5d02c863d9bc525e133e9d3feeaed600338b360a832",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 236527,
+      "sha256": "dcfbd4bc54d464f8d058fad2df9dd5fd720449224a197bf7cf7f9ea5fc730b88",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_scenarios.png",
+      "origin": "output_team100_resource_dashboard/dashboard_scenarios.png",
+      "original_sha256": "84e41f0ffbc38c503d35204f7699daac781115ec6bdb353809be0b5abac6f61a",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 294013,
+      "sha256": "696129d68f7a6b5255c71bfc7d4a50cc0671e8d9493ad856ae69b5537e63575c",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/dashboard_tablet.png",
+      "origin": "output_team100_resource_dashboard/dashboard_tablet.png",
+      "original_sha256": "4e5d25b1b5f5f405eebaecf96c5dabaa18643fd5372952beda21e6dfe547115f",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 246954,
+      "sha256": "206ab052d65da288c91dfafb1c629bdad8ea7b8214f3dbbc4e05a33d236450dd",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/raw_dashboard_concurrency.png",
+      "origin": "output_team100_resource_dashboard/raw_dashboard_concurrency.png",
+      "original_sha256": "ee081eaba5603a843a05834a45560fe8468f1b9720f8cba0290bf51dcc7e3083",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 208560,
+      "sha256": "03cff6fe7005d9525c5498224b5650cef47c589d02dc1be144bbd5e1b8764f8c",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/raw_dashboard_ensemble.png",
+      "category": "05_figures",
+      "bytes": 365976,
+      "sha256": "f1d09d9d673a70ac91c30b19b88588353da8c3f200f673b33350e628e1e484d6",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "05_figures/screenshots/raw_dashboard_mobile.png",
+      "origin": "output_team100_resource_dashboard/raw_dashboard_mobile.png",
+      "original_sha256": "cb527f0548ffe5c6f429741b6d17eed35231fa8ba9db6282d34f189b66527584",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 282676,
+      "sha256": "bb197f9cc771604b7fb5de81b3d88e730bff90d2fcd9ab00be0e7fa4106072cb",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/raw_dashboard_output.png",
+      "origin": "output_team100_resource_dashboard/raw_dashboard_output.png",
+      "original_sha256": "518f976b432b3a1865c79fb0bc3a9fd071848f09513f9e3bdfba7cc491dbc21c",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 341461,
+      "sha256": "92266beeffe5720f97e055beb3efa9e8e936cad0dddf457714bea36eab62181a",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/raw_dashboard_tasks.png",
+      "origin": "output_team100_resource_dashboard/raw_dashboard_tasks.png",
+      "original_sha256": "7e0720574ef05c4c11d83a8d80e5ec3d4a85857db7530559cbe51336dccc5449",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 317679,
+      "sha256": "cd9788523e496af5b156e42aa7537d21e2de2ded801751173f8fe37b70bc288a",
+      "matches_original": false
+    },
+    {
+      "path": "05_figures/screenshots/raw_dashboard_workdays.png",
+      "origin": "output_team100_resource_dashboard/raw_dashboard_workdays.png",
+      "original_sha256": "0ee5ab018892070b02c9c07c65511e3d0069e702dff1c7ad269fc1003e0cee71",
+      "role": "archived page preview",
+      "category": "05_figures",
+      "bytes": 295698,
+      "sha256": "47a7bc1c28f40e1fa0a827a0ca9b26f701265c87b14d1aa695a15fa539736014",
+      "matches_original": false
+    },
+    {
+      "path": "06_validation/browser_rebuild_validation.json",
+      "category": "06_validation",
+      "bytes": 8615,
+      "sha256": "87b1a13493ec8b4aa635fcf8b04687f60776ecc171a1a83eb4c76b5375979c89",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "06_validation/bundle_validation.json",
+      "category": "06_validation",
+      "bytes": 1292,
+      "sha256": "618bf01b964271b799a403c35c048cb2e7772eb8f20bcd8a2b166f950608a159",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "06_validation/historical_reports/algorithm_qa_validation.json",
+      "origin": "output_team100_resource_dashboard/algorithm_qa_validation.json",
+      "original_sha256": "08733afb61eb127e12a7d083c1ff79149a64e936bc6f7e53179a7ba90fe7d328",
+      "role": "original verification evidence; original paths retained",
+      "category": "06_validation",
+      "bytes": 69607,
+      "sha256": "08733afb61eb127e12a7d083c1ff79149a64e936bc6f7e53179a7ba90fe7d328",
+      "matches_original": true
+    },
+    {
+      "path": "06_validation/historical_reports/analysis_figure_validation.json",
+      "origin": "output_team100_resource_dashboard/analysis_figure_validation.json",
+      "original_sha256": "e9ced7f220d617e3ce839e4e609b2d67eed8a379ff2f3b42dc9dc9af83351f44",
+      "role": "original verification evidence; original paths retained",
+      "category": "06_validation",
+      "bytes": 475,
+      "sha256": "e9ced7f220d617e3ce839e4e609b2d67eed8a379ff2f3b42dc9dc9af83351f44",
+      "matches_original": true
+    },
+    {
+      "path": "06_validation/historical_reports/artifact_validation.json",
+      "origin": "output_team100_resource_dashboard/artifact_validation.json",
+      "original_sha256": "92281ab710752d390092aacce08db1a1865ca37f31d976de7ae0810a69d32a2f",
+      "role": "original verification evidence; original paths retained",
+      "category": "06_validation",
+      "bytes": 856,
+      "sha256": "92281ab710752d390092aacce08db1a1865ca37f31d976de7ae0810a69d32a2f",
+      "matches_original": true
+    },
+    {
+      "path": "06_validation/historical_reports/data_validation.json",
+      "origin": "output_team100_resource_dashboard/data_validation.json",
+      "original_sha256": "de4d250de49dfcec62c1997a659d271dbc46e833f3da6ce919b18d626a368abd",
+      "role": "original verification evidence; original paths retained",
+      "category": "06_validation",
+      "bytes": 12268,
+      "sha256": "de4d250de49dfcec62c1997a659d271dbc46e833f3da6ce919b18d626a368abd",
+      "matches_original": true
+    },
+    {
+      "path": "06_validation/historical_reports/qa_data_validation.json",
+      "origin": "output_team100_resource_dashboard/qa_data_validation.json",
+      "original_sha256": "f1b98df077358f291efe8d828b759d6c5a902ece1db8da7e0b0f60d5c6f3d108",
+      "role": "original verification evidence; original paths retained",
+      "category": "06_validation",
+      "bytes": 21156,
+      "sha256": "f1b98df077358f291efe8d828b759d6c5a902ece1db8da7e0b0f60d5c6f3d108",
+      "matches_original": true
+    },
+    {
+      "path": "06_validation/historical_reports/qa_validation.json",
+      "origin": "output_team100_resource_dashboard/qa_validation.json",
+      "original_sha256": "e0ae376895f2b11b2f6d4549d7539b806363149a407105ca95c7498fd675050b",
+      "role": "original verification evidence; original paths retained",
+      "category": "06_validation",
+      "bytes": 123136,
+      "sha256": "e0ae376895f2b11b2f6d4549d7539b806363149a407105ca95c7498fd675050b",
+      "matches_original": true
+    },
+    {
+      "path": "06_validation/historical_reports/raw_qa_validation.json",
+      "origin": "output_team100_resource_dashboard/raw_qa_validation.json",
+      "original_sha256": "15272670fc0cc1c2f152fd286e8d5a1ad97f3d16d82520903a02cdc15cce6f05",
+      "role": "original verification evidence; original paths retained",
+      "category": "06_validation",
+      "bytes": 71952,
+      "sha256": "15272670fc0cc1c2f152fd286e8d5a1ad97f3d16d82520903a02cdc15cce6f05",
+      "matches_original": true
+    },
+    {
+      "path": "06_validation/latest_reports/algorithm_qa_validation.json",
+      "category": "06_validation",
+      "bytes": 632383,
+      "sha256": "efbc5db547b4f92cae0a2461b69d6feca8a1c0990d713c52c17ed7209f0f72e1",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "06_validation/latest_reports/analysis_figure_validation.json",
+      "category": "06_validation",
+      "bytes": 475,
+      "sha256": "e9ced7f220d617e3ce839e4e609b2d67eed8a379ff2f3b42dc9dc9af83351f44",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "06_validation/latest_reports/artifact_validation.json",
+      "category": "06_validation",
+      "bytes": 774,
+      "sha256": "77d677d37787fb894d992e738a86d1180722367c8ed53383860a7ff5ac7e2ee1",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "06_validation/latest_reports/data_validation.json",
+      "category": "06_validation",
+      "bytes": 12268,
+      "sha256": "de4d250de49dfcec62c1997a659d271dbc46e833f3da6ce919b18d626a368abd",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "06_validation/latest_reports/qa_validation.json",
+      "category": "06_validation",
+      "bytes": 173325,
+      "sha256": "2d215bb8b04971694b2ed0475d7aef4456d533a05cf76145775671bac8c29604",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "06_validation/latest_reports/raw_qa_validation.json",
+      "category": "06_validation",
+      "bytes": 90660,
+      "sha256": "7e9fa0b9c9fcce52f7d1121295c664bf3e61d454d35a85e733c72a8818e283fe",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "06_validation/prediction_update_validation.json",
+      "category": "06_validation",
+      "bytes": 17678,
+      "sha256": "cdafa7c79caae34c46f287aba2e8b8571d0ede4821c12284210e7f13da2edd00",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "06_validation/rebuild_validation.json",
+      "category": "06_validation",
+      "bytes": 6695,
+      "sha256": "a66bd0b2f91c88914d26727d107807a1cd2323bb735b528a5fd93f5640dc84da",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "06_validation/references/qa_reference_forecasts_v1.json",
+      "origin": "output_team100_resource_dashboard/qa_reference_forecasts_v1.json",
+      "original_sha256": "e5388f7d6dd76511940bf71c6f699127e46de2d253769f81fa060e324eb160b6",
+      "role": "frozen forecast reference",
+      "category": "06_validation",
+      "bytes": 12856,
+      "sha256": "e5388f7d6dd76511940bf71c6f699127e46de2d253769f81fa060e324eb160b6",
+      "matches_original": true
+    },
+    {
+      "path": "06_validation/scripts/cdp_helper.py",
+      "origin": "output_team100_resource_dashboard/cdp_helper.py",
+      "original_sha256": "9236ab4bc47f11e51b84da4d26db8d9b8330022f8aa6e7208c009cb486c94b6e",
+      "role": "browser validation source",
+      "category": "06_validation",
+      "bytes": 7710,
+      "sha256": "9236ab4bc47f11e51b84da4d26db8d9b8330022f8aa6e7208c009cb486c94b6e",
+      "matches_original": true
+    },
+    {
+      "path": "06_validation/scripts/validate_algorithms.py",
+      "origin": "output_team100_resource_dashboard/validate_algorithms.py",
+      "original_sha256": "be22cb4c7f7d089f3dedca43e406c5a54ca3e7ac9e12143ba1d1a3fd4cb5cd02",
+      "role": "browser validation source",
+      "category": "06_validation",
+      "bytes": 54164,
+      "sha256": "6588176ae905f1b3809dfbd7cbaba4ad14063ac33c2454be0455b52fe27de1a3",
+      "matches_original": false
+    },
+    {
+      "path": "06_validation/scripts/validate_explorer.py",
+      "origin": "output_team100_resource_dashboard/validate_explorer.py",
+      "original_sha256": "e6da99dd1021bb8c6c4d40c3bb47f57ac1e2a2142dbbaaae5cc8403f8d1a1cf8",
+      "role": "browser validation source",
+      "category": "06_validation",
+      "bytes": 41353,
+      "sha256": "df55d533d74652da3263c07e0d520a4779d180c798f002638222dc3477676db7",
+      "matches_original": false
+    },
+    {
+      "path": "06_validation/scripts/validate_raw_dashboard.py",
+      "origin": "output_team100_resource_dashboard/validate_raw_dashboard.py",
+      "original_sha256": "66399736897b876b42ec7ea6e5ca6d964e5fdc5bdd79292e6f826b93eb52d002",
+      "role": "browser validation source",
+      "category": "06_validation",
+      "bytes": 33183,
+      "sha256": "b081f2238c78def6bfeb9c7be1717e0768f5037d28a367a75091b086a9b87794",
+      "matches_original": false
+    },
+    {
+      "path": "06_validation/source_copy_validation.json",
+      "category": "06_validation",
+      "bytes": 30371,
+      "sha256": "4a87f904f512986e717bb7725a84707059cc51b32838dd42a723b95c85d5bf03",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "DATA_SOURCES_AND_UPDATES.md",
+      "category": "DATA_SOURCES_AND_UPDATES.md",
+      "bytes": 38812,
+      "sha256": "370006f9637098d5a5d66181c47942f50380bf21d4dec15901dc8f6246dde614",
+      "origin": "bundle_generated"
+    },
+    {
+      "path": "README.md",
+      "category": "README.md",
+      "bytes": 11622,
+      "sha256": "6efdc593af6a8fcda2379d3fd1e5a1e81b115bfc01fea7c0d1be4e588c5798a6",
+      "origin": "bundle_generated"
+    }
+  ],
+  "updated_at_utc": "2026-11-22T09:12:54.192914+00:00",
+  "path_base": "bundle_root",
+  "excludes": [
+    "manifest.json (self-reference)",
+    "__pycache__",
+    "*.pyc"
+  ],
+  "file_count": 172,
+  "total_bytes": 28711515
+}

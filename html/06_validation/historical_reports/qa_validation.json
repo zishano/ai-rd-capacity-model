@@ -1,0 +1,4696 @@
+{
+  "created_at_utc": "2026-11-22T05:20:27.075035+00:00",
+  "status": "passed",
+  "method": "Chrome with actual standalone DOM events, numeric/geometric source checks and responsive views",
+  "source_sha256": {
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/resource-dashboard-preview.html": "114c17337d42d083a73cc5a39fa6b85c19dba465b1457d1c75ef10711da6404a",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/team-resource-dashboard.html": "41337f56573a3d7056b9ed0474006710b7624d2b1f36aebefe173d8c05ecaf9a",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/dashboard_data.json": "045ab5eb740f3c938276fc75a930f1161f65a271c8f1f524cf704df18c0d5722",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/dashboard_data.csv": "b9b61d59ea30ba1c90702e26e3234022c7160cb6fb90819198e1939c84d10bcf"
+  },
+  "checks": [
+    {
+      "name": "all 15 original annual rows remain unchanged",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "2027–2030 numeric endpoints match the prior validated version",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "standalone document contains the working explorer directly",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "legacy BF16 widget state migrates to the configured 30T model without a precision override",
+      "status": "passed",
+      "detail": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute",
+        "explorer": 2
+      }
+    },
+    {
+      "name": "default: fixed-2030 resource values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "default: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "default: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "default: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "default: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "default: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "default: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "tokens",
+        "selected": [
+          "output_tokens_per_team_day"
+        ],
+        "annual": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ]
+      }
+    },
+    {
+      "name": "default: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "all six analysis views are available",
+      "status": "passed",
+      "detail": [
+        "trend",
+        "scenarios",
+        "cache",
+        "compute",
+        "categories",
+        "growth"
+      ]
+    },
+    {
+      "name": "all seven approved metric categories are available",
+      "status": "passed",
+      "detail": [
+        "tokens",
+        "compute",
+        "rate",
+        "agent_time",
+        "agent_scale",
+        "tasks",
+        "cache"
+      ]
+    },
+    {
+      "name": "default shows one actual-unit output-Token series",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "model selector exposes only the actual configured 30T model and replaces the precision selector",
+      "status": "passed",
+      "detail": [
+        {
+          "value": "synthetic-kimi-k2-scaled-30t",
+          "text": "30T MoE模型"
+        }
+      ]
+    },
+    {
+      "name": "old normalization and cross-category comparison controls are removed",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category tokens: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "tokens",
+        "selected": [
+          "output_tokens_per_team_day"
+        ],
+        "annual": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ]
+      }
+    },
+    {
+      "name": "category tokens: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "metric output_tokens_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric output_tokens_per_team_day: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric output_tokens_per_team_day: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric output_tokens_per_team_day: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "metric input_tokens_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric input_tokens_per_team_day: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric input_tokens_per_team_day: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric input_tokens_per_team_day: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "metric cached_input_tokens_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric cached_input_tokens_per_team_day: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric cached_input_tokens_per_team_day: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric cached_input_tokens_per_team_day: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "metric uncached_input_tokens_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric uncached_input_tokens_per_team_day: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric uncached_input_tokens_per_team_day: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric uncached_input_tokens_per_team_day: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "metric total_tokens_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric total_tokens_per_team_day: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric total_tokens_per_team_day: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric total_tokens_per_team_day: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "tokens all same-unit curves: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tokens all same-unit curves: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "tokens all same-unit curves: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tokens all same-unit curves: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tokens all same-unit curves: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "tokens: multiple checkboxes retain every selected metric",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "tokens last checkbox guard: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "tokens",
+        "selected": [
+          "output_tokens_per_team_day"
+        ],
+        "annual": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ]
+      }
+    },
+    {
+      "name": "tokens last checkbox guard: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "tokens: last metric cannot be removed",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual output_tokens_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual output_tokens_per_team_day: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual output_tokens_per_team_day: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual input_tokens_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual input_tokens_per_team_day: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual input_tokens_per_team_day: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual cached_input_tokens_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual cached_input_tokens_per_team_day: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual cached_input_tokens_per_team_day: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual uncached_input_tokens_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual uncached_input_tokens_per_team_day: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual uncached_input_tokens_per_team_day: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual total_tokens_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual total_tokens_per_team_day: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual total_tokens_per_team_day: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category compute: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "compute",
+        "selected": [
+          "eflop_per_team_day"
+        ],
+        "annual": [
+          "eflop_per_team_day",
+          "prefill_eflop_per_team_day",
+          "decode_eflop_per_team_day"
+        ]
+      }
+    },
+    {
+      "name": "category compute: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "metric eflop_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric eflop_per_team_day: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric eflop_per_team_day: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric eflop_per_team_day: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "metric prefill_eflop_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric prefill_eflop_per_team_day: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric prefill_eflop_per_team_day: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric prefill_eflop_per_team_day: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1580,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "metric decode_eflop_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric decode_eflop_per_team_day: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric decode_eflop_per_team_day: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric decode_eflop_per_team_day: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "compute all same-unit curves: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "compute all same-unit curves: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "compute all same-unit curves: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "compute all same-unit curves: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "compute all same-unit curves: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "compute: multiple checkboxes retain every selected metric",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "compute last checkbox guard: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "compute",
+        "selected": [
+          "eflop_per_team_day"
+        ],
+        "annual": [
+          "eflop_per_team_day",
+          "prefill_eflop_per_team_day",
+          "decode_eflop_per_team_day"
+        ]
+      }
+    },
+    {
+      "name": "compute last checkbox guard: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "compute: last metric cannot be removed",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual eflop_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual eflop_per_team_day: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual eflop_per_team_day: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual prefill_eflop_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual prefill_eflop_per_team_day: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual prefill_eflop_per_team_day: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual decode_eflop_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual decode_eflop_per_team_day: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual decode_eflop_per_team_day: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category rate: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "rate",
+        "selected": [
+          "compute_pflops_window"
+        ],
+        "annual": [
+          "compute_pflops_window"
+        ]
+      }
+    },
+    {
+      "name": "category rate: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "metric compute_pflops_window: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric compute_pflops_window: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric compute_pflops_window: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric compute_pflops_window: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "rate three scenarios: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "rate three scenarios: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "rate three scenarios: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "rate three scenarios: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "rate three scenarios: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "rate: independent A/B/C curves are selected",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "rate last scenario guard: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "rate",
+        "selected": [
+          "compute_pflops_window"
+        ],
+        "annual": [
+          "compute_pflops_window"
+        ]
+      }
+    },
+    {
+      "name": "rate last scenario guard: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "rate: last scenario cannot be removed",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual compute_pflops_window: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual compute_pflops_window: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual compute_pflops_window: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category agent_time: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "agent_time",
+        "selected": [
+          "agent_hours_per_team_day"
+        ],
+        "annual": [
+          "agent_hours_per_team_day"
+        ]
+      }
+    },
+    {
+      "name": "category agent_time: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "metric agent_hours_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric agent_hours_per_team_day: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric agent_hours_per_team_day: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric agent_hours_per_team_day: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1426,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "agent_time three scenarios: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "agent_time three scenarios: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "agent_time three scenarios: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "agent_time three scenarios: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "agent_time three scenarios: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1426,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "agent_time: independent A/B/C curves are selected",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "agent_time last scenario guard: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "agent_time",
+        "selected": [
+          "agent_hours_per_team_day"
+        ],
+        "annual": [
+          "agent_hours_per_team_day"
+        ]
+      }
+    },
+    {
+      "name": "agent_time last scenario guard: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "agent_time: last scenario cannot be removed",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual agent_hours_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual agent_hours_per_team_day: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual agent_hours_per_team_day: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category agent_scale: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "agent_scale",
+        "selected": [
+          "mean_online_agent_equivalents"
+        ],
+        "annual": [
+          "mean_online_agent_equivalents"
+        ]
+      }
+    },
+    {
+      "name": "category agent_scale: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "metric mean_online_agent_equivalents: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric mean_online_agent_equivalents: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric mean_online_agent_equivalents: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric mean_online_agent_equivalents: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1426,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "agent_scale three scenarios: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "agent_scale three scenarios: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "agent_scale three scenarios: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "agent_scale three scenarios: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "agent_scale three scenarios: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1426,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "agent_scale: independent A/B/C curves are selected",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "agent_scale last scenario guard: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "agent_scale",
+        "selected": [
+          "mean_online_agent_equivalents"
+        ],
+        "annual": [
+          "mean_online_agent_equivalents"
+        ]
+      }
+    },
+    {
+      "name": "agent_scale last scenario guard: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "agent_scale: last scenario cannot be removed",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual mean_online_agent_equivalents: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual mean_online_agent_equivalents: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual mean_online_agent_equivalents: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category tasks: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "tasks",
+        "selected": [
+          "task_starts_per_team_day"
+        ],
+        "annual": [
+          "task_starts_per_team_day"
+        ]
+      }
+    },
+    {
+      "name": "category tasks: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "metric task_starts_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric task_starts_per_team_day: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric task_starts_per_team_day: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric task_starts_per_team_day: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 2534,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "tasks three scenarios: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks three scenarios: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "tasks three scenarios: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks three scenarios: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks three scenarios: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 2534,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "tasks: independent A/B/C curves are selected",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "tasks last scenario guard: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "tasks",
+        "selected": [
+          "task_starts_per_team_day"
+        ],
+        "annual": [
+          "task_starts_per_team_day"
+        ]
+      }
+    },
+    {
+      "name": "tasks last scenario guard: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "tasks: last scenario cannot be removed",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual task_starts_per_team_day: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual task_starts_per_team_day: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual task_starts_per_team_day: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category cache: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "cache",
+        "selected": [
+          "prefix_cache_hit_rate"
+        ],
+        "annual": [
+          "prefix_cache_hit_rate"
+        ]
+      }
+    },
+    {
+      "name": "category cache: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "metric prefix_cache_hit_rate: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric prefix_cache_hit_rate: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric prefix_cache_hit_rate: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "metric prefix_cache_hit_rate: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "cache three scenarios: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "cache three scenarios: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "cache three scenarios: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "cache three scenarios: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "cache three scenarios: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "cache: independent A/B/C curves are selected",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "cache last scenario guard: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "cache",
+        "selected": [
+          "prefix_cache_hit_rate"
+        ],
+        "annual": [
+          "prefix_cache_hit_rate"
+        ]
+      }
+    },
+    {
+      "name": "cache last scenario guard: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "cache: last scenario cannot be removed",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "annual prefix_cache_hit_rate: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual prefix_cache_hit_rate: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "annual prefix_cache_hit_rate: all five years and three scenarios are present",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Token to computation transition: nonempty selections and annual selector stay inside category",
+      "status": "passed",
+      "detail": {
+        "category": "compute",
+        "selected": [
+          "eflop_per_team_day"
+        ],
+        "annual": [
+          "eflop_per_team_day",
+          "prefill_eflop_per_team_day",
+          "decode_eflop_per_team_day"
+        ]
+      }
+    },
+    {
+      "name": "Token to computation transition: nonempty valid scenario selection",
+      "status": "passed",
+      "detail": [
+        "C"
+      ]
+    },
+    {
+      "name": "category changes clear incompatible Token selections",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "Token readout preserves the actual August 15 observation date",
+      "status": "passed",
+      "detail": "2026-08输入Token · 公共历史 64.933 亿Token/日（2026-08-15，条件估算）输出Token · 公共历史 0.655 亿Token/日（2026-08-15，公开观测换算）未缓存输入 / Prefill · 公共历史 3.986 亿Token/日（2026-08-15，条件估算）"
+    },
+    {
+      "name": "monthly table and CSV schema contain actual units without normalized values",
+      "status": "passed",
+      "detail": {
+        "headers": [
+          "日期",
+          "月份",
+          "指标",
+          "原始值",
+          "原始单位",
+          "图表值",
+          "图表单位",
+          "证据",
+          "情景",
+          "团队人数",
+          "算法ID",
+          "算法"
+        ],
+        "rows": 174
+      }
+    },
+    {
+      "name": "actual download serializes selected monthly values with original units",
+      "status": "passed",
+      "detail": {
+        "header": "\"日期\",\"月份\",\"指标\",\"原始值\",\"原始单位\",\"图表值\",\"图表单位\",\"证据\",\"情景\",\"团队人数\",\"算法ID\",\"算法\"",
+        "rows": 174
+      }
+    },
+    {
+      "name": "observed filter: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "observed filter: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "observed filter: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "observed filter: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "observed filter: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1195,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "forecast filter: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "forecast filter: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "forecast filter: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "forecast filter: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "forecast filter: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1542,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "custom 2028 filter: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "custom 2028 filter: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "custom 2028 filter: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "custom 2028 filter: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "custom 2028 filter: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1195,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "single-date actual-unit series: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "single-date actual-unit series: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "single-date actual-unit series: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "single-date actual-unit series: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "single-date actual-unit series: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1195,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "empty interval provides a message and disables data export",
+      "status": "passed",
+      "detail": "所选区间内至少一个指标没有月度数据，请扩大日期范围。"
+    },
+    {
+      "name": "reversed date interval is handled without runtime errors",
+      "status": "passed",
+      "detail": "请选择有效的开始与结束日期，开始日期不能晚于结束日期。"
+    },
+    {
+      "name": "scenario A: fixed-2030 resource values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "scenario A: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "scenario A: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "scenario A: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "scenario A: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "scenario B: fixed-2030 resource values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "scenario B: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "scenario B: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "scenario B: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "scenario B: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "scenario C: fixed-2030 resource values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "scenario C: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "scenario C: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "scenario C: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "scenario C: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "team 10: fixed-2030 resource values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team 10: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team 10: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team 10: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team 10: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1658,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "team 1000: fixed-2030 resource values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team 1000: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team 1000: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team 1000: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team 1000: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "team 100: fixed-2030 resource values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team 100: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team 100: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team 100: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team 100: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "8-hour processing window: fixed-2030 resource values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "8-hour actual PFLOP/s: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "8-hour actual PFLOP/s: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "8-hour actual PFLOP/s: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "8-hour actual PFLOP/s: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "8-hour rate, three scenarios: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "8-hour rate, three scenarios: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "8-hour rate, three scenarios: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "8-hour rate, three scenarios: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "12-hour actual PFLOP/s: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "12-hour actual PFLOP/s: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "12-hour actual PFLOP/s: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "12-hour actual PFLOP/s: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "configured model weights: fixed-2030 resource values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "selecting the configured model preserves other controls and plotted values",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "cache percentages do not scale with team size: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "cache percentages do not scale with team size: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "cache percentages do not scale with team size: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "cache percentages do not scale with team size: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 1195,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "736 trend: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 trend: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "736 trend: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 trend: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 trend: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 655,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "736 trend: no horizontal overflow",
+      "status": "passed",
+      "detail": {
+        "viewport": 736,
+        "documentWidth": 721,
+        "rootWidth": 721
+      }
+    },
+    {
+      "name": "736 scenarios: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 scenarios: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "736 scenarios: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 scenarios: no horizontal overflow",
+      "status": "passed",
+      "detail": {
+        "viewport": 736,
+        "documentWidth": 721,
+        "rootWidth": 721
+      }
+    },
+    {
+      "name": "736 cache: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 cache: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "736 cache: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 cache share: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 cache share: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "736 cache share: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 cache: no horizontal overflow",
+      "status": "passed",
+      "detail": {
+        "viewport": 736,
+        "documentWidth": 721,
+        "rootWidth": 721
+      }
+    },
+    {
+      "name": "736 compute: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 compute: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "736 compute: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 compute share: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 compute share: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "736 compute share: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 compute: no horizontal overflow",
+      "status": "passed",
+      "detail": {
+        "viewport": 736,
+        "documentWidth": 736,
+        "rootWidth": 736
+      }
+    },
+    {
+      "name": "736 categories: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 categories: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "736 categories: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 categories: no horizontal overflow",
+      "status": "passed",
+      "detail": {
+        "viewport": 736,
+        "documentWidth": 721,
+        "rootWidth": 721
+      }
+    },
+    {
+      "name": "736 growth: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 growth: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "736 growth: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 growth: no horizontal overflow",
+      "status": "passed",
+      "detail": {
+        "viewport": 736,
+        "documentWidth": 736,
+        "rootWidth": 736
+      }
+    },
+    {
+      "name": "736 three computation curves: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 three computation curves: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "736 three computation curves: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 three computation curves: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 three computation curves: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 655,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "736 cache scenario comparison: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 cache scenario comparison: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "736 cache scenario comparison: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 cache scenario comparison: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "736 cache scenario comparison: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 655,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "320 trend: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 trend: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320 trend: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 trend: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 trend: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 259,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "320 trend: no horizontal overflow",
+      "status": "passed",
+      "detail": {
+        "viewport": 320,
+        "documentWidth": 305,
+        "rootWidth": 305
+      }
+    },
+    {
+      "name": "320 scenarios: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 scenarios: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320 scenarios: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 scenarios: no horizontal overflow",
+      "status": "passed",
+      "detail": {
+        "viewport": 320,
+        "documentWidth": 305,
+        "rootWidth": 305
+      }
+    },
+    {
+      "name": "320 cache: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 cache: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320 cache: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 cache share: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 cache share: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320 cache share: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 cache: no horizontal overflow",
+      "status": "passed",
+      "detail": {
+        "viewport": 320,
+        "documentWidth": 305,
+        "rootWidth": 305
+      }
+    },
+    {
+      "name": "320 compute: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 compute: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320 compute: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 compute share: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 compute share: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320 compute share: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 compute: no horizontal overflow",
+      "status": "passed",
+      "detail": {
+        "viewport": 320,
+        "documentWidth": 305,
+        "rootWidth": 305
+      }
+    },
+    {
+      "name": "320 categories: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 categories: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320 categories: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 categories: no horizontal overflow",
+      "status": "passed",
+      "detail": {
+        "viewport": 320,
+        "documentWidth": 305,
+        "rootWidth": 305
+      }
+    },
+    {
+      "name": "320 growth: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 growth: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320 growth: analysis marks retain source values",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 growth: no horizontal overflow",
+      "status": "passed",
+      "detail": {
+        "viewport": 320,
+        "documentWidth": 305,
+        "rootWidth": 305
+      }
+    },
+    {
+      "name": "320 three computation curves: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 three computation curves: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320 three computation curves: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 three computation curves: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 three computation curves: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 259,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "320 cache scenario comparison: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 cache scenario comparison: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320 cache scenario comparison: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 cache scenario comparison: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320 cache scenario comparison: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 259,
+        "scrollWidth": 1501,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "320px horizontal scrolling preserves pointer readout for 2026-08",
+      "status": "passed",
+      "detail": "2026-08输入Token · 公共历史 64.933 亿Token/日（2026-08-15，条件估算）输出Token · 公共历史 0.655 亿Token/日（2026-08-15，公开观测换算）缓存输入 · 公共历史 60.947 亿Token/日（2026-08-15，条件估算）未缓存输入 / Prefill · 公共历史 3.986 亿Token/日（2026-08-15，条件估算）输入＋输出Token · 公共历史 65.588 亿Token/日（2026-08-15，条件估算）"
+    },
+    {
+      "name": "320px horizontal scrolling preserves pointer readout for 2030-11",
+      "status": "passed",
+      "detail": "2030-11输入Token · 原脚本 OLS（默认） 541.924 亿Token/日（2030-11-18，预测）输出Token · 原脚本 OLS（默认） 4.712 亿Token/日（2030-11-18，预测）缓存输入 · 原脚本 OLS（默认） 520.974 亿Token/日（2030-11-18，预测）未缓存输入 / Prefill · 原脚本 OLS（默认） 20.951 亿Token/日（2030-11-18，预测）输入＋输出Token · 原脚本 OLS（默认） 546.636 亿Token/日（2030-11-18，预测）"
+    },
+    {
+      "name": "dark same-unit multi-curve chart: visible finite plot without runtime errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "dark same-unit multi-curve chart: labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "dark same-unit multi-curve chart: exact source values, time filter and zero-axis geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "dark same-unit multi-curve chart: quarterly labels retain anchored dates, real units and readable precision",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "dark same-unit multi-curve chart: wide labeled plots remain inside a scrollable chart viewport",
+      "status": "passed",
+      "detail": {
+        "width": 939,
+        "scrollWidth": 1736,
+        "overflowX": "auto"
+      }
+    },
+    {
+      "name": "no JavaScript exceptions throughout standalone interactions",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "source and data unchanged throughout QA",
+      "status": "passed",
+      "detail": null
+    }
+  ],
+  "snapshots": [
+    {
+      "label": "default",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 58,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "output_tokens_per_team_day",
+          "min": "0",
+          "max": "6",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric output_tokens_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 58,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "output_tokens_per_team_day",
+          "min": "0",
+          "max": "6",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric input_tokens_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 58,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric cached_input_tokens_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 58,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "cached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric uncached_input_tokens_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 58,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "25",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric total_tokens_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 58,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "total_tokens_per_team_day",
+          "min": "0",
+          "max": "700",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "tokens all same-unit curves",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 290,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,cached_input_tokens_per_team_day,uncached_input_tokens_per_team_day,total_tokens_per_team_day",
+          "min": "0",
+          "max": "700",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual output_tokens_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "output_tokens_per_team_day",
+          "min": "0",
+          "max": "6",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual input_tokens_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "tokens",
+        "primary": "input_tokens_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day",
+          "min": "0",
+          "max": "700",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual cached_input_tokens_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "tokens",
+        "primary": "cached_input_tokens_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "cached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual uncached_input_tokens_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "tokens",
+        "primary": "uncached_input_tokens_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "40",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual total_tokens_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "tokens",
+        "primary": "total_tokens_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "total_tokens_per_team_day",
+          "min": "0",
+          "max": "700",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric eflop_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "compute",
+        "primary": "eflop_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 58,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "eflop_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric prefill_eflop_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "compute",
+        "primary": "eflop_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 58,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "prefill_eflop_per_team_day",
+          "min": "0",
+          "max": "500",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric decode_eflop_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "compute",
+        "primary": "eflop_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 58,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "decode_eflop_per_team_day",
+          "min": "0",
+          "max": "150",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "compute all same-unit curves",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "compute",
+        "primary": "eflop_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "eflop_per_team_day,prefill_eflop_per_team_day,decode_eflop_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual eflop_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "compute",
+        "primary": "eflop_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "eflop_per_team_day",
+          "min": "0",
+          "max": "700",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual prefill_eflop_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "compute",
+        "primary": "prefill_eflop_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "prefill_eflop_per_team_day",
+          "min": "0",
+          "max": "500",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual decode_eflop_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "compute",
+        "primary": "decode_eflop_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "decode_eflop_per_team_day",
+          "min": "0",
+          "max": "200",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric compute_pflops_window",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "rate",
+        "primary": "compute_pflops_window",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 58,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "compute_pflops_window",
+          "min": "0",
+          "max": "7",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "rate three scenarios",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "rate",
+        "primary": "compute_pflops_window",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "compute_pflops_window",
+          "min": "0",
+          "max": "7",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual compute_pflops_window",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "rate",
+        "primary": "compute_pflops_window",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "compute_pflops_window",
+          "min": "0",
+          "max": "7",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric agent_hours_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "agent_time",
+        "primary": "agent_hours_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 55,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "agent_hours_per_team_day",
+          "min": "0",
+          "max": "6",
+          "divisor": "10000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "agent_time three scenarios",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "agent_time",
+        "primary": "agent_hours_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 165,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "agent_hours_per_team_day",
+          "min": "0",
+          "max": "6",
+          "divisor": "10000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual agent_hours_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "agent_time",
+        "primary": "agent_hours_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "agent_hours_per_team_day",
+          "min": "0",
+          "max": "6",
+          "divisor": "10000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric mean_online_agent_equivalents",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "agent_scale",
+        "primary": "mean_online_agent_equivalents",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 55,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "mean_online_agent_equivalents",
+          "min": "0",
+          "max": "2500",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "agent_scale three scenarios",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "agent_scale",
+        "primary": "mean_online_agent_equivalents",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 165,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "mean_online_agent_equivalents",
+          "min": "0",
+          "max": "2500",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual mean_online_agent_equivalents",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "agent_scale",
+        "primary": "mean_online_agent_equivalents",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "mean_online_agent_equivalents",
+          "min": "0",
+          "max": "2500",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric task_starts_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tasks",
+        "primary": "task_starts_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 57,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "task_starts_per_team_day",
+          "min": "0",
+          "max": "20000",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "tasks three scenarios",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tasks",
+        "primary": "task_starts_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 171,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "task_starts_per_team_day",
+          "min": "0",
+          "max": "20000",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual task_starts_per_team_day",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "tasks",
+        "primary": "task_starts_per_team_day",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "task_starts_per_team_day",
+          "min": "0",
+          "max": "20000",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "metric prefix_cache_hit_rate",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "cache",
+        "primary": "prefix_cache_hit_rate",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 58,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "prefix_cache_hit_rate",
+          "min": "0",
+          "max": "100",
+          "divisor": "0.01",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "cache three scenarios",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "cache",
+        "primary": "prefix_cache_hit_rate",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "prefix_cache_hit_rate",
+          "min": "0",
+          "max": "100",
+          "divisor": "0.01",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "annual prefix_cache_hit_rate",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "cache",
+        "primary": "prefix_cache_hit_rate",
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "prefix_cache_hit_rate",
+          "min": "0",
+          "max": "100",
+          "divisor": "0.01",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "observed filter",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "observed",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 21,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "80",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "forecast filter",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "forecast",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 153,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "custom 2028 filter",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "custom",
+        "start": "2028-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 36,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "400",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "single-date actual-unit series",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "custom",
+        "start": "2028-05-18",
+        "end": "2028-05-18",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 3,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "300",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "scenario A",
+      "controls": {
+        "scenario": "A",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "scenario B",
+      "controls": {
+        "scenario": "B",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "scenario C",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "team 10",
+      "controls": {
+        "scenario": "C",
+        "team": "10",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "60",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "team 1000",
+      "controls": {
+        "scenario": "C",
+        "team": "1000",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "6000",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "team 100",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "8-hour actual PFLOP/s",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "8",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "rate",
+        "primary": "compute_pflops_window",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 58,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "compute_pflops_window",
+          "min": "0",
+          "max": "20",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "8-hour rate, three scenarios",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "8",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "rate",
+        "primary": "compute_pflops_window",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "compute_pflops_window",
+          "min": "0",
+          "max": "25",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "12-hour actual PFLOP/s",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "12",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "rate",
+        "primary": "compute_pflops_window",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "compute_pflops_window",
+          "min": "0",
+          "max": "15",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "cache percentages do not scale with team size",
+      "controls": {
+        "scenario": "C",
+        "team": "1000",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "cache",
+        "primary": "prefix_cache_hit_rate",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "prefix_cache_hit_rate",
+          "min": "0",
+          "max": "100",
+          "divisor": "0.01",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "736 trend",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 290,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,cached_input_tokens_per_team_day,uncached_input_tokens_per_team_day,total_tokens_per_team_day",
+          "min": "0",
+          "max": "700",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "736 scenarios",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "output_tokens_per_team_day",
+          "min": "0",
+          "max": "6",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "736 cache",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "cache",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "cache",
+      "marks": 10,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "cached_input_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "700",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "736 cache share",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "cache",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "share"
+      },
+      "view": "cache",
+      "marks": 10,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "cached_input_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "100",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "736 compute",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "compute",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "compute",
+      "marks": 10,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "prefill_eflop_per_team_day,decode_eflop_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "736 compute share",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "compute",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "share"
+      },
+      "view": "compute",
+      "marks": 10,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "prefill_eflop_per_team_day,decode_eflop_per_team_day",
+          "min": "0",
+          "max": "100",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "736 categories",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "categories",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "categories",
+      "marks": 18,
+      "axes": []
+    },
+    {
+      "label": "736 growth",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "growth",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "growth",
+      "marks": 30,
+      "axes": []
+    },
+    {
+      "label": "736 three computation curves",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "compute",
+        "primary": "eflop_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "eflop_per_team_day,prefill_eflop_per_team_day,decode_eflop_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "736 cache scenario comparison",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "cache",
+        "primary": "prefix_cache_hit_rate",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "prefix_cache_hit_rate",
+          "min": "0",
+          "max": "100",
+          "divisor": "0.01",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    },
+    {
+      "label": "320 trend",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 290,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,cached_input_tokens_per_team_day,uncached_input_tokens_per_team_day,total_tokens_per_team_day",
+          "min": "0",
+          "max": "700",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 246
+          }
+        }
+      ]
+    },
+    {
+      "label": "320 scenarios",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "scenarios",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "scenarios",
+      "marks": 15,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "output_tokens_per_team_day",
+          "min": "0",
+          "max": "6",
+          "divisor": "100000000",
+          "line": {
+            "x": 44,
+            "y": 44,
+            "w": 0,
+            "h": 246
+          }
+        }
+      ]
+    },
+    {
+      "label": "320 cache",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "cache",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "cache",
+      "marks": 10,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "cached_input_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "700",
+          "divisor": "100000000",
+          "line": {
+            "x": 44,
+            "y": 44,
+            "w": 0,
+            "h": 246
+          }
+        }
+      ]
+    },
+    {
+      "label": "320 cache share",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "cache",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "share"
+      },
+      "view": "cache",
+      "marks": 10,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "cached_input_tokens_per_team_day,uncached_input_tokens_per_team_day",
+          "min": "0",
+          "max": "100",
+          "divisor": "1",
+          "line": {
+            "x": 44,
+            "y": 44,
+            "w": 0,
+            "h": 246
+          }
+        }
+      ]
+    },
+    {
+      "label": "320 compute",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "compute",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "compute",
+      "marks": 10,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "prefill_eflop_per_team_day,decode_eflop_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "1",
+          "line": {
+            "x": 44,
+            "y": 44,
+            "w": 0,
+            "h": 246
+          }
+        }
+      ]
+    },
+    {
+      "label": "320 compute share",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "compute",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "share"
+      },
+      "view": "compute",
+      "marks": 10,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "prefill_eflop_per_team_day,decode_eflop_per_team_day",
+          "min": "0",
+          "max": "100",
+          "divisor": "1",
+          "line": {
+            "x": 44,
+            "y": 44,
+            "w": 0,
+            "h": 246
+          }
+        }
+      ]
+    },
+    {
+      "label": "320 categories",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "categories",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "categories",
+      "marks": 18,
+      "axes": []
+    },
+    {
+      "label": "320 growth",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "growth",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "growth",
+      "marks": 30,
+      "axes": []
+    },
+    {
+      "label": "320 three computation curves",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "compute",
+        "primary": "eflop_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "eflop_per_team_day,prefill_eflop_per_team_day,decode_eflop_per_team_day",
+          "min": "0",
+          "max": "600",
+          "divisor": "1",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 246
+          }
+        }
+      ]
+    },
+    {
+      "label": "320 cache scenario comparison",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "cache",
+        "primary": "prefix_cache_hit_rate",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 174,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "prefix_cache_hit_rate",
+          "min": "0",
+          "max": "100",
+          "divisor": "0.01",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 246
+          }
+        }
+      ]
+    },
+    {
+      "label": "dark same-unit multi-curve chart",
+      "controls": {
+        "scenario": "C",
+        "team": "100",
+        "window": "24",
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "range": "all",
+        "start": "2029-01-01",
+        "end": "2028-12-31",
+        "detail-mode": "absolute"
+      },
+      "view": "trend",
+      "marks": 290,
+      "axes": [
+        {
+          "axis": "left",
+          "series": "input_tokens_per_team_day,output_tokens_per_team_day,cached_input_tokens_per_team_day,uncached_input_tokens_per_team_day,total_tokens_per_team_day",
+          "min": "0",
+          "max": "700",
+          "divisor": "100000000",
+          "line": {
+            "x": 60,
+            "y": 44,
+            "w": 0,
+            "h": 326
+          }
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "view": "trend",
+      "viewport": 736,
+      "documentWidth": 721,
+      "rootWidth": 721
+    },
+    {
+      "view": "scenarios",
+      "viewport": 736,
+      "documentWidth": 721,
+      "rootWidth": 721
+    },
+    {
+      "view": "cache",
+      "viewport": 736,
+      "documentWidth": 721,
+      "rootWidth": 721
+    },
+    {
+      "view": "compute",
+      "viewport": 736,
+      "documentWidth": 736,
+      "rootWidth": 736
+    },
+    {
+      "view": "categories",
+      "viewport": 736,
+      "documentWidth": 721,
+      "rootWidth": 721
+    },
+    {
+      "view": "growth",
+      "viewport": 736,
+      "documentWidth": 736,
+      "rootWidth": 736
+    },
+    {
+      "view": "trend",
+      "viewport": 320,
+      "documentWidth": 305,
+      "rootWidth": 305
+    },
+    {
+      "view": "scenarios",
+      "viewport": 320,
+      "documentWidth": 305,
+      "rootWidth": 305
+    },
+    {
+      "view": "cache",
+      "viewport": 320,
+      "documentWidth": 305,
+      "rootWidth": 305
+    },
+    {
+      "view": "compute",
+      "viewport": 320,
+      "documentWidth": 305,
+      "rootWidth": 305
+    },
+    {
+      "view": "categories",
+      "viewport": 320,
+      "documentWidth": 305,
+      "rootWidth": 305
+    },
+    {
+      "view": "growth",
+      "viewport": 320,
+      "documentWidth": 305,
+      "rootWidth": 305
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "dashboard_default.png",
+      "width": 1280,
+      "height": 1335,
+      "theme": "light",
+      "sha256": "30af2a0b39ea1c1d088bf94b0bcebd55086e2b3eff731d1ca5d43c3d18dd6526"
+    },
+    {
+      "file": "dashboard_mobile.png",
+      "width": 320,
+      "height": 2345,
+      "theme": "light",
+      "sha256": "b49cd4ab85ac53828c63c5d02c863d9bc525e133e9d3feeaed600338b360a832"
+    },
+    {
+      "file": "dashboard_dark.png",
+      "width": 1024,
+      "height": 1354,
+      "theme": "dark",
+      "sha256": "38db345585ebc909f907325f01c4c61d8e621292a1c9b0215407d93f2e3434f9"
+    },
+    {
+      "file": "dashboard_tablet.png",
+      "width": 736,
+      "height": 1624,
+      "theme": "light",
+      "sha256": "4e5d25b1b5f5f405eebaecf96c5dabaa18643fd5372952beda21e6dfe547115f"
+    },
+    {
+      "file": "dashboard_compare.png",
+      "width": 1280,
+      "height": 1379,
+      "theme": "light",
+      "sha256": "be696ec08620f84e9c21dcc00b5f3106d2b16b3eea6924de2ece974a3820ab3d"
+    },
+    {
+      "file": "dashboard_compute.png",
+      "width": 1280,
+      "height": 1379,
+      "theme": "light",
+      "sha256": "b069fd187aac2fa87495b32b93f99691c811728447663cdebce86da15c0449fa"
+    },
+    {
+      "file": "dashboard_scenarios.png",
+      "width": 1280,
+      "height": 1379,
+      "theme": "light",
+      "sha256": "84e41f0ffbc38c503d35204f7699daac781115ec6bdb353809be0b5abac6f61a"
+    }
+  ],
+  "execution_context": [
+    null,
+    2
+  ],
+  "elapsed_seconds": 71.84552149404772
+}

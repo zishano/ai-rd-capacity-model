@@ -1,0 +1,102 @@
+{
+  "access_date": "2026-11-22",
+  "sources": [
+    {
+      "name": "state_space",
+      "url": "https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.structural.UnobservedComponents.html",
+      "status": 200,
+      "characters": 26783,
+      "title": "statsmodels.tsa.statespace.structural.UnobservedComponents &#8212; statsmodels 0.15.0"
+    },
+    {
+      "name": "uc_simulate",
+      "url": "https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.structural.UnobservedComponentsResults.simulate.html",
+      "status": 200,
+      "characters": 13741,
+      "title": "statsmodels.tsa.statespace.structural.UnobservedComponentsResults.simulate &#8212; statsmodels 0.15.0"
+    },
+    {
+      "name": "holt",
+      "url": "https://otexts.com/fpp3/holt.html",
+      "status": 202,
+      "characters": 1,
+      "title": ""
+    },
+    {
+      "name": "combinations",
+      "url": "https://otexts.com/fpp3/combinations.html",
+      "status": 202,
+      "characters": 1,
+      "title": ""
+    },
+    {
+      "name": "intervals",
+      "url": "https://otexts.com/fpp3/prediction-intervals.html",
+      "status": 202,
+      "characters": 1,
+      "title": ""
+    },
+    {
+      "name": "bootstrap",
+      "url": "https://otexts.com/fpp3/bootstrap.html",
+      "status": 202,
+      "characters": 1,
+      "title": ""
+    },
+    {
+      "name": "conformal",
+      "url": "https://nixtlaverse.nixtla.io/statsforecast/docs/tutorials/conformalprediction.html",
+      "status": 200,
+      "characters": 131868,
+      "title": "Conformal Prediction - Nixtla"
+    },
+    {
+      "name": "prophet",
+      "url": "https://facebook.github.io/prophet/docs/uncertainty_intervals.html",
+      "status": 200,
+      "characters": 127,
+      "title": "Documentation moved"
+    },
+    {
+      "name": "chronos",
+      "url": "https://github.com/amazon-science/chronos-forecasting",
+      "status": 200,
+      "characters": 11420,
+      "title": "GitHub - amazon-science/chronos-forecasting: Chronos: Pretrained Models for Time Series Forecasting · GitHub"
+    },
+    {
+      "name": "arch_bootstrap",
+      "url": "https://arch.readthedocs.io/en/latest/bootstrap/timeseries-bootstraps.html",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "prophet_source",
+      "url": "https://raw.githubusercontent.com/facebook/prophet/main/docs/_docs/12_uncertainty_intervals.md",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "ensemble",
+      "url": "https://www.sktime.net/en/stable/api_reference/auto_generated/sktime.forecasting.compose.EnsembleForecaster.html",
+      "status": 200,
+      "characters": 17876
+    },
+    {
+      "name": "arch_source",
+      "url": "https://raw.githubusercontent.com/bashtage/arch/main/arch/bootstrap/base.py",
+      "status": 200,
+      "characters": 82320
+    },
+    {
+      "name": "conformal_dependence",
+      "url": "https://arxiv.org/abs/2202.13415",
+      "status": 200,
+      "characters": 4975
+    },
+    {
+      "name": "prophet_current",
+      "url": "https://meta.github.io/prophet/docs/uncertainty_intervals.html",
+      "status": 200,
+      "characters": 6792
+    }
+  ]
+}

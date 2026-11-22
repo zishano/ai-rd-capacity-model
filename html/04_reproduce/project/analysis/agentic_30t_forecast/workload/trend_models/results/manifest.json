@@ -1,0 +1,33 @@
+{
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.10.8",
+    "python-pptx": "1.0.2"
+  },
+  "sources": {
+    "observed_openai_research_usage.csv": "697ee13990d246403c197959b4a59dc0b4f3abfad5f09e999fac039ef1ecc632",
+    "calibration/observed_output_tokens.csv": "90952607008546a3ef82a13cba191cdab07a93685694ba0cef5ee4e1606475aa",
+    "calibration/public_tasks.csv": "2627833f5c03c21b551e1ea7cced069ef9d861e393d713c75610540d2503d4dd",
+    "observed_workdays_by_team.csv": "e0602e56546b413210c4fc6f0aaa7f67bffd620882c8127961594463b02f8ca6"
+  },
+  "end": "2030-11-18",
+  "models": [
+    "naive",
+    "ols",
+    "piecewise",
+    "damped_holt",
+    "auto_arima"
+  ],
+  "cap_multipliers": [
+    2,
+    4,
+    8
+  ],
+  "conditional_half_lives_days": [
+    90,
+    365,
+    730
+  ]
+}

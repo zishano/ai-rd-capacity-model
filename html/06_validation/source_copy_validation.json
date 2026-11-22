@@ -1,0 +1,550 @@
+{
+  "status": "passed",
+  "copied_files": 108,
+  "checks": [
+    "Each copied file matches the SHA256 of its original source.",
+    "Every source file was rechecked after copying; no source file was changed."
+  ],
+  "entries": [
+    {
+      "bundle_path": "01_pages/resource-dashboard-preview.html",
+      "original_path": "output_team100_resource_dashboard/resource-dashboard-preview.html",
+      "sha256": "114c17337d42d083a73cc5a39fa6b85c19dba465b1457d1c75ef10711da6404a"
+    },
+    {
+      "bundle_path": "01_pages/raw-data-dashboard.html",
+      "original_path": "output_team100_resource_dashboard/raw-data-dashboard.html",
+      "sha256": "8793110e85a2234175ff4e18b5da90910dd556ab8e7304b85027832d1da8d6be"
+    },
+    {
+      "bundle_path": "01_pages/team-resource-dashboard.html",
+      "original_path": "output_team100_resource_dashboard/team-resource-dashboard.html",
+      "sha256": "41337f56573a3d7056b9ed0474006710b7624d2b1f36aebefe173d8c05ecaf9a"
+    },
+    {
+      "bundle_path": "02_frontend/dashboard.template.html",
+      "original_path": "output_team100_resource_dashboard/dashboard.template.html",
+      "sha256": "ccbcee05378757faec4dd953080426a6a8d821e6a7838d1b974cb7c1efdab5d5"
+    },
+    {
+      "bundle_path": "02_frontend/dashboard.css",
+      "original_path": "output_team100_resource_dashboard/dashboard.css",
+      "sha256": "a372e9375b1672aaa3e3f0d322dde90485157d93d542131a9db545d8b5a229e3"
+    },
+    {
+      "bundle_path": "02_frontend/dashboard.js",
+      "original_path": "output_team100_resource_dashboard/dashboard.js",
+      "sha256": "b16bec1743cb87988f1c0f34b3fa506ec4ea64d60135183e7dd4e389a94b6d1a"
+    },
+    {
+      "bundle_path": "02_frontend/raw-dashboard.template.html",
+      "original_path": "output_team100_resource_dashboard/raw-dashboard.template.html",
+      "sha256": "5b30aab1196e7f67d1ab25114930bf318a8dc8a4ffcf435e3dcf917e2996c1b8"
+    },
+    {
+      "bundle_path": "02_frontend/raw-dashboard.css",
+      "original_path": "output_team100_resource_dashboard/raw-dashboard.css",
+      "sha256": "d85e8b849bd7dab2a94a45dc76201c2b7967d76e7c04bec402d223ea950c1ede"
+    },
+    {
+      "bundle_path": "02_frontend/raw-dashboard.js",
+      "original_path": "output_team100_resource_dashboard/raw-dashboard.js",
+      "sha256": "080444f3b0373d7cd03e5f6ddc6044cca4cd360b70879159f21155da11517212"
+    },
+    {
+      "bundle_path": "03_data/dashboard_data.json",
+      "original_path": "output_team100_resource_dashboard/dashboard_data.json",
+      "sha256": "045ab5eb740f3c938276fc75a930f1161f65a271c8f1f524cf704df18c0d5722"
+    },
+    {
+      "bundle_path": "03_data/algorithm_forecasts.json",
+      "original_path": "output_team100_resource_dashboard/algorithm_forecasts.json",
+      "sha256": "b4f2287ebc6d746f04eb2261f53c94fa7edd467fd1bdaa39971e5d46054fc534"
+    },
+    {
+      "bundle_path": "03_data/raw_research_data.json",
+      "original_path": "output_team100_resource_dashboard/raw_research_data.json",
+      "sha256": "543fb85ac21003a5fa63f1c9627e733422889ad54dc586e88b610cb4eb182708"
+    },
+    {
+      "bundle_path": "03_data/dashboard_data.csv",
+      "original_path": "output_team100_resource_dashboard/dashboard_data.csv",
+      "sha256": "b9b61d59ea30ba1c90702e26e3234022c7160cb6fb90819198e1939c84d10bcf"
+    },
+    {
+      "bundle_path": "03_data/baseline_2026.csv",
+      "original_path": "output_team100_resource_dashboard/baseline_2026.csv",
+      "sha256": "66234a112f4ebb29c743330c4911beb3a95f02d476335e0763c1ed1727e9b8bc"
+    },
+    {
+      "bundle_path": "03_data/official_history.csv",
+      "original_path": "output_team100_resource_dashboard/official_history.csv",
+      "sha256": "d9455a9430874179df594832e6961c1144bf7d75af596d5a0a7e4181575b2b28"
+    },
+    {
+      "bundle_path": "03_data/category_mix.csv",
+      "original_path": "output_team100_resource_dashboard/category_mix.csv",
+      "sha256": "c314fbf526d090ec0ce4b02205f37bbeb316f6c15188ec6089f54960ea31b7ab"
+    },
+    {
+      "bundle_path": "03_data/monthly_tokens.csv",
+      "original_path": "output_team100_resource_dashboard/monthly_tokens.csv",
+      "sha256": "46ae587fb39c69aa231bddfd03cda25e48d836910604b93386276862c096a283"
+    },
+    {
+      "bundle_path": "03_data/monthly_agents.csv",
+      "original_path": "output_team100_resource_dashboard/monthly_agents.csv",
+      "sha256": "48a05ac521581bfcfa9a09bb8226f50fde92c2bcd1216cf3249cb8feedacb46c"
+    },
+    {
+      "bundle_path": "03_data/monthly_resources.csv",
+      "original_path": "output_team100_resource_dashboard/monthly_resources.csv",
+      "sha256": "9c116e76b7ec845a325f52cc802a8458c43e4fa238be3716ee1447ac99dd04b1"
+    },
+    {
+      "bundle_path": "03_data/monthly_tasks.csv",
+      "original_path": "output_team100_resource_dashboard/monthly_tasks.csv",
+      "sha256": "1b32e0f909d0bf9491a296794ae17be65d1f907350a89283fdc7c2ddeeb84526"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_team100_resource_dashboard/build_data.py",
+      "original_path": "output_team100_resource_dashboard/build_data.py",
+      "sha256": "f8bd2c9575a1d7d394d3eb9f80c54f6bd179973a9f574b38a3e0b9034afa4ed2"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_team100_resource_dashboard/build_algorithm_data.py",
+      "original_path": "output_team100_resource_dashboard/build_algorithm_data.py",
+      "sha256": "e5e5eae9e57a1338f1c019ae0e6b1fd96a285a3f35ed147b74ccf5cc757ff8ba"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_team100_resource_dashboard/build_raw_data.py",
+      "original_path": "output_team100_resource_dashboard/build_raw_data.py",
+      "sha256": "1d488224017f5cf3cd3e626cfe6f9ec5c0293bfe35fbc9541934fe0dcdc43dfb"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_team100_resource_dashboard/build_fragment.py",
+      "original_path": "output_team100_resource_dashboard/build_fragment.py",
+      "sha256": "15769771365c672886484ce16b4a499b460cd3a132dc44a76a59bc55f93208a4"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_team100_resource_dashboard/build_preview.py",
+      "original_path": "output_team100_resource_dashboard/build_preview.py",
+      "sha256": "af0d421e91a2d30e0fc9466a058670f7e74d7409ec3d6233e0c4af0af638454b"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_team100_resource_dashboard/build_raw_dashboard.py",
+      "original_path": "output_team100_resource_dashboard/build_raw_dashboard.py",
+      "sha256": "d78df270b268282a4c904f1de12c95b8e4a977a4ecd344daba40155f2858f230"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_team100_resource_dashboard/build_presentation.py",
+      "original_path": "output_team100_resource_dashboard/build_presentation.py",
+      "sha256": "87b29e435158dbab071a16a252a4f592b7ec76e5a8ca9aec606de254d6ad2299"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_team100_resource_dashboard/build_analysis_figures.py",
+      "original_path": "output_team100_resource_dashboard/build_analysis_figures.py",
+      "sha256": "ea03b97e88eb82d042f8213756bff898a3923cdd5d871449056764941e9dffa3"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_team100_resource_dashboard/package_outputs.py",
+      "original_path": "output_team100_resource_dashboard/package_outputs.py",
+      "sha256": "5768b75dca868a1bbfe96730f4ff3cdc1ab3da0450872e044701b5369390892d"
+    },
+    {
+      "bundle_path": "06_validation/scripts/validate_explorer.py",
+      "original_path": "output_team100_resource_dashboard/validate_explorer.py",
+      "sha256": "e6da99dd1021bb8c6c4d40c3bb47f57ac1e2a2142dbbaaae5cc8403f8d1a1cf8"
+    },
+    {
+      "bundle_path": "06_validation/scripts/validate_algorithms.py",
+      "original_path": "output_team100_resource_dashboard/validate_algorithms.py",
+      "sha256": "be22cb4c7f7d089f3dedca43e406c5a54ca3e7ac9e12143ba1d1a3fd4cb5cd02"
+    },
+    {
+      "bundle_path": "06_validation/scripts/validate_raw_dashboard.py",
+      "original_path": "output_team100_resource_dashboard/validate_raw_dashboard.py",
+      "sha256": "66399736897b876b42ec7ea6e5ca6d964e5fdc5bdd79292e6f826b93eb52d002"
+    },
+    {
+      "bundle_path": "06_validation/scripts/cdp_helper.py",
+      "original_path": "output_team100_resource_dashboard/cdp_helper.py",
+      "sha256": "9236ab4bc47f11e51b84da4d26db8d9b8330022f8aa6e7208c009cb486c94b6e"
+    },
+    {
+      "bundle_path": "06_validation/references/qa_reference_forecasts_v1.json",
+      "original_path": "output_team100_resource_dashboard/qa_reference_forecasts_v1.json",
+      "sha256": "e5388f7d6dd76511940bf71c6f699127e46de2d253769f81fa060e324eb160b6"
+    },
+    {
+      "bundle_path": "06_validation/historical_reports/algorithm_qa_validation.json",
+      "original_path": "output_team100_resource_dashboard/algorithm_qa_validation.json",
+      "sha256": "08733afb61eb127e12a7d083c1ff79149a64e936bc6f7e53179a7ba90fe7d328"
+    },
+    {
+      "bundle_path": "06_validation/historical_reports/analysis_figure_validation.json",
+      "original_path": "output_team100_resource_dashboard/analysis_figure_validation.json",
+      "sha256": "e9ced7f220d617e3ce839e4e609b2d67eed8a379ff2f3b42dc9dc9af83351f44"
+    },
+    {
+      "bundle_path": "06_validation/historical_reports/artifact_validation.json",
+      "original_path": "output_team100_resource_dashboard/artifact_validation.json",
+      "sha256": "92281ab710752d390092aacce08db1a1865ca37f31d976de7ae0810a69d32a2f"
+    },
+    {
+      "bundle_path": "06_validation/historical_reports/data_validation.json",
+      "original_path": "output_team100_resource_dashboard/data_validation.json",
+      "sha256": "de4d250de49dfcec62c1997a659d271dbc46e833f3da6ce919b18d626a368abd"
+    },
+    {
+      "bundle_path": "06_validation/historical_reports/qa_data_validation.json",
+      "original_path": "output_team100_resource_dashboard/qa_data_validation.json",
+      "sha256": "f1b98df077358f291efe8d828b759d6c5a902ece1db8da7e0b0f60d5c6f3d108"
+    },
+    {
+      "bundle_path": "06_validation/historical_reports/qa_validation.json",
+      "original_path": "output_team100_resource_dashboard/qa_validation.json",
+      "sha256": "e0ae376895f2b11b2f6d4549d7539b806363149a407105ca95c7498fd675050b"
+    },
+    {
+      "bundle_path": "06_validation/historical_reports/raw_qa_validation.json",
+      "original_path": "output_team100_resource_dashboard/raw_qa_validation.json",
+      "sha256": "15272670fc0cc1c2f152fd286e8d5a1ad97f3d16d82520903a02cdc15cce6f05"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/dashboard_2026_baseline.png",
+      "original_path": "output_team100_resource_dashboard/dashboard_2026_baseline.png",
+      "sha256": "2a91601064a4610a474bd64fa32c4d0f37ca7adf995efaea013d663ce2bf59b7"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/dashboard_algorithms.png",
+      "original_path": "output_team100_resource_dashboard/dashboard_algorithms.png",
+      "sha256": "dcf22d7901f64270741242a2fd476bb6531fba7c018d7bc60f4c496e33f2a8c9"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/dashboard_algorithms_menu.png",
+      "original_path": "output_team100_resource_dashboard/dashboard_algorithms_menu.png",
+      "sha256": "69f1c36c8d5900373d81443b28f52640bffd25c96b70bf071c4a6019420aa4cf"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/dashboard_algorithms_mobile.png",
+      "original_path": "output_team100_resource_dashboard/dashboard_algorithms_mobile.png",
+      "sha256": "43447a6bdfd363b50737d19ffaac3013329e93990b07aa7a5ca24a4d3df70dd4"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/dashboard_compare.png",
+      "original_path": "output_team100_resource_dashboard/dashboard_compare.png",
+      "sha256": "be696ec08620f84e9c21dcc00b5f3106d2b16b3eea6924de2ece974a3820ab3d"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/dashboard_compute.png",
+      "original_path": "output_team100_resource_dashboard/dashboard_compute.png",
+      "sha256": "b069fd187aac2fa87495b32b93f99691c811728447663cdebce86da15c0449fa"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/dashboard_dark.png",
+      "original_path": "output_team100_resource_dashboard/dashboard_dark.png",
+      "sha256": "38db345585ebc909f907325f01c4c61d8e621292a1c9b0215407d93f2e3434f9"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/dashboard_default.png",
+      "original_path": "output_team100_resource_dashboard/dashboard_default.png",
+      "sha256": "30af2a0b39ea1c1d088bf94b0bcebd55086e2b3eff731d1ca5d43c3d18dd6526"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/dashboard_mobile.png",
+      "original_path": "output_team100_resource_dashboard/dashboard_mobile.png",
+      "sha256": "b49cd4ab85ac53828c63c5d02c863d9bc525e133e9d3feeaed600338b360a832"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/dashboard_scenarios.png",
+      "original_path": "output_team100_resource_dashboard/dashboard_scenarios.png",
+      "sha256": "84e41f0ffbc38c503d35204f7699daac781115ec6bdb353809be0b5abac6f61a"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/dashboard_tablet.png",
+      "original_path": "output_team100_resource_dashboard/dashboard_tablet.png",
+      "sha256": "4e5d25b1b5f5f405eebaecf96c5dabaa18643fd5372952beda21e6dfe547115f"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/raw_dashboard_concurrency.png",
+      "original_path": "output_team100_resource_dashboard/raw_dashboard_concurrency.png",
+      "sha256": "ee081eaba5603a843a05834a45560fe8468f1b9720f8cba0290bf51dcc7e3083"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/raw_dashboard_mobile.png",
+      "original_path": "output_team100_resource_dashboard/raw_dashboard_mobile.png",
+      "sha256": "cb527f0548ffe5c6f429741b6d17eed35231fa8ba9db6282d34f189b66527584"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/raw_dashboard_output.png",
+      "original_path": "output_team100_resource_dashboard/raw_dashboard_output.png",
+      "sha256": "518f976b432b3a1865c79fb0bc3a9fd071848f09513f9e3bdfba7cc491dbc21c"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/raw_dashboard_tasks.png",
+      "original_path": "output_team100_resource_dashboard/raw_dashboard_tasks.png",
+      "sha256": "7e0720574ef05c4c11d83a8d80e5ec3d4a85857db7530559cbe51336dccc5449"
+    },
+    {
+      "bundle_path": "05_figures/screenshots/raw_dashboard_workdays.png",
+      "original_path": "output_team100_resource_dashboard/raw_dashboard_workdays.png",
+      "sha256": "0ee5ab018892070b02c9c07c65511e3d0069e702dff1c7ad269fc1003e0cee71"
+    },
+    {
+      "bundle_path": "05_figures/exports/team-resource-analysis-2026-2030.png",
+      "original_path": "output_team100_resource_dashboard/team-resource-analysis-2026-2030.png",
+      "sha256": "5f496cef00fd9d565e9b3a8a21f3eb4bfa1e6ecf897b4af9d2118aa0dd93c3c0"
+    },
+    {
+      "bundle_path": "05_figures/exports/team-resource-analysis-2026-2030.svg",
+      "original_path": "output_team100_resource_dashboard/team-resource-analysis-2026-2030.svg",
+      "sha256": "c7a424ab826dfb69fef365d9b00e0a6e8cda5710b301ad15258dc2c30321759a"
+    },
+    {
+      "bundle_path": "05_figures/exports/team-resource-analysis-2026-2030.pdf",
+      "original_path": "output_team100_resource_dashboard/team-resource-analysis-2026-2030.pdf",
+      "sha256": "962a37bbc9001e5a08575e97d698cbbea2e14a83da478d88948026a8e33185a9"
+    },
+    {
+      "bundle_path": "05_figures/exports/team-resource-analysis-2026-2030.pptx",
+      "original_path": "output_team100_resource_dashboard/team-resource-analysis-2026-2030.pptx",
+      "sha256": "29dc3784b17537d1db6161c3658d24a0ceab40663ba080ec24cad0f730b8369d"
+    },
+    {
+      "bundle_path": "05_figures/exports/team-resource-overview-2030.pptx",
+      "original_path": "output_team100_resource_dashboard/team-resource-overview-2030.pptx",
+      "sha256": "e9692fdf24a8fc69d16afbdb12f697048499fe31609261ace8e7ee904f4361c8"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/calibration/public_tasks.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/calibration/public_tasks.csv",
+      "sha256": "2627833f5c03c21b551e1ea7cced069ef9d861e393d713c75610540d2503d4dd"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/monthly_research_usage.py",
+      "original_path": "analysis/agentic_30t_forecast/workload/monthly_research_usage.py",
+      "sha256": "c8cafb2814b456858f2248e6db216b1ddc04b7d7a0c8b528553c7c0d5cbd25ed"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/settings.json",
+      "original_path": "analysis/agentic_30t_forecast/workload/settings.json",
+      "sha256": "394b796e804461a2148ee7991451d489e6ac128b0c672db8b740f1279dc9262d"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/original_style.py",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/original_style.py",
+      "sha256": "e5bc4f0d3723bc1aef288aff8d91c44f8488aab4d9251cb100fe595c2d2863cc"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/concurrency.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/concurrency.csv",
+      "sha256": "6eef2a221a9730fdce05934ce71d4713bacec25c9d363566f263ae073b8fd2e6"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/forecast.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/forecast.csv",
+      "sha256": "71105d8bc2259716c99e5efaf571b9ed6001a1c67b2670fe099bd96c9fa016cd"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt/chart_data.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt/chart_data.csv",
+      "sha256": "0520d76a3bd257325010b752603227cf43f98abf03be14cdd0a8694fa61b59a8"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt/team_parameters.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt/team_parameters.csv",
+      "sha256": "469e72aee6e13d56ad48d3142041cf26396f38918a42dd5ddc24a3eb95259f5a"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt_hl365/chart_data.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt_hl365/chart_data.csv",
+      "sha256": "8d47b182a85f2de4e9f812d44bb2f1f5076321ba252ec2b3d7a735d769d6848e"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt_hl365/team_parameters.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/damped_holt_hl365/team_parameters.csv",
+      "sha256": "b2bf64c23922710e02547e3cca2096cab145a5657c275fa1566cc583c3905e1a"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/gompertz_cap4x/chart_data.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/gompertz_cap4x/chart_data.csv",
+      "sha256": "e2ab57df99b9f2dcd76534ea95bea043a180a3483d421749ffd988c7b82756cb"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/gompertz_cap4x/team_parameters.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/gompertz_cap4x/team_parameters.csv",
+      "sha256": "5f9e1fe410f9dd803056716c64c4e84cb59db7fb9d3ba326f3aeb50eedd121cf"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/legacy_ols/chart_data.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/legacy_ols/chart_data.csv",
+      "sha256": "abe65edf65ae95de1510958aeee7fb6967de0e8972fafc53b0666d34b3f06adf"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/legacy_ols/team_parameters.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/legacy_ols/team_parameters.csv",
+      "sha256": "8b3e031825cab4f89c9ce82a415603d928b4782af7da6354029ef193b235489d"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/logistic_cap4x/chart_data.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/logistic_cap4x/chart_data.csv",
+      "sha256": "d77e9261fb60fae876b31a43b11525f6c4cd483955599ebb49590e413f3d22a9"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/original_style/logistic_cap4x/team_parameters.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/original_style/logistic_cap4x/team_parameters.csv",
+      "sha256": "53e58fa4951388e8143d0ea3c665e9e04834cc2ad22ecc6e04455fb6f10cc087"
+    },
+    {
+      "bundle_path": "04_reproduce/project/config/models/moe_30t.json",
+      "original_path": "config/models/moe_30t.json",
+      "sha256": "11341675d6ee27d44d24a03b2531b0c1e79a5dccf1c0677fa36985ea6641c954"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output/team_100_2030.csv",
+      "original_path": "output/team_100_2030.csv",
+      "sha256": "87bd5134a66f0258f48ab7451e972965c53ff6ed97af0d14f939682e9c8f8d55"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_official_100/official_data/normalization_manifest.json",
+      "original_path": "output_openai_official_100/official_data/normalization_manifest.json",
+      "sha256": "c24c24993900ebb8b7a935cfc778eb1d9394954ef5d01786448d43026b088445"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_official_100/official_data/task_starts.csv",
+      "original_path": "output_openai_official_100/official_data/task_starts.csv",
+      "sha256": "da498ed88239961eb732ced0b187c7ec4a104e01b77eee59481fb6e8bba428fe"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_official_100/official_data/workdays.csv",
+      "original_path": "output_openai_official_100/official_data/workdays.csv",
+      "sha256": "1dbf79fd16d2a5625b4d581316fea20466d721e5d2ba91897374af526043b9b6"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_official_100/source_downloads/download_manifest.json",
+      "original_path": "output_openai_official_100/source_downloads/download_manifest.json",
+      "sha256": "bf3c3121d7625aa5d1e84aa3eca31b9ef3302d77306a5cc6ed343cc45dab2117"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_researcher_forecast/official_data/normalization_manifest.json",
+      "original_path": "output_openai_researcher_forecast/official_data/normalization_manifest.json",
+      "sha256": "3033b4fcbfe3cd8bcc6b180fc77a8f2480b26d3081b028741ecd280d01bf38da"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_researcher_forecast/official_data/output_tokens_14d.csv",
+      "original_path": "output_openai_researcher_forecast/official_data/output_tokens_14d.csv",
+      "sha256": "3a1cc809ec87bf13f3abe10875cd9d5b854bfb7d761e3fd1ed5694da88c9a1fd"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_researcher_forecast/source_downloads/download_manifest.json",
+      "original_path": "output_openai_researcher_forecast/source_downloads/download_manifest.json",
+      "sha256": "c2107a37863f74c03e03ccfdc917d1d3afbb96c847e1b4f1a8290a77a51c7254"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_researcher_forecast/source_downloads/chart_08.json",
+      "original_path": "output_openai_researcher_forecast/source_downloads/chart_08.json",
+      "sha256": "5c7b8252d6c6fd47a7644b28466f1f155e692f815df6d8150918d564f5c14d89"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_researcher_forecast/source_downloads/selected_chart_identity.json",
+      "original_path": "output_openai_researcher_forecast/source_downloads/selected_chart_identity.json",
+      "sha256": "22cd91fc1588b2fcd3eed4ab958fe74f8265ea74f83a3c7d64043c0e48e1388e"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_researcher_forecast/source_downloads/selected_zh_article.html",
+      "original_path": "output_openai_researcher_forecast/source_downloads/selected_zh_article.html",
+      "sha256": "a08c742e5c54a0876c5d8bdaa217d4ae667f504bde74f9861dbb126e073fbf63"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_official_100/source_downloads/november_2026_chart_02.json",
+      "original_path": "output_openai_official_100/source_downloads/november_2026_chart_02.json",
+      "sha256": "45be68e16706293c24fce138dc77c067f9f97888efb0532152e715955f965123"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_official_100/source_downloads/november_2026_chart_03.json",
+      "original_path": "output_openai_official_100/source_downloads/november_2026_chart_03.json",
+      "sha256": "003070bab3ed409a7459df5fca111ff587124d4f32c01e19e778e93c43876d4a"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_official_100/source_downloads/november_2026_chart_08.json",
+      "original_path": "output_openai_official_100/source_downloads/november_2026_chart_08.json",
+      "sha256": "7238a2b52ced9577929dc4e8ffc797d2f7726f8a5ce60e65a8f9cd4055fa5221"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_official_100/source_downloads/november_2026_page.html",
+      "original_path": "output_openai_official_100/source_downloads/november_2026_page.html",
+      "sha256": "07a39c8c1298f2f4e2163a4811dcb3923a1d6b49a5bfe4a1f24be9634c57cace"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_researcher_forecast/source_methods.md",
+      "original_path": "output_openai_researcher_forecast/source_methods.md",
+      "sha256": "d627814e83f0d84de81ea01e7cbf12c43388e80cd9a0d2747e46f4690e8c80d3"
+    },
+    {
+      "bundle_path": "04_reproduce/project/output_openai_official_100/source_methods.md",
+      "original_path": "output_openai_official_100/source_methods.md",
+      "sha256": "3469a579bb7ce0398d5e3bce651c084465eaa7c8a51f919d6789efc06eb21b2a"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/observed_openai_research_usage.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/observed_openai_research_usage.csv",
+      "sha256": "697ee13990d246403c197959b4a59dc0b4f3abfad5f09e999fac039ef1ecc632"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/observed_workdays_by_team.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/observed_workdays_by_team.csv",
+      "sha256": "e0602e56546b413210c4fc6f0aaa7f67bffd620882c8127961594463b02f8ca6"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/calibration/observed_output_tokens.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/calibration/observed_output_tokens.csv",
+      "sha256": "90952607008546a3ef82a13cba191cdab07a93685694ba0cef5ee4e1606475aa"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/sources.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/sources.csv",
+      "sha256": "12124ef94b5bd7365b08120bf8158608ad97e0b5260d23f56f2f47945ab1cecf"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/calibration/REPORT.md",
+      "original_path": "analysis/agentic_30t_forecast/workload/calibration/REPORT.md",
+      "sha256": "d8f7e967cc4bac772d2b3c9dc9527e08146f04462fbde3e2efacaee68f9ccd81"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/README.md",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/README.md",
+      "sha256": "dc780583bed7be8833ebc3d686fcda919c144b8c13aad27184929a625540dc0c"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/requirements.txt",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/requirements.txt",
+      "sha256": "8a2134db6b21d38c2455e8cb2b02fa12ddb38cd48e69533100805594342c2039"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/manifest.json",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/manifest.json",
+      "sha256": "bed6d29dd6dc4a6b8d09a384af8b74e1859072b5ac245612aa5b3d9ad9c2da96"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/audit.json",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/audit.json",
+      "sha256": "141238935017bca06566657e3cf3e15ce1508d3123290a3c1421991178b84aae"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/parameters.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/parameters.csv",
+      "sha256": "ac9488750b4d424bce04072debd60726e9d7104e2ea1c2de3cb71558adbed0ec"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/backtest.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/backtest.csv",
+      "sha256": "b30686b1ab8d89748ed49e1c1b9f5f61678d7bd9df86716f021ba58aab3f61e8"
+    },
+    {
+      "bundle_path": "04_reproduce/project/analysis/agentic_30t_forecast/workload/trend_models/results/concurrency_backtest.csv",
+      "original_path": "analysis/agentic_30t_forecast/workload/trend_models/results/concurrency_backtest.csv",
+      "sha256": "23295fbb288237457c9f99314ff36128d171116e2aa0c790e61a62c70d97cd7d"
+    }
+  ]
+}

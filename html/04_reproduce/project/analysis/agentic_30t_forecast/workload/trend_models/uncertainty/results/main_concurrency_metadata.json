@@ -1,0 +1,22 @@
+{
+  "center_method": "legacy_log_complement",
+  "center_unchanged": true,
+  "uncertainty_method": "paired moving-calendar-block residual bootstrap of the two original trends",
+  "seed": 20261122,
+  "draws": 2400,
+  "block_days": 28,
+  "valid_block_starts": 107,
+  "coefficients": [
+    [
+      -0.06934926731393197,
+      0.017531584047404562
+    ],
+    [
+      -0.007308413931151863,
+      -0.0009261619878595145
+    ]
+  ],
+  "nested_projection_fraction": 0.0,
+  "probability_floor_fraction": 0.0,
+  "limitation": "trend-fit uncertainty only; few independent blocks; no four-year calibrated coverage"
+}

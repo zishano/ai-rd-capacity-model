@@ -1,0 +1,6 @@
+method,series,parameters
+logistic_cap4x,Pretraining,"{""cap"": 32.8, ""a"": 3.544562151382626, ""rate_per_day"": 0.015584772054601152, ""jacobian_condition"": 504.8640155632189, ""cap_basis"": ""conditional sensitivity"", ""internal_scale"": 1.0, ""negative_forecasts_before_floor"": 0, ""fit_days"": 169}"
+logistic_cap4x,Posttraining,"{""cap"": 31.2, ""a"": 3.8484848172098847, ""rate_per_day"": 0.01720908767185093, ""jacobian_condition"": 564.6067905465707, ""cap_basis"": ""conditional sensitivity"", ""internal_scale"": 1.0, ""negative_forecasts_before_floor"": 0, ""fit_days"": 169}"
+logistic_cap4x,Overall Research,"{""basis"": ""forecast.csv overall series, identical to model comparison""}"
+logistic_cap4x,Scaling / Infrastructure,"{""cap"": 17.2, ""a"": 3.3012032929739696, ""rate_per_day"": 0.014034086393354118, ""jacobian_condition"": 457.05709011627215, ""cap_basis"": ""conditional sensitivity"", ""internal_scale"": 1.0, ""negative_forecasts_before_floor"": 0, ""fit_days"": 169}"
+logistic_cap4x,Other,"{""cap"": 12.0, ""a"": 3.417403916749915, ""rate_per_day"": 0.015398443183283596, ""jacobian_condition"": 487.50334209309693, ""cap_basis"": ""conditional sensitivity"", ""internal_scale"": 1.0, ""negative_forecasts_before_floor"": 0, ""fit_days"": 169}"

@@ -1,0 +1,377 @@
+{
+  "status": "passed",
+  "row_count": 15,
+  "years": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030
+  ],
+  "scenarios": [
+    "A",
+    "B",
+    "C"
+  ],
+  "source_observations": {
+    "output_per_category": 208,
+    "task_starts_per_category": 232,
+    "agent_workdays": 169
+  },
+  "complete_proxy_tasks": 252,
+  "top_output_decile_tasks": 26,
+  "endpoint_check_count": 27,
+  "endpoint_checks": [
+    {
+      "scenario": "A",
+      "metric": "input_tokens_per_team_day",
+      "recomputed": 46693189443.23747,
+      "reference": 46693189443.237465,
+      "relative_error": 1.633941613803158e-16
+    },
+    {
+      "scenario": "A",
+      "metric": "cached_input_tokens_per_team_day",
+      "recomputed": 43827040439.76505,
+      "reference": 43827040439.765045,
+      "relative_error": 1.7407961967533897e-16
+    },
+    {
+      "scenario": "A",
+      "metric": "uncached_input_tokens_per_team_day",
+      "recomputed": 2866149003.4724197,
+      "reference": 2866149003.4724236,
+      "relative_error": 1.3309486914334818e-15
+    },
+    {
+      "scenario": "A",
+      "metric": "output_tokens_per_team_day",
+      "recomputed": 471197464.69711226,
+      "reference": 471197464.69711226,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "A",
+      "metric": "agent_hours_per_team_day",
+      "recomputed": 45570.43448858833,
+      "reference": 45570.43448858833,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "A",
+      "metric": "mean_online_agent_equivalents",
+      "recomputed": 1898.7681036911806,
+      "reference": 1898.7681036911806,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "A",
+      "metric": "task_starts_per_team_day",
+      "recomputed": 16895.838697339364,
+      "reference": 16895.838697339364,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "A",
+      "metric": "eflop_per_team_day",
+      "recomputed": 527.2961578864456,
+      "reference": 527.2961578864455,
+      "relative_error": 2.1560338724504563e-16
+    },
+    {
+      "scenario": "A",
+      "metric": "prefix_cache_hit_rate",
+      "recomputed": 0.9386174078565215,
+      "reference": 0.9386174078565215,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "B",
+      "metric": "input_tokens_per_team_day",
+      "recomputed": 46693189443.23747,
+      "reference": 46693189443.237465,
+      "relative_error": 1.633941613803158e-16
+    },
+    {
+      "scenario": "B",
+      "metric": "cached_input_tokens_per_team_day",
+      "recomputed": 43827040439.76505,
+      "reference": 43827040439.765045,
+      "relative_error": 1.7407961967533897e-16
+    },
+    {
+      "scenario": "B",
+      "metric": "uncached_input_tokens_per_team_day",
+      "recomputed": 2866149003.4724197,
+      "reference": 2866149003.4724236,
+      "relative_error": 1.3309486914334818e-15
+    },
+    {
+      "scenario": "B",
+      "metric": "output_tokens_per_team_day",
+      "recomputed": 471197464.69711226,
+      "reference": 471197464.69711226,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "B",
+      "metric": "agent_hours_per_team_day",
+      "recomputed": 45570.43448858833,
+      "reference": 45570.43448858833,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "B",
+      "metric": "mean_online_agent_equivalents",
+      "recomputed": 1898.7681036911806,
+      "reference": 1898.7681036911806,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "B",
+      "metric": "task_starts_per_team_day",
+      "recomputed": 16895.838697339364,
+      "reference": 16895.838697339364,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "B",
+      "metric": "eflop_per_team_day",
+      "recomputed": 527.2961578864456,
+      "reference": 527.2961578864455,
+      "relative_error": 2.1560338724504563e-16
+    },
+    {
+      "scenario": "B",
+      "metric": "prefix_cache_hit_rate",
+      "recomputed": 0.9386174078565215,
+      "reference": 0.9386174078565215,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "C",
+      "metric": "input_tokens_per_team_day",
+      "recomputed": 54192434900.86692,
+      "reference": 54192434900.86691,
+      "relative_error": 1.4078338692856839e-16
+    },
+    {
+      "scenario": "C",
+      "metric": "cached_input_tokens_per_team_day",
+      "recomputed": 52097366239.17287,
+      "reference": 52097366239.17286,
+      "relative_error": 1.464449180832741e-16
+    },
+    {
+      "scenario": "C",
+      "metric": "uncached_input_tokens_per_team_day",
+      "recomputed": 2095068661.6940536,
+      "reference": 2095068661.6940558,
+      "relative_error": 1.0241989922082135e-15
+    },
+    {
+      "scenario": "C",
+      "metric": "output_tokens_per_team_day",
+      "recomputed": 471197464.69711226,
+      "reference": 471197464.69711226,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "C",
+      "metric": "agent_hours_per_team_day",
+      "recomputed": 45570.43448858833,
+      "reference": 45570.43448858833,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "C",
+      "metric": "mean_online_agent_equivalents",
+      "recomputed": 1898.7681036911806,
+      "reference": 1898.7681036911806,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "C",
+      "metric": "task_starts_per_team_day",
+      "recomputed": 16895.838697339364,
+      "reference": 16895.838697339364,
+      "relative_error": 0.0
+    },
+    {
+      "scenario": "C",
+      "metric": "eflop_per_team_day",
+      "recomputed": 503.85889983497253,
+      "reference": 503.8588998349725,
+      "relative_error": 1.128161453125583e-16
+    },
+    {
+      "scenario": "C",
+      "metric": "prefix_cache_hit_rate",
+      "recomputed": 0.9613402006105368,
+      "reference": 0.9613402006105368,
+      "relative_error": 0.0
+    }
+  ],
+  "checks": [
+    "原始历史独立复算15行；旧2030表仅用于断言。",
+    "2027–2030全部12行原字段与v1哈希精确相同。",
+    "2026使用各自最新观测及窗口换算，不以11月18日拟合值冒充实测。",
+    "2026资源标记proxy_estimate，ABC均匀252题且tail_share=0。",
+    "18类占比合计为1，分类输出合计与各年总量一致。",
+    "A/B资源相同；A/B/C共用输出、任务与累计时长。",
+    "输入、缓存、未缓存及Prefill/Decode恒等式通过。",
+    "H/24平均活动当量及24小时PFLOP/s换算通过。"
+  ],
+  "future_rows_preserved": {
+    "row_count": 12,
+    "core_fields": [
+      "year",
+      "date",
+      "researchers",
+      "scenario",
+      "input_tokens_per_team_day",
+      "cached_input_tokens_per_team_day",
+      "uncached_input_tokens_per_team_day",
+      "output_tokens_per_team_day",
+      "total_tokens_per_team_day",
+      "agent_hours_per_team_day",
+      "mean_online_agent_equivalents",
+      "task_starts_per_team_day",
+      "eflop_per_team_day",
+      "prefill_eflop_per_team_day",
+      "decode_eflop_per_team_day",
+      "prefix_cache_hit_rate",
+      "tail_share",
+      "compute_pflops_24h"
+    ],
+    "canonical_json_sha256": "db04c55b75fd401946d029e3295754d1d567bcc35b85c0a11e46e9ed6d5c8619",
+    "v1_sha256": "db04c55b75fd401946d029e3295754d1d567bcc35b85c0a11e46e9ed6d5c8619",
+    "canonicalization": "json.dumps(rows, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode()"
+  },
+  "observed_dates": {
+    "output": "2026-08-15",
+    "agent_hours": "2026-10-18",
+    "task_starts": "2026-10-18"
+  },
+  "history_counts": {
+    "output_tokens_14d": 208,
+    "output_tokens_28d": 194,
+    "agent_workdays": 169,
+    "agent_hours": 169,
+    "mean_online_agent_equivalents": 169,
+    "task_starts": 232
+  },
+  "category_mix_rows": 270,
+  "official_csv_manifest_checks": [
+    {
+      "role": "output",
+      "sha256": "3a1cc809ec87bf13f3abe10875cd9d5b854bfb7d761e3fd1ed5694da88c9a1fd",
+      "normalization_manifest_verified": true
+    },
+    {
+      "role": "workdays",
+      "sha256": "1dbf79fd16d2a5625b4d581316fea20466d721e5d2ba91897374af526043b9b6",
+      "normalization_manifest_verified": true
+    },
+    {
+      "role": "task_starts",
+      "sha256": "da498ed88239961eb732ced0b187c7ec4a104e01b77eee59481fb6e8bba428fe",
+      "normalization_manifest_verified": true
+    }
+  ],
+  "source_files": [
+    {
+      "role": "output",
+      "path": "output_openai_researcher_forecast/official_data/output_tokens_14d.csv",
+      "sha256": "3a1cc809ec87bf13f3abe10875cd9d5b854bfb7d761e3fd1ed5694da88c9a1fd"
+    },
+    {
+      "role": "workdays",
+      "path": "output_openai_official_100/official_data/workdays.csv",
+      "sha256": "1dbf79fd16d2a5625b4d581316fea20466d721e5d2ba91897374af526043b9b6"
+    },
+    {
+      "role": "task_starts",
+      "path": "output_openai_official_100/official_data/task_starts.csv",
+      "sha256": "da498ed88239961eb732ced0b187c7ec4a104e01b77eee59481fb6e8bba428fe"
+    },
+    {
+      "role": "proxy_tasks",
+      "path": "analysis/agentic_30t_forecast/workload/calibration/public_tasks.csv",
+      "sha256": "2627833f5c03c21b551e1ea7cced069ef9d861e393d713c75610540d2503d4dd"
+    },
+    {
+      "role": "model",
+      "path": "config/models/moe_30t.json",
+      "sha256": "11341675d6ee27d44d24a03b2531b0c1e79a5dccf1c0677fa36985ea6641c954"
+    },
+    {
+      "role": "scenario_settings",
+      "path": "analysis/agentic_30t_forecast/workload/settings.json",
+      "sha256": "394b796e804461a2148ee7991451d489e6ac128b0c672db8b740f1279dc9262d"
+    }
+  ],
+  "endpoint_reference": {
+    "path": "output/team_100_2030.csv",
+    "usage": "assertions_only",
+    "sha256": "87bd5134a66f0258f48ab7451e972965c53ff6ed97af0d14f939682e9c8f8d55"
+  },
+  "generated_at_utc": "2026-11-21T14:37:30.052602+00:00",
+  "monthly": {
+    "status": "passed",
+    "tokens_rows": 174,
+    "agents_rows": 165,
+    "checks": [
+      "历史每月选最后一条实际28日观测，真实日期与原始history严格相同；未补造历史。",
+      "预测每月18日直接计算，两个序列分别从自己的观测截止次月起始。",
+      "各年11月18日月度值与2027–2030既有年度值逐字段精确相同。",
+      "2026各序列最后观测及输入估算与既有基线精确相同。",
+      "A/B相同、ABC输出与Agent共用；Agent小时除24换算通过。"
+    ]
+  },
+  "monthly_extensions": {
+    "status": "passed",
+    "resource_rows": 174,
+    "task_rows": 171,
+    "checks": [
+      "月度资源完整保留原Token各行全部字段，日期及旧值精确不变。",
+      "新增缓存、未缓存、总Token、Prefill/Decode/总EFLOP、缓存率和PFLOP/s沿用年度252题代理算式。",
+      "所有新增资源字段在基线及2027–2030年11月18日与既有年度数据精确相同。",
+      "历史输入缓存计算均标记estimated，未把代理估算标记为官方观测。",
+      "任务月度历史点为每月最后真实28日观测，未来沿用原232日OLS，无重新拟合或口径改变。",
+      "任务2026最后观测及2027–2030年11月18日与既有年度值精确相同；ABC任务数相同。",
+      "资源加总、Token加权缓存率及24小时计算速率恒等式通过。"
+    ],
+    "supported_metrics": [
+      "input_tokens_per_team_day",
+      "output_tokens_per_team_day",
+      "cached_input_tokens_per_team_day",
+      "uncached_input_tokens_per_team_day",
+      "total_tokens_per_team_day",
+      "prefill_eflop_per_team_day",
+      "decode_eflop_per_team_day",
+      "eflop_per_team_day",
+      "prefix_cache_hit_rate",
+      "compute_pflops_24h",
+      "task_starts_per_team_day"
+    ],
+    "unsupported_metrics": [
+      "GPU卡数",
+      "部署副本",
+      "HBM容量",
+      "显存带宽",
+      "网络带宽",
+      "请求瞬时峰值并发",
+      "LLM请求并发"
+    ]
+  },
+  "preexisting_sections_preserved": {
+    "rows": "55d1d80dbf3d3152637cf6e13276d0c854ea4c2cb0c9744c0dabb6f32ade7d79",
+    "model": "011cb44ee581c132a4b464ecee0f83c2999ed2ec6577f55feca605f4c91e8cd6",
+    "baseline": "aae6f72132d4a137071f5d70fcaccef3c148991fcd15d52e36a1f5f592e1f9ec",
+    "history": "ae1cc4b486c42f7c21f95696069597b4967d149422b2f4c4ba69628038414ea6",
+    "category_mix": "9cc86f1b2fe8a45bec944e482aadc6fb7123d2136feaa379274bfc0ee6a5d7b9",
+    "monthly_trends": "8c819e53848364dc2a218dafd7ee10352d0c744fc22d5cb880684b18979d0df4",
+    "monthly_metadata": "186784919d561238f79b9aaa0e9ade1ff82bc333e65c07ca88d12c7eed97b687"
+  }
+}

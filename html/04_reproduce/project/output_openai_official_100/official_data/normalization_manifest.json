@@ -1,0 +1,115 @@
+{
+  "provenance": "Normalized exclusively from this run's freshly downloaded official Vega charts",
+  "sources_manifest": "../source_downloads/download_manifest.json",
+  "tables": [
+    {
+      "file": "workdays.csv",
+      "rows": 845,
+      "columns": [
+        "date",
+        "group",
+        "value",
+        "unit",
+        "rolling_window_days",
+        "source_url",
+        "chart_file"
+      ],
+      "start_date": "2026-05-03",
+      "end_date": "2026-10-18",
+      "distinct_dates": 169,
+      "sha256": "1dbf79fd16d2a5625b4d581316fea20466d721e5d2ba91897374af526043b9b6"
+    },
+    {
+      "file": "task_starts.csv",
+      "rows": 4176,
+      "columns": [
+        "date",
+        "category",
+        "value",
+        "category_label",
+        "area",
+        "unit",
+        "rolling_window_days",
+        "source_url",
+        "chart_file"
+      ],
+      "start_date": "2026-03-01",
+      "end_date": "2026-10-18",
+      "distinct_dates": 232,
+      "sha256": "da498ed88239961eb732ced0b187c7ec4a104e01b77eee59481fb6e8bba428fe"
+    },
+    {
+      "file": "categories.csv",
+      "rows": 18,
+      "columns": [
+        "category",
+        "category_label",
+        "area",
+        "rank",
+        "source_url"
+      ],
+      "start_date": null,
+      "end_date": null,
+      "distinct_dates": 0,
+      "sha256": "ee22b0b062632e780929f5c2f7730dc2e22428e2513d11bf9b038f1fb605fbc7"
+    },
+    {
+      "file": "output_tokens_14d.csv",
+      "rows": 3744,
+      "columns": [
+        "date",
+        "category",
+        "value",
+        "category_label",
+        "stack_index",
+        "unit",
+        "rolling_window_days",
+        "source_url",
+        "chart_file"
+      ],
+      "start_date": "2026-01-20",
+      "end_date": "2026-08-15",
+      "distinct_dates": 208,
+      "sha256": "7c29af08670ffaea73a0171026e42ebbd7d943d42fd06b86ef1e20909d5b120d"
+    },
+    {
+      "file": "output_tokens_14d_totals.csv",
+      "rows": 208,
+      "columns": [
+        "date",
+        "value",
+        "unit",
+        "rolling_window_days",
+        "source_url",
+        "chart_file"
+      ],
+      "start_date": "2026-01-20",
+      "end_date": "2026-08-15",
+      "distinct_dates": 208,
+      "sha256": "938a019b0465a2183a473f6c6dae89bec21034ed1cfef0d92d5e8d6a5f73e8da"
+    },
+    {
+      "file": "concurrency.csv",
+      "rows": 1458,
+      "columns": [
+        "date",
+        "bin",
+        "share",
+        "bin_order",
+        "source_timestamp",
+        "unit",
+        "rolling_window_days",
+        "source_url",
+        "chart_file"
+      ],
+      "start_date": "2026-05-04",
+      "end_date": "2026-10-19",
+      "distinct_dates": 162,
+      "sha256": "f498494ffe250281408e022405ee855126e4e7a5aab85764728a244dc018a819"
+    }
+  ],
+  "output_category_sums_match_published_totals": true,
+  "concurrency_share_sum_min": 0.997,
+  "concurrency_share_sum_max": 1.003,
+  "concurrency_note": "Trailing 28-day windows. Shares are rounded to one decimal place and may not sum to 100%."
+}

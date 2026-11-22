@@ -1,0 +1,17 @@
+{
+  "requested_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+  "download_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/",
+  "final_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/",
+  "downloaded_at_utc": "2026-11-21T08:15:04.949499+00:00",
+  "html_file": "selected_zh_article.html",
+  "sha256": "a08c742e5c54a0876c5d8bdaa217d4ae667f504bde74f9861dbb126e073fbf63",
+  "bytes": 2358481,
+  "content_type": "text/html; charset=utf-8",
+  "unique_vega_charts": 13,
+  "anchor_in_html": true,
+  "anchor_in_next_payload": false,
+  "input_policy": "Only the exact Chinese article chosen by the user; no November article or previous derived data read.",
+  "selected_anchor_verified": true,
+  "react_component_id": "4QLdZ4iw0n4L9rYGTvteZK",
+  "selected_chart_identity_file": "selected_chart_identity.json"
+}

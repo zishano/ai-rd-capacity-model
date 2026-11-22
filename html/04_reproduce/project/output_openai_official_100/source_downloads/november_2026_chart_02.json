@@ -1,0 +1,6933 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": "Agent workdays across research",
+  "description": "Agent workdays per researcher per day, averaged over trailing 28-day windows.",
+  "data": {
+    "values": [
+      {
+        "date": "2026-05-03",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-03"
+      },
+      {
+        "date": "2026-05-04",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-04"
+      },
+      {
+        "date": "2026-05-05",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-05"
+      },
+      {
+        "date": "2026-05-06",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-06"
+      },
+      {
+        "date": "2026-05-07",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-07"
+      },
+      {
+        "date": "2026-05-08",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-08"
+      },
+      {
+        "date": "2026-05-09",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-09"
+      },
+      {
+        "date": "2026-05-10",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-10"
+      },
+      {
+        "date": "2026-05-11",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-11"
+      },
+      {
+        "date": "2026-05-12",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-12"
+      },
+      {
+        "date": "2026-05-13",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-13"
+      },
+      {
+        "date": "2026-05-14",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-14"
+      },
+      {
+        "date": "2026-05-15",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-15"
+      },
+      {
+        "date": "2026-05-16",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-16"
+      },
+      {
+        "date": "2026-05-17",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-17"
+      },
+      {
+        "date": "2026-05-18",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-18"
+      },
+      {
+        "date": "2026-05-19",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-05-19"
+      },
+      {
+        "date": "2026-05-20",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-05-20"
+      },
+      {
+        "date": "2026-05-21",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-05-21"
+      },
+      {
+        "date": "2026-05-22",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-05-22"
+      },
+      {
+        "date": "2026-05-23",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-05-23"
+      },
+      {
+        "date": "2026-05-24",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-05-24"
+      },
+      {
+        "date": "2026-05-25",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-05-25"
+      },
+      {
+        "date": "2026-05-26",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-05-26"
+      },
+      {
+        "date": "2026-05-27",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-05-27"
+      },
+      {
+        "date": "2026-05-28",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-05-28"
+      },
+      {
+        "date": "2026-05-29",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-05-29"
+      },
+      {
+        "date": "2026-05-30",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-05-30"
+      },
+      {
+        "date": "2026-05-31",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-05-31"
+      },
+      {
+        "date": "2026-06-01",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-06-01"
+      },
+      {
+        "date": "2026-06-02",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-06-02"
+      },
+      {
+        "date": "2026-06-03",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-06-03"
+      },
+      {
+        "date": "2026-06-04",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-04"
+      },
+      {
+        "date": "2026-06-05",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-05"
+      },
+      {
+        "date": "2026-06-06",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-06"
+      },
+      {
+        "date": "2026-06-07",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-07"
+      },
+      {
+        "date": "2026-06-08",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-08"
+      },
+      {
+        "date": "2026-06-09",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-09"
+      },
+      {
+        "date": "2026-06-10",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-10"
+      },
+      {
+        "date": "2026-06-11",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-11"
+      },
+      {
+        "date": "2026-06-12",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-06-12"
+      },
+      {
+        "date": "2026-06-13",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-06-13"
+      },
+      {
+        "date": "2026-06-14",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-06-14"
+      },
+      {
+        "date": "2026-06-15",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-06-15"
+      },
+      {
+        "date": "2026-06-16",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-06-16"
+      },
+      {
+        "date": "2026-06-17",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-06-17"
+      },
+      {
+        "date": "2026-06-18",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-06-18"
+      },
+      {
+        "date": "2026-06-19",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-06-19"
+      },
+      {
+        "date": "2026-06-20",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-06-20"
+      },
+      {
+        "date": "2026-06-21",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-06-21"
+      },
+      {
+        "date": "2026-06-22",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-06-22"
+      },
+      {
+        "date": "2026-06-23",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-06-23"
+      },
+      {
+        "date": "2026-06-24",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-06-24"
+      },
+      {
+        "date": "2026-06-25",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-06-25"
+      },
+      {
+        "date": "2026-06-26",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-06-26"
+      },
+      {
+        "date": "2026-06-27",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-06-27"
+      },
+      {
+        "date": "2026-06-28",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-06-28"
+      },
+      {
+        "date": "2026-06-29",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-06-29"
+      },
+      {
+        "date": "2026-06-30",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-06-30"
+      },
+      {
+        "date": "2026-07-01",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-07-01"
+      },
+      {
+        "date": "2026-07-02",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-07-02"
+      },
+      {
+        "date": "2026-07-03",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-07-03"
+      },
+      {
+        "date": "2026-07-04",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-07-04"
+      },
+      {
+        "date": "2026-07-05",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.9,
+        "last": false,
+        "dateLabel": "2026-07-05"
+      },
+      {
+        "date": "2026-07-06",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.9,
+        "last": false,
+        "dateLabel": "2026-07-06"
+      },
+      {
+        "date": "2026-07-07",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.9,
+        "last": false,
+        "dateLabel": "2026-07-07"
+      },
+      {
+        "date": "2026-07-08",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.9,
+        "last": false,
+        "dateLabel": "2026-07-08"
+      },
+      {
+        "date": "2026-07-09",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 1.9,
+        "last": false,
+        "dateLabel": "2026-07-09"
+      },
+      {
+        "date": "2026-07-10",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-10"
+      },
+      {
+        "date": "2026-07-11",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-11"
+      },
+      {
+        "date": "2026-07-12",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-12"
+      },
+      {
+        "date": "2026-07-13",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-13"
+      },
+      {
+        "date": "2026-07-14",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2.1,
+        "last": false,
+        "dateLabel": "2026-07-14"
+      },
+      {
+        "date": "2026-07-15",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2.1,
+        "last": false,
+        "dateLabel": "2026-07-15"
+      },
+      {
+        "date": "2026-07-16",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2.1,
+        "last": false,
+        "dateLabel": "2026-07-16"
+      },
+      {
+        "date": "2026-07-17",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2.2,
+        "last": false,
+        "dateLabel": "2026-07-17"
+      },
+      {
+        "date": "2026-07-18",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2.3,
+        "last": false,
+        "dateLabel": "2026-07-18"
+      },
+      {
+        "date": "2026-07-19",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2.3,
+        "last": false,
+        "dateLabel": "2026-07-19"
+      },
+      {
+        "date": "2026-07-20",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2.3,
+        "last": false,
+        "dateLabel": "2026-07-20"
+      },
+      {
+        "date": "2026-07-21",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2.4,
+        "last": false,
+        "dateLabel": "2026-07-21"
+      },
+      {
+        "date": "2026-07-22",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2.5,
+        "last": false,
+        "dateLabel": "2026-07-22"
+      },
+      {
+        "date": "2026-07-23",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-07-23"
+      },
+      {
+        "date": "2026-07-24",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-07-24"
+      },
+      {
+        "date": "2026-07-25",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-07-25"
+      },
+      {
+        "date": "2026-07-26",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-07-26"
+      },
+      {
+        "date": "2026-07-27",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 3.1,
+        "last": false,
+        "dateLabel": "2026-07-27"
+      },
+      {
+        "date": "2026-07-28",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 3.3,
+        "last": false,
+        "dateLabel": "2026-07-28"
+      },
+      {
+        "date": "2026-07-29",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 3.4,
+        "last": false,
+        "dateLabel": "2026-07-29"
+      },
+      {
+        "date": "2026-07-30",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 3.5,
+        "last": false,
+        "dateLabel": "2026-07-30"
+      },
+      {
+        "date": "2026-07-31",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 3.6,
+        "last": false,
+        "dateLabel": "2026-07-31"
+      },
+      {
+        "date": "2026-08-01",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 3.7,
+        "last": false,
+        "dateLabel": "2026-08-01"
+      },
+      {
+        "date": "2026-08-02",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 3.9,
+        "last": false,
+        "dateLabel": "2026-08-02"
+      },
+      {
+        "date": "2026-08-03",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 4,
+        "last": false,
+        "dateLabel": "2026-08-03"
+      },
+      {
+        "date": "2026-08-04",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 4.1,
+        "last": false,
+        "dateLabel": "2026-08-04"
+      },
+      {
+        "date": "2026-08-05",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-08-05"
+      },
+      {
+        "date": "2026-08-06",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 4.3,
+        "last": false,
+        "dateLabel": "2026-08-06"
+      },
+      {
+        "date": "2026-08-07",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 4.4,
+        "last": false,
+        "dateLabel": "2026-08-07"
+      },
+      {
+        "date": "2026-08-08",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 4.4,
+        "last": false,
+        "dateLabel": "2026-08-08"
+      },
+      {
+        "date": "2026-08-09",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 4.5,
+        "last": false,
+        "dateLabel": "2026-08-09"
+      },
+      {
+        "date": "2026-08-10",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 4.6,
+        "last": false,
+        "dateLabel": "2026-08-10"
+      },
+      {
+        "date": "2026-08-11",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 4.7,
+        "last": false,
+        "dateLabel": "2026-08-11"
+      },
+      {
+        "date": "2026-08-12",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 4.8,
+        "last": false,
+        "dateLabel": "2026-08-12"
+      },
+      {
+        "date": "2026-08-13",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 4.9,
+        "last": false,
+        "dateLabel": "2026-08-13"
+      },
+      {
+        "date": "2026-08-14",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5,
+        "last": false,
+        "dateLabel": "2026-08-14"
+      },
+      {
+        "date": "2026-08-15",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5,
+        "last": false,
+        "dateLabel": "2026-08-15"
+      },
+      {
+        "date": "2026-08-16",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.2,
+        "last": false,
+        "dateLabel": "2026-08-16"
+      },
+      {
+        "date": "2026-08-17",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.3,
+        "last": false,
+        "dateLabel": "2026-08-17"
+      },
+      {
+        "date": "2026-08-18",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.4,
+        "last": false,
+        "dateLabel": "2026-08-18"
+      },
+      {
+        "date": "2026-08-19",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.5,
+        "last": false,
+        "dateLabel": "2026-08-19"
+      },
+      {
+        "date": "2026-08-20",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.5,
+        "last": false,
+        "dateLabel": "2026-08-20"
+      },
+      {
+        "date": "2026-08-21",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.5,
+        "last": false,
+        "dateLabel": "2026-08-21"
+      },
+      {
+        "date": "2026-08-22",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-08-22"
+      },
+      {
+        "date": "2026-08-23",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-08-23"
+      },
+      {
+        "date": "2026-08-24",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-08-24"
+      },
+      {
+        "date": "2026-08-25",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-08-25"
+      },
+      {
+        "date": "2026-08-26",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-08-26"
+      },
+      {
+        "date": "2026-08-27",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.7,
+        "last": false,
+        "dateLabel": "2026-08-27"
+      },
+      {
+        "date": "2026-08-28",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.8,
+        "last": false,
+        "dateLabel": "2026-08-28"
+      },
+      {
+        "date": "2026-08-29",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.8,
+        "last": false,
+        "dateLabel": "2026-08-29"
+      },
+      {
+        "date": "2026-08-30",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.8,
+        "last": false,
+        "dateLabel": "2026-08-30"
+      },
+      {
+        "date": "2026-08-31",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.8,
+        "last": false,
+        "dateLabel": "2026-08-31"
+      },
+      {
+        "date": "2026-09-01",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.8,
+        "last": false,
+        "dateLabel": "2026-09-01"
+      },
+      {
+        "date": "2026-09-02",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 5.9,
+        "last": false,
+        "dateLabel": "2026-09-02"
+      },
+      {
+        "date": "2026-09-03",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6,
+        "last": false,
+        "dateLabel": "2026-09-03"
+      },
+      {
+        "date": "2026-09-04",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.1,
+        "last": false,
+        "dateLabel": "2026-09-04"
+      },
+      {
+        "date": "2026-09-05",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.2,
+        "last": false,
+        "dateLabel": "2026-09-05"
+      },
+      {
+        "date": "2026-09-06",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.2,
+        "last": false,
+        "dateLabel": "2026-09-06"
+      },
+      {
+        "date": "2026-09-07",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.2,
+        "last": false,
+        "dateLabel": "2026-09-07"
+      },
+      {
+        "date": "2026-09-08",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.2,
+        "last": false,
+        "dateLabel": "2026-09-08"
+      },
+      {
+        "date": "2026-09-09",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.3,
+        "last": false,
+        "dateLabel": "2026-09-09"
+      },
+      {
+        "date": "2026-09-10",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.4,
+        "last": false,
+        "dateLabel": "2026-09-10"
+      },
+      {
+        "date": "2026-09-11",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.4,
+        "last": false,
+        "dateLabel": "2026-09-11"
+      },
+      {
+        "date": "2026-09-12",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.5,
+        "last": false,
+        "dateLabel": "2026-09-12"
+      },
+      {
+        "date": "2026-09-13",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.5,
+        "last": false,
+        "dateLabel": "2026-09-13"
+      },
+      {
+        "date": "2026-09-14",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.5,
+        "last": false,
+        "dateLabel": "2026-09-14"
+      },
+      {
+        "date": "2026-09-15",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.5,
+        "last": false,
+        "dateLabel": "2026-09-15"
+      },
+      {
+        "date": "2026-09-16",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.5,
+        "last": false,
+        "dateLabel": "2026-09-16"
+      },
+      {
+        "date": "2026-09-17",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.6,
+        "last": false,
+        "dateLabel": "2026-09-17"
+      },
+      {
+        "date": "2026-09-18",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.7,
+        "last": false,
+        "dateLabel": "2026-09-18"
+      },
+      {
+        "date": "2026-09-19",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.8,
+        "last": false,
+        "dateLabel": "2026-09-19"
+      },
+      {
+        "date": "2026-09-20",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.8,
+        "last": false,
+        "dateLabel": "2026-09-20"
+      },
+      {
+        "date": "2026-09-21",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.8,
+        "last": false,
+        "dateLabel": "2026-09-21"
+      },
+      {
+        "date": "2026-09-22",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.9,
+        "last": false,
+        "dateLabel": "2026-09-22"
+      },
+      {
+        "date": "2026-09-23",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.9,
+        "last": false,
+        "dateLabel": "2026-09-23"
+      },
+      {
+        "date": "2026-09-24",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 6.9,
+        "last": false,
+        "dateLabel": "2026-09-24"
+      },
+      {
+        "date": "2026-09-25",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 7,
+        "last": false,
+        "dateLabel": "2026-09-25"
+      },
+      {
+        "date": "2026-09-26",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 7,
+        "last": false,
+        "dateLabel": "2026-09-26"
+      },
+      {
+        "date": "2026-09-27",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 7.1,
+        "last": false,
+        "dateLabel": "2026-09-27"
+      },
+      {
+        "date": "2026-09-28",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 7.1,
+        "last": false,
+        "dateLabel": "2026-09-28"
+      },
+      {
+        "date": "2026-09-29",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 7.1,
+        "last": false,
+        "dateLabel": "2026-09-29"
+      },
+      {
+        "date": "2026-09-30",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 7.1,
+        "last": false,
+        "dateLabel": "2026-09-30"
+      },
+      {
+        "date": "2026-10-01",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 7.1,
+        "last": false,
+        "dateLabel": "2026-10-01"
+      },
+      {
+        "date": "2026-10-02",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 7.2,
+        "last": false,
+        "dateLabel": "2026-10-02"
+      },
+      {
+        "date": "2026-10-03",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 7.3,
+        "last": false,
+        "dateLabel": "2026-10-03"
+      },
+      {
+        "date": "2026-10-04",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 7.6,
+        "last": false,
+        "dateLabel": "2026-10-04"
+      },
+      {
+        "date": "2026-10-05",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 7.8,
+        "last": false,
+        "dateLabel": "2026-10-05"
+      },
+      {
+        "date": "2026-10-06",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 7.9,
+        "last": false,
+        "dateLabel": "2026-10-06"
+      },
+      {
+        "date": "2026-10-07",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 8,
+        "last": false,
+        "dateLabel": "2026-10-07"
+      },
+      {
+        "date": "2026-10-08",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 8.1,
+        "last": false,
+        "dateLabel": "2026-10-08"
+      },
+      {
+        "date": "2026-10-09",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 8.1,
+        "last": false,
+        "dateLabel": "2026-10-09"
+      },
+      {
+        "date": "2026-10-10",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 8.1,
+        "last": false,
+        "dateLabel": "2026-10-10"
+      },
+      {
+        "date": "2026-10-11",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 8.1,
+        "last": false,
+        "dateLabel": "2026-10-11"
+      },
+      {
+        "date": "2026-10-12",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 8.1,
+        "last": false,
+        "dateLabel": "2026-10-12"
+      },
+      {
+        "date": "2026-10-13",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 8.1,
+        "last": false,
+        "dateLabel": "2026-10-13"
+      },
+      {
+        "date": "2026-10-14",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 8.1,
+        "last": false,
+        "dateLabel": "2026-10-14"
+      },
+      {
+        "date": "2026-10-15",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 8.2,
+        "last": false,
+        "dateLabel": "2026-10-15"
+      },
+      {
+        "date": "2026-10-16",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 8.2,
+        "last": false,
+        "dateLabel": "2026-10-16"
+      },
+      {
+        "date": "2026-10-17",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 8.2,
+        "last": false,
+        "dateLabel": "2026-10-17"
+      },
+      {
+        "date": "2026-10-18",
+        "series": "Pretraining",
+        "label": "Pretraining",
+        "value": 8.2,
+        "last": true,
+        "dateLabel": "2026-10-18"
+      },
+      {
+        "date": "2026-05-03",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-03"
+      },
+      {
+        "date": "2026-05-04",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-04"
+      },
+      {
+        "date": "2026-05-05",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-05"
+      },
+      {
+        "date": "2026-05-06",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-06"
+      },
+      {
+        "date": "2026-05-07",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-07"
+      },
+      {
+        "date": "2026-05-08",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-08"
+      },
+      {
+        "date": "2026-05-09",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-09"
+      },
+      {
+        "date": "2026-05-10",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-10"
+      },
+      {
+        "date": "2026-05-11",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-11"
+      },
+      {
+        "date": "2026-05-12",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-12"
+      },
+      {
+        "date": "2026-05-13",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-13"
+      },
+      {
+        "date": "2026-05-14",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-14"
+      },
+      {
+        "date": "2026-05-15",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-15"
+      },
+      {
+        "date": "2026-05-16",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-16"
+      },
+      {
+        "date": "2026-05-17",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-17"
+      },
+      {
+        "date": "2026-05-18",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-18"
+      },
+      {
+        "date": "2026-05-19",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-19"
+      },
+      {
+        "date": "2026-05-20",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-20"
+      },
+      {
+        "date": "2026-05-21",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-21"
+      },
+      {
+        "date": "2026-05-22",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-05-22"
+      },
+      {
+        "date": "2026-05-23",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-23"
+      },
+      {
+        "date": "2026-05-24",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-24"
+      },
+      {
+        "date": "2026-05-25",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-25"
+      },
+      {
+        "date": "2026-05-26",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-26"
+      },
+      {
+        "date": "2026-05-27",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-27"
+      },
+      {
+        "date": "2026-05-28",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-28"
+      },
+      {
+        "date": "2026-05-29",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-05-29"
+      },
+      {
+        "date": "2026-05-30",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-05-30"
+      },
+      {
+        "date": "2026-05-31",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-05-31"
+      },
+      {
+        "date": "2026-06-01",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-06-01"
+      },
+      {
+        "date": "2026-06-02",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-02"
+      },
+      {
+        "date": "2026-06-03",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-03"
+      },
+      {
+        "date": "2026-06-04",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-04"
+      },
+      {
+        "date": "2026-06-05",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-05"
+      },
+      {
+        "date": "2026-06-06",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-06"
+      },
+      {
+        "date": "2026-06-07",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-07"
+      },
+      {
+        "date": "2026-06-08",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-08"
+      },
+      {
+        "date": "2026-06-09",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-06-09"
+      },
+      {
+        "date": "2026-06-10",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-06-10"
+      },
+      {
+        "date": "2026-06-11",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-06-11"
+      },
+      {
+        "date": "2026-06-12",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-06-12"
+      },
+      {
+        "date": "2026-06-13",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-06-13"
+      },
+      {
+        "date": "2026-06-14",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-06-14"
+      },
+      {
+        "date": "2026-06-15",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-15"
+      },
+      {
+        "date": "2026-06-16",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-16"
+      },
+      {
+        "date": "2026-06-17",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-17"
+      },
+      {
+        "date": "2026-06-18",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-18"
+      },
+      {
+        "date": "2026-06-19",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-19"
+      },
+      {
+        "date": "2026-06-20",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-20"
+      },
+      {
+        "date": "2026-06-21",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-21"
+      },
+      {
+        "date": "2026-06-22",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-22"
+      },
+      {
+        "date": "2026-06-23",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-23"
+      },
+      {
+        "date": "2026-06-24",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-24"
+      },
+      {
+        "date": "2026-06-25",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-25"
+      },
+      {
+        "date": "2026-06-26",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-06-26"
+      },
+      {
+        "date": "2026-06-27",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-06-27"
+      },
+      {
+        "date": "2026-06-28",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-06-28"
+      },
+      {
+        "date": "2026-06-29",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-06-29"
+      },
+      {
+        "date": "2026-06-30",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-06-30"
+      },
+      {
+        "date": "2026-07-01",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-01"
+      },
+      {
+        "date": "2026-07-02",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-02"
+      },
+      {
+        "date": "2026-07-03",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-03"
+      },
+      {
+        "date": "2026-07-04",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-04"
+      },
+      {
+        "date": "2026-07-05",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-05"
+      },
+      {
+        "date": "2026-07-06",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-06"
+      },
+      {
+        "date": "2026-07-07",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-07-07"
+      },
+      {
+        "date": "2026-07-08",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-07-08"
+      },
+      {
+        "date": "2026-07-09",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-07-09"
+      },
+      {
+        "date": "2026-07-10",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 1.9,
+        "last": false,
+        "dateLabel": "2026-07-10"
+      },
+      {
+        "date": "2026-07-11",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-11"
+      },
+      {
+        "date": "2026-07-12",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-12"
+      },
+      {
+        "date": "2026-07-13",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-13"
+      },
+      {
+        "date": "2026-07-14",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-14"
+      },
+      {
+        "date": "2026-07-15",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-15"
+      },
+      {
+        "date": "2026-07-16",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-16"
+      },
+      {
+        "date": "2026-07-17",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.1,
+        "last": false,
+        "dateLabel": "2026-07-17"
+      },
+      {
+        "date": "2026-07-18",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.1,
+        "last": false,
+        "dateLabel": "2026-07-18"
+      },
+      {
+        "date": "2026-07-19",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.1,
+        "last": false,
+        "dateLabel": "2026-07-19"
+      },
+      {
+        "date": "2026-07-20",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.2,
+        "last": false,
+        "dateLabel": "2026-07-20"
+      },
+      {
+        "date": "2026-07-21",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.2,
+        "last": false,
+        "dateLabel": "2026-07-21"
+      },
+      {
+        "date": "2026-07-22",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.3,
+        "last": false,
+        "dateLabel": "2026-07-22"
+      },
+      {
+        "date": "2026-07-23",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.4,
+        "last": false,
+        "dateLabel": "2026-07-23"
+      },
+      {
+        "date": "2026-07-24",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.4,
+        "last": false,
+        "dateLabel": "2026-07-24"
+      },
+      {
+        "date": "2026-07-25",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.5,
+        "last": false,
+        "dateLabel": "2026-07-25"
+      },
+      {
+        "date": "2026-07-26",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.5,
+        "last": false,
+        "dateLabel": "2026-07-26"
+      },
+      {
+        "date": "2026-07-27",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-07-27"
+      },
+      {
+        "date": "2026-07-28",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-07-28"
+      },
+      {
+        "date": "2026-07-29",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-07-29"
+      },
+      {
+        "date": "2026-07-30",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-07-30"
+      },
+      {
+        "date": "2026-07-31",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-07-31"
+      },
+      {
+        "date": "2026-08-01",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-08-01"
+      },
+      {
+        "date": "2026-08-02",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-08-02"
+      },
+      {
+        "date": "2026-08-03",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-08-03"
+      },
+      {
+        "date": "2026-08-04",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.1,
+        "last": false,
+        "dateLabel": "2026-08-04"
+      },
+      {
+        "date": "2026-08-05",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.1,
+        "last": false,
+        "dateLabel": "2026-08-05"
+      },
+      {
+        "date": "2026-08-06",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-08-06"
+      },
+      {
+        "date": "2026-08-07",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.1,
+        "last": false,
+        "dateLabel": "2026-08-07"
+      },
+      {
+        "date": "2026-08-08",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.1,
+        "last": false,
+        "dateLabel": "2026-08-08"
+      },
+      {
+        "date": "2026-08-09",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-08-09"
+      },
+      {
+        "date": "2026-08-10",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-08-10"
+      },
+      {
+        "date": "2026-08-11",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.3,
+        "last": false,
+        "dateLabel": "2026-08-11"
+      },
+      {
+        "date": "2026-08-12",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.4,
+        "last": false,
+        "dateLabel": "2026-08-12"
+      },
+      {
+        "date": "2026-08-13",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.5,
+        "last": false,
+        "dateLabel": "2026-08-13"
+      },
+      {
+        "date": "2026-08-14",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.6,
+        "last": false,
+        "dateLabel": "2026-08-14"
+      },
+      {
+        "date": "2026-08-15",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.6,
+        "last": false,
+        "dateLabel": "2026-08-15"
+      },
+      {
+        "date": "2026-08-16",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.7,
+        "last": false,
+        "dateLabel": "2026-08-16"
+      },
+      {
+        "date": "2026-08-17",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.8,
+        "last": false,
+        "dateLabel": "2026-08-17"
+      },
+      {
+        "date": "2026-08-18",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.8,
+        "last": false,
+        "dateLabel": "2026-08-18"
+      },
+      {
+        "date": "2026-08-19",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.9,
+        "last": false,
+        "dateLabel": "2026-08-19"
+      },
+      {
+        "date": "2026-08-20",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.9,
+        "last": false,
+        "dateLabel": "2026-08-20"
+      },
+      {
+        "date": "2026-08-21",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 3.9,
+        "last": false,
+        "dateLabel": "2026-08-21"
+      },
+      {
+        "date": "2026-08-22",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4,
+        "last": false,
+        "dateLabel": "2026-08-22"
+      },
+      {
+        "date": "2026-08-23",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4,
+        "last": false,
+        "dateLabel": "2026-08-23"
+      },
+      {
+        "date": "2026-08-24",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4.1,
+        "last": false,
+        "dateLabel": "2026-08-24"
+      },
+      {
+        "date": "2026-08-25",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-08-25"
+      },
+      {
+        "date": "2026-08-26",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-08-26"
+      },
+      {
+        "date": "2026-08-27",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4.3,
+        "last": false,
+        "dateLabel": "2026-08-27"
+      },
+      {
+        "date": "2026-08-28",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4.4,
+        "last": false,
+        "dateLabel": "2026-08-28"
+      },
+      {
+        "date": "2026-08-29",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4.5,
+        "last": false,
+        "dateLabel": "2026-08-29"
+      },
+      {
+        "date": "2026-08-30",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4.6,
+        "last": false,
+        "dateLabel": "2026-08-30"
+      },
+      {
+        "date": "2026-08-31",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4.6,
+        "last": false,
+        "dateLabel": "2026-08-31"
+      },
+      {
+        "date": "2026-09-01",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4.7,
+        "last": false,
+        "dateLabel": "2026-09-01"
+      },
+      {
+        "date": "2026-09-02",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4.8,
+        "last": false,
+        "dateLabel": "2026-09-02"
+      },
+      {
+        "date": "2026-09-03",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4.8,
+        "last": false,
+        "dateLabel": "2026-09-03"
+      },
+      {
+        "date": "2026-09-04",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 4.9,
+        "last": false,
+        "dateLabel": "2026-09-04"
+      },
+      {
+        "date": "2026-09-05",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 5,
+        "last": false,
+        "dateLabel": "2026-09-05"
+      },
+      {
+        "date": "2026-09-06",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 5.1,
+        "last": false,
+        "dateLabel": "2026-09-06"
+      },
+      {
+        "date": "2026-09-07",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 5.2,
+        "last": false,
+        "dateLabel": "2026-09-07"
+      },
+      {
+        "date": "2026-09-08",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 5.2,
+        "last": false,
+        "dateLabel": "2026-09-08"
+      },
+      {
+        "date": "2026-09-09",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 5.3,
+        "last": false,
+        "dateLabel": "2026-09-09"
+      },
+      {
+        "date": "2026-09-10",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 5.4,
+        "last": false,
+        "dateLabel": "2026-09-10"
+      },
+      {
+        "date": "2026-09-11",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-09-11"
+      },
+      {
+        "date": "2026-09-12",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 5.7,
+        "last": false,
+        "dateLabel": "2026-09-12"
+      },
+      {
+        "date": "2026-09-13",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 5.8,
+        "last": false,
+        "dateLabel": "2026-09-13"
+      },
+      {
+        "date": "2026-09-14",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 5.9,
+        "last": false,
+        "dateLabel": "2026-09-14"
+      },
+      {
+        "date": "2026-09-15",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6,
+        "last": false,
+        "dateLabel": "2026-09-15"
+      },
+      {
+        "date": "2026-09-16",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.2,
+        "last": false,
+        "dateLabel": "2026-09-16"
+      },
+      {
+        "date": "2026-09-17",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.3,
+        "last": false,
+        "dateLabel": "2026-09-17"
+      },
+      {
+        "date": "2026-09-18",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.4,
+        "last": false,
+        "dateLabel": "2026-09-18"
+      },
+      {
+        "date": "2026-09-19",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.5,
+        "last": false,
+        "dateLabel": "2026-09-19"
+      },
+      {
+        "date": "2026-09-20",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.6,
+        "last": false,
+        "dateLabel": "2026-09-20"
+      },
+      {
+        "date": "2026-09-21",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.7,
+        "last": false,
+        "dateLabel": "2026-09-21"
+      },
+      {
+        "date": "2026-09-22",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.8,
+        "last": false,
+        "dateLabel": "2026-09-22"
+      },
+      {
+        "date": "2026-09-23",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.8,
+        "last": false,
+        "dateLabel": "2026-09-23"
+      },
+      {
+        "date": "2026-09-24",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.9,
+        "last": false,
+        "dateLabel": "2026-09-24"
+      },
+      {
+        "date": "2026-09-25",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.9,
+        "last": false,
+        "dateLabel": "2026-09-25"
+      },
+      {
+        "date": "2026-09-26",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.9,
+        "last": false,
+        "dateLabel": "2026-09-26"
+      },
+      {
+        "date": "2026-09-27",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.9,
+        "last": false,
+        "dateLabel": "2026-09-27"
+      },
+      {
+        "date": "2026-09-28",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 6.9,
+        "last": false,
+        "dateLabel": "2026-09-28"
+      },
+      {
+        "date": "2026-09-29",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7,
+        "last": false,
+        "dateLabel": "2026-09-29"
+      },
+      {
+        "date": "2026-09-30",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7,
+        "last": false,
+        "dateLabel": "2026-09-30"
+      },
+      {
+        "date": "2026-10-01",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7,
+        "last": false,
+        "dateLabel": "2026-10-01"
+      },
+      {
+        "date": "2026-10-02",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.1,
+        "last": false,
+        "dateLabel": "2026-10-02"
+      },
+      {
+        "date": "2026-10-03",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.2,
+        "last": false,
+        "dateLabel": "2026-10-03"
+      },
+      {
+        "date": "2026-10-04",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.2,
+        "last": false,
+        "dateLabel": "2026-10-04"
+      },
+      {
+        "date": "2026-10-05",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.3,
+        "last": false,
+        "dateLabel": "2026-10-05"
+      },
+      {
+        "date": "2026-10-06",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.4,
+        "last": false,
+        "dateLabel": "2026-10-06"
+      },
+      {
+        "date": "2026-10-07",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.4,
+        "last": false,
+        "dateLabel": "2026-10-07"
+      },
+      {
+        "date": "2026-10-08",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.4,
+        "last": false,
+        "dateLabel": "2026-10-08"
+      },
+      {
+        "date": "2026-10-09",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.4,
+        "last": false,
+        "dateLabel": "2026-10-09"
+      },
+      {
+        "date": "2026-10-10",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.4,
+        "last": false,
+        "dateLabel": "2026-10-10"
+      },
+      {
+        "date": "2026-10-11",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.4,
+        "last": false,
+        "dateLabel": "2026-10-11"
+      },
+      {
+        "date": "2026-10-12",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.4,
+        "last": false,
+        "dateLabel": "2026-10-12"
+      },
+      {
+        "date": "2026-10-13",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.4,
+        "last": false,
+        "dateLabel": "2026-10-13"
+      },
+      {
+        "date": "2026-10-14",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.5,
+        "last": false,
+        "dateLabel": "2026-10-14"
+      },
+      {
+        "date": "2026-10-15",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.5,
+        "last": false,
+        "dateLabel": "2026-10-15"
+      },
+      {
+        "date": "2026-10-16",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.6,
+        "last": false,
+        "dateLabel": "2026-10-16"
+      },
+      {
+        "date": "2026-10-17",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.7,
+        "last": false,
+        "dateLabel": "2026-10-17"
+      },
+      {
+        "date": "2026-10-18",
+        "series": "Posttraining",
+        "label": "Posttraining",
+        "value": 7.8,
+        "last": true,
+        "dateLabel": "2026-10-18"
+      },
+      {
+        "date": "2026-05-03",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-03"
+      },
+      {
+        "date": "2026-05-04",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-04"
+      },
+      {
+        "date": "2026-05-05",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-05"
+      },
+      {
+        "date": "2026-05-06",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-06"
+      },
+      {
+        "date": "2026-05-07",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-07"
+      },
+      {
+        "date": "2026-05-08",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-08"
+      },
+      {
+        "date": "2026-05-09",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-09"
+      },
+      {
+        "date": "2026-05-10",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-10"
+      },
+      {
+        "date": "2026-05-11",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-11"
+      },
+      {
+        "date": "2026-05-12",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-12"
+      },
+      {
+        "date": "2026-05-13",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-13"
+      },
+      {
+        "date": "2026-05-14",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-14"
+      },
+      {
+        "date": "2026-05-15",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-15"
+      },
+      {
+        "date": "2026-05-16",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-16"
+      },
+      {
+        "date": "2026-05-17",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-17"
+      },
+      {
+        "date": "2026-05-18",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-18"
+      },
+      {
+        "date": "2026-05-19",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-19"
+      },
+      {
+        "date": "2026-05-20",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-20"
+      },
+      {
+        "date": "2026-05-21",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-21"
+      },
+      {
+        "date": "2026-05-22",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-22"
+      },
+      {
+        "date": "2026-05-23",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-23"
+      },
+      {
+        "date": "2026-05-24",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-24"
+      },
+      {
+        "date": "2026-05-25",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-25"
+      },
+      {
+        "date": "2026-05-26",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-26"
+      },
+      {
+        "date": "2026-05-27",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-27"
+      },
+      {
+        "date": "2026-05-28",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-28"
+      },
+      {
+        "date": "2026-05-29",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-29"
+      },
+      {
+        "date": "2026-05-30",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-30"
+      },
+      {
+        "date": "2026-05-31",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-05-31"
+      },
+      {
+        "date": "2026-06-01",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-06-01"
+      },
+      {
+        "date": "2026-06-02",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-06-02"
+      },
+      {
+        "date": "2026-06-03",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-06-03"
+      },
+      {
+        "date": "2026-06-04",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-06-04"
+      },
+      {
+        "date": "2026-06-05",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-06-05"
+      },
+      {
+        "date": "2026-06-06",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-06-06"
+      },
+      {
+        "date": "2026-06-07",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-07"
+      },
+      {
+        "date": "2026-06-08",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-08"
+      },
+      {
+        "date": "2026-06-09",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-09"
+      },
+      {
+        "date": "2026-06-10",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-10"
+      },
+      {
+        "date": "2026-06-11",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-06-11"
+      },
+      {
+        "date": "2026-06-12",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-06-12"
+      },
+      {
+        "date": "2026-06-13",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-06-13"
+      },
+      {
+        "date": "2026-06-14",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-06-14"
+      },
+      {
+        "date": "2026-06-15",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-06-15"
+      },
+      {
+        "date": "2026-06-16",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-06-16"
+      },
+      {
+        "date": "2026-06-17",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-17"
+      },
+      {
+        "date": "2026-06-18",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-18"
+      },
+      {
+        "date": "2026-06-19",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-19"
+      },
+      {
+        "date": "2026-06-20",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-20"
+      },
+      {
+        "date": "2026-06-21",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-21"
+      },
+      {
+        "date": "2026-06-22",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-22"
+      },
+      {
+        "date": "2026-06-23",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-23"
+      },
+      {
+        "date": "2026-06-24",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-24"
+      },
+      {
+        "date": "2026-06-25",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-25"
+      },
+      {
+        "date": "2026-06-26",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-26"
+      },
+      {
+        "date": "2026-06-27",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-27"
+      },
+      {
+        "date": "2026-06-28",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-28"
+      },
+      {
+        "date": "2026-06-29",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-29"
+      },
+      {
+        "date": "2026-06-30",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-30"
+      },
+      {
+        "date": "2026-07-01",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-01"
+      },
+      {
+        "date": "2026-07-02",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-02"
+      },
+      {
+        "date": "2026-07-03",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-03"
+      },
+      {
+        "date": "2026-07-04",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-04"
+      },
+      {
+        "date": "2026-07-05",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-05"
+      },
+      {
+        "date": "2026-07-06",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-06"
+      },
+      {
+        "date": "2026-07-07",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-07"
+      },
+      {
+        "date": "2026-07-08",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-07-08"
+      },
+      {
+        "date": "2026-07-09",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-07-09"
+      },
+      {
+        "date": "2026-07-10",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-10"
+      },
+      {
+        "date": "2026-07-11",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-11"
+      },
+      {
+        "date": "2026-07-12",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-12"
+      },
+      {
+        "date": "2026-07-13",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-13"
+      },
+      {
+        "date": "2026-07-14",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-14"
+      },
+      {
+        "date": "2026-07-15",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-15"
+      },
+      {
+        "date": "2026-07-16",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-16"
+      },
+      {
+        "date": "2026-07-17",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-07-17"
+      },
+      {
+        "date": "2026-07-18",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-07-18"
+      },
+      {
+        "date": "2026-07-19",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-07-19"
+      },
+      {
+        "date": "2026-07-20",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-07-20"
+      },
+      {
+        "date": "2026-07-21",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-07-21"
+      },
+      {
+        "date": "2026-07-22",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-07-22"
+      },
+      {
+        "date": "2026-07-23",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 1.9,
+        "last": false,
+        "dateLabel": "2026-07-23"
+      },
+      {
+        "date": "2026-07-24",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-24"
+      },
+      {
+        "date": "2026-07-25",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-25"
+      },
+      {
+        "date": "2026-07-26",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.1,
+        "last": false,
+        "dateLabel": "2026-07-26"
+      },
+      {
+        "date": "2026-07-27",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.1,
+        "last": false,
+        "dateLabel": "2026-07-27"
+      },
+      {
+        "date": "2026-07-28",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.2,
+        "last": false,
+        "dateLabel": "2026-07-28"
+      },
+      {
+        "date": "2026-07-29",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.3,
+        "last": false,
+        "dateLabel": "2026-07-29"
+      },
+      {
+        "date": "2026-07-30",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.3,
+        "last": false,
+        "dateLabel": "2026-07-30"
+      },
+      {
+        "date": "2026-07-31",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.4,
+        "last": false,
+        "dateLabel": "2026-07-31"
+      },
+      {
+        "date": "2026-08-01",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.5,
+        "last": false,
+        "dateLabel": "2026-08-01"
+      },
+      {
+        "date": "2026-08-02",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.5,
+        "last": false,
+        "dateLabel": "2026-08-02"
+      },
+      {
+        "date": "2026-08-03",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-08-03"
+      },
+      {
+        "date": "2026-08-04",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-08-04"
+      },
+      {
+        "date": "2026-08-05",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-08-05"
+      },
+      {
+        "date": "2026-08-06",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-08-06"
+      },
+      {
+        "date": "2026-08-07",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-08-07"
+      },
+      {
+        "date": "2026-08-08",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-08-08"
+      },
+      {
+        "date": "2026-08-09",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-08-09"
+      },
+      {
+        "date": "2026-08-10",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-08-10"
+      },
+      {
+        "date": "2026-08-11",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-08-11"
+      },
+      {
+        "date": "2026-08-12",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-08-12"
+      },
+      {
+        "date": "2026-08-13",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.1,
+        "last": false,
+        "dateLabel": "2026-08-13"
+      },
+      {
+        "date": "2026-08-14",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.1,
+        "last": false,
+        "dateLabel": "2026-08-14"
+      },
+      {
+        "date": "2026-08-15",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-08-15"
+      },
+      {
+        "date": "2026-08-16",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-08-16"
+      },
+      {
+        "date": "2026-08-17",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.3,
+        "last": false,
+        "dateLabel": "2026-08-17"
+      },
+      {
+        "date": "2026-08-18",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.4,
+        "last": false,
+        "dateLabel": "2026-08-18"
+      },
+      {
+        "date": "2026-08-19",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.4,
+        "last": false,
+        "dateLabel": "2026-08-19"
+      },
+      {
+        "date": "2026-08-20",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.4,
+        "last": false,
+        "dateLabel": "2026-08-20"
+      },
+      {
+        "date": "2026-08-21",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.5,
+        "last": false,
+        "dateLabel": "2026-08-21"
+      },
+      {
+        "date": "2026-08-22",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.5,
+        "last": false,
+        "dateLabel": "2026-08-22"
+      },
+      {
+        "date": "2026-08-23",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.5,
+        "last": false,
+        "dateLabel": "2026-08-23"
+      },
+      {
+        "date": "2026-08-24",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.6,
+        "last": false,
+        "dateLabel": "2026-08-24"
+      },
+      {
+        "date": "2026-08-25",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.6,
+        "last": false,
+        "dateLabel": "2026-08-25"
+      },
+      {
+        "date": "2026-08-26",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.6,
+        "last": false,
+        "dateLabel": "2026-08-26"
+      },
+      {
+        "date": "2026-08-27",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.7,
+        "last": false,
+        "dateLabel": "2026-08-27"
+      },
+      {
+        "date": "2026-08-28",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.8,
+        "last": false,
+        "dateLabel": "2026-08-28"
+      },
+      {
+        "date": "2026-08-29",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.8,
+        "last": false,
+        "dateLabel": "2026-08-29"
+      },
+      {
+        "date": "2026-08-30",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.8,
+        "last": false,
+        "dateLabel": "2026-08-30"
+      },
+      {
+        "date": "2026-08-31",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.9,
+        "last": false,
+        "dateLabel": "2026-08-31"
+      },
+      {
+        "date": "2026-09-01",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.9,
+        "last": false,
+        "dateLabel": "2026-09-01"
+      },
+      {
+        "date": "2026-09-02",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 3.9,
+        "last": false,
+        "dateLabel": "2026-09-02"
+      },
+      {
+        "date": "2026-09-03",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4,
+        "last": false,
+        "dateLabel": "2026-09-03"
+      },
+      {
+        "date": "2026-09-04",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4,
+        "last": false,
+        "dateLabel": "2026-09-04"
+      },
+      {
+        "date": "2026-09-05",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4,
+        "last": false,
+        "dateLabel": "2026-09-05"
+      },
+      {
+        "date": "2026-09-06",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.1,
+        "last": false,
+        "dateLabel": "2026-09-06"
+      },
+      {
+        "date": "2026-09-07",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.1,
+        "last": false,
+        "dateLabel": "2026-09-07"
+      },
+      {
+        "date": "2026-09-08",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.1,
+        "last": false,
+        "dateLabel": "2026-09-08"
+      },
+      {
+        "date": "2026-09-09",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-09-09"
+      },
+      {
+        "date": "2026-09-10",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.3,
+        "last": false,
+        "dateLabel": "2026-09-10"
+      },
+      {
+        "date": "2026-09-11",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.3,
+        "last": false,
+        "dateLabel": "2026-09-11"
+      },
+      {
+        "date": "2026-09-12",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.4,
+        "last": false,
+        "dateLabel": "2026-09-12"
+      },
+      {
+        "date": "2026-09-13",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.5,
+        "last": false,
+        "dateLabel": "2026-09-13"
+      },
+      {
+        "date": "2026-09-14",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.5,
+        "last": false,
+        "dateLabel": "2026-09-14"
+      },
+      {
+        "date": "2026-09-15",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.5,
+        "last": false,
+        "dateLabel": "2026-09-15"
+      },
+      {
+        "date": "2026-09-16",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.6,
+        "last": false,
+        "dateLabel": "2026-09-16"
+      },
+      {
+        "date": "2026-09-17",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.7,
+        "last": false,
+        "dateLabel": "2026-09-17"
+      },
+      {
+        "date": "2026-09-18",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.7,
+        "last": false,
+        "dateLabel": "2026-09-18"
+      },
+      {
+        "date": "2026-09-19",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.8,
+        "last": false,
+        "dateLabel": "2026-09-19"
+      },
+      {
+        "date": "2026-09-20",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.8,
+        "last": false,
+        "dateLabel": "2026-09-20"
+      },
+      {
+        "date": "2026-09-21",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.9,
+        "last": false,
+        "dateLabel": "2026-09-21"
+      },
+      {
+        "date": "2026-09-22",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.9,
+        "last": false,
+        "dateLabel": "2026-09-22"
+      },
+      {
+        "date": "2026-09-23",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 4.9,
+        "last": false,
+        "dateLabel": "2026-09-23"
+      },
+      {
+        "date": "2026-09-24",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5,
+        "last": false,
+        "dateLabel": "2026-09-24"
+      },
+      {
+        "date": "2026-09-25",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5,
+        "last": false,
+        "dateLabel": "2026-09-25"
+      },
+      {
+        "date": "2026-09-26",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5,
+        "last": false,
+        "dateLabel": "2026-09-26"
+      },
+      {
+        "date": "2026-09-27",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.1,
+        "last": false,
+        "dateLabel": "2026-09-27"
+      },
+      {
+        "date": "2026-09-28",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.1,
+        "last": false,
+        "dateLabel": "2026-09-28"
+      },
+      {
+        "date": "2026-09-29",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.1,
+        "last": false,
+        "dateLabel": "2026-09-29"
+      },
+      {
+        "date": "2026-09-30",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.1,
+        "last": false,
+        "dateLabel": "2026-09-30"
+      },
+      {
+        "date": "2026-10-01",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.2,
+        "last": false,
+        "dateLabel": "2026-10-01"
+      },
+      {
+        "date": "2026-10-02",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.2,
+        "last": false,
+        "dateLabel": "2026-10-02"
+      },
+      {
+        "date": "2026-10-03",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.3,
+        "last": false,
+        "dateLabel": "2026-10-03"
+      },
+      {
+        "date": "2026-10-04",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.3,
+        "last": false,
+        "dateLabel": "2026-10-04"
+      },
+      {
+        "date": "2026-10-05",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.4,
+        "last": false,
+        "dateLabel": "2026-10-05"
+      },
+      {
+        "date": "2026-10-06",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.5,
+        "last": false,
+        "dateLabel": "2026-10-06"
+      },
+      {
+        "date": "2026-10-07",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-10-07"
+      },
+      {
+        "date": "2026-10-08",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-10-08"
+      },
+      {
+        "date": "2026-10-09",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-10-09"
+      },
+      {
+        "date": "2026-10-10",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-10-10"
+      },
+      {
+        "date": "2026-10-11",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-10-11"
+      },
+      {
+        "date": "2026-10-12",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-10-12"
+      },
+      {
+        "date": "2026-10-13",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-10-13"
+      },
+      {
+        "date": "2026-10-14",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-10-14"
+      },
+      {
+        "date": "2026-10-15",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-10-15"
+      },
+      {
+        "date": "2026-10-16",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.6,
+        "last": false,
+        "dateLabel": "2026-10-16"
+      },
+      {
+        "date": "2026-10-17",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.7,
+        "last": false,
+        "dateLabel": "2026-10-17"
+      },
+      {
+        "date": "2026-10-18",
+        "series": "Overall Research",
+        "label": "Overall Research",
+        "value": 5.7,
+        "last": true,
+        "dateLabel": "2026-10-18"
+      },
+      {
+        "date": "2026-05-03",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-03"
+      },
+      {
+        "date": "2026-05-04",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-04"
+      },
+      {
+        "date": "2026-05-05",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-05"
+      },
+      {
+        "date": "2026-05-06",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-06"
+      },
+      {
+        "date": "2026-05-07",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-07"
+      },
+      {
+        "date": "2026-05-08",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-08"
+      },
+      {
+        "date": "2026-05-09",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-09"
+      },
+      {
+        "date": "2026-05-10",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-10"
+      },
+      {
+        "date": "2026-05-11",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-11"
+      },
+      {
+        "date": "2026-05-12",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-12"
+      },
+      {
+        "date": "2026-05-13",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-13"
+      },
+      {
+        "date": "2026-05-14",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-14"
+      },
+      {
+        "date": "2026-05-15",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-15"
+      },
+      {
+        "date": "2026-05-16",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-16"
+      },
+      {
+        "date": "2026-05-17",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-17"
+      },
+      {
+        "date": "2026-05-18",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-18"
+      },
+      {
+        "date": "2026-05-19",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-19"
+      },
+      {
+        "date": "2026-05-20",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-20"
+      },
+      {
+        "date": "2026-05-21",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-21"
+      },
+      {
+        "date": "2026-05-22",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-22"
+      },
+      {
+        "date": "2026-05-23",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-05-23"
+      },
+      {
+        "date": "2026-05-24",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-24"
+      },
+      {
+        "date": "2026-05-25",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-25"
+      },
+      {
+        "date": "2026-05-26",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-26"
+      },
+      {
+        "date": "2026-05-27",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-27"
+      },
+      {
+        "date": "2026-05-28",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-28"
+      },
+      {
+        "date": "2026-05-29",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-29"
+      },
+      {
+        "date": "2026-05-30",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-30"
+      },
+      {
+        "date": "2026-05-31",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-05-31"
+      },
+      {
+        "date": "2026-06-01",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-06-01"
+      },
+      {
+        "date": "2026-06-02",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-06-02"
+      },
+      {
+        "date": "2026-06-03",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-06-03"
+      },
+      {
+        "date": "2026-06-04",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-06-04"
+      },
+      {
+        "date": "2026-06-05",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-06-05"
+      },
+      {
+        "date": "2026-06-06",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-06-06"
+      },
+      {
+        "date": "2026-06-07",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-06-07"
+      },
+      {
+        "date": "2026-06-08",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-06-08"
+      },
+      {
+        "date": "2026-06-09",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-09"
+      },
+      {
+        "date": "2026-06-10",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-10"
+      },
+      {
+        "date": "2026-06-11",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-11"
+      },
+      {
+        "date": "2026-06-12",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-06-12"
+      },
+      {
+        "date": "2026-06-13",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-06-13"
+      },
+      {
+        "date": "2026-06-14",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-06-14"
+      },
+      {
+        "date": "2026-06-15",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-06-15"
+      },
+      {
+        "date": "2026-06-16",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-06-16"
+      },
+      {
+        "date": "2026-06-17",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-06-17"
+      },
+      {
+        "date": "2026-06-18",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-18"
+      },
+      {
+        "date": "2026-06-19",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-19"
+      },
+      {
+        "date": "2026-06-20",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-20"
+      },
+      {
+        "date": "2026-06-21",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-21"
+      },
+      {
+        "date": "2026-06-22",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-06-22"
+      },
+      {
+        "date": "2026-06-23",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-23"
+      },
+      {
+        "date": "2026-06-24",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-24"
+      },
+      {
+        "date": "2026-06-25",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-25"
+      },
+      {
+        "date": "2026-06-26",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-26"
+      },
+      {
+        "date": "2026-06-27",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-06-27"
+      },
+      {
+        "date": "2026-06-28",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-28"
+      },
+      {
+        "date": "2026-06-29",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-29"
+      },
+      {
+        "date": "2026-06-30",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-06-30"
+      },
+      {
+        "date": "2026-07-01",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-01"
+      },
+      {
+        "date": "2026-07-02",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-02"
+      },
+      {
+        "date": "2026-07-03",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-07-03"
+      },
+      {
+        "date": "2026-07-04",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-07-04"
+      },
+      {
+        "date": "2026-07-05",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-07-05"
+      },
+      {
+        "date": "2026-07-06",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-07-06"
+      },
+      {
+        "date": "2026-07-07",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-07-07"
+      },
+      {
+        "date": "2026-07-08",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-08"
+      },
+      {
+        "date": "2026-07-09",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-09"
+      },
+      {
+        "date": "2026-07-10",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-10"
+      },
+      {
+        "date": "2026-07-11",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-11"
+      },
+      {
+        "date": "2026-07-12",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-12"
+      },
+      {
+        "date": "2026-07-13",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-13"
+      },
+      {
+        "date": "2026-07-14",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-14"
+      },
+      {
+        "date": "2026-07-15",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-15"
+      },
+      {
+        "date": "2026-07-16",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-16"
+      },
+      {
+        "date": "2026-07-17",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-17"
+      },
+      {
+        "date": "2026-07-18",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-18"
+      },
+      {
+        "date": "2026-07-19",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-19"
+      },
+      {
+        "date": "2026-07-20",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-20"
+      },
+      {
+        "date": "2026-07-21",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-07-21"
+      },
+      {
+        "date": "2026-07-22",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-07-22"
+      },
+      {
+        "date": "2026-07-23",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-23"
+      },
+      {
+        "date": "2026-07-24",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-07-24"
+      },
+      {
+        "date": "2026-07-25",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-07-25"
+      },
+      {
+        "date": "2026-07-26",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-07-26"
+      },
+      {
+        "date": "2026-07-27",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-07-27"
+      },
+      {
+        "date": "2026-07-28",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-07-28"
+      },
+      {
+        "date": "2026-07-29",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 1.9,
+        "last": false,
+        "dateLabel": "2026-07-29"
+      },
+      {
+        "date": "2026-07-30",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-07-30"
+      },
+      {
+        "date": "2026-07-31",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.1,
+        "last": false,
+        "dateLabel": "2026-07-31"
+      },
+      {
+        "date": "2026-08-01",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.1,
+        "last": false,
+        "dateLabel": "2026-08-01"
+      },
+      {
+        "date": "2026-08-02",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.2,
+        "last": false,
+        "dateLabel": "2026-08-02"
+      },
+      {
+        "date": "2026-08-03",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.2,
+        "last": false,
+        "dateLabel": "2026-08-03"
+      },
+      {
+        "date": "2026-08-04",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.3,
+        "last": false,
+        "dateLabel": "2026-08-04"
+      },
+      {
+        "date": "2026-08-05",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.4,
+        "last": false,
+        "dateLabel": "2026-08-05"
+      },
+      {
+        "date": "2026-08-06",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.4,
+        "last": false,
+        "dateLabel": "2026-08-06"
+      },
+      {
+        "date": "2026-08-07",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.5,
+        "last": false,
+        "dateLabel": "2026-08-07"
+      },
+      {
+        "date": "2026-08-08",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.5,
+        "last": false,
+        "dateLabel": "2026-08-08"
+      },
+      {
+        "date": "2026-08-09",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.5,
+        "last": false,
+        "dateLabel": "2026-08-09"
+      },
+      {
+        "date": "2026-08-10",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.5,
+        "last": false,
+        "dateLabel": "2026-08-10"
+      },
+      {
+        "date": "2026-08-11",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-08-11"
+      },
+      {
+        "date": "2026-08-12",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-08-12"
+      },
+      {
+        "date": "2026-08-13",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-08-13"
+      },
+      {
+        "date": "2026-08-14",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-08-14"
+      },
+      {
+        "date": "2026-08-15",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-08-15"
+      },
+      {
+        "date": "2026-08-16",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-08-16"
+      },
+      {
+        "date": "2026-08-17",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-08-17"
+      },
+      {
+        "date": "2026-08-18",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-08-18"
+      },
+      {
+        "date": "2026-08-19",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-08-19"
+      },
+      {
+        "date": "2026-08-20",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-08-20"
+      },
+      {
+        "date": "2026-08-21",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-08-21"
+      },
+      {
+        "date": "2026-08-22",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-08-22"
+      },
+      {
+        "date": "2026-08-23",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-08-23"
+      },
+      {
+        "date": "2026-08-24",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-08-24"
+      },
+      {
+        "date": "2026-08-25",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-08-25"
+      },
+      {
+        "date": "2026-08-26",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-08-26"
+      },
+      {
+        "date": "2026-08-27",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.1,
+        "last": false,
+        "dateLabel": "2026-08-27"
+      },
+      {
+        "date": "2026-08-28",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.1,
+        "last": false,
+        "dateLabel": "2026-08-28"
+      },
+      {
+        "date": "2026-08-29",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-08-29"
+      },
+      {
+        "date": "2026-08-30",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.1,
+        "last": false,
+        "dateLabel": "2026-08-30"
+      },
+      {
+        "date": "2026-08-31",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.1,
+        "last": false,
+        "dateLabel": "2026-08-31"
+      },
+      {
+        "date": "2026-09-01",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-09-01"
+      },
+      {
+        "date": "2026-09-02",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-09-02"
+      },
+      {
+        "date": "2026-09-03",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-09-03"
+      },
+      {
+        "date": "2026-09-04",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-09-04"
+      },
+      {
+        "date": "2026-09-05",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-09-05"
+      },
+      {
+        "date": "2026-09-06",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-09-06"
+      },
+      {
+        "date": "2026-09-07",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-09-07"
+      },
+      {
+        "date": "2026-09-08",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.2,
+        "last": false,
+        "dateLabel": "2026-09-08"
+      },
+      {
+        "date": "2026-09-09",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.3,
+        "last": false,
+        "dateLabel": "2026-09-09"
+      },
+      {
+        "date": "2026-09-10",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.3,
+        "last": false,
+        "dateLabel": "2026-09-10"
+      },
+      {
+        "date": "2026-09-11",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.4,
+        "last": false,
+        "dateLabel": "2026-09-11"
+      },
+      {
+        "date": "2026-09-12",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.4,
+        "last": false,
+        "dateLabel": "2026-09-12"
+      },
+      {
+        "date": "2026-09-13",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.5,
+        "last": false,
+        "dateLabel": "2026-09-13"
+      },
+      {
+        "date": "2026-09-14",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.5,
+        "last": false,
+        "dateLabel": "2026-09-14"
+      },
+      {
+        "date": "2026-09-15",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.5,
+        "last": false,
+        "dateLabel": "2026-09-15"
+      },
+      {
+        "date": "2026-09-16",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.6,
+        "last": false,
+        "dateLabel": "2026-09-16"
+      },
+      {
+        "date": "2026-09-17",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.6,
+        "last": false,
+        "dateLabel": "2026-09-17"
+      },
+      {
+        "date": "2026-09-18",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.6,
+        "last": false,
+        "dateLabel": "2026-09-18"
+      },
+      {
+        "date": "2026-09-19",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.6,
+        "last": false,
+        "dateLabel": "2026-09-19"
+      },
+      {
+        "date": "2026-09-20",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.6,
+        "last": false,
+        "dateLabel": "2026-09-20"
+      },
+      {
+        "date": "2026-09-21",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.6,
+        "last": false,
+        "dateLabel": "2026-09-21"
+      },
+      {
+        "date": "2026-09-22",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.7,
+        "last": false,
+        "dateLabel": "2026-09-22"
+      },
+      {
+        "date": "2026-09-23",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.7,
+        "last": false,
+        "dateLabel": "2026-09-23"
+      },
+      {
+        "date": "2026-09-24",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.7,
+        "last": false,
+        "dateLabel": "2026-09-24"
+      },
+      {
+        "date": "2026-09-25",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.8,
+        "last": false,
+        "dateLabel": "2026-09-25"
+      },
+      {
+        "date": "2026-09-26",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.8,
+        "last": false,
+        "dateLabel": "2026-09-26"
+      },
+      {
+        "date": "2026-09-27",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.8,
+        "last": false,
+        "dateLabel": "2026-09-27"
+      },
+      {
+        "date": "2026-09-28",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.8,
+        "last": false,
+        "dateLabel": "2026-09-28"
+      },
+      {
+        "date": "2026-09-29",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.9,
+        "last": false,
+        "dateLabel": "2026-09-29"
+      },
+      {
+        "date": "2026-09-30",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.9,
+        "last": false,
+        "dateLabel": "2026-09-30"
+      },
+      {
+        "date": "2026-10-01",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 3.9,
+        "last": false,
+        "dateLabel": "2026-10-01"
+      },
+      {
+        "date": "2026-10-02",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4,
+        "last": false,
+        "dateLabel": "2026-10-02"
+      },
+      {
+        "date": "2026-10-03",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4,
+        "last": false,
+        "dateLabel": "2026-10-03"
+      },
+      {
+        "date": "2026-10-04",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4,
+        "last": false,
+        "dateLabel": "2026-10-04"
+      },
+      {
+        "date": "2026-10-05",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.1,
+        "last": false,
+        "dateLabel": "2026-10-05"
+      },
+      {
+        "date": "2026-10-06",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-10-06"
+      },
+      {
+        "date": "2026-10-07",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-10-07"
+      },
+      {
+        "date": "2026-10-08",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.3,
+        "last": false,
+        "dateLabel": "2026-10-08"
+      },
+      {
+        "date": "2026-10-09",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.3,
+        "last": false,
+        "dateLabel": "2026-10-09"
+      },
+      {
+        "date": "2026-10-10",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-10-10"
+      },
+      {
+        "date": "2026-10-11",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-10-11"
+      },
+      {
+        "date": "2026-10-12",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-10-12"
+      },
+      {
+        "date": "2026-10-13",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-10-13"
+      },
+      {
+        "date": "2026-10-14",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-10-14"
+      },
+      {
+        "date": "2026-10-15",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-10-15"
+      },
+      {
+        "date": "2026-10-16",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-10-16"
+      },
+      {
+        "date": "2026-10-17",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.2,
+        "last": false,
+        "dateLabel": "2026-10-17"
+      },
+      {
+        "date": "2026-10-18",
+        "series": "Scaling / Infrastructure",
+        "label": "Scaling / Infrastructure",
+        "value": 4.2,
+        "last": true,
+        "dateLabel": "2026-10-18"
+      },
+      {
+        "date": "2026-05-03",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-03"
+      },
+      {
+        "date": "2026-05-04",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-04"
+      },
+      {
+        "date": "2026-05-05",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-05"
+      },
+      {
+        "date": "2026-05-06",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-06"
+      },
+      {
+        "date": "2026-05-07",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-07"
+      },
+      {
+        "date": "2026-05-08",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-08"
+      },
+      {
+        "date": "2026-05-09",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-09"
+      },
+      {
+        "date": "2026-05-10",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-10"
+      },
+      {
+        "date": "2026-05-11",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-11"
+      },
+      {
+        "date": "2026-05-12",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-12"
+      },
+      {
+        "date": "2026-05-13",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-13"
+      },
+      {
+        "date": "2026-05-14",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-14"
+      },
+      {
+        "date": "2026-05-15",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-15"
+      },
+      {
+        "date": "2026-05-16",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-16"
+      },
+      {
+        "date": "2026-05-17",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-17"
+      },
+      {
+        "date": "2026-05-18",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.3,
+        "last": false,
+        "dateLabel": "2026-05-18"
+      },
+      {
+        "date": "2026-05-19",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-19"
+      },
+      {
+        "date": "2026-05-20",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-20"
+      },
+      {
+        "date": "2026-05-21",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-21"
+      },
+      {
+        "date": "2026-05-22",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-22"
+      },
+      {
+        "date": "2026-05-23",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-23"
+      },
+      {
+        "date": "2026-05-24",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-24"
+      },
+      {
+        "date": "2026-05-25",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-25"
+      },
+      {
+        "date": "2026-05-26",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-26"
+      },
+      {
+        "date": "2026-05-27",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-27"
+      },
+      {
+        "date": "2026-05-28",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-28"
+      },
+      {
+        "date": "2026-05-29",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-29"
+      },
+      {
+        "date": "2026-05-30",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-30"
+      },
+      {
+        "date": "2026-05-31",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-05-31"
+      },
+      {
+        "date": "2026-06-01",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-06-01"
+      },
+      {
+        "date": "2026-06-02",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-06-02"
+      },
+      {
+        "date": "2026-06-03",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-06-03"
+      },
+      {
+        "date": "2026-06-04",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-06-04"
+      },
+      {
+        "date": "2026-06-05",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-06-05"
+      },
+      {
+        "date": "2026-06-06",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-06-06"
+      },
+      {
+        "date": "2026-06-07",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-06-07"
+      },
+      {
+        "date": "2026-06-08",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-06-08"
+      },
+      {
+        "date": "2026-06-09",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-06-09"
+      },
+      {
+        "date": "2026-06-10",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-06-10"
+      },
+      {
+        "date": "2026-06-11",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.4,
+        "last": false,
+        "dateLabel": "2026-06-11"
+      },
+      {
+        "date": "2026-06-12",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-06-12"
+      },
+      {
+        "date": "2026-06-13",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-06-13"
+      },
+      {
+        "date": "2026-06-14",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-06-14"
+      },
+      {
+        "date": "2026-06-15",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-06-15"
+      },
+      {
+        "date": "2026-06-16",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-06-16"
+      },
+      {
+        "date": "2026-06-17",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-06-17"
+      },
+      {
+        "date": "2026-06-18",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-06-18"
+      },
+      {
+        "date": "2026-06-19",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-06-19"
+      },
+      {
+        "date": "2026-06-20",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-06-20"
+      },
+      {
+        "date": "2026-06-21",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-06-21"
+      },
+      {
+        "date": "2026-06-22",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.5,
+        "last": false,
+        "dateLabel": "2026-06-22"
+      },
+      {
+        "date": "2026-06-23",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-06-23"
+      },
+      {
+        "date": "2026-06-24",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-06-24"
+      },
+      {
+        "date": "2026-06-25",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-06-25"
+      },
+      {
+        "date": "2026-06-26",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-06-26"
+      },
+      {
+        "date": "2026-06-27",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-06-27"
+      },
+      {
+        "date": "2026-06-28",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-06-28"
+      },
+      {
+        "date": "2026-06-29",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-06-29"
+      },
+      {
+        "date": "2026-06-30",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-06-30"
+      },
+      {
+        "date": "2026-07-01",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-07-01"
+      },
+      {
+        "date": "2026-07-02",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-07-02"
+      },
+      {
+        "date": "2026-07-03",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-07-03"
+      },
+      {
+        "date": "2026-07-04",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-07-04"
+      },
+      {
+        "date": "2026-07-05",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-07-05"
+      },
+      {
+        "date": "2026-07-06",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-07-06"
+      },
+      {
+        "date": "2026-07-07",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-07-07"
+      },
+      {
+        "date": "2026-07-08",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.6,
+        "last": false,
+        "dateLabel": "2026-07-08"
+      },
+      {
+        "date": "2026-07-09",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-07-09"
+      },
+      {
+        "date": "2026-07-10",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-07-10"
+      },
+      {
+        "date": "2026-07-11",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.7,
+        "last": false,
+        "dateLabel": "2026-07-11"
+      },
+      {
+        "date": "2026-07-12",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-07-12"
+      },
+      {
+        "date": "2026-07-13",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-07-13"
+      },
+      {
+        "date": "2026-07-14",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.8,
+        "last": false,
+        "dateLabel": "2026-07-14"
+      },
+      {
+        "date": "2026-07-15",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-07-15"
+      },
+      {
+        "date": "2026-07-16",
+        "series": "Other",
+        "label": "Other",
+        "value": 0.9,
+        "last": false,
+        "dateLabel": "2026-07-16"
+      },
+      {
+        "date": "2026-07-17",
+        "series": "Other",
+        "label": "Other",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-07-17"
+      },
+      {
+        "date": "2026-07-18",
+        "series": "Other",
+        "label": "Other",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-07-18"
+      },
+      {
+        "date": "2026-07-19",
+        "series": "Other",
+        "label": "Other",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-07-19"
+      },
+      {
+        "date": "2026-07-20",
+        "series": "Other",
+        "label": "Other",
+        "value": 1,
+        "last": false,
+        "dateLabel": "2026-07-20"
+      },
+      {
+        "date": "2026-07-21",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-07-21"
+      },
+      {
+        "date": "2026-07-22",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-07-22"
+      },
+      {
+        "date": "2026-07-23",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.1,
+        "last": false,
+        "dateLabel": "2026-07-23"
+      },
+      {
+        "date": "2026-07-24",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-07-24"
+      },
+      {
+        "date": "2026-07-25",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-07-25"
+      },
+      {
+        "date": "2026-07-26",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.2,
+        "last": false,
+        "dateLabel": "2026-07-26"
+      },
+      {
+        "date": "2026-07-27",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-07-27"
+      },
+      {
+        "date": "2026-07-28",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.3,
+        "last": false,
+        "dateLabel": "2026-07-28"
+      },
+      {
+        "date": "2026-07-29",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-29"
+      },
+      {
+        "date": "2026-07-30",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.4,
+        "last": false,
+        "dateLabel": "2026-07-30"
+      },
+      {
+        "date": "2026-07-31",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-07-31"
+      },
+      {
+        "date": "2026-08-01",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-08-01"
+      },
+      {
+        "date": "2026-08-02",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.5,
+        "last": false,
+        "dateLabel": "2026-08-02"
+      },
+      {
+        "date": "2026-08-03",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-08-03"
+      },
+      {
+        "date": "2026-08-04",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.6,
+        "last": false,
+        "dateLabel": "2026-08-04"
+      },
+      {
+        "date": "2026-08-05",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-08-05"
+      },
+      {
+        "date": "2026-08-06",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.7,
+        "last": false,
+        "dateLabel": "2026-08-06"
+      },
+      {
+        "date": "2026-08-07",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-08-07"
+      },
+      {
+        "date": "2026-08-08",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-08-08"
+      },
+      {
+        "date": "2026-08-09",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-08-09"
+      },
+      {
+        "date": "2026-08-10",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.8,
+        "last": false,
+        "dateLabel": "2026-08-10"
+      },
+      {
+        "date": "2026-08-11",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.9,
+        "last": false,
+        "dateLabel": "2026-08-11"
+      },
+      {
+        "date": "2026-08-12",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.9,
+        "last": false,
+        "dateLabel": "2026-08-12"
+      },
+      {
+        "date": "2026-08-13",
+        "series": "Other",
+        "label": "Other",
+        "value": 1.9,
+        "last": false,
+        "dateLabel": "2026-08-13"
+      },
+      {
+        "date": "2026-08-14",
+        "series": "Other",
+        "label": "Other",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-08-14"
+      },
+      {
+        "date": "2026-08-15",
+        "series": "Other",
+        "label": "Other",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-08-15"
+      },
+      {
+        "date": "2026-08-16",
+        "series": "Other",
+        "label": "Other",
+        "value": 2,
+        "last": false,
+        "dateLabel": "2026-08-16"
+      },
+      {
+        "date": "2026-08-17",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.1,
+        "last": false,
+        "dateLabel": "2026-08-17"
+      },
+      {
+        "date": "2026-08-18",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.1,
+        "last": false,
+        "dateLabel": "2026-08-18"
+      },
+      {
+        "date": "2026-08-19",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.2,
+        "last": false,
+        "dateLabel": "2026-08-19"
+      },
+      {
+        "date": "2026-08-20",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.2,
+        "last": false,
+        "dateLabel": "2026-08-20"
+      },
+      {
+        "date": "2026-08-21",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.3,
+        "last": false,
+        "dateLabel": "2026-08-21"
+      },
+      {
+        "date": "2026-08-22",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.3,
+        "last": false,
+        "dateLabel": "2026-08-22"
+      },
+      {
+        "date": "2026-08-23",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.3,
+        "last": false,
+        "dateLabel": "2026-08-23"
+      },
+      {
+        "date": "2026-08-24",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.4,
+        "last": false,
+        "dateLabel": "2026-08-24"
+      },
+      {
+        "date": "2026-08-25",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.4,
+        "last": false,
+        "dateLabel": "2026-08-25"
+      },
+      {
+        "date": "2026-08-26",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.4,
+        "last": false,
+        "dateLabel": "2026-08-26"
+      },
+      {
+        "date": "2026-08-27",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.5,
+        "last": false,
+        "dateLabel": "2026-08-27"
+      },
+      {
+        "date": "2026-08-28",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-08-28"
+      },
+      {
+        "date": "2026-08-29",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-08-29"
+      },
+      {
+        "date": "2026-08-30",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-08-30"
+      },
+      {
+        "date": "2026-08-31",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-08-31"
+      },
+      {
+        "date": "2026-09-01",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-09-01"
+      },
+      {
+        "date": "2026-09-02",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-09-02"
+      },
+      {
+        "date": "2026-09-03",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-09-03"
+      },
+      {
+        "date": "2026-09-04",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.6,
+        "last": false,
+        "dateLabel": "2026-09-04"
+      },
+      {
+        "date": "2026-09-05",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-09-05"
+      },
+      {
+        "date": "2026-09-06",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-09-06"
+      },
+      {
+        "date": "2026-09-07",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-09-07"
+      },
+      {
+        "date": "2026-09-08",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-09-08"
+      },
+      {
+        "date": "2026-09-09",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-09-09"
+      },
+      {
+        "date": "2026-09-10",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-09-10"
+      },
+      {
+        "date": "2026-09-11",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-09-11"
+      },
+      {
+        "date": "2026-09-12",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-09-12"
+      },
+      {
+        "date": "2026-09-13",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-09-13"
+      },
+      {
+        "date": "2026-09-14",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-09-14"
+      },
+      {
+        "date": "2026-09-15",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-09-15"
+      },
+      {
+        "date": "2026-09-16",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-09-16"
+      },
+      {
+        "date": "2026-09-17",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-09-17"
+      },
+      {
+        "date": "2026-09-18",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-09-18"
+      },
+      {
+        "date": "2026-09-19",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-09-19"
+      },
+      {
+        "date": "2026-09-20",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-09-20"
+      },
+      {
+        "date": "2026-09-21",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-09-21"
+      },
+      {
+        "date": "2026-09-22",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-09-22"
+      },
+      {
+        "date": "2026-09-23",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-09-23"
+      },
+      {
+        "date": "2026-09-24",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-09-24"
+      },
+      {
+        "date": "2026-09-25",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-09-25"
+      },
+      {
+        "date": "2026-09-26",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-09-26"
+      },
+      {
+        "date": "2026-09-27",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-09-27"
+      },
+      {
+        "date": "2026-09-28",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-09-28"
+      },
+      {
+        "date": "2026-09-29",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-09-29"
+      },
+      {
+        "date": "2026-09-30",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-09-30"
+      },
+      {
+        "date": "2026-10-01",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-10-01"
+      },
+      {
+        "date": "2026-10-02",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-10-02"
+      },
+      {
+        "date": "2026-10-03",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-10-03"
+      },
+      {
+        "date": "2026-10-04",
+        "series": "Other",
+        "label": "Other",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-10-04"
+      },
+      {
+        "date": "2026-10-05",
+        "series": "Other",
+        "label": "Other",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-10-05"
+      },
+      {
+        "date": "2026-10-06",
+        "series": "Other",
+        "label": "Other",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-10-06"
+      },
+      {
+        "date": "2026-10-07",
+        "series": "Other",
+        "label": "Other",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-10-07"
+      },
+      {
+        "date": "2026-10-08",
+        "series": "Other",
+        "label": "Other",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-10-08"
+      },
+      {
+        "date": "2026-10-09",
+        "series": "Other",
+        "label": "Other",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-10-09"
+      },
+      {
+        "date": "2026-10-10",
+        "series": "Other",
+        "label": "Other",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-10-10"
+      },
+      {
+        "date": "2026-10-11",
+        "series": "Other",
+        "label": "Other",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-10-11"
+      },
+      {
+        "date": "2026-10-12",
+        "series": "Other",
+        "label": "Other",
+        "value": 3,
+        "last": false,
+        "dateLabel": "2026-10-12"
+      },
+      {
+        "date": "2026-10-13",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-10-13"
+      },
+      {
+        "date": "2026-10-14",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-10-14"
+      },
+      {
+        "date": "2026-10-15",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.9,
+        "last": false,
+        "dateLabel": "2026-10-15"
+      },
+      {
+        "date": "2026-10-16",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.8,
+        "last": false,
+        "dateLabel": "2026-10-16"
+      },
+      {
+        "date": "2026-10-17",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.7,
+        "last": false,
+        "dateLabel": "2026-10-17"
+      },
+      {
+        "date": "2026-10-18",
+        "series": "Other",
+        "label": "Other",
+        "value": 2.7,
+        "last": true,
+        "dateLabel": "2026-10-18"
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "scale": {
+        "type": "utc",
+        "domain": [
+          "2026-05-01",
+          "2026-10-18"
+        ],
+        "nice": false
+      },
+      "axis": {
+        "title": null,
+        "format": "%b %Y",
+        "values": [
+          1777593600000,
+          1780272000000,
+          1782864000000,
+          1785542400000,
+          1788220800000,
+          1790812800000
+        ],
+        "labelAngle": 0,
+        "labelExpr": "utcFormat(datum.value, '%b\\n%Y')"
+      },
+      "timeUnit": "utcyearmonthdate"
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          9
+        ],
+        "nice": false
+      },
+      "axis": {
+        "title": "Agent workdays per researcher per day (28-day moving average)",
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "labelExpr": "datum.label + '×'"
+      }
+    },
+    "color": {
+      "field": "series",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Pretraining",
+          "Posttraining",
+          "Overall Research",
+          "Scaling / Infrastructure",
+          "Other"
+        ],
+        "range": [
+          "theme1",
+          "theme2",
+          "theme3",
+          "theme4",
+          "theme5"
+        ]
+      },
+      "legend": {
+        "title": null,
+        "labelExpr": "datum.label === 'Pretraining' ? 'Pretraining' : datum.label === 'Posttraining' ? 'Posttraining' : datum.label === 'Overall Research' ? 'Overall Research' : datum.label === 'Scaling / Infrastructure' ? 'Scaling / Infrastructure' : 'Other'",
+        "symbolDash": [
+          1,
+          0
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "name": "series_lines",
+      "mark": {
+        "type": "line",
+        "point": false
+      },
+      "encoding": {
+        "detail": {
+          "field": "series"
+        },
+        "strokeDash": {
+          "condition": {
+            "test": "datum.series === 'Overall Research'",
+            "value": [
+              1,
+              0
+            ]
+          },
+          "value": [
+            6,
+            4
+          ]
+        },
+        "tooltip": [
+          {
+            "field": "label",
+            "type": "nominal",
+            "title": "Research group"
+          },
+          {
+            "field": "dateLabel",
+            "type": "nominal",
+            "title": "Window ending (UTC)"
+          },
+          {
+            "field": "value",
+            "type": "quantitative",
+            "title": "Agent workdays per researcher per day",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "name": "endpoints",
+      "transform": [
+        {
+          "filter": "datum.last"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true
+      }
+    },
+    {
+      "name": "series_labels",
+      "transform": [
+        {
+          "filter": "datum.last"
+        },
+        {
+          "calculate": "format(datum.value, '.1f') + '×'",
+          "as": "endpointLabel"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10
+      },
+      "encoding": {
+        "text": {
+          "field": "endpointLabel"
+        }
+      }
+    }
+  ]
+}

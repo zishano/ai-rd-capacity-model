@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "preview": "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/resource-dashboard-preview.html",
+  "fragment_bytes": 641079,
+  "ppt_native_editable_shapes": 39,
+  "ppt_validation": "OOXML, labels, native shapes and slide bounds; not Office rendering",
+  "annual_analysis_exports": {
+    "status": "passed",
+    "annual_rows": 5,
+    "scenario": "C",
+    "png_svg_pdf_panels": 6,
+    "ppt_slides": 3,
+    "ppt_native_charts": 9,
+    "embedded_workbooks": 9,
+    "heatmap_native_cells": 30,
+    "ppt_validation": "OOXML, native charts, workbooks and bounds; not Office rendering",
+    "files": [
+      "team-resource-analysis-2026-2030.png",
+      "team-resource-analysis-2026-2030.svg",
+      "team-resource-analysis-2026-2030.pdf",
+      "team-resource-analysis-2026-2030.pptx"
+    ]
+  }
+}

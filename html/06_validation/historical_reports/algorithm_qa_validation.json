@@ -1,0 +1,2608 @@
+{
+  "created_at_utc": "2026-11-22T05:20:27.096221+00:00",
+  "status": "passed",
+  "method": "Actual standalone Chrome interactions and independent forecast-to-resource arithmetic",
+  "source_sha256": {
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/resource-dashboard-preview.html": "114c17337d42d083a73cc5a39fa6b85c19dba465b1457d1c75ef10711da6404a",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/team-resource-dashboard.html": "41337f56573a3d7056b9ed0474006710b7624d2b1f36aebefe173d8c05ecaf9a",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/dashboard_data.json": "045ab5eb740f3c938276fc75a930f1161f65a271c8f1f524cf704df18c0d5722",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/dashboard_data.csv": "b9b61d59ea30ba1c90702e26e3234022c7160cb6fb90819198e1939c84d10bcf",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/algorithm_forecasts.json": "b4f2287ebc6d746f04eb2261f53c94fa7edd467fd1bdaa39971e5d46054fc534"
+  },
+  "checks": [
+    {
+      "name": "artifact exposes the 15 supported methods with the original OLS default",
+      "status": "passed",
+      "detail": [
+        "legacy_ols",
+        "naive",
+        "ols",
+        "piecewise",
+        "damped_holt",
+        "auto_arima",
+        "damped_holt_hl90",
+        "damped_holt_hl365",
+        "damped_holt_hl730",
+        "logistic_cap2x",
+        "logistic_cap4x",
+        "logistic_cap8x",
+        "gompertz_cap2x",
+        "gompertz_cap4x",
+        "gompertz_cap8x"
+      ]
+    },
+    {
+      "name": "original annual dashboard data is unchanged",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "original OLS default: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "original OLS default: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "original OLS default: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "original OLS default: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "original OLS default: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1280,
+        "chart": 1210,
+        "chartScroll": 1501,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "the original OLS remains the only default algorithm",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "dropdown contains exactly the 15 supported methods",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "algorithm dropdown exposes a readable selection summary",
+      "status": "passed",
+      "detail": "原脚本 OLS（默认）"
+    },
+    {
+      "name": "algorithm summary opens the multi-select dropdown",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "the last selected algorithm cannot be removed",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "three distinct algorithms: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "three distinct algorithms: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three distinct algorithms: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three distinct algorithms: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "three distinct algorithms: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1280,
+        "chart": 1210,
+        "chartScroll": 1501,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "a fourth algorithm is disabled while three are selected",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "clicking a disabled fourth method cannot select all algorithms",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "algorithm choices leave fixed-2030 headline cards unchanged",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "scenarios: algorithm choices leave the original annual analysis unchanged",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "scenarios: algorithm selector is hidden outside monthly trends",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "cache: algorithm choices leave the original annual analysis unchanged",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "cache: algorithm selector is hidden outside monthly trends",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "compute: algorithm choices leave the original annual analysis unchanged",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "compute: algorithm selector is hidden outside monthly trends",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "categories: algorithm choices leave the original annual analysis unchanged",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "categories: algorithm selector is hidden outside monthly trends",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "growth: algorithm choices leave the original annual analysis unchanged",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "growth: algorithm selector is hidden outside monthly trends",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "output method legacy_ols: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method legacy_ols: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method legacy_ols: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method naive: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method naive: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method naive: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method ols: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method ols: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method ols: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method piecewise: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method piecewise: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method piecewise: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method damped_holt: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method damped_holt: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method damped_holt: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method auto_arima: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method auto_arima: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method auto_arima: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method damped_holt_hl90: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method damped_holt_hl90: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method damped_holt_hl90: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method damped_holt_hl365: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method damped_holt_hl365: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method damped_holt_hl365: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method damped_holt_hl730: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method damped_holt_hl730: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method damped_holt_hl730: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method logistic_cap2x: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method logistic_cap2x: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method logistic_cap2x: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method logistic_cap4x: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method logistic_cap4x: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method logistic_cap4x: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method logistic_cap8x: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method logistic_cap8x: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method logistic_cap8x: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method gompertz_cap2x: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method gompertz_cap2x: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method gompertz_cap2x: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method gompertz_cap4x: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method gompertz_cap4x: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method gompertz_cap4x: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method gompertz_cap8x: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "output method gompertz_cap8x: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output method gompertz_cap8x: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category tokens: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "three methods, category tokens: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category tokens: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category tokens: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "three methods, category tokens: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1265,
+        "chart": 1195,
+        "chartScroll": 1736,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "three methods, category compute: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "three methods, category compute: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category compute: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category compute: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "three methods, category compute: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1265,
+        "chart": 1195,
+        "chartScroll": 1736,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "three methods, category rate: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "three methods, category rate: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category rate: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category rate: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "three methods, category rate: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1280,
+        "chart": 1210,
+        "chartScroll": 1501,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "three methods, category agent_time: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "three methods, category agent_time: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category agent_time: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category agent_time: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "three methods, category agent_time: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1280,
+        "chart": 1210,
+        "chartScroll": 1426,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "three methods, category agent_scale: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "three methods, category agent_scale: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category agent_scale: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category agent_scale: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "three methods, category agent_scale: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1280,
+        "chart": 1210,
+        "chartScroll": 1426,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "three methods, category tasks: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "three methods, category tasks: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category tasks: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category tasks: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "three methods, category tasks: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1280,
+        "chart": 1210,
+        "chartScroll": 2534,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "three methods, category cache: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "three methods, category cache: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category cache: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three methods, category cache: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "three methods, category cache: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1280,
+        "chart": 1210,
+        "chartScroll": 1501,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "identical cache-rate method forecasts share one curve with complete membership",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "merged cache-rate CSV: downloaded raw and plotted values match every method and shared historical observation",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "monthly CSV includes algorithms and both original and plotted units",
+      "status": "passed",
+      "detail": [
+        "原始值",
+        "原始单位",
+        "团队人数",
+        "图表值",
+        "图表单位",
+        "情景",
+        "指标",
+        "日期",
+        "月份",
+        "算法",
+        "算法ID",
+        "证据"
+      ]
+    },
+    {
+      "name": "CSV preserves each selected algorithm even when its curve is merged",
+      "status": "passed",
+      "detail": [
+        "保持末值",
+        "公共历史",
+        "原脚本 OLS（默认）",
+        "统一水平 OLS"
+      ]
+    },
+    {
+      "name": "CSV keeps one shared history row and every individual method forecast row",
+      "status": "passed",
+      "detail": {
+        "rows": 160,
+        "expected": 160
+      }
+    },
+    {
+      "name": "maximum fifteen forecast curves: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "maximum fifteen forecast curves: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "maximum fifteen forecast curves: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "maximum fifteen forecast curves: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "maximum fifteen forecast curves: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1265,
+        "chart": 1195,
+        "chartScroll": 1736,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "fifteen-curve Token CSV: downloaded raw and plotted values match every method and shared historical observation",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "five metrics by three methods CSV contains every forecast value exactly once",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "monthly scenario ratios preserved for A: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "monthly scenario ratios preserved for A: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "monthly scenario ratios preserved for A: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "monthly scenario ratios preserved for B: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "monthly scenario ratios preserved for B: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "monthly scenario ratios preserved for B: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "monthly scenario ratios preserved for C: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "monthly scenario ratios preserved for C: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "monthly scenario ratios preserved for C: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team scaling 10: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "team scaling 10: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team scaling 10: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team scaling 1000: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "team scaling 1000: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team scaling 1000: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team scaling 100: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "team scaling 100: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "team scaling 100: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "processing-window scaling 8: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "processing-window scaling 8: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "processing-window scaling 8: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "processing-window scaling 12: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "processing-window scaling 12: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "processing-window scaling 12: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "processing-window scaling 24: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "processing-window scaling 24: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "processing-window scaling 24: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three scenarios by three rate algorithms: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "three scenarios by three rate algorithms: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three scenarios by three rate algorithms: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three scenarios by three rate algorithms: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "three scenarios by three rate algorithms: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1265,
+        "chart": 1195,
+        "chartScroll": 1501,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "algorithm range observed: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "algorithm range observed: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "algorithm range observed: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "algorithm range observed: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "algorithm range observed: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1280,
+        "chart": 1210,
+        "chartScroll": 1210,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "algorithm range forecast: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "algorithm range forecast: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "algorithm range forecast: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "algorithm range forecast: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "algorithm range forecast: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1265,
+        "chart": 1195,
+        "chartScroll": 1542,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "single-date fifteen-series labels: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "single-date fifteen-series labels: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "single-date fifteen-series labels: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "single-date fifteen-series labels: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "single-date fifteen-series labels: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1265,
+        "chart": 1195,
+        "chartScroll": 1195,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "oversized persisted selection: reload restores one to three valid methods",
+      "status": "passed",
+      "detail": [
+        "legacy_ols",
+        "naive",
+        "ols"
+      ]
+    },
+    {
+      "name": "invalid persisted selection: reload restores one to three valid methods",
+      "status": "passed",
+      "detail": [
+        "legacy_ols"
+      ]
+    },
+    {
+      "name": "empty persisted selection: reload restores one to three valid methods",
+      "status": "passed",
+      "detail": [
+        "legacy_ols"
+      ]
+    },
+    {
+      "name": "desktop fifteen-series labels: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "desktop fifteen-series labels: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "desktop fifteen-series labels: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "desktop fifteen-series labels: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "desktop fifteen-series labels: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 1280,
+        "page": 1265,
+        "chart": 1195,
+        "chartScroll": 1736,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "320px fifteen-series labels: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "320px fifteen-series labels: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px fifteen-series labels: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px fifteen-series labels: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320px fifteen-series labels: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 320,
+        "page": 305,
+        "chart": 259,
+        "chartScroll": 1736,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "320px real touch swipe horizontally scrolls the dense chart",
+      "status": "passed",
+      "detail": {
+        "x": 242.20000000000002,
+        "y": 500.203125,
+        "initial": 0,
+        "overflow": 1462,
+        "touchAction": "pan-x pan-y",
+        "final": 125,
+        "mechanism": "dispatchTouchEvent start/move/end"
+      }
+    },
+    {
+      "name": "three-output-method presentation: finite plot without runtime errors",
+      "status": "passed",
+      "detail": {
+        "error": "",
+        "runtime": []
+      }
+    },
+    {
+      "name": "three-output-method presentation: forecast-to-resource values, shared history and actual-unit geometry",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three-output-method presentation: quarterly values and dates match each selected algorithm",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "three-output-method presentation: all quarterly labels fit without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "three-output-method presentation: dense charts scroll inside the page",
+      "status": "passed",
+      "detail": {
+        "viewport": 320,
+        "page": 320,
+        "chart": 274,
+        "chartScroll": 1501,
+        "overflow": "auto"
+      }
+    },
+    {
+      "name": "source and data hashes stay stable throughout algorithm QA",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "no JavaScript errors throughout algorithm interactions",
+      "status": "passed",
+      "detail": []
+    }
+  ],
+  "snapshots": [
+    {
+      "label": "original OLS default",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "three distinct algorithms",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 160,
+      "labels": 54,
+      "expanded_forecast_points": 153
+    },
+    {
+      "label": "output method legacy_ols",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method naive",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "naive"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method ols",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method piecewise",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "piecewise"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method damped_holt",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "damped_holt"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method auto_arima",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "auto_arima"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method damped_holt_hl90",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "damped_holt_hl90"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method damped_holt_hl365",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "damped_holt_hl365"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method damped_holt_hl730",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "damped_holt_hl730"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method logistic_cap2x",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "logistic_cap2x"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method logistic_cap4x",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "logistic_cap4x"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method logistic_cap8x",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "logistic_cap8x"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method gompertz_cap2x",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "gompertz_cap2x"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method gompertz_cap4x",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "gompertz_cap4x"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "output method gompertz_cap8x",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "gompertz_cap8x"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 51
+    },
+    {
+      "label": "three methods, category tokens",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 800,
+      "labels": 270,
+      "expanded_forecast_points": 765
+    },
+    {
+      "label": "three methods, category compute",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "compute",
+        "primary": "eflop_per_team_day",
+        "selectedMetrics": [
+          "eflop_per_team_day",
+          "prefill_eflop_per_team_day",
+          "decode_eflop_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 480,
+      "labels": 162,
+      "expanded_forecast_points": 459
+    },
+    {
+      "label": "three methods, category rate",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "rate",
+        "primary": "compute_pflops_window",
+        "selectedMetrics": [
+          "compute_pflops_window"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 160,
+      "labels": 54,
+      "expanded_forecast_points": 153
+    },
+    {
+      "label": "three methods, category agent_time",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "agent_time",
+        "primary": "agent_hours_per_team_day",
+        "selectedMetrics": [
+          "agent_hours_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 104,
+      "labels": 36,
+      "expanded_forecast_points": 147
+    },
+    {
+      "label": "three methods, category agent_scale",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "agent_scale",
+        "primary": "mean_online_agent_equivalents",
+        "selectedMetrics": [
+          "mean_online_agent_equivalents"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 104,
+      "labels": 36,
+      "expanded_forecast_points": 147
+    },
+    {
+      "label": "three methods, category tasks",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tasks",
+        "primary": "task_starts_per_team_day",
+        "selectedMetrics": [
+          "task_starts_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 106,
+      "labels": 37,
+      "expanded_forecast_points": 147
+    },
+    {
+      "label": "three methods, category cache",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "cache",
+        "primary": "prefix_cache_hit_rate",
+        "selectedMetrics": [
+          "prefix_cache_hit_rate"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 58,
+      "labels": 20,
+      "expanded_forecast_points": 153
+    },
+    {
+      "label": "maximum fifteen forecast curves",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 800,
+      "labels": 270,
+      "expanded_forecast_points": 765
+    },
+    {
+      "label": "monthly scenario ratios preserved for A",
+      "state": {
+        "year": 2030,
+        "scenario": "A",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "A"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 800,
+      "labels": 270,
+      "expanded_forecast_points": 765
+    },
+    {
+      "label": "monthly scenario ratios preserved for B",
+      "state": {
+        "year": 2030,
+        "scenario": "B",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "B"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 800,
+      "labels": 270,
+      "expanded_forecast_points": 765
+    },
+    {
+      "label": "monthly scenario ratios preserved for C",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 800,
+      "labels": 270,
+      "expanded_forecast_points": 765
+    },
+    {
+      "label": "team scaling 10",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 10,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 800,
+      "labels": 270,
+      "expanded_forecast_points": 765
+    },
+    {
+      "label": "team scaling 1000",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 1000,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 800,
+      "labels": 270,
+      "expanded_forecast_points": 765
+    },
+    {
+      "label": "team scaling 100",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 800,
+      "labels": 270,
+      "expanded_forecast_points": 765
+    },
+    {
+      "label": "processing-window scaling 8",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 8,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "rate",
+        "primary": "compute_pflops_window",
+        "selectedMetrics": [
+          "compute_pflops_window"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 160,
+      "labels": 54,
+      "expanded_forecast_points": 153
+    },
+    {
+      "label": "processing-window scaling 12",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 12,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "rate",
+        "primary": "compute_pflops_window",
+        "selectedMetrics": [
+          "compute_pflops_window"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 160,
+      "labels": 54,
+      "expanded_forecast_points": 153
+    },
+    {
+      "label": "processing-window scaling 24",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "rate",
+        "primary": "compute_pflops_window",
+        "selectedMetrics": [
+          "compute_pflops_window"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 160,
+      "labels": 54,
+      "expanded_forecast_points": 153
+    },
+    {
+      "label": "three scenarios by three rate algorithms",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "rate",
+        "primary": "compute_pflops_window",
+        "selectedMetrics": [
+          "compute_pflops_window"
+        ],
+        "scenarios": [
+          "A",
+          "B",
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 480,
+      "labels": 162,
+      "expanded_forecast_points": 459
+    },
+    {
+      "label": "algorithm range observed",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "observed",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 35,
+      "labels": 15,
+      "expanded_forecast_points": 0
+    },
+    {
+      "label": "algorithm range forecast",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "forecast",
+        "start": "2026-02-28",
+        "end": "2030-11-18",
+        "detailMode": "absolute"
+      },
+      "marks": 765,
+      "labels": 255,
+      "expanded_forecast_points": 765
+    },
+    {
+      "label": "single-date fifteen-series labels",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "custom",
+        "start": "2028-05-18",
+        "end": "2028-05-18",
+        "detailMode": "absolute"
+      },
+      "marks": 15,
+      "labels": 15,
+      "expanded_forecast_points": 15
+    },
+    {
+      "label": "desktop fifteen-series labels",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2028-05-18",
+        "end": "2028-05-18",
+        "detailMode": "absolute"
+      },
+      "marks": 800,
+      "labels": 270,
+      "expanded_forecast_points": 765
+    },
+    {
+      "label": "320px fifteen-series labels",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "input_tokens_per_team_day",
+          "output_tokens_per_team_day",
+          "cached_input_tokens_per_team_day",
+          "uncached_input_tokens_per_team_day",
+          "total_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "naive",
+          "ols"
+        ],
+        "range": "all",
+        "start": "2028-05-18",
+        "end": "2028-05-18",
+        "detailMode": "absolute"
+      },
+      "marks": 800,
+      "labels": 270,
+      "expanded_forecast_points": 765
+    },
+    {
+      "label": "three-output-method presentation",
+      "state": {
+        "year": 2030,
+        "scenario": "C",
+        "team": 100,
+        "window": 24,
+        "model": "synthetic-kimi-k2-scaled-30t",
+        "view": "trend",
+        "category": "tokens",
+        "primary": "output_tokens_per_team_day",
+        "selectedMetrics": [
+          "output_tokens_per_team_day"
+        ],
+        "scenarios": [
+          "C"
+        ],
+        "algorithms": [
+          "legacy_ols",
+          "damped_holt_hl365",
+          "logistic_cap4x"
+        ],
+        "range": "all",
+        "start": "2028-05-18",
+        "end": "2028-05-18",
+        "detailMode": "absolute"
+      },
+      "marks": 160,
+      "labels": 54,
+      "expanded_forecast_points": 153
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "dashboard_algorithms.png",
+      "width": 1280,
+      "sha256": "dcf22d7901f64270741242a2fd476bb6531fba7c018d7bc60f4c496e33f2a8c9"
+    },
+    {
+      "file": "dashboard_algorithms_menu.png",
+      "width": 1280,
+      "sha256": "69f1c36c8d5900373d81443b28f52640bffd25c96b70bf071c4a6019420aa4cf"
+    },
+    {
+      "file": "dashboard_algorithms_mobile.png",
+      "width": 320,
+      "sha256": "43447a6bdfd363b50737d19ffaac3013329e93990b07aa7a5ca24a4d3df70dd4"
+    }
+  ],
+  "elapsed_seconds": 32.5981172779575
+}

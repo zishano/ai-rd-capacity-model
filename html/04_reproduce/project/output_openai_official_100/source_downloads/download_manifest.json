@@ -1,0 +1,26 @@
+[
+  {
+    "id": "november_2026",
+    "requested_url": "https://openai.com/index/research-acceleration-jagged-frontier/",
+    "final_url": "https://openai.com/index/research-acceleration-jagged-frontier/",
+    "downloaded_at_utc": "2026-11-21T07:47:51.293828+00:00",
+    "sha256": "07a39c8c1298f2f4e2163a4811dcb3923a1d6b49a5bfe4a1f24be9634c57cace",
+    "bytes": 1813869,
+    "content_type": "text/html; charset=utf-8",
+    "file": "november_2026_page.html",
+    "provenance": "Fresh HTTPS download from the official OpenAI article",
+    "unique_chart_count": 18
+  },
+  {
+    "id": "september_2026",
+    "requested_url": "https://openai.com/index/research-acceleration-view-inside-openai/",
+    "final_url": "https://openai.com/index/research-acceleration-view-inside-openai/",
+    "downloaded_at_utc": "2026-11-21T07:47:53.424813+00:00",
+    "sha256": "2d054b99c120b9ef553b7a3bee15827f8c76f8ec7282cd4e5463baf106292aa2",
+    "bytes": 2345146,
+    "content_type": "text/html; charset=utf-8",
+    "file": "september_2026_page.html",
+    "provenance": "Fresh HTTPS download from the official OpenAI article",
+    "unique_chart_count": 13
+  }
+]

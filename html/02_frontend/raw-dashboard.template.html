@@ -1,0 +1,49 @@
+<div id="raw-research-dashboard-v1">
+<style>/* RAW_DASHBOARD_STYLES */</style>
+<header class="page-header">
+  <div>
+    <div class="eyebrow">OpenAI公开观测 / 外推目标 2030-11-18</div>
+    <div class="raw-heading-row"><h1>原始数据推演</h1><a id="raw-back" class="raw-back" href="resource-dashboard-preview.html">返回资源探索</a></div>
+    <p class="muted">保留公开统计的原始人均单位与观察窗口。</p>
+  </div>
+  <div class="baseline-notes" aria-label="原始统计口径">
+    <p><strong>人均口径</strong>直接展示公开人均统计与外推，不换算为百人团队资源需求。</p>
+    <p><strong>28日窗口</strong>Agent工作日、研发任务与并发档位沿用28日统计窗口。</p>
+    <p><strong>14日窗口</strong>输出Token沿用官方14日滑动平均，已平滑的数据不重复处理；与资源页输出窗口一致。</p>
+  </div>
+</header>
+<section class="surface parameters" aria-label="原始数据外推参数">
+  <div class="section-heading"><h2>外推参数</h2><span class="muted">概要取值固定2030-11-18 · 未来数值为算法推演</span></div>
+  <div class="parameter-grid raw-parameter-grid">
+    <label for="raw-method">总量外推算法（图1、3、4：工作日、任务、输出Token）<select id="raw-method"></select></label>
+    <label for="raw-concurrency-method">并发占比外推算法（仅图2：并发占比）<select id="raw-concurrency-method"></select></label>
+    <label for="raw-range">图表时间范围<select id="raw-range"><option value="all">完整周期</option><option value="observed">观测期</option><option value="forecast">预测期</option><option value="custom">自定义区间</option></select></label>
+  </div>
+  <div id="raw-date-controls" class="date-controls raw-date-controls" hidden><label for="raw-start">开始日期<input id="raw-start" type="date"></label><label for="raw-end">结束日期<input id="raw-end" type="date"></label><span class="muted">只调整图表范围；概要仍为2030-11-18预测。</span></div>
+</section>
+<div class="headline-stats" aria-label="2030年11月18日研究员人均预测">
+  <section class="surface stat"><div class="muted">研究员 · Agent工作日</div><div class="stat-value"><span data-testid="raw-workdays"></span><small>工作日/研究员日</small></div><div class="stat-detail">28日统计口径</div></section>
+  <section class="surface stat"><div class="muted">研究员 · 研发任务</div><div class="stat-value"><span data-testid="raw-tasks"></span><small>项/研究员日</small></div><div class="stat-detail">18类任务合计 · 28日统计口径</div></section>
+  <section class="surface stat"><div class="muted">研究员 · 输出Token</div><div class="stat-value"><span data-testid="raw-output"></span><small>万Token/研究员日</small></div><div class="stat-detail">18类输出合计 · 14日统计口径</div></section>
+  <section class="surface stat"><div class="muted">高并发档位 · ≥16</div><div class="stat-value"><span data-testid="raw-peak-ge16"></span><small>%</small></div><div class="stat-detail">档位占比合计 · 28日统计口径</div></section>
+</div>
+<section class="surface explorer" aria-label="原始数据图表">
+  <div class="explorer-heading"><div><div class="eyebrow">原始单位 · 公开观测与算法外推</div><h2 id="raw-chart-title">五团队Agent工作日</h2></div><label class="view-picker" for="raw-view">分析内容<select id="raw-view"><option value="workdays">五团队Agent工作日</option><option value="concurrency">九档并发占比</option><option value="tasks">18类研发任务</option><option value="output">18类输出Token</option></select></label></div>
+  <div id="raw-uncertainty-controls" class="raw-uncertainty-controls" hidden><label for="raw-show-uncertainty"><input id="raw-show-uncertainty" type="checkbox">显示名义80% / 95%区间</label><span class="muted">未经长期覆盖率校准 · 默认收起以突出中心趋势</span></div>
+  <div class="chart-context"><div id="raw-legend" class="legend"></div><p id="raw-chart-context" class="muted"></p></div>
+  <p id="raw-error" class="error" role="alert" hidden></p>
+  <div id="raw-chart" class="chart"></div>
+  <div id="raw-readout" class="chart-readout" aria-label="图表取值"></div>
+  <p id="raw-chart-note" class="chart-note"></p>
+  <details id="raw-data-details" class="data-details"><summary>当前图的全部数据</summary><div class="data-actions"><span class="muted" id="raw-data-count"></span><button type="button" id="raw-download">下载当前数据 CSV</button></div><div class="table-scroll"><table id="raw-data-table"></table></div></details>
+</section>
+<details id="raw-sources" class="surface sources"><summary>原始口径与数据来源</summary><div class="source-facts">
+  <p>观测期沿用公开统计；预测期由所选算法外推。各图分别保留原始单位、统计窗口与观测截止日期。</p>
+  <p>总量外推算法用于Agent工作日、研发任务和输出Token；并发占比使用独立算法。并发档位是分布占比，不是团队同时在线的Agent数量。</p>
+  <p>2030年数值是本页面的算法推演，不是OpenAI发布的预测。本页未引入模型参数、团队人数或资源增长情景。</p>
+  <div class="source-links"><a href="https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK" target="_blank" rel="noopener noreferrer">OpenAI：研究员任务与输出统计</a><a href="https://openai.com/index/research-acceleration-jagged-frontier/#agent-workdays-research" target="_blank" rel="noopener noreferrer">OpenAI：Agent活动与并发统计</a></div>
+</div></details>
+<div id="raw-live-summary" class="sr-only" aria-live="polite"></div>
+<script type="application/json" id="raw-inline-data">{}</script>
+<script>/* RAW_DASHBOARD_SCRIPT */</script>
+</div>

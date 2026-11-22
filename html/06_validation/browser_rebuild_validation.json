@@ -1,0 +1,156 @@
+{
+  "created_at_utc": "2026-11-22T05:42:17.222925+00:00",
+  "status": "passed",
+  "scope": "archived-input rebuild; saved trend-model fits are not retrained",
+  "options": {
+    "check": true,
+    "publish": false,
+    "recompute_data": true,
+    "browser_check": true,
+    "export_figures": false
+  },
+  "commands": [
+    {
+      "script": "build_data.py",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"rows\": 15, \"endpoint_checks\": 27, \"monthly_rows\": {\"tokens\": 174, \"agents\": 165}, \"monthly_resource_rows\": 174, \"monthly_task_rows\": 171, \"model\": {\"total_parameters\": 30001025228800, \"active_parameters\": 36078592000, \"experts_per_token\": 8, \"name\": \"合成30T Top-8 MoE\"}}",
+      "stderr": ""
+    },
+    {
+      "script": "build_algorithm_data.py",
+      "exit_code": 0,
+      "stdout": "{\"file\": \"reconstructed_project/output_team100_resource_dashboard/algorithm_forecasts.json\", \"bytes\": 72947, \"source_and_dashboard_unchanged\": true, \"status\": \"passed\", \"method_count\": 15, \"forecast_points\": 2250, \"points_per_method\": {\"output\": 52, \"workdays\": 49, \"tasks\": 49}, \"legacy_matches\": {\"output\": {\"matched_monthly_rows\": 153, \"max_relative_error\": 4.068379625073976e-16}, \"workdays\": {\"matched_monthly_rows\": 147, \"max_relative_error\": 3.861168027362098e-16}, \"tasks\": {\"matched_monthly_rows\": 147, \"max_relative_error\": 6.013934360703786e-16}}, \"matched_annual_values\": 36}",
+      "stderr": ""
+    },
+    {
+      "script": "build_raw_data.py",
+      "exit_code": 0,
+      "stdout": "{\"file\": \"reconstructed_project/output_team100_resource_dashboard/raw_research_data.json\", \"bytes\": 360711, \"source_files_unchanged\": true, \"status\": \"passed\", \"source_chart_rows\": 63590, \"total_forecast_checks\": 750, \"method_count\": 5, \"concurrency_method_count\": 4, \"metrics\": {\"workdays\": {\"series\": 5, \"history_dates\": 169, \"forecast_dates_per_method\": 49}, \"concurrency\": {\"series\": 9, \"history_dates\": 161, \"forecast_dates_per_method\": 49}, \"tasks\": {\"series\": 18, \"history_dates\": 232, \"forecast_dates_per_method\": 49}, \"output\": {\"series\": 18, \"history_dates\": 208, \"forecast_dates_per_method\": 52}}}",
+      "stderr": ""
+    },
+    {
+      "script": "build_fragment.py",
+      "exit_code": 0,
+      "stdout": "{\"fragment\": \"reconstructed_project/output_team100_resource_dashboard/team-resource-dashboard.html\", \"rows\": 15, \"category_rows\": 270, \"bytes\": 641079, \"data_sha256\": \"045ab5eb740f3c938276fc75a930f1161f65a271c8f1f524cf704df18c0d5722\", \"algorithm_count\": 15, \"embedded_ui_data_matches_source\": true}",
+      "stderr": ""
+    },
+    {
+      "script": "build_preview.py",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"preview\": \"reconstructed_project/output_team100_resource_dashboard/resource-dashboard-preview.html\", \"fragment_bytes\": 641079, \"ppt_native_editable_shapes\": 39, \"ppt_validation\": \"OOXML, labels, native shapes and slide bounds; not Office rendering\", \"annual_analysis_exports\": {\"status\": \"passed\", \"annual_rows\": 5, \"scenario\": \"C\", \"png_svg_pdf_panels\": 6, \"ppt_slides\": 3, \"ppt_native_charts\": 9, \"embedded_workbooks\": 9, \"heatmap_native_cells\": 30, \"ppt_validation\": \"OOXML, native charts, workbooks and bounds; not Office rendering\", \"files\": [\"team-resource-analysis-2026-2030.png\", \"team-resource-analysis-2026-2030.svg\", \"team-resource-analysis-2026-2030.pdf\", \"team-resource-analysis-2026-2030.pptx\"]}}",
+      "stderr": ""
+    },
+    {
+      "script": "build_raw_dashboard.py",
+      "exit_code": 0,
+      "stdout": "{\"page\": \"reconstructed_project/output_team100_resource_dashboard/raw-data-dashboard.html\", \"bytes\": 400802, \"data_sha256\": \"543fb85ac21003a5fa63f1c9627e733422889ad54dc586e88b610cb4eb182708\", \"metrics\": [\"workdays\", \"concurrency\", \"tasks\", \"output\"], \"self_contained\": true}",
+      "stderr": ""
+    },
+    {
+      "script": "validate_explorer.py",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"checks\": 355, \"elapsed_seconds\": 70.72066249093041, \"error\": null, \"failures\": []}",
+      "stderr": ""
+    },
+    {
+      "script": "validate_algorithms.py",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"checks\": 190, \"elapsed_seconds\": 32.15072629600763, \"error\": null, \"failures\": []}",
+      "stderr": ""
+    },
+    {
+      "script": "validate_raw_dashboard.py",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"checks\": 225, \"elapsed_seconds\": 33.531492182053626, \"error\": null, \"failures\": []}",
+      "stderr": ""
+    }
+  ],
+  "comparisons": [
+    {
+      "path": "01_pages/resource-dashboard-preview.html",
+      "archived_sha256": "114c17337d42d083a73cc5a39fa6b85c19dba465b1457d1c75ef10711da6404a",
+      "rebuilt_sha256": "114c17337d42d083a73cc5a39fa6b85c19dba465b1457d1c75ef10711da6404a",
+      "identical": true
+    },
+    {
+      "path": "01_pages/raw-data-dashboard.html",
+      "archived_sha256": "8793110e85a2234175ff4e18b5da90910dd556ab8e7304b85027832d1da8d6be",
+      "rebuilt_sha256": "8793110e85a2234175ff4e18b5da90910dd556ab8e7304b85027832d1da8d6be",
+      "identical": true
+    },
+    {
+      "path": "01_pages/team-resource-dashboard.html",
+      "archived_sha256": "41337f56573a3d7056b9ed0474006710b7624d2b1f36aebefe173d8c05ecaf9a",
+      "rebuilt_sha256": "41337f56573a3d7056b9ed0474006710b7624d2b1f36aebefe173d8c05ecaf9a",
+      "identical": true
+    },
+    {
+      "path": "03_data/algorithm_forecasts.json",
+      "archived_sha256": "b4f2287ebc6d746f04eb2261f53c94fa7edd467fd1bdaa39971e5d46054fc534",
+      "rebuilt_sha256": "b4f2287ebc6d746f04eb2261f53c94fa7edd467fd1bdaa39971e5d46054fc534",
+      "identical": true
+    },
+    {
+      "path": "03_data/baseline_2026.csv",
+      "archived_sha256": "66234a112f4ebb29c743330c4911beb3a95f02d476335e0763c1ed1727e9b8bc",
+      "rebuilt_sha256": "66234a112f4ebb29c743330c4911beb3a95f02d476335e0763c1ed1727e9b8bc",
+      "identical": true
+    },
+    {
+      "path": "03_data/category_mix.csv",
+      "archived_sha256": "c314fbf526d090ec0ce4b02205f37bbeb316f6c15188ec6089f54960ea31b7ab",
+      "rebuilt_sha256": "c314fbf526d090ec0ce4b02205f37bbeb316f6c15188ec6089f54960ea31b7ab",
+      "identical": true
+    },
+    {
+      "path": "03_data/dashboard_data.csv",
+      "archived_sha256": "b9b61d59ea30ba1c90702e26e3234022c7160cb6fb90819198e1939c84d10bcf",
+      "rebuilt_sha256": "b9b61d59ea30ba1c90702e26e3234022c7160cb6fb90819198e1939c84d10bcf",
+      "identical": true
+    },
+    {
+      "path": "03_data/dashboard_data.json",
+      "archived_sha256": "045ab5eb740f3c938276fc75a930f1161f65a271c8f1f524cf704df18c0d5722",
+      "rebuilt_sha256": "045ab5eb740f3c938276fc75a930f1161f65a271c8f1f524cf704df18c0d5722",
+      "identical": true
+    },
+    {
+      "path": "03_data/monthly_agents.csv",
+      "archived_sha256": "48a05ac521581bfcfa9a09bb8226f50fde92c2bcd1216cf3249cb8feedacb46c",
+      "rebuilt_sha256": "48a05ac521581bfcfa9a09bb8226f50fde92c2bcd1216cf3249cb8feedacb46c",
+      "identical": true
+    },
+    {
+      "path": "03_data/monthly_resources.csv",
+      "archived_sha256": "9c116e76b7ec845a325f52cc802a8458c43e4fa238be3716ee1447ac99dd04b1",
+      "rebuilt_sha256": "9c116e76b7ec845a325f52cc802a8458c43e4fa238be3716ee1447ac99dd04b1",
+      "identical": true
+    },
+    {
+      "path": "03_data/monthly_tasks.csv",
+      "archived_sha256": "1b32e0f909d0bf9491a296794ae17be65d1f907350a89283fdc7c2ddeeb84526",
+      "rebuilt_sha256": "1b32e0f909d0bf9491a296794ae17be65d1f907350a89283fdc7c2ddeeb84526",
+      "identical": true
+    },
+    {
+      "path": "03_data/monthly_tokens.csv",
+      "archived_sha256": "46ae587fb39c69aa231bddfd03cda25e48d836910604b93386276862c096a283",
+      "rebuilt_sha256": "46ae587fb39c69aa231bddfd03cda25e48d836910604b93386276862c096a283",
+      "identical": true
+    },
+    {
+      "path": "03_data/official_history.csv",
+      "archived_sha256": "d9455a9430874179df594832e6961c1144bf7d75af596d5a0a7e4181575b2b28",
+      "rebuilt_sha256": "d9455a9430874179df594832e6961c1144bf7d75af596d5a0a7e4181575b2b28",
+      "identical": true
+    },
+    {
+      "path": "03_data/raw_research_data.json",
+      "archived_sha256": "543fb85ac21003a5fa63f1c9627e733422889ad54dc586e88b610cb4eb182708",
+      "rebuilt_sha256": "543fb85ac21003a5fa63f1c9627e733422889ad54dc586e88b610cb4eb182708",
+      "identical": true
+    }
+  ],
+  "source": "04_reproduce/project + classified bundle files; original checkout not used",
+  "browser_checks": 770
+}

@@ -1,0 +1,139 @@
+{
+  "created_at_utc": "2026-11-22T09:10:04.135174+00:00",
+  "status": "passed",
+  "scope": "archived-input rebuild; saved trend-model fits are not retrained",
+  "options": {
+    "check": false,
+    "publish": true,
+    "recompute_data": false,
+    "refresh_algorithms": false,
+    "browser_check": true,
+    "export_figures": false
+  },
+  "commands": [
+    {
+      "script": "build_fragment.py",
+      "exit_code": 0,
+      "stdout": "{\"fragment\": \"reconstructed_project/output_team100_resource_dashboard/team-resource-dashboard.html\", \"rows\": 15, \"category_rows\": 270, \"bytes\": 682513, \"data_sha256\": \"2cdd9b5ee7e817e73ed3a88e6d62e25f8c26d6acd25404082245b560e0e001a5\", \"algorithm_count\": 16, \"embedded_ui_data_matches_source\": true}",
+      "stderr": ""
+    },
+    {
+      "script": "build_preview.py",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"preview\": \"reconstructed_project/output_team100_resource_dashboard/resource-dashboard-preview.html\", \"fragment_bytes\": 682513, \"ppt_native_editable_shapes\": 39, \"ppt_validation\": \"OOXML, labels, native shapes and slide bounds; not Office rendering\", \"annual_analysis_exports\": {\"status\": \"passed\", \"annual_rows\": 5, \"scenario\": \"C\", \"png_svg_pdf_panels\": 6, \"ppt_slides\": 3, \"ppt_native_charts\": 9, \"embedded_workbooks\": 9, \"heatmap_native_cells\": 30, \"ppt_validation\": \"OOXML, native charts, workbooks and bounds; not Office rendering\", \"files\": [\"team-resource-analysis-2026-2030.png\", \"team-resource-analysis-2026-2030.svg\", \"team-resource-analysis-2026-2030.pdf\", \"team-resource-analysis-2026-2030.pptx\"]}}",
+      "stderr": ""
+    },
+    {
+      "script": "build_raw_dashboard.py",
+      "exit_code": 0,
+      "stdout": "{\"page\": \"reconstructed_project/output_team100_resource_dashboard/raw-data-dashboard.html\", \"bytes\": 498725, \"data_sha256\": \"ff749cf029e35619733f38c2a29b1b5bad3397882d53513952be5be6cd099df3\", \"metrics\": [\"workdays\", \"concurrency\", \"tasks\", \"output\"], \"self_contained\": true}",
+      "stderr": ""
+    },
+    {
+      "script": "validate_explorer.py",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"checks\": 363, \"elapsed_seconds\": 71.40216170693748, \"error\": null, \"failures\": []}",
+      "stderr": ""
+    },
+    {
+      "script": "validate_algorithms.py",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"checks\": 586, \"elapsed_seconds\": 53.95944074797444, \"error\": null, \"failures\": []}",
+      "stderr": ""
+    },
+    {
+      "script": "validate_raw_dashboard.py",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"checks\": 302, \"elapsed_seconds\": 43.64510824508034, \"error\": null, \"failures\": []}",
+      "stderr": ""
+    }
+  ],
+  "comparisons": [
+    {
+      "path": "01_pages/resource-dashboard-preview.html",
+      "archived_sha256": "19cb9367152c6540b8d01005e03be79a43eef930e043c953841508195357436c",
+      "rebuilt_sha256": "19cb9367152c6540b8d01005e03be79a43eef930e043c953841508195357436c",
+      "identical": true
+    },
+    {
+      "path": "01_pages/raw-data-dashboard.html",
+      "archived_sha256": "4d9d43d824fa1a272df53008d278f3e0114f5a1d7a246710be8625326a9403d4",
+      "rebuilt_sha256": "720151baf09c1f882313ec1d86d9f07927f1770b3adf9435d7403d55a988b2d7",
+      "identical": false
+    },
+    {
+      "path": "01_pages/team-resource-dashboard.html",
+      "archived_sha256": "26307351266b68a15743040c798f9940832acc1fb6e0db76ed931b1a87201685",
+      "rebuilt_sha256": "26307351266b68a15743040c798f9940832acc1fb6e0db76ed931b1a87201685",
+      "identical": true
+    },
+    {
+      "path": "03_data/algorithm_forecasts.json",
+      "archived_sha256": "a57cd62aa3313ad5bb6d1b90495c4c1b8e50add4ee9e3042037d8b9626fd7a0b",
+      "rebuilt_sha256": "a57cd62aa3313ad5bb6d1b90495c4c1b8e50add4ee9e3042037d8b9626fd7a0b",
+      "identical": true
+    },
+    {
+      "path": "03_data/baseline_2026.csv",
+      "archived_sha256": "2a0a6cf5e61de03e4b21ade89dabe996e2a7a44920a4ff8319d33a1ebb8d13c1",
+      "rebuilt_sha256": "2a0a6cf5e61de03e4b21ade89dabe996e2a7a44920a4ff8319d33a1ebb8d13c1",
+      "identical": true
+    },
+    {
+      "path": "03_data/category_mix.csv",
+      "archived_sha256": "8c13bdd988dea3c85d394c277644666de4f0fd70f244c8f636842aa2858ce71b",
+      "rebuilt_sha256": "8c13bdd988dea3c85d394c277644666de4f0fd70f244c8f636842aa2858ce71b",
+      "identical": true
+    },
+    {
+      "path": "03_data/dashboard_data.csv",
+      "archived_sha256": "4f6e81be56b28314d07446d2d3c9e3a0b7bda785cbab29c54401f15bfe30efdd",
+      "rebuilt_sha256": "4f6e81be56b28314d07446d2d3c9e3a0b7bda785cbab29c54401f15bfe30efdd",
+      "identical": true
+    },
+    {
+      "path": "03_data/dashboard_data.json",
+      "archived_sha256": "2cdd9b5ee7e817e73ed3a88e6d62e25f8c26d6acd25404082245b560e0e001a5",
+      "rebuilt_sha256": "2cdd9b5ee7e817e73ed3a88e6d62e25f8c26d6acd25404082245b560e0e001a5",
+      "identical": true
+    },
+    {
+      "path": "03_data/monthly_agents.csv",
+      "archived_sha256": "48a05ac521581bfcfa9a09bb8226f50fde92c2bcd1216cf3249cb8feedacb46c",
+      "rebuilt_sha256": "48a05ac521581bfcfa9a09bb8226f50fde92c2bcd1216cf3249cb8feedacb46c",
+      "identical": true
+    },
+    {
+      "path": "03_data/monthly_resources.csv",
+      "archived_sha256": "72b8f43b3671912d3409558ff863e0eeb63e0e4e55d9bf08517b66792013530c",
+      "rebuilt_sha256": "72b8f43b3671912d3409558ff863e0eeb63e0e4e55d9bf08517b66792013530c",
+      "identical": true
+    },
+    {
+      "path": "03_data/monthly_tasks.csv",
+      "archived_sha256": "1b32e0f909d0bf9491a296794ae17be65d1f907350a89283fdc7c2ddeeb84526",
+      "rebuilt_sha256": "1b32e0f909d0bf9491a296794ae17be65d1f907350a89283fdc7c2ddeeb84526",
+      "identical": true
+    },
+    {
+      "path": "03_data/monthly_tokens.csv",
+      "archived_sha256": "836ce094ca105c4fb233058832b3ca21829bc40cfdfb07a3f363522e8bee867b",
+      "rebuilt_sha256": "836ce094ca105c4fb233058832b3ca21829bc40cfdfb07a3f363522e8bee867b",
+      "identical": true
+    },
+    {
+      "path": "03_data/official_history.csv",
+      "archived_sha256": "d9455a9430874179df594832e6961c1144bf7d75af596d5a0a7e4181575b2b28",
+      "rebuilt_sha256": "d9455a9430874179df594832e6961c1144bf7d75af596d5a0a7e4181575b2b28",
+      "identical": true
+    },
+    {
+      "path": "03_data/raw_research_data.json",
+      "archived_sha256": "ff749cf029e35619733f38c2a29b1b5bad3397882d53513952be5be6cd099df3",
+      "rebuilt_sha256": "ff749cf029e35619733f38c2a29b1b5bad3397882d53513952be5be6cd099df3",
+      "identical": true
+    }
+  ],
+  "source": "04_reproduce/project + classified bundle files; original checkout not used",
+  "browser_checks": 1251
+}

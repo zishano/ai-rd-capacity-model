@@ -1,0 +1,27 @@
+# build
+/target
+
+# output
+/output/
+/output_design_examples/
+/output_openai_official_100/
+/output_openai_researcher_forecast/
+/output_team100_30t_c_annual/
+/output_team100_resource_dashboard/
+/task_md/
+/data/
+/data_row/
+/data_predict/
+/report_nextgen_ensemble_20261122/
+
+# cache
+__pycache__
+
+# lint cache
+.ruff_cache/
+
+# development environments
+.devenv*
+.venv/
+
+

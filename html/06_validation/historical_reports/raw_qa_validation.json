@@ -1,0 +1,2515 @@
+{
+  "created_at_utc": "2026-11-22T05:23:05.824453+00:00",
+  "status": "passed",
+  "method": "Standalone Chrome with actual navigation, daily source checks, stacked geometry, CSV and touch gestures",
+  "source_sha256": {
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/raw-data-dashboard.html": "8793110e85a2234175ff4e18b5da90910dd556ab8e7304b85027832d1da8d6be",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/resource-dashboard-preview.html": "114c17337d42d083a73cc5a39fa6b85c19dba465b1457d1c75ef10711da6404a",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/team-resource-dashboard.html": "41337f56573a3d7056b9ed0474006710b7624d2b1f36aebefe173d8c05ecaf9a",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/raw_research_data.json": "543fb85ac21003a5fa63f1c9627e733422889ad54dc586e88b610cb4eb182708",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/dashboard_data.json": "045ab5eb740f3c938276fc75a930f1161f65a271c8f1f524cf704df18c0d5722",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/dashboard_data.csv": "b9b61d59ea30ba1c90702e26e3234022c7160cb6fb90819198e1939c84d10bcf"
+  },
+  "checks": [
+    {
+      "name": "raw artifact exposes the four requested source charts",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "five total-volume methods retain the original OLS default",
+      "status": "passed",
+      "detail": [
+        "legacy_ols",
+        "damped_holt",
+        "damped_holt_hl365",
+        "logistic_cap4x",
+        "gompertz_cap4x"
+      ]
+    },
+    {
+      "name": "four concurrency-share methods use their independent default",
+      "status": "passed",
+      "detail": [
+        "legacy_log_complement",
+        "naive",
+        "conditional_logistic",
+        "joint_logratio"
+      ]
+    },
+    {
+      "name": "raw output keeps its official 14-day window while other charts retain 28 days",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "workdays contain five overlapping research groups and concurrency contains nine bins",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "resource-page button links to raw views with an explicit restorable state",
+      "status": "passed",
+      "detail": "file:///mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/raw-data-dashboard.html#return=resource-dashboard-preview.html&resource-state=%7B%22year%22%3A2030%2C%22scenario%22%3A%22B%22%2C%22team%22%3A1000%2C%22window%22%3A24%2C%22model%22%3A%22synthetic-kimi-k2-scaled-30t%22%2C%22view%22%3A%22trend%22%2C%22category%22%3A%22compute%22%2C%22primary%22%3A%22eflop_per_team_day%22%2C%22selectedMetrics%22%3A%5B%22eflop_per_team_day%22%2C%22prefill_eflop_per_team_day%22%5D%2C%22scenarios%22%3A%5B%22B%22%5D%2C%22algorithms%22%3A%5B%22legacy_ols%22%5D%2C%22range%22%3A%22all%22%2C%22start%22%3A%222026-02-28%22%2C%22end%22%3A%222030-11-18%22%2C%22detailMode%22%3A%22absolute%22%7D"
+    },
+    {
+      "name": "raw default workdays: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "raw default workdays: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "raw default workdays: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "raw default workdays: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "raw default workdays: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1210,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "raw page starts with original methods and a separate workdays view",
+      "status": "passed",
+      "detail": {
+        "view": "workdays",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-01-20",
+        "end": "2030-11-18"
+      }
+    },
+    {
+      "name": "all four views and their independent algorithms are selectable",
+      "status": "passed",
+      "detail": {
+        "view": [
+          "workdays",
+          "concurrency",
+          "tasks",
+          "output"
+        ],
+        "method": [
+          "legacy_ols",
+          "damped_holt",
+          "damped_holt_hl365",
+          "logistic_cap4x",
+          "gompertz_cap4x"
+        ],
+        "concurrency-method": [
+          "legacy_log_complement",
+          "naive",
+          "conditional_logistic",
+          "joint_logratio"
+        ]
+      }
+    },
+    {
+      "name": "workdays / legacy_ols: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays / legacy_ols: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays / legacy_ols: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "workdays / legacy_ols: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "workdays / legacy_ols: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1210,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "workdays / damped_holt: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays / damped_holt: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays / damped_holt: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "workdays / damped_holt: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "workdays / damped_holt: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1210,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "workdays / damped_holt_hl365: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays / damped_holt_hl365: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays / damped_holt_hl365: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "workdays / damped_holt_hl365: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "workdays / damped_holt_hl365: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1210,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "workdays / logistic_cap4x: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays / logistic_cap4x: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays / logistic_cap4x: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "workdays / logistic_cap4x: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "workdays / logistic_cap4x: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1210,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "workdays / gompertz_cap4x: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays / gompertz_cap4x: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays / gompertz_cap4x: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "workdays / gompertz_cap4x: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "workdays / gompertz_cap4x: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1210,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "workdays original full series: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays original full series: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays original full series: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "workdays: downloaded CSV preserves every source value and its actual units",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays observed: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays observed: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays observed: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "pointer readout retains the actual source date 2026-07-26",
+      "status": "passed",
+      "detail": "2026-07-26 · 公开观测 · 28日窗口各团队分别统计，不作加总预训练 3 Agent工作日/研究员日后训练 2.5 Agent工作日/研究员日全部研究团队 2.1 Agent工作日/研究员日扩展与基础设施 1.7 Agent工作日/研究员日其他 1.2 Agent工作日/研究员日"
+    },
+    {
+      "name": "workdays forecast: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays forecast: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays forecast: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "workdays single actual observation: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays single actual observation: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "workdays single actual observation: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "workdays single actual observation: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "workdays single actual observation: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1210,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "concurrency / legacy_log_complement: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency / legacy_log_complement: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency / legacy_log_complement: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "concurrency / legacy_log_complement: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "concurrency / legacy_log_complement: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1210,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "concurrency / naive: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency / naive: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency / naive: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "concurrency / naive: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "concurrency / naive: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1210,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "concurrency / conditional_logistic: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency / conditional_logistic: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency / conditional_logistic: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "concurrency / conditional_logistic: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "concurrency / conditional_logistic: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1210,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "concurrency / joint_logratio: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency / joint_logratio: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency / joint_logratio: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "concurrency / joint_logratio: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "concurrency / joint_logratio: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1210,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "concurrency original full series: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency original full series: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency original full series: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "concurrency: downloaded CSV preserves every source value and its actual units",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency observed: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency observed: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency observed: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "pointer readout retains the actual source date 2026-07-30",
+      "status": "passed",
+      "detail": "2026-07-30 · 公开观测 · 28日窗口九档合计 100.00%0 1.5 %(0, 1) 3.4 %[1, 2) 12 %[2, 4) 29.7 %[4, 8) 33.2 %[8, 16) 15.9 %[16, 32) 3.1 %[32, 64) 0.8 %[64, ∞) 0.4 %"
+    },
+    {
+      "name": "concurrency forecast: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency forecast: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency forecast: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "concurrency single actual observation: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency single actual observation: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "concurrency single actual observation: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "concurrency single actual observation: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "concurrency single actual observation: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1265,
+        "viewport": 1280,
+        "chart": {
+          "width": 1195,
+          "scrollWidth": 1195,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "tasks / legacy_ols: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks / legacy_ols: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks / legacy_ols: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "tasks / legacy_ols: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "tasks / legacy_ols: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1265,
+        "viewport": 1280,
+        "chart": {
+          "width": 1195,
+          "scrollWidth": 1201,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "tasks / damped_holt: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks / damped_holt: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks / damped_holt: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "tasks / damped_holt: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "tasks / damped_holt: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1265,
+        "viewport": 1280,
+        "chart": {
+          "width": 1195,
+          "scrollWidth": 1195,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "tasks / damped_holt_hl365: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks / damped_holt_hl365: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks / damped_holt_hl365: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "tasks / damped_holt_hl365: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "tasks / damped_holt_hl365: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1265,
+        "viewport": 1280,
+        "chart": {
+          "width": 1195,
+          "scrollWidth": 1195,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "tasks / logistic_cap4x: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks / logistic_cap4x: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks / logistic_cap4x: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "tasks / logistic_cap4x: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "tasks / logistic_cap4x: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1265,
+        "viewport": 1280,
+        "chart": {
+          "width": 1195,
+          "scrollWidth": 1201,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "tasks / gompertz_cap4x: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks / gompertz_cap4x: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks / gompertz_cap4x: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "tasks / gompertz_cap4x: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "tasks / gompertz_cap4x: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1265,
+        "viewport": 1280,
+        "chart": {
+          "width": 1195,
+          "scrollWidth": 1195,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "tasks original full series: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks original full series: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks original full series: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "tasks: downloaded CSV preserves every source value and its actual units",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks observed: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks observed: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks observed: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "pointer readout retains the actual source date 2026-06-25",
+      "status": "passed",
+      "detail": "2026-06-25 · 公开观测 · 28日窗口18类合计 12 项/研究员日工作方向 0 项/研究员日继续或停止的工作 0 项/研究员日算力与人员配置 0 项/研究员日研究与实验规划 0.1 项/研究员日技术规格 0.1 项/研究员日研究与基础设施代码 3.6 项/研究员日训练与评估数据集 0.2 项/研究员日启动、监控与调试运行 1.1 项/研究员日计算集群运维 0.6 项/研究员日生产推理服务可靠性 0.1 项/研究员日分析实验结果 0.1 项/研究员日分析模型行为与能力 0.1 项/研究员日分析生产使用情况 0.1 项/研究员日评阅外部研究 0 项/研究员日研究文档与撰写 0.8 项/研究员日技术协助与评审 4.8 项/研究员日状态更新与工作日志 0.3 项/研究员日传达决策 0 项/研究员日"
+    },
+    {
+      "name": "tasks forecast: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks forecast: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks forecast: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "tasks single actual observation: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks single actual observation: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "tasks single actual observation: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "tasks single actual observation: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "tasks single actual observation: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1265,
+        "viewport": 1280,
+        "chart": {
+          "width": 1195,
+          "scrollWidth": 1195,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "output / legacy_ols: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output / legacy_ols: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output / legacy_ols: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "output / legacy_ols: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "output / legacy_ols: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1326,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "output / damped_holt: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output / damped_holt: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output / damped_holt: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "output / damped_holt: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "output / damped_holt: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1210,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "output / damped_holt_hl365: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output / damped_holt_hl365: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output / damped_holt_hl365: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "output / damped_holt_hl365: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "output / damped_holt_hl365: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1330,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "output / logistic_cap4x: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output / logistic_cap4x: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output / logistic_cap4x: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "output / logistic_cap4x: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "output / logistic_cap4x: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1356,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "output / gompertz_cap4x: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output / gompertz_cap4x: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output / gompertz_cap4x: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "output / gompertz_cap4x: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "output / gompertz_cap4x: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1280,
+        "viewport": 1280,
+        "chart": {
+          "width": 1210,
+          "scrollWidth": 1330,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "output original full series: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output original full series: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output original full series: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "output: downloaded CSV preserves every source value and its actual units",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output observed: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output observed: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output observed: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "pointer readout retains the actual source date 2026-05-04",
+      "status": "passed",
+      "detail": "2026-05-04 · 公开观测 · 14日窗口18类合计 21.183 万Token/研究员日工作方向 0.18 万Token/研究员日继续或停止的工作 0.005 万Token/研究员日算力与人员配置 0.016 万Token/研究员日研究与实验规划 0.096 万Token/研究员日技术规格 0.229 万Token/研究员日研究与基础设施代码 8.287 万Token/研究员日训练与评估数据集 1.107 万Token/研究员日启动、监控与调试运行 3.657 万Token/研究员日计算集群运维 0.889 万Token/研究员日生产推理服务可靠性 0.376 万Token/研究员日分析实验结果 1.274 万Token/研究员日分析模型行为与能力 0.523 万Token/研究员日分析生产使用情况 0.125 万Token/研究员日评阅外部研究 0.002 万Token/研究员日研究文档与撰写 0.705 万Token/研究员日技术协助与评审 3.578 万Token/研究员日状态更新与工作日志 0.133 万Token/研究员日传达决策 0 万Token/研究员日"
+    },
+    {
+      "name": "output forecast: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output forecast: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output forecast: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "output single actual observation: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output single actual observation: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "output single actual observation: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "output single actual observation: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "output single actual observation: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 1265,
+        "viewport": 1280,
+        "chart": {
+          "width": 1195,
+          "scrollWidth": 1195,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "volume method selection survives switching to concurrency and back",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "concurrency method selection is independent of volume methods",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "320px workdays: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px workdays: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px workdays: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "320px workdays: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320px workdays: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 305,
+        "viewport": 320,
+        "chart": {
+          "width": 259,
+          "scrollWidth": 1056,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "320px workdays single observation: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px workdays single observation: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px workdays single observation: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "320px workdays single observation: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320px workdays single observation: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 305,
+        "viewport": 320,
+        "chart": {
+          "width": 259,
+          "scrollWidth": 259,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "320px workdays: a single date is visible immediately without horizontal scrolling",
+      "status": "passed",
+      "detail": {
+        "scrollLeft": 0,
+        "bars": []
+      }
+    },
+    {
+      "name": "320px concurrency: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px concurrency: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px concurrency: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "320px concurrency: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320px concurrency: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 305,
+        "viewport": 320,
+        "chart": {
+          "width": 259,
+          "scrollWidth": 900,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "320px concurrency single observation: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px concurrency single observation: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px concurrency single observation: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "320px concurrency single observation: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320px concurrency single observation: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 305,
+        "viewport": 320,
+        "chart": {
+          "width": 259,
+          "scrollWidth": 259,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "320px concurrency: a single date is visible immediately without horizontal scrolling",
+      "status": "passed",
+      "detail": {
+        "scrollLeft": 0,
+        "bars": [
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 4.2900390625
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 9.7239990234375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 34.3199462890625
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 84.9420166015625
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 94.9520263671875
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 45.4739990234375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 8.865966796875
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 2.2879638671875
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 1.14404296875
+          }
+        ]
+      }
+    },
+    {
+      "name": "320px tasks: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px tasks: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px tasks: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "320px tasks: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320px tasks: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 305,
+        "viewport": 320,
+        "chart": {
+          "width": 259,
+          "scrollWidth": 1163,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "320px tasks single observation: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px tasks single observation: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px tasks single observation: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "320px tasks single observation: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320px tasks single observation: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 305,
+        "viewport": 320,
+        "chart": {
+          "width": 259,
+          "scrollWidth": 259,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "320px tasks: a single date is visible immediately without horizontal scrolling",
+      "status": "passed",
+      "detail": {
+        "scrollLeft": 0,
+        "bars": [
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 0
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 0
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 0
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 1.90673828125
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 1.90673828125
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 68.6400146484375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 3.813232421875
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 20.9732666015625
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 11.43994140625
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 1.9066162109375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 1.9066162109375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 1.90673828125
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 1.9066162109375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 0
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 15.25341796875
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 91.5198974609375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 5.7200927734375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "320px output: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px output: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px output: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "320px output: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320px output: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 305,
+        "viewport": 320,
+        "chart": {
+          "width": 259,
+          "scrollWidth": 1330,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "320px output single observation: finite chart without JavaScript errors",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px output single observation: raw source values, original dates and stack geometry match",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "320px output single observation: chart draws visible source trajectories",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "320px output single observation: labels remain inside the plot without collisions",
+      "status": "passed",
+      "detail": {
+        "clipping": [],
+        "overlaps": []
+      }
+    },
+    {
+      "name": "320px output single observation: any horizontal scrolling stays inside the chart",
+      "status": "passed",
+      "detail": {
+        "page": 305,
+        "viewport": 320,
+        "chart": {
+          "width": 259,
+          "scrollWidth": 259,
+          "overflow": "auto"
+        }
+      }
+    },
+    {
+      "name": "320px output: a single date is visible immediately without horizontal scrolling",
+      "status": "passed",
+      "detail": {
+        "scrollLeft": 0,
+        "bars": [
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 2.055419921875
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 0.05224609375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 0.180908203125
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 1.097900390625
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 2.62255859375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 94.7984619140625
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 12.665771484375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 41.840576171875
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 10.1759033203125
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 4.3060302734375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 14.5753173828125
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 5.9798583984375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 1.4345703125
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 0.0255126953125
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 8.0618896484375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 40.9365234375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 1.521240234375
+          },
+          {
+            "left": 135.5,
+            "right": 171.5,
+            "height": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "320px real touch gesture horizontally scrolls the raw chart",
+      "status": "passed",
+      "detail": {
+        "x": 242.20000000000002,
+        "y": 500.296875,
+        "initial": 0,
+        "overflow": 1052,
+        "final": 125
+      }
+    },
+    {
+      "name": "raw back link uses the whitelisted resource entry in the same folder",
+      "status": "passed",
+      "detail": "file:///mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/resource-dashboard-preview.html#resource-state=%7B%22year%22%3A2030%2C%22scenario%22%3A%22B%22%2C%22team%22%3A1000%2C%22window%22%3A24%2C%22model%22%3A%22synthetic-kimi-k2-scaled-30t%22%2C%22view%22%3A%22trend%22%2C%22category%22%3A%22compute%22%2C%22primary%22%3A%22eflop_per_team_day%22%2C%22selectedMetrics%22%3A%5B%22eflop_per_team_day%22%2C%22prefill_eflop_per_team_day%22%5D%2C%22scenarios%22%3A%5B%22B%22%5D%2C%22algorithms%22%3A%5B%22legacy_ols%22%5D%2C%22range%22%3A%22all%22%2C%22start%22%3A%222026-02-28%22%2C%22end%22%3A%222030-11-18%22%2C%22detailMode%22%3A%22absolute%22%7D"
+    },
+    {
+      "name": "actual return navigation restores the exact resource state without localStorage",
+      "status": "passed",
+      "detail": {
+        "expected": {
+          "year": 2030,
+          "scenario": "B",
+          "team": 1000,
+          "window": 24,
+          "model": "synthetic-kimi-k2-scaled-30t",
+          "view": "trend",
+          "category": "compute",
+          "primary": "eflop_per_team_day",
+          "selectedMetrics": [
+            "eflop_per_team_day",
+            "prefill_eflop_per_team_day"
+          ],
+          "scenarios": [
+            "B"
+          ],
+          "algorithms": [
+            "legacy_ols"
+          ],
+          "range": "all",
+          "start": "2026-02-28",
+          "end": "2030-11-18",
+          "detailMode": "absolute"
+        },
+        "actual": {
+          "year": 2030,
+          "scenario": "B",
+          "team": 1000,
+          "window": 24,
+          "model": "synthetic-kimi-k2-scaled-30t",
+          "view": "trend",
+          "category": "compute",
+          "primary": "eflop_per_team_day",
+          "selectedMetrics": [
+            "eflop_per_team_day",
+            "prefill_eflop_per_team_day"
+          ],
+          "scenarios": [
+            "B"
+          ],
+          "algorithms": [
+            "legacy_ols"
+          ],
+          "range": "all",
+          "start": "2026-02-28",
+          "end": "2030-11-18",
+          "detailMode": "absolute"
+        }
+      }
+    },
+    {
+      "name": "fragment entry returns to the fragment rather than changing the entry file",
+      "status": "passed",
+      "detail": "file:///mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/team-resource-dashboard.html#resource-state=%7B%22year%22%3A2030%2C%22scenario%22%3A%22C%22%2C%22team%22%3A100%2C%22window%22%3A24%2C%22model%22%3A%22synthetic-kimi-k2-scaled-30t%22%2C%22view%22%3A%22trend%22%2C%22category%22%3A%22tokens%22%2C%22primary%22%3A%22output_tokens_per_team_day%22%2C%22selectedMetrics%22%3A%5B%22output_tokens_per_team_day%22%5D%2C%22scenarios%22%3A%5B%22C%22%5D%2C%22algorithms%22%3A%5B%22legacy_ols%22%5D%2C%22range%22%3A%22all%22%2C%22start%22%3A%222026-02-28%22%2C%22end%22%3A%222030-11-18%22%2C%22detailMode%22%3A%22absolute%22%7D"
+    },
+    {
+      "name": "untrusted return URL falls back to a local whitelisted resource file",
+      "status": "passed",
+      "detail": "file:///mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/team-resource-dashboard.html#resource-state=%7B%22year%22%3A2030%2C%22scenario%22%3A%22C%22%2C%22team%22%3A100%2C%22window%22%3A24%2C%22model%22%3A%22synthetic-kimi-k2-scaled-30t%22%2C%22view%22%3A%22trend%22%2C%22category%22%3A%22tokens%22%2C%22primary%22%3A%22output_tokens_per_team_day%22%2C%22selectedMetrics%22%3A%5B%22output_tokens_per_team_day%22%5D%2C%22scenarios%22%3A%5B%22C%22%5D%2C%22algorithms%22%3A%5B%22legacy_ols%22%5D%2C%22range%22%3A%22all%22%2C%22start%22%3A%222026-02-28%22%2C%22end%22%3A%222030-11-18%22%2C%22detailMode%22%3A%22absolute%22%7D"
+    },
+    {
+      "name": "source and data hashes remain unchanged throughout raw QA",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "no JavaScript errors throughout raw charts, downloads and navigation",
+      "status": "passed",
+      "detail": []
+    }
+  ],
+  "snapshots": [
+    {
+      "label": "raw default workdays",
+      "controls": {
+        "view": "workdays",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-01-20",
+        "end": "2030-11-18"
+      },
+      "dates": 218,
+      "series": 5,
+      "marks": 1090,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "workdays / legacy_ols",
+      "controls": {
+        "view": "workdays",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-01-20",
+        "end": "2030-11-18"
+      },
+      "dates": 218,
+      "series": 5,
+      "marks": 1090,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "workdays / damped_holt",
+      "controls": {
+        "view": "workdays",
+        "method": "damped_holt",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-01-20",
+        "end": "2030-11-18"
+      },
+      "dates": 218,
+      "series": 5,
+      "marks": 1090,
+      "method": "damped_holt"
+    },
+    {
+      "label": "workdays / damped_holt_hl365",
+      "controls": {
+        "view": "workdays",
+        "method": "damped_holt_hl365",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-01-20",
+        "end": "2030-11-18"
+      },
+      "dates": 218,
+      "series": 5,
+      "marks": 1090,
+      "method": "damped_holt_hl365"
+    },
+    {
+      "label": "workdays / logistic_cap4x",
+      "controls": {
+        "view": "workdays",
+        "method": "logistic_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-01-20",
+        "end": "2030-11-18"
+      },
+      "dates": 218,
+      "series": 5,
+      "marks": 1090,
+      "method": "logistic_cap4x"
+    },
+    {
+      "label": "workdays / gompertz_cap4x",
+      "controls": {
+        "view": "workdays",
+        "method": "gompertz_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-01-20",
+        "end": "2030-11-18"
+      },
+      "dates": 218,
+      "series": 5,
+      "marks": 1090,
+      "method": "gompertz_cap4x"
+    },
+    {
+      "label": "workdays original full series",
+      "controls": {
+        "view": "workdays",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-01-20",
+        "end": "2030-11-18"
+      },
+      "dates": 218,
+      "series": 5,
+      "marks": 1090,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "workdays observed",
+      "controls": {
+        "view": "workdays",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "observed",
+        "start": "2026-01-20",
+        "end": "2030-11-18"
+      },
+      "dates": 169,
+      "series": 5,
+      "marks": 845,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "workdays forecast",
+      "controls": {
+        "view": "workdays",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "forecast",
+        "start": "2026-01-20",
+        "end": "2030-11-18"
+      },
+      "dates": 49,
+      "series": 5,
+      "marks": 245,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "workdays single actual observation",
+      "controls": {
+        "view": "workdays",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "custom",
+        "start": "2026-07-26",
+        "end": "2026-07-26"
+      },
+      "dates": 1,
+      "series": 5,
+      "marks": 5,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "concurrency / legacy_log_complement",
+      "controls": {
+        "view": "concurrency",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-07-26",
+        "end": "2026-07-26"
+      },
+      "dates": 210,
+      "series": 9,
+      "marks": 1890,
+      "method": "legacy_log_complement"
+    },
+    {
+      "label": "concurrency / naive",
+      "controls": {
+        "view": "concurrency",
+        "method": "legacy_ols",
+        "concurrency-method": "naive",
+        "range": "all",
+        "start": "2026-07-26",
+        "end": "2026-07-26"
+      },
+      "dates": 210,
+      "series": 9,
+      "marks": 1890,
+      "method": "naive"
+    },
+    {
+      "label": "concurrency / conditional_logistic",
+      "controls": {
+        "view": "concurrency",
+        "method": "legacy_ols",
+        "concurrency-method": "conditional_logistic",
+        "range": "all",
+        "start": "2026-07-26",
+        "end": "2026-07-26"
+      },
+      "dates": 210,
+      "series": 9,
+      "marks": 1890,
+      "method": "conditional_logistic"
+    },
+    {
+      "label": "concurrency / joint_logratio",
+      "controls": {
+        "view": "concurrency",
+        "method": "legacy_ols",
+        "concurrency-method": "joint_logratio",
+        "range": "all",
+        "start": "2026-07-26",
+        "end": "2026-07-26"
+      },
+      "dates": 210,
+      "series": 9,
+      "marks": 1890,
+      "method": "joint_logratio"
+    },
+    {
+      "label": "concurrency original full series",
+      "controls": {
+        "view": "concurrency",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-07-26",
+        "end": "2026-07-26"
+      },
+      "dates": 210,
+      "series": 9,
+      "marks": 1890,
+      "method": "legacy_log_complement"
+    },
+    {
+      "label": "concurrency observed",
+      "controls": {
+        "view": "concurrency",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "observed",
+        "start": "2026-07-26",
+        "end": "2026-07-26"
+      },
+      "dates": 161,
+      "series": 9,
+      "marks": 1449,
+      "method": "legacy_log_complement"
+    },
+    {
+      "label": "concurrency forecast",
+      "controls": {
+        "view": "concurrency",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "forecast",
+        "start": "2026-07-26",
+        "end": "2026-07-26"
+      },
+      "dates": 49,
+      "series": 9,
+      "marks": 441,
+      "method": "legacy_log_complement"
+    },
+    {
+      "label": "concurrency single actual observation",
+      "controls": {
+        "view": "concurrency",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "custom",
+        "start": "2026-07-30",
+        "end": "2026-07-30"
+      },
+      "dates": 1,
+      "series": 9,
+      "marks": 9,
+      "method": "legacy_log_complement"
+    },
+    {
+      "label": "tasks / legacy_ols",
+      "controls": {
+        "view": "tasks",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-07-30",
+        "end": "2026-07-30"
+      },
+      "dates": 281,
+      "series": 18,
+      "marks": 5058,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "tasks / damped_holt",
+      "controls": {
+        "view": "tasks",
+        "method": "damped_holt",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-07-30",
+        "end": "2026-07-30"
+      },
+      "dates": 281,
+      "series": 18,
+      "marks": 5058,
+      "method": "damped_holt"
+    },
+    {
+      "label": "tasks / damped_holt_hl365",
+      "controls": {
+        "view": "tasks",
+        "method": "damped_holt_hl365",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-07-30",
+        "end": "2026-07-30"
+      },
+      "dates": 281,
+      "series": 18,
+      "marks": 5058,
+      "method": "damped_holt_hl365"
+    },
+    {
+      "label": "tasks / logistic_cap4x",
+      "controls": {
+        "view": "tasks",
+        "method": "logistic_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-07-30",
+        "end": "2026-07-30"
+      },
+      "dates": 281,
+      "series": 18,
+      "marks": 5058,
+      "method": "logistic_cap4x"
+    },
+    {
+      "label": "tasks / gompertz_cap4x",
+      "controls": {
+        "view": "tasks",
+        "method": "gompertz_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-07-30",
+        "end": "2026-07-30"
+      },
+      "dates": 281,
+      "series": 18,
+      "marks": 5058,
+      "method": "gompertz_cap4x"
+    },
+    {
+      "label": "tasks original full series",
+      "controls": {
+        "view": "tasks",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-07-30",
+        "end": "2026-07-30"
+      },
+      "dates": 281,
+      "series": 18,
+      "marks": 5058,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "tasks observed",
+      "controls": {
+        "view": "tasks",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "observed",
+        "start": "2026-07-30",
+        "end": "2026-07-30"
+      },
+      "dates": 232,
+      "series": 18,
+      "marks": 4176,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "tasks forecast",
+      "controls": {
+        "view": "tasks",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "forecast",
+        "start": "2026-07-30",
+        "end": "2026-07-30"
+      },
+      "dates": 49,
+      "series": 18,
+      "marks": 882,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "tasks single actual observation",
+      "controls": {
+        "view": "tasks",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "custom",
+        "start": "2026-06-25",
+        "end": "2026-06-25"
+      },
+      "dates": 1,
+      "series": 18,
+      "marks": 18,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "output / legacy_ols",
+      "controls": {
+        "view": "output",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-06-25",
+        "end": "2026-06-25"
+      },
+      "dates": 260,
+      "series": 18,
+      "marks": 4680,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "output / damped_holt",
+      "controls": {
+        "view": "output",
+        "method": "damped_holt",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-06-25",
+        "end": "2026-06-25"
+      },
+      "dates": 260,
+      "series": 18,
+      "marks": 4680,
+      "method": "damped_holt"
+    },
+    {
+      "label": "output / damped_holt_hl365",
+      "controls": {
+        "view": "output",
+        "method": "damped_holt_hl365",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-06-25",
+        "end": "2026-06-25"
+      },
+      "dates": 260,
+      "series": 18,
+      "marks": 4680,
+      "method": "damped_holt_hl365"
+    },
+    {
+      "label": "output / logistic_cap4x",
+      "controls": {
+        "view": "output",
+        "method": "logistic_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-06-25",
+        "end": "2026-06-25"
+      },
+      "dates": 260,
+      "series": 18,
+      "marks": 4680,
+      "method": "logistic_cap4x"
+    },
+    {
+      "label": "output / gompertz_cap4x",
+      "controls": {
+        "view": "output",
+        "method": "gompertz_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-06-25",
+        "end": "2026-06-25"
+      },
+      "dates": 260,
+      "series": 18,
+      "marks": 4680,
+      "method": "gompertz_cap4x"
+    },
+    {
+      "label": "output original full series",
+      "controls": {
+        "view": "output",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-06-25",
+        "end": "2026-06-25"
+      },
+      "dates": 260,
+      "series": 18,
+      "marks": 4680,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "output observed",
+      "controls": {
+        "view": "output",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "observed",
+        "start": "2026-06-25",
+        "end": "2026-06-25"
+      },
+      "dates": 208,
+      "series": 18,
+      "marks": 3744,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "output forecast",
+      "controls": {
+        "view": "output",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "forecast",
+        "start": "2026-06-25",
+        "end": "2026-06-25"
+      },
+      "dates": 52,
+      "series": 18,
+      "marks": 936,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "output single actual observation",
+      "controls": {
+        "view": "output",
+        "method": "legacy_ols",
+        "concurrency-method": "legacy_log_complement",
+        "range": "custom",
+        "start": "2026-05-04",
+        "end": "2026-05-04"
+      },
+      "dates": 1,
+      "series": 18,
+      "marks": 18,
+      "method": "legacy_ols"
+    },
+    {
+      "label": "320px workdays",
+      "controls": {
+        "view": "workdays",
+        "method": "gompertz_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-05-04",
+        "end": "2026-05-04"
+      },
+      "dates": 218,
+      "series": 5,
+      "marks": 1090,
+      "method": "gompertz_cap4x"
+    },
+    {
+      "label": "320px workdays single observation",
+      "controls": {
+        "view": "workdays",
+        "method": "gompertz_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "custom",
+        "start": "2026-07-26",
+        "end": "2026-07-26"
+      },
+      "dates": 1,
+      "series": 5,
+      "marks": 5,
+      "method": "gompertz_cap4x"
+    },
+    {
+      "label": "320px concurrency",
+      "controls": {
+        "view": "concurrency",
+        "method": "gompertz_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-07-26",
+        "end": "2026-07-26"
+      },
+      "dates": 210,
+      "series": 9,
+      "marks": 1890,
+      "method": "legacy_log_complement"
+    },
+    {
+      "label": "320px concurrency single observation",
+      "controls": {
+        "view": "concurrency",
+        "method": "gompertz_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "custom",
+        "start": "2026-07-30",
+        "end": "2026-07-30"
+      },
+      "dates": 1,
+      "series": 9,
+      "marks": 9,
+      "method": "legacy_log_complement"
+    },
+    {
+      "label": "320px tasks",
+      "controls": {
+        "view": "tasks",
+        "method": "gompertz_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-07-30",
+        "end": "2026-07-30"
+      },
+      "dates": 281,
+      "series": 18,
+      "marks": 5058,
+      "method": "gompertz_cap4x"
+    },
+    {
+      "label": "320px tasks single observation",
+      "controls": {
+        "view": "tasks",
+        "method": "gompertz_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "custom",
+        "start": "2026-06-25",
+        "end": "2026-06-25"
+      },
+      "dates": 1,
+      "series": 18,
+      "marks": 18,
+      "method": "gompertz_cap4x"
+    },
+    {
+      "label": "320px output",
+      "controls": {
+        "view": "output",
+        "method": "gompertz_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "all",
+        "start": "2026-06-25",
+        "end": "2026-06-25"
+      },
+      "dates": 260,
+      "series": 18,
+      "marks": 4680,
+      "method": "gompertz_cap4x"
+    },
+    {
+      "label": "320px output single observation",
+      "controls": {
+        "view": "output",
+        "method": "gompertz_cap4x",
+        "concurrency-method": "legacy_log_complement",
+        "range": "custom",
+        "start": "2026-05-04",
+        "end": "2026-05-04"
+      },
+      "dates": 1,
+      "series": 18,
+      "marks": 18,
+      "method": "gompertz_cap4x"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "raw_dashboard_workdays.png",
+      "width": 1280,
+      "sha256": "0ee5ab018892070b02c9c07c65511e3d0069e702dff1c7ad269fc1003e0cee71"
+    },
+    {
+      "file": "raw_dashboard_concurrency.png",
+      "width": 1280,
+      "sha256": "ee081eaba5603a843a05834a45560fe8468f1b9720f8cba0290bf51dcc7e3083"
+    },
+    {
+      "file": "raw_dashboard_tasks.png",
+      "width": 1280,
+      "sha256": "7e0720574ef05c4c11d83a8d80e5ec3d4a85857db7530559cbe51336dccc5449"
+    },
+    {
+      "file": "raw_dashboard_output.png",
+      "width": 1280,
+      "sha256": "518f976b432b3a1865c79fb0bc3a9fd071848f09513f9e3bdfba7cc491dbc21c"
+    },
+    {
+      "file": "raw_dashboard_mobile.png",
+      "width": 320,
+      "sha256": "cb527f0548ffe5c6f429741b6d17eed35231fa8ba9db6282d34f189b66527584"
+    }
+  ],
+  "elapsed_seconds": 33.110670774942264
+}

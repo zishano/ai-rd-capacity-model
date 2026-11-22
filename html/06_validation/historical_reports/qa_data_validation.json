@@ -1,0 +1,737 @@
+{
+  "created_at_utc": "2026-11-21T09:34:25.817336+00:00",
+  "status": "passed",
+  "preview": "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/resource-dashboard-preview.html",
+  "source_sha256": {
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/resource-dashboard-preview.html": "2754715c2f662fd01eb018823c485b37e2a81a2bb93b42df31a0b73442db868d",
+    "/mnt/nvme1n1/data/lmk/PROJECT/TEST2/ai-rd-capacity-model/output_team100_resource_dashboard/dashboard_data.json": "5b8493f4db27515bf7901d76dd4756206c01eeffc3bcd4e1a709541562b4687f"
+  },
+  "method": "Data-only validation; official 2026 metadata, mixed observation dates and resources, frozen future values, history endpoints, category reconciliation. Chrome was not started.",
+  "chrome_deadline_seconds": 45,
+  "checks": [
+    {
+      "name": "2027–2030 forecasts match the prior validated version exactly",
+      "status": "passed",
+      "detail": []
+    },
+    {
+      "name": "2026 baseline source date/window/value: output_14d",
+      "status": "passed",
+      "detail": {
+        "date": "2026-08-15",
+        "rolling_window_days": 14,
+        "value_per_researcher_day": 722833.2289131717,
+        "value_per_team_day": 72283322.89131717,
+        "researchers": 100,
+        "evidence": "official_observation",
+        "unit": "Token/日",
+        "label": "官方公布输出：14日均值",
+        "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+        "chart_file": "chart_08.json",
+        "source_unit": "output tokens per researcher calendar day",
+        "downloaded_at_utc": "2026-11-21T08:15:04.949499+00:00"
+      }
+    },
+    {
+      "name": "2026 baseline source date/window/value: output_28d",
+      "status": "passed",
+      "detail": {
+        "date": "2026-08-15",
+        "rolling_window_days": 28,
+        "value_per_researcher_day": 655257.1813177636,
+        "value_per_team_day": 65525718.13177636,
+        "researchers": 100,
+        "evidence": "derived_from_observed",
+        "unit": "Token/日",
+        "label": "年度比较输出：相邻14日观测拼接为28日",
+        "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+        "chart_file": "chart_08.json",
+        "source_unit": "output tokens per researcher calendar day",
+        "downloaded_at_utc": "2026-11-21T08:15:04.949499+00:00",
+        "lag_date": "2026-08-01",
+        "source_rolling_window_days": 14,
+        "formula": "(T14(d) + T14(d-14)) / 2"
+      }
+    },
+    {
+      "name": "2026 baseline source date/window/value: agent_hours",
+      "status": "passed",
+      "detail": {
+        "date": "2026-10-18",
+        "rolling_window_days": 28,
+        "value_per_researcher_day": 45.6,
+        "value_per_team_day": 4560.0,
+        "researchers": 100,
+        "evidence": "derived_from_observed",
+        "unit": "Agent小时/日",
+        "label": "官方Agent工作日×8小时",
+        "source_url": "https://openai.com/index/research-acceleration-jagged-frontier/#agent-workdays-research",
+        "chart_file": "november_2026_chart_02.json",
+        "source_unit": "8-hour agent workdays per researcher per calendar day",
+        "downloaded_at_utc": "2026-11-21T07:47:51.293828+00:00",
+        "source_agent_workdays_per_researcher_day": 5.7,
+        "hours_per_agent_workday": 8,
+        "source_group": "Overall Research",
+        "source_values_rounded": true
+      }
+    },
+    {
+      "name": "2026 baseline source date/window/value: mean_online_agent_equivalents",
+      "status": "passed",
+      "detail": {
+        "date": "2026-10-18",
+        "rolling_window_days": 28,
+        "value_per_researcher_day": 1.9,
+        "value_per_team_day": 190.0,
+        "researchers": 100,
+        "evidence": "derived_from_observed",
+        "unit": "平均在线活动当量",
+        "label": "累计Agent小时÷24",
+        "source_url": "https://openai.com/index/research-acceleration-jagged-frontier/#agent-workdays-research",
+        "chart_file": "november_2026_chart_02.json",
+        "source_unit": "8-hour agent workdays per researcher per calendar day",
+        "downloaded_at_utc": "2026-11-21T07:47:51.293828+00:00",
+        "source_agent_workdays_per_researcher_day": 5.7,
+        "hours_per_agent_workday": 8,
+        "source_group": "Overall Research",
+        "source_values_rounded": true
+      }
+    },
+    {
+      "name": "2026 baseline source date/window/value: task_starts",
+      "status": "passed",
+      "detail": {
+        "date": "2026-10-18",
+        "rolling_window_days": 28,
+        "value_per_researcher_day": 26.3,
+        "value_per_team_day": 2630.0,
+        "researchers": 100,
+        "evidence": "official_observation",
+        "unit": "次/日",
+        "label": "官方18类任务发起率之和",
+        "source_url": "https://openai.com/index/research-acceleration-jagged-frontier/#figure-research-task-starts",
+        "chart_file": "november_2026_chart_08.json",
+        "source_unit": "initiated R&D tasks per researcher per calendar day",
+        "downloaded_at_utc": "2026-11-21T07:47:51.293828+00:00",
+        "source_values_rounded": true
+      }
+    },
+    {
+      "name": "15 rows cover 2026–2030 and scenarios A/B/C",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "2026 A: mixed observation dates, no invented common date",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "2026 A: resource provenance distinguishes observations and proxies",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "2026 A: input_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 6493253888.999469,
+        "expected": 6493253888.999469
+      }
+    },
+    {
+      "name": "2026 A: cached_input_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 6094681133.846958,
+        "expected": 6094681133.846958
+      }
+    },
+    {
+      "name": "2026 A: uncached_input_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 398572755.15251064,
+        "expected": 398572755.15251064
+      }
+    },
+    {
+      "name": "2026 A: output_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 65525718.13177636,
+        "expected": 65525718.13177636
+      }
+    },
+    {
+      "name": "2026 A: total_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 6558779607.131246,
+        "expected": 6558779607.131246
+      }
+    },
+    {
+      "name": "2026 A: agent_hours_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 4560.0,
+        "expected": 4560
+      }
+    },
+    {
+      "name": "2026 A: mean_online_agent_equivalents",
+      "status": "passed",
+      "detail": {
+        "actual": 190.0,
+        "expected": 190
+      }
+    },
+    {
+      "name": "2026 A: task_starts_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 2630.0,
+        "expected": 2630
+      }
+    },
+    {
+      "name": "2026 A: eflop_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 73.32692130643298,
+        "expected": 73.32692130643298
+      }
+    },
+    {
+      "name": "2026 A: prefill_eflop_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 58.15289493929918,
+        "expected": 58.15289493929918
+      }
+    },
+    {
+      "name": "2026 A: decode_eflop_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 15.174026367133791,
+        "expected": 15.174026367133791
+      }
+    },
+    {
+      "name": "2026 A: compute_pflops_24h",
+      "status": "passed",
+      "detail": {
+        "actual": 0.8486912188244558,
+        "expected": 0.8486912188244558
+      }
+    },
+    {
+      "name": "2026 A: prefix_cache_hit_rate",
+      "status": "passed",
+      "detail": {
+        "actual": 0.9386174078565215,
+        "expected": 0.9386174078565215
+      }
+    },
+    {
+      "name": "2026 A: tail_share",
+      "status": "passed",
+      "detail": {
+        "actual": 0.0,
+        "expected": 0
+      }
+    },
+    {
+      "name": "2026 B: mixed observation dates, no invented common date",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "2026 B: resource provenance distinguishes observations and proxies",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "2026 B: input_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 6493253888.999469,
+        "expected": 6493253888.999469
+      }
+    },
+    {
+      "name": "2026 B: cached_input_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 6094681133.846958,
+        "expected": 6094681133.846958
+      }
+    },
+    {
+      "name": "2026 B: uncached_input_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 398572755.15251064,
+        "expected": 398572755.15251064
+      }
+    },
+    {
+      "name": "2026 B: output_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 65525718.13177636,
+        "expected": 65525718.13177636
+      }
+    },
+    {
+      "name": "2026 B: total_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 6558779607.131246,
+        "expected": 6558779607.131246
+      }
+    },
+    {
+      "name": "2026 B: agent_hours_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 4560.0,
+        "expected": 4560
+      }
+    },
+    {
+      "name": "2026 B: mean_online_agent_equivalents",
+      "status": "passed",
+      "detail": {
+        "actual": 190.0,
+        "expected": 190
+      }
+    },
+    {
+      "name": "2026 B: task_starts_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 2630.0,
+        "expected": 2630
+      }
+    },
+    {
+      "name": "2026 B: eflop_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 73.32692130643298,
+        "expected": 73.32692130643298
+      }
+    },
+    {
+      "name": "2026 B: prefill_eflop_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 58.15289493929918,
+        "expected": 58.15289493929918
+      }
+    },
+    {
+      "name": "2026 B: decode_eflop_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 15.174026367133791,
+        "expected": 15.174026367133791
+      }
+    },
+    {
+      "name": "2026 B: compute_pflops_24h",
+      "status": "passed",
+      "detail": {
+        "actual": 0.8486912188244558,
+        "expected": 0.8486912188244558
+      }
+    },
+    {
+      "name": "2026 B: prefix_cache_hit_rate",
+      "status": "passed",
+      "detail": {
+        "actual": 0.9386174078565215,
+        "expected": 0.9386174078565215
+      }
+    },
+    {
+      "name": "2026 B: tail_share",
+      "status": "passed",
+      "detail": {
+        "actual": 0.0,
+        "expected": 0
+      }
+    },
+    {
+      "name": "2026 C: mixed observation dates, no invented common date",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "2026 C: resource provenance distinguishes observations and proxies",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "2026 C: input_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 6493253888.999469,
+        "expected": 6493253888.999469
+      }
+    },
+    {
+      "name": "2026 C: cached_input_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 6094681133.846958,
+        "expected": 6094681133.846958
+      }
+    },
+    {
+      "name": "2026 C: uncached_input_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 398572755.15251064,
+        "expected": 398572755.15251064
+      }
+    },
+    {
+      "name": "2026 C: output_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 65525718.13177636,
+        "expected": 65525718.13177636
+      }
+    },
+    {
+      "name": "2026 C: total_tokens_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 6558779607.131246,
+        "expected": 6558779607.131246
+      }
+    },
+    {
+      "name": "2026 C: agent_hours_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 4560.0,
+        "expected": 4560
+      }
+    },
+    {
+      "name": "2026 C: mean_online_agent_equivalents",
+      "status": "passed",
+      "detail": {
+        "actual": 190.0,
+        "expected": 190
+      }
+    },
+    {
+      "name": "2026 C: task_starts_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 2630.0,
+        "expected": 2630
+      }
+    },
+    {
+      "name": "2026 C: eflop_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 73.32692130643298,
+        "expected": 73.32692130643298
+      }
+    },
+    {
+      "name": "2026 C: prefill_eflop_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 58.15289493929918,
+        "expected": 58.15289493929918
+      }
+    },
+    {
+      "name": "2026 C: decode_eflop_per_team_day",
+      "status": "passed",
+      "detail": {
+        "actual": 15.174026367133791,
+        "expected": 15.174026367133791
+      }
+    },
+    {
+      "name": "2026 C: compute_pflops_24h",
+      "status": "passed",
+      "detail": {
+        "actual": 0.8486912188244558,
+        "expected": 0.8486912188244558
+      }
+    },
+    {
+      "name": "2026 C: prefix_cache_hit_rate",
+      "status": "passed",
+      "detail": {
+        "actual": 0.9386174078565215,
+        "expected": 0.9386174078565215
+      }
+    },
+    {
+      "name": "2026 C: tail_share",
+      "status": "passed",
+      "detail": {
+        "actual": 0.0,
+        "expected": 0
+      }
+    },
+    {
+      "name": "future row is marked forecast: 2027A",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "future row is marked forecast: 2027B",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "future row is marked forecast: 2027C",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "future row is marked forecast: 2028A",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "future row is marked forecast: 2028B",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "future row is marked forecast: 2028C",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "future row is marked forecast: 2029A",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "future row is marked forecast: 2029B",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "future row is marked forecast: 2029C",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "future row is marked forecast: 2030A",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "future row is marked forecast: 2030B",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "future row is marked forecast: 2030C",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "1141 official history records retained",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "latest history point agrees with 2026 metadata: output_tokens_14d",
+      "status": "passed",
+      "detail": {
+        "date": "2026-08-15",
+        "metric": "output_tokens_14d",
+        "value_per_researcher_day": 722833.2289131717,
+        "value_per_team_day": 72283322.89131717,
+        "researchers": 100,
+        "unit": "Token/日",
+        "rolling_window_days": 14,
+        "evidence": "official_observation",
+        "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+        "chart_file": "chart_08.json"
+      }
+    },
+    {
+      "name": "latest history point agrees with 2026 metadata: output_tokens_28d",
+      "status": "passed",
+      "detail": {
+        "date": "2026-08-15",
+        "metric": "output_tokens_28d",
+        "value_per_researcher_day": 655257.1813177636,
+        "value_per_team_day": 65525718.13177636,
+        "researchers": 100,
+        "unit": "Token/日",
+        "rolling_window_days": 28,
+        "evidence": "derived_from_observed",
+        "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+        "chart_file": "chart_08.json"
+      }
+    },
+    {
+      "name": "latest history point agrees with 2026 metadata: agent_hours",
+      "status": "passed",
+      "detail": {
+        "date": "2026-10-18",
+        "metric": "agent_hours",
+        "value_per_researcher_day": 45.6,
+        "value_per_team_day": 4560.0,
+        "researchers": 100,
+        "unit": "Agent小时/日",
+        "rolling_window_days": 28,
+        "evidence": "derived_from_observed",
+        "source_url": "https://openai.com/index/research-acceleration-jagged-frontier/#agent-workdays-research",
+        "chart_file": "november_2026_chart_02.json"
+      }
+    },
+    {
+      "name": "latest history point agrees with 2026 metadata: mean_online_agent_equivalents",
+      "status": "passed",
+      "detail": {
+        "date": "2026-10-18",
+        "metric": "mean_online_agent_equivalents",
+        "value_per_researcher_day": 1.9000000000000001,
+        "value_per_team_day": 190.0,
+        "researchers": 100,
+        "unit": "平均在线活动当量",
+        "rolling_window_days": 28,
+        "evidence": "derived_from_observed",
+        "source_url": "https://openai.com/index/research-acceleration-jagged-frontier/#agent-workdays-research",
+        "chart_file": "november_2026_chart_02.json"
+      }
+    },
+    {
+      "name": "latest history point agrees with 2026 metadata: task_starts",
+      "status": "passed",
+      "detail": {
+        "date": "2026-10-18",
+        "metric": "task_starts",
+        "value_per_researcher_day": 26.3,
+        "value_per_team_day": 2630.0,
+        "researchers": 100,
+        "unit": "次/日",
+        "rolling_window_days": 28,
+        "evidence": "official_observation",
+        "source_url": "https://openai.com/index/research-acceleration-jagged-frontier/#figure-research-task-starts",
+        "chart_file": "november_2026_chart_08.json"
+      }
+    },
+    {
+      "name": "18 categories × 15 annual scenarios retained",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2026, 'A')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "2026 raw 14-day category total preserved: A",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2026, 'B')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "2026 raw 14-day category total preserved: B",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2026, 'C')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "2026 raw 14-day category total preserved: C",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2027, 'A')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2027, 'B')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2027, 'C')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2028, 'A')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2028, 'B')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2028, 'C')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2029, 'A')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2029, 'B')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2029, 'C')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2030, 'A')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2030, 'B')",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "name": "category shares and output reconcile: (2030, 'C')",
+      "status": "passed",
+      "detail": null
+    }
+  ],
+  "snapshots": [],
+  "layouts": [],
+  "charts": [],
+  "screenshots": [],
+  "prior_forecast_reference_sha256": "e5388f7d6dd76511940bf71c6f699127e46de2d253769f81fa060e324eb160b6",
+  "elapsed_seconds": 0.0008541690185666084
+}

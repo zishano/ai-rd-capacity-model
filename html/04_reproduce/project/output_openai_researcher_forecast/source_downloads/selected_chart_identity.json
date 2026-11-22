@@ -1,0 +1,22 @@
+{
+  "requested_fragment": "chart-4QLdZ4iw0n4L9rYGTvteZK",
+  "html_id": "chart-4QLdZ4iw0n4L9rYGTvteZK",
+  "react_component_id": "4QLdZ4iw0n4L9rYGTvteZK",
+  "figure_id": "rsi-output-token-usage",
+  "title": "研究人员正在以全新方式使用编程智能体",
+  "chart_file": "chart_08.json",
+  "data_keys": [
+    "areaRows",
+    "totalRows",
+    "categoryRows"
+  ],
+  "identity_check": "HTML ID and React component's Vega spec both verified",
+  "metric": "Output tokens per research employee per calendar day, 14-day trailing mean, 18 R&D categories",
+  "not_disclosed_by_this_chart": [
+    "task starts",
+    "input tokens",
+    "cached input tokens",
+    "per-task distributions"
+  ],
+  "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK"
+}

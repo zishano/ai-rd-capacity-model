@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "annual_rows": 5,
+  "scenario": "C",
+  "png_svg_pdf_panels": 6,
+  "ppt_slides": 3,
+  "ppt_native_charts": 9,
+  "embedded_workbooks": 9,
+  "heatmap_native_cells": 30,
+  "ppt_validation": "OOXML, native charts, workbooks and bounds; not Office rendering",
+  "files": [
+    "team-resource-analysis-2026-2030.png",
+    "team-resource-analysis-2026-2030.svg",
+    "team-resource-analysis-2026-2030.pdf",
+    "team-resource-analysis-2026-2030.pptx"
+  ]
+}

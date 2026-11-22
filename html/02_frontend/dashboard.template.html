@@ -1,0 +1,57 @@
+<div id="team-resource-dashboard-30t-v2">
+<style>/* DASHBOARD_STYLES */</style>
+<header class="page-header">
+  <div><div class="eyebrow">研发资源规划 / 目标 2030-11-18</div><div class="title-row"><h1>百人团队 · 资源探索</h1><a id="trd-raw-link" class="page-link" href="raw-data-dashboard.html" aria-label="切换到研究员原始数据推演页面">原始数据推演 →</a></div><p class="muted" data-testid="model-summary"></p></div>
+  <div class="baseline-notes" aria-label="公开观测基线与推演口径">
+    <p><strong>2026 输出基线</strong><span data-testid="baseline-output"></span></p>
+    <p><strong>2026 活动基线</strong><span data-testid="baseline-activity"></span></p>
+    <p>输出沿用官方14日滑动平均，已平滑的数据不重复处理；Agent与任务保留28日。输入、缓存与计算量为14日输出代入30T模型的条件估算；活动当量＝Agent小时÷24，不等于峰值并发。</p>
+  </div>
+</header>
+<section class="surface parameters" aria-label="推演参数">
+  <div class="section-heading"><h2>推演参数</h2><div class="headline-context"><span class="muted" data-testid="selection-summary"></span><span class="headline-source">顶部：<strong data-testid="headline-algorithm-name"></strong></span></div></div>
+  <div class="parameter-grid">
+    <label for="trd-scenario">增长情景<select id="trd-scenario"><option value="A">A · 增加会话</option><option value="B">B · 延长会话</option><option value="C" selected>C · 混合增长</option></select></label>
+    <label for="trd-team">团队人数<select id="trd-team"><option value="10">10人</option><option value="100" selected>100人</option><option value="1000">1,000人</option></select></label>
+    <label for="trd-window">每日处理窗口<select id="trd-window"><option value="8">8小时</option><option value="12">12小时</option><option value="24" selected>24小时</option></select></label>
+    <label for="trd-model">模型<select id="trd-model"></select></label>
+  </div>
+</section>
+<div class="headline-stats" aria-label="2030年11月18日预测日量">
+  <section class="surface stat"><div class="muted">输入Token · 条件估算</div><div class="stat-value"><span data-testid="input-tokens"></span><small>亿/日</small></div><div class="stat-detail">缓存命中 <span data-testid="cache-hit-rate"></span>%</div></section>
+  <section class="surface stat"><div class="muted">输出Token · 14日平均口径</div><div class="stat-value"><span data-testid="output-tokens"></span><small>亿/日</small></div><div class="stat-detail">输入＋输出 <span data-testid="total-tokens"></span> 亿/日</div></section>
+  <section class="surface stat"><div class="muted">累计Agent活动时长 · 28日口径</div><div class="stat-value"><span data-testid="agent-hours"></span><small>小时/日</small></div><div class="stat-detail">平均活动当量 <span data-testid="agent-equivalents"></span> · 任务 <span data-testid="tasks"></span>/日</div></section>
+  <section class="surface stat"><div class="muted">理论推理计算 · 条件估算</div><div class="stat-value"><span data-testid="compute-eflop"></span><small>EFLOP/日</small></div><div class="stat-detail"><span data-testid="compute-pflops"></span> PFLOP/s · <span data-testid="window-summary"></span></div></section>
+</div>
+<section class="surface explorer" aria-label="资源指标探索">
+  <div class="explorer-heading"><div><div class="eyebrow">选择指标，集中查看变化</div><h2 id="trd-chart-title">输出Token月度趋势</h2></div><label class="view-picker" for="trd-view">分析内容<select id="trd-view"><option value="trend">月度趋势</option><option value="scenarios">年度情景比较</option><option value="cache">输入缓存分解</option><option value="compute">理论计算分解</option><option value="categories">18类研发活动构成</option><option value="growth">相对2026的增长倍数</option></select></label></div>
+  <div class="explorer-controls">
+    <label id="trd-category-field" for="trd-category">指标类别<select id="trd-category"></select></label>
+    <label id="trd-primary-field" for="trd-primary" hidden>指标<select id="trd-primary"></select></label>
+    <label id="trd-range-field" for="trd-range">图表时间范围<select id="trd-range"><option value="all">完整周期</option><option value="observed">观测期</option><option value="forecast">预测期</option><option value="custom">自定义区间</option></select></label>
+    <div id="trd-algorithms-field" class="algorithm-picker">
+      <span id="trd-algorithms-label">外推算法</span>
+      <details id="trd-algorithms-menu" class="algorithm-menu">
+        <summary aria-labelledby="trd-algorithms-label trd-algorithms-summary" aria-describedby="trd-algorithms-help"><span id="trd-algorithms-summary"><span id="trd-algorithms-curves-summary">选择对比曲线</span><span id="trd-algorithms-headline-summary" class="algorithm-summary-secondary">选择顶部预测</span></span></summary>
+        <div class="algorithm-panel"><p id="trd-algorithms-help" class="algorithm-help">折线选1–3项；顶部独立单选，可选未加入折线的算法。</p><div class="algorithm-columns" aria-hidden="true"><span>折线</span><span>顶部</span><span>算法</span></div><div id="trd-algorithm-options" class="algorithm-options"></div></div>
+      </details>
+    </div>
+    <label id="trd-detail-mode-field" for="trd-detail-mode" hidden>分解口径<select id="trd-detail-mode"><option value="absolute">实际用量</option><option value="share">占比</option></select></label>
+  </div>
+  <fieldset id="trd-metrics-field" class="curve-selection"><legend>选择指标 <span>可多选，同一单位共同刻度</span></legend><div id="trd-metric-options" class="curve-options"></div></fieldset>
+  <fieldset id="trd-scenarios-field" class="curve-selection" hidden><legend>对比情景 <span>可多选</span></legend><div id="trd-scenario-options" class="curve-options"></div></fieldset>
+  <p id="trd-category-note" class="category-note"></p>
+  <label id="trd-intervals-field" class="interval-toggle" for="trd-intervals" hidden><input id="trd-intervals" type="checkbox">显示名义80% / 95%区间<span>仅融合方案 · 浅色95%，深色80% · 未经长期覆盖率校准</span></label>
+  <div id="trd-date-controls" class="date-controls" hidden><label for="trd-start">开始日期<input id="trd-start" type="date"></label><label for="trd-end">结束日期<input id="trd-end" type="date"></label><span class="muted">只调整图表范围；顶部仍为2030-11-18预测。</span></div>
+  <div class="chart-context"><div id="trd-legend" class="legend"></div><p id="trd-chart-context" class="muted"></p></div>
+  <p id="trd-error" class="error" role="alert" hidden></p>
+  <div id="trd-chart-main" class="chart"></div>
+  <div id="trd-chart-readout" class="chart-readout" aria-label="图表取值"></div>
+  <p id="trd-chart-note" class="chart-note"></p>
+  <details id="trd-data-details" class="data-details"><summary>当前图的全部数据</summary><div class="data-actions"><span class="muted" id="trd-data-count"></span><button type="button" id="trd-download">下载当前数据 CSV</button></div><div class="table-scroll"><table id="trd-data-table"></table></div></details>
+</section>
+<details id="trd-sources" class="surface sources"><summary>模型参数、计算分解与数据来源</summary><div class="source-facts"><p>单份纯权重 <strong data-testid="weight-tb"></strong> TB（模型配置：<span data-testid="weight-format"></span>）；不含副本、KV与量化元数据。</p><div id="trd-source-predictions" class="source-predictions"><p><strong data-testid="source-algorithm-name"></strong> · 2030-11-18 · 情景<span data-testid="source-scenario"></span>（与顶部一致）</p><p>缓存输入 <span data-testid="cached-input-tokens"></span> 亿/日；未缓存输入 <span data-testid="uncached-input-tokens"></span> 亿/日。</p><p>Prefill <span data-testid="prefill-eflop"></span> EFLOP/日；Decode <span data-testid="decode-eflop"></span> EFLOP/日。</p></div><p>2026基线是OpenAI公开人均统计按团队人数缩放，并非同一支真实百人团队的实测。历史每月取最后有效观测，预测采用所选算法每月18日的数据；不同指标的观测截止日期各自保留。年度、构成与增长分析保留原始OLS基准。</p><p>输入、缓存、FLOPs另依赖252条公开编码代理轨迹与合成30T MoE；缓存输入是日累计复用量，不是KV驻留容量。理论计算量不直接给出GPU卡数或硬件峰值并发。</p><div id="trd-source-links" class="source-links"></div></div></details>
+<div id="trd-live-summary" class="sr-only" aria-live="polite"></div>
+<script type="application/json" id="trd-inline-data">{}</script>
+<script>/* DASHBOARD_SCRIPT */</script>
+</div>

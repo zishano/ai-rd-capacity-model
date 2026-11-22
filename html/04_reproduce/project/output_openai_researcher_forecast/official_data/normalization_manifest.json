@@ -1,0 +1,452 @@
+{
+  "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/",
+  "selected_chart": "../source_downloads/selected_chart_identity.json",
+  "inputs": "Only freshly downloaded selected Chinese page; no other article data or prior forecasts",
+  "selected_category_sums_match_official_total": true,
+  "tables": [
+    {
+      "file": "workdays.csv",
+      "rows": 105,
+      "columns": [
+        "date",
+        "value",
+        "unit",
+        "rolling_window_days",
+        "source_metric",
+        "source_url",
+        "chart_file"
+      ],
+      "first_date": "2026-05-03",
+      "last_date": "2026-08-15",
+      "dates": 105,
+      "latest_rows": [
+        {
+          "date": "2026-08-15",
+          "value": 3.1415500874671642,
+          "unit": "8-hour agent workdays per researcher calendar day",
+          "rolling_window_days": 28,
+          "source_metric": "agent_workdays_per_researcher_workday",
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/",
+          "chart_file": "chart_04.json"
+        }
+      ],
+      "sha256": "ddc0986cbfc72e24a78d8c8c74d74ddc489abb204cb64b188c265e816cf6c328"
+    },
+    {
+      "file": "categories.csv",
+      "rows": 18,
+      "columns": [
+        "category",
+        "category_number",
+        "category_label",
+        "category_label_en",
+        "area",
+        "stack_index",
+        "source_url"
+      ],
+      "first_date": null,
+      "last_date": null,
+      "dates": 0,
+      "latest_rows": [],
+      "sha256": "da0d4fccf0679f448bf7e377214cb3d93e82d74088cbf0f4f764865b4175ee68"
+    },
+    {
+      "file": "output_tokens_14d.csv",
+      "rows": 3744,
+      "columns": [
+        "date",
+        "category",
+        "value",
+        "category_label",
+        "category_label_en",
+        "area",
+        "stack_index",
+        "unit",
+        "rolling_window_days",
+        "source_url",
+        "chart_file"
+      ],
+      "first_date": "2026-01-20",
+      "last_date": "2026-08-15",
+      "dates": 208,
+      "latest_rows": [
+        {
+          "date": "2026-08-15",
+          "category": "task1_1",
+          "value": 2541.56442970754,
+          "category_label": "1.1 确定研发方向",
+          "category_label_en": "1.1 What to work on",
+          "area": 1,
+          "stack_index": 1,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task1_2",
+          "value": 191.983980120621,
+          "category_label": "1.2 继续或终止项目",
+          "category_label_en": "1.2 What to continue or stop",
+          "area": 1,
+          "stack_index": 2,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task1_3",
+          "value": 1554.56397696264,
+          "category_label": "1.3 算力与人员决策",
+          "category_label_en": "1.3 Compute & staffing decisions",
+          "area": 1,
+          "stack_index": 3,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task2_1",
+          "value": 5328.37301711778,
+          "category_label": "2.1 研究与实验规划",
+          "category_label_en": "2.1 Research & experiment planning",
+          "area": 2,
+          "stack_index": 4,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task2_2",
+          "value": 10841.2235494156,
+          "category_label": "2.2 技术规范",
+          "category_label_en": "2.2 Technical specifications",
+          "area": 2,
+          "stack_index": 5,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task3_1",
+          "value": 233303.206370846,
+          "category_label": "3.1 研究与基础设施代码",
+          "category_label_en": "3.1 Research & infrastructure code",
+          "area": 3,
+          "stack_index": 6,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task3_2",
+          "value": 14978.0916538454,
+          "category_label": "3.2 训练与评估数据集",
+          "category_label_en": "3.2 Training & eval datasets",
+          "area": 3,
+          "stack_index": 7,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task4_1",
+          "value": 139563.637478304,
+          "category_label": "4.1 启动、监控与调试训练/评估任务",
+          "category_label_en": "4.1 Launch, monitor & debug runs",
+          "area": 4,
+          "stack_index": 8,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task4_2",
+          "value": 39343.8361216949,
+          "category_label": "4.2 计算集群运维",
+          "category_label_en": "4.2 Compute-cluster operations",
+          "area": 4,
+          "stack_index": 9,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task4_3",
+          "value": 13255.7881745895,
+          "category_label": "4.3 生产环境服务可靠性",
+          "category_label_en": "4.3 Production serving reliability",
+          "area": 4,
+          "stack_index": 10,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task5_1",
+          "value": 43204.934016766,
+          "category_label": "5.1 分析实验结果",
+          "category_label_en": "5.1 Analyze experiment results",
+          "area": 5,
+          "stack_index": 11,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task5_2",
+          "value": 12285.2475213528,
+          "category_label": "5.2 分析模型行为与能力",
+          "category_label_en": "5.2 Analyze model behavior & capabilities",
+          "area": 5,
+          "stack_index": 12,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task5_3",
+          "value": 3244.27971126007,
+          "category_label": "5.3 分析生产环境使用情况",
+          "category_label_en": "5.3 Analyze production usage",
+          "area": 5,
+          "stack_index": 13,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task5_4",
+          "value": 765.908295616089,
+          "category_label": "5.4 审查外部研究",
+          "category_label_en": "5.4 Review external research",
+          "area": 5,
+          "stack_index": 14,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task6_1",
+          "value": 20527.2731526722,
+          "category_label": "6.1 研究报告与文档撰写",
+          "category_label_en": "6.1 Research write-ups & documentation",
+          "area": 6,
+          "stack_index": 15,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task6_2",
+          "value": 173640.014931168,
+          "category_label": "6.2 技术支持与审查",
+          "category_label_en": "6.2 Technical help & review",
+          "area": 6,
+          "stack_index": 16,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task6_3",
+          "value": 8226.78534354511,
+          "category_label": "6.3 状态更新与工作日志",
+          "category_label_en": "6.3 Status updates & work logs",
+          "area": 6,
+          "stack_index": 17,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        },
+        {
+          "date": "2026-08-15",
+          "category": "task6_4",
+          "value": 36.5171881874983,
+          "category_label": "6.4 决策发布",
+          "category_label_en": "6.4 Decision announcements",
+          "area": 6,
+          "stack_index": 18,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        }
+      ],
+      "sha256": "3a1cc809ec87bf13f3abe10875cd9d5b854bfb7d761e3fd1ed5694da88c9a1fd"
+    },
+    {
+      "file": "output_tokens_14d_totals.csv",
+      "rows": 208,
+      "columns": [
+        "date",
+        "value",
+        "unit",
+        "rolling_window_days",
+        "source_url",
+        "chart_file"
+      ],
+      "first_date": "2026-01-20",
+      "last_date": "2026-08-15",
+      "dates": 208,
+      "latest_rows": [
+        {
+          "date": "2026-08-15",
+          "value": 722833.2289131718,
+          "unit": "output tokens per researcher calendar day",
+          "rolling_window_days": 14,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/#chart-4QLdZ4iw0n4L9rYGTvteZK",
+          "chart_file": "chart_08.json"
+        }
+      ],
+      "sha256": "f85f6d4fa3cd6a60fb351d490de0e1c7b4e8dec323a7555d29aa74cb817526c8"
+    },
+    {
+      "file": "concurrency.csv",
+      "rows": 126,
+      "columns": [
+        "date",
+        "share",
+        "series",
+        "threshold_agents",
+        "threshold_operator",
+        "lookback_days",
+        "unit",
+        "source_url",
+        "chart_file"
+      ],
+      "first_date": "2026-04-12",
+      "last_date": "2026-08-15",
+      "dates": 126,
+      "latest_rows": [
+        {
+          "date": "2026-08-15",
+          "share": 0.7395002658,
+          "series": "4 个以上的并发工作流",
+          "threshold_agents": 4,
+          "threshold_operator": ">=",
+          "lookback_days": 7,
+          "unit": "share of research headcount reaching at least 4 concurrent agents during the past 7 days",
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/",
+          "chart_file": "chart_05.json"
+        }
+      ],
+      "sha256": "9e8ceaeb1dd2cc1c97f57d00f69ee2f4ab33365d2bde331616818b26c4101b54"
+    },
+    {
+      "file": "cost_percentiles.csv",
+      "rows": 62,
+      "columns": [
+        "date",
+        "percentile",
+        "value",
+        "unit",
+        "aggregation",
+        "window_basis",
+        "source_url",
+        "chart_file"
+      ],
+      "first_date": "2026-01-04",
+      "last_date": "2026-08-15",
+      "dates": 31,
+      "latest_rows": [
+        {
+          "date": "2026-08-15",
+          "percentile": 50,
+          "value": 601.2531342816667,
+          "unit": "USD per day at API list-price equivalent",
+          "aggregation": "weekly average of daily cross-employee percentile",
+          "window_basis": "Monday-Sunday calendar week; company breaks excluded",
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/",
+          "chart_file": "chart_01.json"
+        },
+        {
+          "date": "2026-08-15",
+          "percentile": 90,
+          "value": 7047.126402210001,
+          "unit": "USD per day at API list-price equivalent",
+          "aggregation": "weekly average of daily cross-employee percentile",
+          "window_basis": "Monday-Sunday calendar week; company breaks excluded",
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/",
+          "chart_file": "chart_02.json"
+        }
+      ],
+      "sha256": "7a0ed5536d2fca25e77fb7308a488ba7d99c364bda8e9716961aa4803f547cd3"
+    },
+    {
+      "file": "relative_token_usage.csv",
+      "rows": 289,
+      "columns": [
+        "date",
+        "group",
+        "value",
+        "source_series",
+        "unit",
+        "statistic",
+        "rolling_window_days",
+        "baseline_date",
+        "not_team_additive",
+        "source_url",
+        "chart_file"
+      ],
+      "first_date": "2025-11-01",
+      "last_date": "2026-08-16",
+      "dates": 289,
+      "latest_rows": [
+        {
+          "date": "2026-08-16",
+          "group": "Research",
+          "value": 124.39359975092846,
+          "source_series": "r",
+          "unit": "department median output-usage index; department 2025-11-01 median = 1",
+          "statistic": "median over full-time employees including zero-usage employees",
+          "rolling_window_days": 28,
+          "baseline_date": "2025-11-01",
+          "not_team_additive": true,
+          "source_url": "https://openai.com/zh-Hans-CN/index/research-acceleration-view-inside-openai/",
+          "chart_file": "chart_03.json"
+        }
+      ],
+      "sha256": "bf4bc07ee260949106e2c47471e1b18e0d88fde1b975b39143dddb557e521c6f"
+    }
+  ],
+  "missing_metrics": [
+    "task starts per researcher",
+    "input tokens",
+    "cached input tokens",
+    "per-task token distributions",
+    "team peak LLM requests"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-22T05:48:30.354949+00:00",
+  "copied_files_unchanged": 108,
+  "original_files_unchanged": true,
+  "no_symlinks": true,
+  "pages": [
+    {
+      "path": "01_pages/raw-data-dashboard.html",
+      "self_contained": true,
+      "links_resolve": true,
+      "matches_original": true
+    },
+    {
+      "path": "01_pages/resource-dashboard-preview.html",
+      "self_contained": true,
+      "links_resolve": true,
+      "matches_original": true
+    },
+    {
+      "path": "01_pages/team-resource-dashboard.html",
+      "self_contained": true,
+      "links_resolve": true,
+      "matches_original": true
+    }
+  ],
+  "reconstructed_files_identical": 14,
+  "browser_checks": 770,
+  "browser_reports": [
+    {
+      "path": "06_validation/latest_reports/qa_validation.json",
+      "checks": 355,
+      "source_hashes_match_bundle": true
+    },
+    {
+      "path": "06_validation/latest_reports/algorithm_qa_validation.json",
+      "checks": 190,
+      "source_hashes_match_bundle": true
+    },
+    {
+      "path": "06_validation/latest_reports/raw_qa_validation.json",
+      "checks": 225,
+      "source_hashes_match_bundle": true
+    }
+  ],
+  "scope": "classified bundle; independent archived-input rebuild and current source-hash verification"
+}
