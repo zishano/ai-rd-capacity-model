@@ -1,0 +1,14 @@
+factor,value,gpu_hours_per_agent_day,decode_bottleneck,scope
+decode_batch_sequences,1,2.2117,communication,single-agent isolated sequence
+decode_batch_sequences,4,1.1058,communication,shared decode batch sensitivity
+decode_batch_sequences,16,0.8591,hbm,shared decode batch sensitivity
+decode_batch_sequences,64,0.8561,hbm,shared decode batch sensitivity
+decode_batch_sequences,100,0.8558,hbm,shared decode batch sensitivity
+a2a_latency_us_per_layer,5,1.4739,communication,base workload decode batch 1
+a2a_latency_us_per_layer,10,2.2117,communication,base workload decode batch 1
+a2a_latency_us_per_layer,50,8.1096,communication,base workload decode batch 1
+expert_weight_reuse_factor,1,2.2117,communication,base workload
+expert_weight_reuse_factor,2,1.8546,communication,base workload
+expert_weight_reuse_factor,4,1.6763,communication,base workload
+expert_weight_reuse_factor,8,1.5871,communication,base workload
+expert_weight_reuse_factor,16,1.5420,communication,base workload

@@ -107,3 +107,17 @@ MoE 推理模块位于 [inference/moe.py](inference/moe.py)，合成模型结构
 - [预测结果 CSV](analysis/agentic_10t_forecast/forecast_summary.csv)
 
 10T MoE 是 Kimi K2-style Synthetic 模型，不是已发布模型。未来 Agent 工作时长、Token 速率、上下文、Top-K 与 Serving 效率均为 C 类情景。GPU-hours 是分摊工作量；部署 GPU 数是权重/KV 容量下界，不是单 Agent 独占卡数或实测可行部署规模。完整可编辑 PPT、Excel、DOCX、10 张研究图和复算脚本见本次研究交付包。
+
+
+## 单 Agent 推理输入参数证据审计（2026-11-20）
+
+本次只更新独立 MoE 推理配置、硬件推理规格和独立证据审计目录；未修改团队主流程、团队业务参数和非推理资源公式。
+
+- [审计报告](analysis/agent_inference_evidence_audit/audit_report.md)
+- [52 项参数证据台账](analysis/agent_inference_evidence_audit/parameter_ledger.csv)
+- [独立单 Agent 参数配置](config/agent_inference_evidence.json)
+- [敏感性结果](analysis/agent_inference_evidence_audit/sensitivity_results.csv)
+
+审计发现：公开的 Agent-workdays、平台并发、AL4 工作覆盖率和 API list-price spend 均是研究员或平台级口径，不能直接转换成单 Agent 的 GPU-hours。当前单 Agent Token 速率和 Serving efficiency 仍是 C 类假设，必须用真实 Agent trace 和目标模型 Profile 校准。
+
+硬件 FP8 峰值已统一为 dense 口径；稀疏峰值单独记录。模型同时输出 HBM 原始容量下界与 TP×EP 分组取整后的候选部署卡数，避免把两者混为一谈。

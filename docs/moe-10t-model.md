@@ -97,3 +97,27 @@ python scripts/moe_hardware_sweep.py
 ```
 
 默认输出 `modelout/moe_hardware_sweep.csv`，比较三种激活场景与 H100/H200/B200/GB300 的参数量、部署 GPU 下界、FLOPs、GPU-hours、KV 和瓶颈标签。
+
+
+## 单 Agent 输入参数证据审计（2026-11-20）
+
+完整参数台账和 OpenAI/Anthropic 证据口径见 [analysis/agent_inference_evidence_audit/audit_report.md](../analysis/agent_inference_evidence_audit/audit_report.md)。本次明确区分 Agent wall-clock runtime、LLM inference active time、GPU busy time；公开的 researcher/platform aggregates 不直接转换为单 Agent GPU-hours。
+
+独立工作负载构造器：
+```python
+from inference.agent_workload import build_daily_workload
+workload = build_daily_workload(
+    online_hours=24, inference_duty=0.24,
+    input_tokens_per_active_hour=110000,
+    output_tokens_per_active_hour=8000,
+    prefix_cache_hit_rate=0.55, context_tokens=16384)
+```
+当前点值仍为 C 类假设；单 Agent Token rate 和 inference duty 没有可比公开 trace 支持。OpenAI API list-price spend 只能通过指定模型价格、Input:Output 比和缓存命中率生成条件 Token 等价区间，不能视为实测 Token 数。
+
+## HBM 容量下界与分组部署数
+
+输出字段 `hbm_capacity_lower_bound_gpus` 是权重、KV 与 runtime reserve 除以可用 HBM 后的原始容量下界；`deployment_gpus_per_replica` 是再按 TP×EP group size 取整的候选部署规模。后者不是实测可行部署配置。两者不能和单 Agent GPU-hours 混为一谈。
+
+FP8 scale metadata 默认采用 128×128 block、每块一个 FP32 scale 的 scale-only 理论下界（0.0244%），不包含 padding/layout 额外开销。真实 checkpoint 的 scale dtype、group layout 和实际权重占用必须从文件与引擎 profile 校准。
+
+硬件 FP8 roofline 使用 dense peak：H100/H200 1,979 TFLOPS、B200 4,500 TFLOPS、GB300 5,000 TFLOPS；稀疏峰值另存于硬件配置，不得混用。Inter-node per-GPU bandwidth 是 C 类网络配置项，不是 GPU 官方规格。

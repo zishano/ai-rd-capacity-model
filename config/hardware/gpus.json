@@ -1,6 +1,6 @@
 {
   "as_of": "2026-11-20",
-  "note": "Vendor peak specifications only. Achieved serving performance must be calibrated with measured profiles.",
+  "note": "Vendor peak specifications only. fp8_dense_peak_tflops is dense (non-sparse); sparse peaks are separately recorded. inter_node_per_gpu_gb_s is a scenario input, not a GPU vendor specification.",
   "hardware": {
     "H100_SXM": {
       "memory_gb": 80,
@@ -8,7 +8,9 @@
       "fp8_dense_peak_tflops": 1979,
       "nvlink_per_gpu_tb_s": 0.9,
       "inter_node_per_gpu_gb_s": 50,
-      "source": "https://resources.nvidia.com/en-us-gpu/h100-datasheet-24306"
+      "source": "https://resources.nvidia.com/en-us-gpu/h100-datasheet-24306",
+      "fp8_sparse_peak_tflops": 3958,
+      "inter_node_bandwidth_evidence": "C: illustrative 50 GB/s per GPU; replace with NIC/rail/bisection benchmark"
     },
     "H200_SXM": {
       "memory_gb": 141,
@@ -16,23 +18,29 @@
       "fp8_dense_peak_tflops": 1979,
       "nvlink_per_gpu_tb_s": 0.9,
       "inter_node_per_gpu_gb_s": 50,
-      "source": "https://www.nvidia.com/en-us/data-center/h200/"
+      "source": "https://www.nvidia.com/en-us/data-center/h200/",
+      "fp8_sparse_peak_tflops": 3958,
+      "inter_node_bandwidth_evidence": "C: illustrative 50 GB/s per GPU; replace with NIC/rail/bisection benchmark"
     },
     "B200_SXM": {
       "memory_gb": 180,
       "hbm_bandwidth_tb_s": 8,
-      "fp8_dense_peak_tflops": 9000,
+      "fp8_dense_peak_tflops": 4500,
       "nvlink_per_gpu_tb_s": 1.8,
       "inter_node_per_gpu_gb_s": 100,
-      "source": "https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory-h100-h200-b200/latest/components.html"
+      "source": "https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory-h100-h200-b200/latest/components.html",
+      "fp8_sparse_peak_tflops": 9000,
+      "inter_node_bandwidth_evidence": "C: illustrative 100 GB/s per GPU; replace with NIC/rail/bisection benchmark"
     },
     "GB300_NVL72": {
       "memory_gb": 279,
       "hbm_bandwidth_tb_s": 8,
-      "fp8_dense_peak_tflops": 9000,
+      "fp8_dense_peak_tflops": 5000,
       "nvlink_per_gpu_tb_s": 1.8,
       "inter_node_per_gpu_gb_s": 100,
-      "source": "https://resources.nvidia.com/en-us-gpu-resources/blackwell-ultra-datasheet"
+      "source": "https://resources.nvidia.com/en-us-gpu-resources/blackwell-ultra-datasheet",
+      "fp8_sparse_peak_tflops": 10000,
+      "inter_node_bandwidth_evidence": "C: illustrative 100 GB/s per GPU; replace with NIC/rail/bisection benchmark"
     }
   }
 }

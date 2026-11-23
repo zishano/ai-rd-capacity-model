@@ -26,7 +26,13 @@
   "weights": {
     "format": "FP8",
     "bytes_per_parameter": 1,
-    "scale_metadata_overhead_fraction": 0.03
+    "scale_metadata_overhead_fraction": 0.000244,
+    "quantization_block_shape": [
+      128,
+      128
+    ],
+    "scale_dtype": "FP32",
+    "scale_metadata_derivation": "4 bytes per 128x128 block / 16384 weights = 0.000244; scale-only lower bound, excludes padding/layout overhead"
   },
   "kv_cache": {
     "format": "BF16",
@@ -37,7 +43,7 @@
     ]
   },
   "serving_assumptions": {
-    "prefill_batch_tokens": 64,
+    "prefill_batch_tokens": 8192,
     "decode_batch_sequences": 1,
     "target_gpu_pool_utilization": 0.7,
     "compute_efficiency": 0.3,
@@ -54,7 +60,8 @@
       "B200_SXM": 24,
       "GB300_NVL72": 18
     },
-    "expert_weight_batch_reuse_factor": 1
+    "expert_weight_batch_reuse_factor": 1,
+    "prefill_batch_tokens_evidence": "C/A reference: vLLM Kimi K2 recipe uses max-num-batched-tokens 8192; prompt-heavy examples 32768. This is scheduler budget, not measured average occupancy."
   },
   "references": [
     {
