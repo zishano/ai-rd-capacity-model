@@ -13,6 +13,8 @@
 /data_row/
 /data_predict/
 /report_nextgen_ensemble_20261122/
+/next-system-2/
+/next-100-team-resource/
 
 # cache
 __pycache__

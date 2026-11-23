@@ -44,7 +44,7 @@ def team_prediction(days, values, future, method):
     return fit_predict(values, h, method)
 
 
-def render(out, methods=None, concurrency_method='legacy_log_complement'):
+def render(out, methods=None, concurrency_method='legacy_log_complement', show_intervals=True, show_sample_paths=True):
     out = Path(out)
     methods = list(PRESETS) if methods is None else methods
     if UNCERTAINTY_PRESET in methods and concurrency_method != 'legacy_log_complement':
@@ -77,7 +77,7 @@ def render(out, methods=None, concurrency_method='legacy_log_complement'):
         folder.mkdir(exist_ok=True)
         if method == UNCERTAINTY_PRESET:
             from .uncertainty.export import export
-            export(out, folder)
+            export(out, folder, show_intervals=show_intervals, show_sample_paths=show_sample_paths)
             continue
         selected = [r for r in forecasts if r['method']==method]
         if not selected:
@@ -207,5 +207,8 @@ if __name__=='__main__':
     parser.add_argument('--results',type=Path,default=HERE_NEW/'results')
     parser.add_argument('--method',choices=['all',*PRESETS],default='all')
     parser.add_argument('--concurrency-method',choices=list(CONCURRENCY_LABELS),default='legacy_log_complement')
+    parser.add_argument('--hide-intervals',action='store_true',help='Hide interval bands and bounds on the four ensemble charts; keep all interval data')
+    parser.add_argument('--hide-sample-paths',action='store_true',help='Hide example simulation paths on ensemble charts; keep all prediction data')
     args=parser.parse_args()
-    render(args.results,None if args.method=='all' else [args.method],args.concurrency_method)
+    render(args.results,None if args.method=='all' else [args.method],args.concurrency_method,
+           show_intervals=not args.hide_intervals,show_sample_paths=not args.hide_sample_paths)

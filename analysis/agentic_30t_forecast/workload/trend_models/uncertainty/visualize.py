@@ -16,7 +16,7 @@ from .run import summary,SEED,ROOT
 from . import LABEL
 
 
-def render(out,data,bins,caches,bin_cache,draws):
+def render(out,data,bins,caches,bin_cache,draws,show_intervals=True,show_sample_paths=True):
     style.configure_fonts()
     dest=out/'figures';dest.mkdir(exist_ok=True)
     scenarios=records(out/'scenarios.csv')
@@ -28,22 +28,28 @@ def render(out,data,bins,caches,bin_cache,draws):
 
     def overlay(ax,metric):
         c=caches[metric];d=c['dates'];s=c['summary']
-        ax.fill_between(d,s['lower95'],s['upper95'],color='#7F91AC',alpha=.18,zorder=4)
-        ax.fill_between(d,s['lower80'],s['upper80'],color='#647C9D',alpha=.20,zorder=4)
-        ax.plot(d,s['upper95'],lw=.7,color='#647C9D',ls=':',zorder=5)
-        ax.plot(d,s['lower95'],lw=.7,color='#647C9D',ls=':',zorder=5)
+        interval_handles=[]
+        if show_intervals:
+            ax.fill_between(d,s['lower95'],s['upper95'],color='#7F91AC',alpha=.18,zorder=4)
+            ax.fill_between(d,s['lower80'],s['upper80'],color='#647C9D',alpha=.20,zorder=4)
+            ax.plot(d,s['upper95'],lw=.7,color='#647C9D',ls=':',zorder=5)
+            ax.plot(d,s['lower95'],lw=.7,color='#647C9D',ls=':',zorder=5)
+            interval_handles=[Patch(color='#7F91AC',alpha=.18,label='名义 95% 模型分位带'),
+                              Patch(color='#647C9D',alpha=.38,label='名义 80% 模型分位带')]
         # One fixed-index draw from each mixture component; never chosen by its shape.
         example_indices=(0,draws+min(100,draws-1),2*draws+min(500,draws-1))
-        for i in example_indices:
-            ax.plot(d,c['paths'][i],color='#555',lw=.65,alpha=.45,zorder=5)
+        sample_handles=[]
+        if show_sample_paths:
+            for i in example_indices:
+                ax.plot(d,c['paths'][i],color='#555',lw=.65,alpha=.45,zorder=5)
+            sample_handles=[Line2D([],[],color='#555',lw=.8,label='3 条固定抽样路径')]
         sc=[r for r in scenarios if r['metric']==metric]
         ax.plot(d,[float(r['plateau']) for r in sc],color='#333',ls='--',lw=1.2,zorder=6)
         ax.plot(d,[float(r['contraction10']) for r in sc],color='#8B3B32',ls='-.',lw=1.4,zorder=6)
-        ax.set_ylim(0,max(float(max(s['upper95'])),float(c['paths'][list(example_indices)].max()),float(ax.get_ylim()[1]))*1.05)
-        return [Patch(color='#7F91AC',alpha=.18,label='名义 95% 模型分位带'),
-                Patch(color='#647C9D',alpha=.38,label='名义 80% 模型分位带'),
-                Line2D([],[],color='#555',lw=.8,label='3 条固定抽样路径'),
-                Line2D([],[],color='#333',ls='--',label='2028 起停滞（假设）'),
+        upper=float(max(s['upper95'])) if show_intervals else 0.
+        sample_upper=float(c['paths'][list(example_indices)].max()) if show_sample_paths else 0.
+        ax.set_ylim(0,max(upper,sample_upper,float(ax.get_ylim()[1]))*1.05)
+        return interval_handles+sample_handles+[Line2D([],[],color='#333',ls='--',label='2028 起停滞（假设）'),
                 Line2D([],[],color='#8B3B32',ls='-.',label='2028 起年降 10%（假设）')]
 
     def record(metric,series,points,cutoff):
@@ -69,7 +75,8 @@ def render(out,data,bins,caches,bin_cache,draws):
     fig,ax=plt.subplots(figsize=(14,8.2))
     fig.subplots_adjust(left=.085,right=.92,top=.81,bottom=.25)
     fig.suptitle(style.TITLES[0],x=.055,y=.97,ha='left',fontsize=20,weight='bold')
-    fig.text(.055,.91,f'{LABEL} · 中位数 · 阴影对应总体 · 每月 18 日',fontsize=11)
+    interval_note='阴影对应总体' if show_intervals else '区间数值见配套数据'
+    fig.text(.055,.91,f'{LABEL} · 中位数 · {interval_note} · 每月 18 日',fontsize=11)
     style.draw_workdays(ax,teams)
     handles=overlay(ax,'workdays')
     # Team endpoint medians can nearly coincide; keep both two-decimal labels legible.
@@ -87,7 +94,8 @@ def render(out,data,bins,caches,bin_cache,draws):
     style.monthly_ticks(ax);ax.spines[['top','right']].set_visible(False)
     ax.set_xlim(min(teams['Overall Research']),END)
     fig.legend(handles=handles,loc='lower center',bbox_to_anchor=(.5,.075),ncol=5,frameon=False,fontsize=9)
-    save(fig,'monthly_workdays','统计带不包含全部结构变化；回落线是独立条件情景，没有赋予发生概率。模型未通过四年覆盖率验证。')
+    save(fig,'monthly_workdays',('统计带不包含全部结构变化；' if show_intervals else '图中不展示区间；')+
+         '回落线是独立条件情景，没有赋予发生概率。模型未通过四年覆盖率验证。')
 
     for metric in ('tasks','output'):
         days,y,source=data[metric];c=caches[metric]
@@ -113,14 +121,10 @@ def render(out,data,bins,caches,bin_cache,draws):
         handles=overlay(ax,metric)
         ax.set_xlim(days[0],END);style.monthly_ticks(ax);ax.spines[['top','right']].set_visible(False)
         fig.legend(handles=handles,loc='lower center',bbox_to_anchor=(.5,.075),ncol=5,frameon=False,fontsize=9)
-        if metric=='output':
-            bt=[r for r in records(out/'backtest.csv') if r['metric']=='output' and r['method']=='ensemble'
-                and r['horizon']=='28' and r['scoring']=='new_underlying_days']
-            coverage=np.mean([float(r['coverage95']) for r in bt])
-            ax.text(.015,.89,f'注意：28 天回测名义 95% 带的覆盖率仅 {coverage:.1%}，尚未校准',
-                    transform=ax.transAxes,fontsize=10,color='#9B3535')
-        save(fig,'monthly_tasks' if metric=='tasks' else 'monthly_output_tokens',
-             '灰色带是总量的条件区间，不能解释为各类别独立区间；未识别未来类别迁移。未来原始日波动也不等于图中的平滑指标波动。')
+        interval_note=('灰色带是总量的条件区间，不能解释为各类别独立区间；' if show_intervals
+                       else '图中不展示区间；类别色块表示中位总量的构成；')
+        save(fig,'monthly_tasks' if metric=='tasks' else 'monthly_output_tokens',interval_note+
+             '未识别未来类别迁移。未来原始日波动也不等于图中的平滑指标波动。')
 
     histdays=[date.fromisoformat(r['date']) for r in bins]
     observed=np.array([[float(r[f'bin_{i}']) for i in range(9)] for r in bins]);observed/=observed.sum(1,keepdims=True)
@@ -172,10 +176,11 @@ def render(out,data,bins,caches,bin_cache,draws):
         boundary=legacy_paths[:,:,:start].sum(2)
         q=np.quantile(boundary,[.025,.1,.9,.975],axis=0)
         line=legacy_center[:,:start].sum(1)
-        ax.fill_between(future,q[1],q[2],color=color,alpha=.18,zorder=4)
+        if show_intervals:
+            ax.fill_between(future,q[1],q[2],color=color,alpha=.18,zorder=4)
+            ax.plot(future,q[0],color=color,lw=.8,ls=':',zorder=5)
+            ax.plot(future,q[3],color=color,lw=.8,ls=':',zorder=5)
         ax.plot(future,line,color=color,lw=1,zorder=5)
-        ax.plot(future,q[0],color=color,lw=.8,ls=':',zorder=5)
-        ax.plot(future,q[3],color=color,lw=.8,ls=':',zorder=5)
         for i,d in enumerate(future):
             band_rows.append(dict(date=d,threshold=4 if start==4 else 16,center_share=float(1-line[i]),
                    boundary_center=float(line[i]),boundary_p025=float(q[0,i]),boundary_p10=float(q[1,i]),
@@ -183,7 +188,8 @@ def render(out,data,bins,caches,bin_cache,draws):
     style.monthly_ticks(ax);ax.spines[['top','right','left']].set_visible(False)
     ax.grid(axis='y',color='white',alpha=.25)
     save(fig,'monthly_concurrency',
-         '≥4、≥16 分界：实线为原趋势，阴影为80%重采样范围，点线为95%范围；仅反映趋势拟合不确定性，未校准。')
+         '≥4、≥16 分界：实线为原趋势，阴影为80%重采样范围，点线为95%范围；仅反映趋势拟合不确定性，未校准。'
+         if show_intervals else '九档色块表示中心构成，≥4、≥16 分界保留原趋势；图中不展示区间，重采样范围见配套数据。')
     write_rows(out/'main_concurrency.csv',[dict(date=d,method='legacy_log_complement',
                **{f'bin_{i}':float(v) for i,v in enumerate(row)}) for d,row in zip(future,legacy_center)])
     write_rows(out/'main_concurrency_bands.csv',band_rows)
@@ -214,7 +220,7 @@ def render(out,data,bins,caches,bin_cache,draws):
        '预测对象是公开平滑指标，不是原始日流量。四年覆盖率无法用当前历史验证。</p>'+links,encoding='utf8')
 
 
-def redraw(out):
+def redraw(out,show_intervals=True,show_sample_paths=True):
     """Redraw saved distributions without rerunning selection or backtests."""
     from ..run import inputs
     saved=np.load(out/'predictive_paths.npz')
@@ -231,7 +237,8 @@ def redraw(out):
         centers=np.array([[lookup[d,i] for i in range(9)] for d in future])
         bin_cache[method]=([date.fromisoformat(d) for d in future],saved[method+'_paths'],centers)
     data,bins=inputs()
-    render(out,data,bins,caches,bin_cache,json.loads((out/'manifest.json').read_text())['draws_per_component'])
+    render(out,data,bins,caches,bin_cache,json.loads((out/'manifest.json').read_text())['draws_per_component'],
+           show_intervals=show_intervals,show_sample_paths=show_sample_paths)
 
 
 if __name__=='__main__':
@@ -239,4 +246,7 @@ if __name__=='__main__':
     from pathlib import Path
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--results',type=Path,default=ROOT/'results')
-    redraw(parser.parse_args().results)
+    parser.add_argument('--hide-intervals',action='store_true',help='Hide interval bands and bounds on the four main charts')
+    parser.add_argument('--hide-sample-paths',action='store_true',help='Hide example simulation paths without changing predictions')
+    args=parser.parse_args()
+    redraw(args.results,show_intervals=not args.hide_intervals,show_sample_paths=not args.hide_sample_paths)
